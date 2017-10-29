@@ -1,0 +1,21 @@
+-mcpu=cortex-m0
+-mthumb
+-mfloat-abi=soft
+-g3
+-gdwarf-2
+-gstrict-dwarf
+-nostdinc
+-I"D:/15. MyFactory/MC - Microcontroller/HSLU/MC_Uebungen/Freedom_LED/Project_Headers"
+-I"D:/15. MyFactory/MC - Microcontroller/HSLU/MC_Uebungen/Freedom_LED/Project_Settings/Startup_Code"
+-I"C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include"
+-I"C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/EWL_Runtime/include"
+-I"D:/15. MyFactory/MC - Microcontroller/HSLU/MC_Uebungen/Freedom_LED/Generated_Code"
+-I"D:/15. MyFactory/MC - Microcontroller/HSLU/MC_Uebungen/Freedom_LED/Sources"
+-I"C:/Freescale/CW MCU v10.7/MCU/ProcessorExpert/lib/Kinetis/iofiles"
+-I"C:/Freescale/CW MCU v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc"
+-O3
+-ffunction-sections
+-fdata-sections
+-Wall
+-c
+-fmessage-length=0

@@ -1,0 +1,137 @@
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"ProcessorExpert.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.startup.main,"ax",%progbits
+  18              		.align	2
+  19              		.global	main
+  20              		.code	16
+  21              		.thumb_func
+  23              	main:
+  24              	.LFB0:
+  25              		.file 1 "../Sources/ProcessorExpert.c"
+   1:../Sources/ProcessorExpert.c **** /** ###################################################################
+   2:../Sources/ProcessorExpert.c **** **     Filename    : ProcessorExpert.c
+   3:../Sources/ProcessorExpert.c **** **     Project     : ProcessorExpert
+   4:../Sources/ProcessorExpert.c **** **     Processor   : MKL25Z128VLK4
+   5:../Sources/ProcessorExpert.c **** **     Version     : Driver 01.01
+   6:../Sources/ProcessorExpert.c **** **     Compiler    : GNU C Compiler
+   7:../Sources/ProcessorExpert.c **** **     Date/Time   : 2012-08-23, 07:53, # CodeGen: 0
+   8:../Sources/ProcessorExpert.c **** **     Abstract    :
+   9:../Sources/ProcessorExpert.c **** **         Main module.
+  10:../Sources/ProcessorExpert.c **** **         This module contains user's application code.
+  11:../Sources/ProcessorExpert.c **** **     Settings    :
+  12:../Sources/ProcessorExpert.c **** **     Contents    :
+  13:../Sources/ProcessorExpert.c **** **         No public methods
+  14:../Sources/ProcessorExpert.c **** **
+  15:../Sources/ProcessorExpert.c **** ** ###################################################################*/
+  16:../Sources/ProcessorExpert.c **** /* MODULE ProcessorExpert */
+  17:../Sources/ProcessorExpert.c **** 
+  18:../Sources/ProcessorExpert.c **** 
+  19:../Sources/ProcessorExpert.c **** /* Including needed modules to compile this module/procedure */
+  20:../Sources/ProcessorExpert.c **** #include "Cpu.h"
+  21:../Sources/ProcessorExpert.c **** #include "Events.h"
+  22:../Sources/ProcessorExpert.c **** #include "LEDR.h"
+  23:../Sources/ProcessorExpert.c **** #include "LEDpin3.h"
+  24:../Sources/ProcessorExpert.c **** #include "BitIoLdd3.h"
+  25:../Sources/ProcessorExpert.c **** #include "LEDG.h"
+  26:../Sources/ProcessorExpert.c **** #include "LEDpin2.h"
+  27:../Sources/ProcessorExpert.c **** #include "BitIoLdd2.h"
+  28:../Sources/ProcessorExpert.c **** #include "LEDB.h"
+  29:../Sources/ProcessorExpert.c **** #include "LEDpin1.h"
+  30:../Sources/ProcessorExpert.c **** #include "BitIoLdd1.h"
+  31:../Sources/ProcessorExpert.c **** #include "WAIT1.h"
+  32:../Sources/ProcessorExpert.c **** /* Including shared modules, which are used for whole project */
+  33:../Sources/ProcessorExpert.c **** #include "PE_Types.h"
+  34:../Sources/ProcessorExpert.c **** #include "PE_Error.h"
+  35:../Sources/ProcessorExpert.c **** #include "PE_Const.h"
+  36:../Sources/ProcessorExpert.c **** #include "IO_Map.h"
+  37:../Sources/ProcessorExpert.c **** 
+  38:../Sources/ProcessorExpert.c **** /* User includes (#include below this line is not maintained by Processor Expert) */
+  39:../Sources/ProcessorExpert.c **** 
+  40:../Sources/ProcessorExpert.c **** /*lint -save  -e970 Disable MISRA rule (6.3) checking. */
+  41:../Sources/ProcessorExpert.c **** int main(void)
+  42:../Sources/ProcessorExpert.c **** /*lint -restore Enable MISRA rule (6.3) checking. */
+  43:../Sources/ProcessorExpert.c **** {
+  26              		.loc 1 43 0
+  27              		.cfi_startproc
+  28 0000 10B5     		push	{r4, lr}
+  29              	.LCFI0:
+  30              		.cfi_def_cfa_offset 8
+  31              		.cfi_offset 4, -8
+  32              		.cfi_offset 14, -4
+  33 0002 0A4C     		ldr	r4, .L4
+  34              	.L2:
+  44:../Sources/ProcessorExpert.c ****   /* Write your local variable definition here */
+  45:../Sources/ProcessorExpert.c **** 
+  46:../Sources/ProcessorExpert.c ****   /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
+  47:../Sources/ProcessorExpert.c ****   /*** End of Processor Expert internal initialization.                    ***/
+  48:../Sources/ProcessorExpert.c **** 
+  49:../Sources/ProcessorExpert.c ****   /* Write your code here */
+  50:../Sources/ProcessorExpert.c ****   for(;;) {
+  51:../Sources/ProcessorExpert.c **** 	  WAIT1_Waitms(100);
+  35              		.loc 1 51 0
+  36 0004 6420     		mov	r0, #100
+  37 0006 FFF7FEFF 		bl	WAIT1_Waitms
+  38              	.LVL0:
+  52:../Sources/ProcessorExpert.c ****     LEDR_Neg();
+  39              		.loc 1 52 0
+  40 000a 2068     		ldr	r0, [r4]
+  41 000c FFF7FEFF 		bl	BitIoLdd3_NegVal
+  42              	.LVL1:
+  53:../Sources/ProcessorExpert.c **** 	  WAIT1_Waitms(200);
+  43              		.loc 1 53 0
+  44 0010 C820     		mov	r0, #200
+  45 0012 FFF7FEFF 		bl	WAIT1_Waitms
+  46              	.LVL2:
+  54:../Sources/ProcessorExpert.c ****     LEDG_Neg();
+  47              		.loc 1 54 0
+  48 0016 6068     		ldr	r0, [r4, #4]
+  49 0018 FFF7FEFF 		bl	BitIoLdd2_NegVal
+  50              	.LVL3:
+  55:../Sources/ProcessorExpert.c **** 	  WAIT1_Waitms(400);
+  51              		.loc 1 55 0
+  52 001c C820     		mov	r0, #200
+  53 001e 4000     		lsl	r0, r0, #1
+  54 0020 FFF7FEFF 		bl	WAIT1_Waitms
+  55              	.LVL4:
+  56:../Sources/ProcessorExpert.c ****     LEDB_Neg();
+  56              		.loc 1 56 0
+  57 0024 A068     		ldr	r0, [r4, #8]
+  58 0026 FFF7FEFF 		bl	BitIoLdd1_NegVal
+  59              	.LVL5:
+  60 002a EBE7     		b	.L2
+  61              	.L5:
+  62              		.align	2
+  63              	.L4:
+  64 002c 00000000 		.word	PE_LDD_DeviceDataList
+  65              		.cfi_endproc
+  66              	.LFE0:
+  68              		.text
+  69              	.Letext0:
+  70              		.file 2 "D:/15. MyFactory/MC - Microcontroller/HSLU/MC_Uebungen/Freedom_LED/Generated_Code/PE_LDD.
+DEFINED SYMBOLS
+                            *ABS*:00000000 ProcessorExpert.c
+C:\Users\burak\AppData\Local\Temp\ccc3UGZi.s:18     .text.startup.main:00000000 $t
+C:\Users\burak\AppData\Local\Temp\ccc3UGZi.s:23     .text.startup.main:00000000 main
+C:\Users\burak\AppData\Local\Temp\ccc3UGZi.s:64     .text.startup.main:0000002c $d
+                     .debug_frame:00000010 $d
+
+UNDEFINED SYMBOLS
+WAIT1_Waitms
+BitIoLdd3_NegVal
+BitIoLdd2_NegVal
+BitIoLdd1_NegVal
+PE_LDD_DeviceDataList
