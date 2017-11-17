@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 import time
 
-cap = cv2.VideoCapture('movie.avi')
+cap = cv2.VideoCapture(0)
 
 
 start_time = time.time()
@@ -48,10 +48,13 @@ while cap.isOpened():
                 cx = int(M['m10'] / m00)
                 cy = int(M['m01'] / m00)
                 found = False
+                offset = 3
                 for lastDimension in lastDimensions:
-                    if np.array_equal((x, y), lastDimension):
-                        lastDimensions.append((x, y))
-                        # print("Found duplicate")
+                    if (lastDimension[0] + offset) >= w >= (lastDimension[0] - offset):
+                        found = True
+                        break
+
+                    if (lastDimension[1] + offset) >= h >= (lastDimension[1] - offset):
                         found = True
                         break
                 if not found:
@@ -71,9 +74,11 @@ while cap.isOpened():
                                 image_counter += 1
                         temp += 1
                     approximations.append(approx)
-                    lastDimensions.append((x, y))
+                    lastDimensions.append((w, h))
                     centers.append(np.array((cx, cy)))
     print("LoopTime: " + str(time.time() - loopTime))
+    cv2.imshow("Image", image)
+    cv2.waitKey(1)
 
 print("Found: " + str(image_counter) + " matches.")
 print("Time: " + str(time.time() - start_time))

@@ -13,7 +13,7 @@ print("--- Image gray: %s seconds ---" % (time.time() - temp_time))
 
 temp_time = time.time()
 gray = cv2.blur(gray, (3, 3))
-# cv2.imshow("Gray", gray)
+cv2.imshow("Gray", gray)
 print("--- Image blurred: %s seconds ---" % (time.time() - temp_time))
 
 temp_time = time.time()
@@ -75,6 +75,7 @@ for contour in contours:
                             cv2.drawContours(image_clone, [matches[0]], -1, (0, 0, 255), 4)
                             cv2.drawContours(image_clone, [approximations[temp]], -1, (255, 0, 0), 4)
                             cv2.imwrite("/home/pi/output" + str(image_counter) + ".jpg", image_clone)
+                            cv2.imshow("Contour", image_clone)
                             image_counter += 1
                     temp += 1
                 approximations.append(approx)
@@ -85,5 +86,5 @@ print("--- %s seconds ---" % (time.time() - start_time))
 
 # display the output
 # cv2.imwrite("/home/pi/output.jpg", image)
-# cv2.waitKey(0)
+cv2.waitKey(0)
 cv2.destroyAllWindows()
