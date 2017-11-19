@@ -1,6 +1,6 @@
 <Analysispoints>
 	<Name>AnalysispointsManager</Name>
-	<ProjectPath>D:/15. MyFactory/MC - Microcontroller/HSLU/MC_Uebungen/Freedom_LED/SaAnalysispointsManager.apconfig</ProjectPath>
+	<ProjectPath>D:/15. MyFactory/PREN/Microcontroller/FRDM KL25Z/Freedom_LED/SaAnalysispointsManager.apconfig</ProjectPath>
 	<MaxNumberOfCores>1</MaxNumberOfCores>
 	<Comments>Analysispoints Manager</Comments>
 	<IgnoreAll>false</IgnoreAll>

@@ -1,5 +1,6 @@
 "./Generated_Code/Vectors.o"
 "./Generated_Code/PE_LDD.o"
+"./Generated_Code/MCUC1.o"
 "./Generated_Code/LEDpin6.o"
 "./Generated_Code/LEDpin5.o"
 "./Generated_Code/LEDpin4.o"
@@ -23,7 +24,7 @@
 -g3
 -gdwarf-2
 -gstrict-dwarf
--T"D:/15. MyFactory/MC - Microcontroller/HSLU/MC_Uebungen/Freedom_Accel/Project_Settings/Linker_Files/ProcessorExpert.ld"
+-T"D:/15. MyFactory/PREN/Microcontroller/FRDM KL25Z/Freedom_Accel/Project_Settings/Linker_Files/ProcessorExpert.ld"
 -nostartfiles
 -nodefaultlibs
 -nostdlib

@@ -17,6 +17,7 @@ C_SRCS_QUOTED += \
 "../Generated_Code/LEDpin4.c" \
 "../Generated_Code/LEDpin5.c" \
 "../Generated_Code/LEDpin6.c" \
+"../Generated_Code/MCUC1.c" \
 "../Generated_Code/PE_LDD.c" \
 "../Generated_Code/Vectors.c" \
 
@@ -32,6 +33,7 @@ C_SRCS += \
 ../Generated_Code/LEDpin4.c \
 ../Generated_Code/LEDpin5.c \
 ../Generated_Code/LEDpin6.c \
+../Generated_Code/MCUC1.c \
 ../Generated_Code/PE_LDD.c \
 ../Generated_Code/Vectors.c \
 
@@ -47,6 +49,7 @@ OBJS += \
 ./Generated_Code/LEDpin4.o \
 ./Generated_Code/LEDpin5.o \
 ./Generated_Code/LEDpin6.o \
+./Generated_Code/MCUC1.o \
 ./Generated_Code/PE_LDD.o \
 ./Generated_Code/Vectors.o \
 
@@ -62,6 +65,7 @@ OBJS_QUOTED += \
 "./Generated_Code/LEDpin4.o" \
 "./Generated_Code/LEDpin5.o" \
 "./Generated_Code/LEDpin6.o" \
+"./Generated_Code/MCUC1.o" \
 "./Generated_Code/PE_LDD.o" \
 "./Generated_Code/Vectors.o" \
 
@@ -77,6 +81,7 @@ C_DEPS += \
 ./Generated_Code/LEDpin4.d \
 ./Generated_Code/LEDpin5.d \
 ./Generated_Code/LEDpin6.d \
+./Generated_Code/MCUC1.d \
 ./Generated_Code/PE_LDD.d \
 ./Generated_Code/Vectors.d \
 
@@ -92,6 +97,7 @@ OBJS_OS_FORMAT += \
 ./Generated_Code/LEDpin4.o \
 ./Generated_Code/LEDpin5.o \
 ./Generated_Code/LEDpin6.o \
+./Generated_Code/MCUC1.o \
 ./Generated_Code/PE_LDD.o \
 ./Generated_Code/Vectors.o \
 
@@ -107,6 +113,7 @@ C_DEPS_QUOTED += \
 "./Generated_Code/LEDpin4.d" \
 "./Generated_Code/LEDpin5.d" \
 "./Generated_Code/LEDpin6.d" \
+"./Generated_Code/MCUC1.d" \
 "./Generated_Code/PE_LDD.d" \
 "./Generated_Code/Vectors.d" \
 
@@ -200,9 +207,17 @@ Generated_Code/LEDpin6.o: ../Generated_Code/LEDpin6.c
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Generated_Code/PE_LDD.o: ../Generated_Code/PE_LDD.c
+Generated_Code/MCUC1.o: ../Generated_Code/MCUC1.c
 	@echo 'Building file: $<'
 	@echo 'Executing target #18 $<'
+	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
+	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/MCUC1.args" -Wa,-adhlns="$@.lst" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/MCUC1.o"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+Generated_Code/PE_LDD.o: ../Generated_Code/PE_LDD.c
+	@echo 'Building file: $<'
+	@echo 'Executing target #19 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/PE_LDD.args" -Wa,-adhlns="$@.lst" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/PE_LDD.o"
 	@echo 'Finished building: $<'
@@ -210,7 +225,7 @@ Generated_Code/PE_LDD.o: ../Generated_Code/PE_LDD.c
 
 Generated_Code/Vectors.o: ../Generated_Code/Vectors.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #19 $<'
+	@echo 'Executing target #20 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/Vectors.args" -Wa,-adhlns="$@.lst" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/Vectors.o"
 	@echo 'Finished building: $<'

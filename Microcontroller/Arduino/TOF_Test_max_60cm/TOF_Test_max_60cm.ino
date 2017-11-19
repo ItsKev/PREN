@@ -52,7 +52,7 @@ void setup()
   // measurement, wait for it to complete
   delay(300);
   // start interleaved continuous mode with period of 100 ms
-  sensor.startInterleavedContinuous(100);
+  sensor.startInterleavedContinuous(500);
 
 }
 

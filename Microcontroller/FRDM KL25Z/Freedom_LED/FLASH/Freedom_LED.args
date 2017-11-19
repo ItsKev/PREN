@@ -22,7 +22,7 @@
 -g3
 -gdwarf-2
 -gstrict-dwarf
--T"D:/15. MyFactory/MC - Microcontroller/HSLU/MC_Uebungen/Freedom_LED/Project_Settings/Linker_Files/ProcessorExpert.ld"
+-T"D:/15. MyFactory/PREN/Microcontroller/FRDM KL25Z/Freedom_LED/Project_Settings/Linker_Files/ProcessorExpert.ld"
 -nostartfiles
 -nodefaultlibs
 -nostdlib

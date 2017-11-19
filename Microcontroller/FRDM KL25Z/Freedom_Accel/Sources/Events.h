@@ -33,6 +33,7 @@
 #include "LEDpin6.h"
 #include "BitIoLdd6.h"
 #include "I2C2.h"
+#include "MCUC1.h"
 #include "PE_LDD.h"
 
 void Cpu_OnNMIINT(void);

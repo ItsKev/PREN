@@ -53,18 +53,19 @@
   29:../Sources/ProcessorExpert.c **** #include "LEDpin6.h"
   30:../Sources/ProcessorExpert.c **** #include "BitIoLdd6.h"
   31:../Sources/ProcessorExpert.c **** #include "I2C2.h"
-  32:../Sources/ProcessorExpert.c **** /* Including shared modules, which are used for whole project */
-  33:../Sources/ProcessorExpert.c **** #include "PE_Types.h"
-  34:../Sources/ProcessorExpert.c **** #include "PE_Error.h"
-  35:../Sources/ProcessorExpert.c **** #include "PE_Const.h"
-  36:../Sources/ProcessorExpert.c **** #include "IO_Map.h"
-  37:../Sources/ProcessorExpert.c **** 
-  38:../Sources/ProcessorExpert.c **** /* User includes (#include below this line is not maintained by Processor Expert) */
-  39:../Sources/ProcessorExpert.c **** #include "MMA8451.h"
-  40:../Sources/ProcessorExpert.c **** 
-  41:../Sources/ProcessorExpert.c **** int main(void)
-  42:../Sources/ProcessorExpert.c **** {
-  26              		.loc 1 42 0
+  32:../Sources/ProcessorExpert.c **** #include "MCUC1.h"
+  33:../Sources/ProcessorExpert.c **** /* Including shared modules, which are used for whole project */
+  34:../Sources/ProcessorExpert.c **** #include "PE_Types.h"
+  35:../Sources/ProcessorExpert.c **** #include "PE_Error.h"
+  36:../Sources/ProcessorExpert.c **** #include "PE_Const.h"
+  37:../Sources/ProcessorExpert.c **** #include "IO_Map.h"
+  38:../Sources/ProcessorExpert.c **** 
+  39:../Sources/ProcessorExpert.c **** /* User includes (#include below this line is not maintained by Processor Expert) */
+  40:../Sources/ProcessorExpert.c **** #include "MMA8451.h"
+  41:../Sources/ProcessorExpert.c **** 
+  42:../Sources/ProcessorExpert.c **** int main(void)
+  43:../Sources/ProcessorExpert.c **** {
+  26              		.loc 1 43 0
   27              		.cfi_startproc
   28 0000 80B5     		push	{r7, lr}
   29              	.LCFI0:
@@ -74,30 +75,30 @@
   33 0002 00AF     		add	r7, sp, #0
   34              	.LCFI1:
   35              		.cfi_def_cfa_register 7
-  43:../Sources/ProcessorExpert.c ****   /* Write your local variable definition here */
-  44:../Sources/ProcessorExpert.c **** 
-  45:../Sources/ProcessorExpert.c ****   /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
-  46:../Sources/ProcessorExpert.c ****   PE_low_level_init();
-  36              		.loc 1 46 0
+  44:../Sources/ProcessorExpert.c ****   /* Write your local variable definition here */
+  45:../Sources/ProcessorExpert.c **** 
+  46:../Sources/ProcessorExpert.c ****   /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
+  47:../Sources/ProcessorExpert.c ****   PE_low_level_init();
+  36              		.loc 1 47 0
   37 0004 FFF7FEFF 		bl	PE_low_level_init
-  47:../Sources/ProcessorExpert.c ****   /*** End of Processor Expert internal initialization.                    ***/
-  48:../Sources/ProcessorExpert.c **** 
-  49:../Sources/ProcessorExpert.c ****   /* Write your code here */
-  50:../Sources/ProcessorExpert.c ****   /* For example: for(;;) { } */
-  51:../Sources/ProcessorExpert.c ****   MMA8451_Run();
-  38              		.loc 1 51 0
+  48:../Sources/ProcessorExpert.c ****   /*** End of Processor Expert internal initialization.                    ***/
+  49:../Sources/ProcessorExpert.c **** 
+  50:../Sources/ProcessorExpert.c ****   /* Write your code here */
+  51:../Sources/ProcessorExpert.c ****   /* For example: for(;;) { } */
+  52:../Sources/ProcessorExpert.c ****   MMA8451_Run();
+  38              		.loc 1 52 0
   39 0008 FFF7FEFF 		bl	MMA8451_Run
   40              	.L2:
-  52:../Sources/ProcessorExpert.c **** 
-  53:../Sources/ProcessorExpert.c ****   /*** Don't write any code pass this line, or it will be deleted during code generation. ***/
-  54:../Sources/ProcessorExpert.c ****   /*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS 
-  55:../Sources/ProcessorExpert.c ****   #ifdef PEX_RTOS_START
-  56:../Sources/ProcessorExpert.c ****     PEX_RTOS_START();                  /* Startup of the selected RTOS. Macro is defined by the RTO
-  57:../Sources/ProcessorExpert.c ****   #endif
-  58:../Sources/ProcessorExpert.c ****   /*** End of RTOS startup code.  ***/
-  59:../Sources/ProcessorExpert.c ****   /*** Processor Expert end of main routine. DON'T MODIFY THIS CODE!!! ***/
-  60:../Sources/ProcessorExpert.c ****   for(;;){}
-  41              		.loc 1 60 0
+  53:../Sources/ProcessorExpert.c **** 
+  54:../Sources/ProcessorExpert.c ****   /*** Don't write any code pass this line, or it will be deleted during code generation. ***/
+  55:../Sources/ProcessorExpert.c ****   /*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS 
+  56:../Sources/ProcessorExpert.c ****   #ifdef PEX_RTOS_START
+  57:../Sources/ProcessorExpert.c ****     PEX_RTOS_START();                  /* Startup of the selected RTOS. Macro is defined by the RTO
+  58:../Sources/ProcessorExpert.c ****   #endif
+  59:../Sources/ProcessorExpert.c ****   /*** End of RTOS startup code.  ***/
+  60:../Sources/ProcessorExpert.c ****   /*** Processor Expert end of main routine. DON'T MODIFY THIS CODE!!! ***/
+  61:../Sources/ProcessorExpert.c ****   for(;;){}
+  41              		.loc 1 61 0
   42 000c FEE7     		b	.L2
   43              		.cfi_endproc
   44              	.LFE0:
@@ -105,8 +106,8 @@
   47              	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 ProcessorExpert.c
-C:\Users\burak\AppData\Local\Temp\ccWJKM2V.s:18     .text.main:00000000 $t
-C:\Users\burak\AppData\Local\Temp\ccWJKM2V.s:23     .text.main:00000000 main
+C:\Users\burak\AppData\Local\Temp\cc0iItBh.s:18     .text.main:00000000 $t
+C:\Users\burak\AppData\Local\Temp\cc0iItBh.s:23     .text.main:00000000 main
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS
