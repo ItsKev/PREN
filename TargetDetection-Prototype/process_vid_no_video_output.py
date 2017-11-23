@@ -56,6 +56,7 @@ def main():
                                     matches.append(approximations[temp])
                                     first_match = False
                                 else:
+                                    print("Found")
                                     cv2.drawContours(image, [approx], -1, (0, 255, 0), 4)
                                     cv2.drawContours(image, [matches[0]], -1, (0, 0, 255), 4)
                                     cv2.drawContours(image, [approximations[temp]], -1, (255, 0, 0), 4)
@@ -63,9 +64,9 @@ def main():
                         approximations.append(approx)
                         last_dimensions.append((w, h))
                         centers.append(np.array((cx, cy)))
-        print("FPS: " + str(1/ (time.time() - loop_time)))
-        cv2.imshow("Image", image)
-        cv2.waitKey(1)
+        print("LoopTime: " + str(time.time() - loop_time))
+        #cv2.imshow("Image", image)
+        #cv2.waitKey(1)
     cap.release()
     cv2.destroyAllWindows()
 
