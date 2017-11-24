@@ -1,171 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PE_PROJECT_SETTINGS_DOCUMENTATION>
-  <PE_product_version v="version 10.3 for Freescale Microcontrollers" />
-  <PE_core_version v="Processor Expert Version 0509" />
+  <PE_product_version v="version 10.5 for Freescale Microcontrollers" />
+  <PE_core_version v="Processor Expert Version 0521" />
   <CPU_Bean name="Cpu" type="MKL25Z128LK4">
     <Enabled v="Y" />
     <Properties>
       <Component_name v="Cpu" />
       <CPU_type v="MKL25Z128VLK4" />
-      <list name="Shared Internal properties" v="1">
-        <EmptySection_DummyValue />
-      </list>
-      <list name="Shared Clock settings" v="1">
-        <group name="Clock settings">
-          <group name="Internal oscillator">
-            <Slow_internal_reference_clock__kHz_ v="32.768000000000" />
-            <boolgroup name="Initialize slow trim value" v="no" />
-            <Fast_internal_reference_clock__MHz_ v="4" />
-            <boolgroup name="Initialize fast trim value" v="no" />
-          </group>
-          <boolgroup name="RTC clock input" v="Disabled" />
-          <boolgroup name="System oscillator 0" v="Disabled" />
-          <list name="Clock source settings" v="1">
-            <group name="Clock source setting 0">
-              <group name="Internal reference clock">
-                <MCGIRCLK_clock v="Enabled" />
-                <MCGIRCLK_in_stop v="Disabled" />
-                <enumgroup name="MCGIRCLK source" v="Slow">
-                  <EmptySection_DummyValue />
-                </enumgroup>
-                <MCGIRCLK_clock__MHz_ v="0.032768000000" />
-              </group>
-              <group name="External reference clock">
-                <OSC0ERCLK_clock v="Enabled" />
-                <OSC0ERCLK_in_stop v="Disabled" />
-                <OSC0ERCLK_clock__MHz_ v="0" />
-                <ERCLK32K_clock_source v="System oscillator 0" />
-                <ERCLK32K__clock__MHz_ v="0" />
-              </group>
-              <group name="MCG settings">
-                <enumgroup name="MCG mode" v="FEI">
-                  <EmptySection_DummyValue />
-                </enumgroup>
-                <MCG_output_clock v="FLL clock" />
-                <MCG_output__MHz_ v="20.971520000000" />
-                <MCG_external_ref__clock__MHz_ v="0" />
-                <Clock_monitor v="Disabled" />
-                <group name="FLL settings">
-                  <FLL_module v="Enabled" />
-                  <FLL_output__MHz_ v="20.971520000000" />
-                  <MCGFFCLK_clock__kHz_ v="32.768000000000" />
-                  <enumgroup name="Reference clock source" v="Slow internal clock">
-                    <EmptySection_DummyValue />
-                  </enumgroup>
-                  <FLL_reference_clock__kHz_ v="32.768000000000" />
-                  <Multiplication_factor v="Auto select" />
-                </group>
-                <group name="PLL 0 settings">
-                  <PLL_module v="Disabled" />
-                  <PLL_module_in_Stop v="Disabled" />
-                  <PLL_output__MHz_ v="0" />
-                  <Reference_clock_divider v="Auto select" />
-                  <PLL_reference_clock__MHz_ v="1" />
-                  <Multiplication_factor v="Auto select" />
-                  <Loss_of_lock_interrupt v="Disabled" />
-                </group>
-              </group>
-            </group>
-          </list>
-        </group>
-      </list>
       <Initialization_priority v="interrupts enabled" />
       <Watchdog_disable v="yes" />
       <group name="Internal peripherals">
-        <list name="Shared NMI settings" v="1">
-          <boolgroup name="NMI pin" v="Enabled">
-            <NMI_Pin v="TSI0_CH5/PTA4/I2C1_SDA/TPM0_CH1/NMI_b" />
-          </boolgroup>
-        </list>
-        <list name="Shared Reset settings" v="1">
-          <boolgroup name="Reset control" v="Enabled">
-            <Reset_pin v="PTA20/RESET_b" />
-            <Filter_in_STOP v="Disabled" />
-            <Filter_in_RUN_WAIT v="Disabled" />
-            <Filter_width v="1" />
-          </boolgroup>
-        </list>
-        <list name="Shared Flash memory organization" v="1">
-          <group name="Flash memory organization">
-            <list name="Shared FLASH settings" v="1">
-              <EmptySection_DummyValue />
-            </list>
-            <list name="Flash blocks" v="1">
-              <group name="Flash block 0">
-                <Address v="0" />
-                <Size v="131072" />
-                <Write_unit_size v="4" />
-                <Erase_unit_size v="1024" />
-                <Protection_unit_size v="4096" />
-              </group>
-            </list>
-          </group>
-        </list>
-        <list name="Shared Flash Config settings" v="1">
-          <boolgroup name="Flash configuration field" v="Disabled" />
-        </list>
-        <list name="Shared Peripheral Bridge MCM settings" v="1">
-          <boolgroup name="MCM settings" v="Disabled" />
-        </list>
-        <list name="Shared Power Management Controller settings" v="1">
-          <group name="Power management controller">
-            <LVD_reset v="Enabled" />
-            <LVD_voltage_treshold v="Low" />
-            <LVW_voltage_treshold v="Low" />
-            <Bandgap_buffer v="Disabled" />
-            <Bandgap_buffer_in_VLPx v="Disabled" />
-            <group name="LVD interrupt">
-              <Interrupt v="INT_LVD_LVW" />
-              <Interrupt_request v="Disabled" />
-              <Interrupt_priority v="0 (Highest)" />
-              <LVD_interrupt v="Disabled" />
-              <LVW_interrupt v="Disabled" />
-            </group>
-          </group>
-        </list>
-        <list name="Shared ClockGate settings" v="1">
-          <group name="System Integration Module">
-            <boolgroup name="CLKOUT pin control" v="Disabled" />
-            <boolgroup name="Clock gating control" v="Disabled" />
-          </group>
-        </list>
+        <EmptySection_DummyValue />
       </group>
-      <list name="Shared CPU interrupts/resets" v="1">
-        <group name="CPU interrupts/resets">
-          <boolgroup name="NMI interrupt" v="Enabled">
-            <Interrupt v="INT_NMI" />
-          </boolgroup>
-          <boolgroup name="Hard Fault" v="Disabled" />
-          <boolgroup name="Bus Fault" v="Disabled" />
-          <boolgroup name="Usage Fault" v="Disabled" />
-          <boolgroup name="Supervisor Call" v="Disabled" />
-          <boolgroup name="Pendable Service" v="Disabled" />
-          <boolgroup name="MCG" v="Disabled" />
-        </group>
-      </list>
       <group name="Low power mode settings">
-        <list name="Shared Low Power Settings" v="1">
-          <group name="Allowed power modes">
-            <Very_low_power_modes v="Not allowed" />
-            <Low_leakage_stop_mode v="Not allowed" />
-            <Very_low_leakage_stop_mode v="Not allowed" />
-          </group>
-        </list>
-        <list name="Shared LLWU settings" v="1">
-          <boolgroup name="LLWU settings" v="Disabled" />
-        </list>
-        <list name="Shared Low Power Settings" v="1">
-          <group name="Operation mode settings">
-            <group name="WAIT operation mode">
-              <Return_to_wait_after_ISR v="no" />
-            </group>
-            <group name="SLEEP operation mode">
-              <Low_Power_mode v="STOP" />
-              <Return_to_stop_after_ISR v="no" />
-            </group>
-            <boolgroup name="STOP operation mode" v="Disabled" />
-          </group>
-        </list>
+        <EmptySection_DummyValue />
       </group>
       <list name="Clock configurations" v="1">
         <group name="Clock configuration 0">
@@ -194,36 +42,10 @@
       </list>
     </Properties>
     <Methods>
-      <list name="CPUCond" v="1">
-        <SetClockConfiguration v="don&amp;apos;t generate code" />
-        <GetClockConfiguration v="don&amp;apos;t generate code" />
-        <SetOperationMode v="don&amp;apos;t generate code" />
-        <EnableInt v="don&amp;apos;t generate code" />
-        <DisableInt v="don&amp;apos;t generate code" />
-        <GetLLSWakeUpFlags v="don&amp;apos;t generate code" />
-        <OpenBackDoor v="don&amp;apos;t generate code" />
-        <MCGAutoTrim v="don&amp;apos;t generate code" />
-        <VLPModeEnable v="don&amp;apos;t generate code" />
-        <VLPModeDisable v="don&amp;apos;t generate code" />
-        <SystemReset v="don&amp;apos;t generate code" />
-      </list>
+      <EmptySection_DummyValue />
     </Methods>
     <Events>
       <Event_module_name v="Events" />
-      <list name="EvntsShrdGrp" v="1">
-        <event name="OnReset" v="don&amp;apos;t generate code" />
-        <event name="OnNMIINT" v="generate code">
-          <Event_procedure_name v="Cpu_OnNMIINT" />
-        </event>
-        <event name="OnHardFault" v="don&amp;apos;t generate code" />
-        <event name="OnBusFault" v="don&amp;apos;t generate code" />
-        <event name="OnUsageFault" v="don&amp;apos;t generate code" />
-        <event name="OnSupervisorCall" v="don&amp;apos;t generate code" />
-        <event name="OnPendableService" v="don&amp;apos;t generate code" />
-        <event name="OnLossOfLockINT" v="don&amp;apos;t generate code" />
-        <event name="OnLowVoltageINT" v="don&amp;apos;t generate code" />
-        <event name="OnLLSWakeUpINT" v="don&amp;apos;t generate code" />
-      </list>
     </Events>
     <Compiler v="GNU C Compiler" />
     <CompilerProperties>
@@ -246,9 +68,7 @@ PE_DEBUGHALT();
           <StrgList></StrgList>
         </User_code_after_PE_initialization>
       </group>
-      <boolgroup name="Generate debugger files" v="yes">
-        <Generate_mem_file v="yes" />
-      </boolgroup>
+      <boolgroup name="Generate debugger files" v="no" />
       <group name="Startup">
         <Add_startup_file v="no" />
       </group>
@@ -610,9 +430,6 @@ PE_DEBUGHALT();
       </group>
       <group name="Initialization">
         <Enabled_in_init_code v="yes" />
-        <list name="Auto Initialization" v="1">
-          <Auto_initialization v="no" />
-        </list>
         <group name="Event mask">
           <OnMasterBlockSent v="Enabled" />
           <OnMasterBlockReceived v="Enabled" />
@@ -629,18 +446,6 @@ PE_DEBUGHALT();
           <OnBusStopDetected v="Disabled" />
         </group>
       </group>
-      <list name="CPU clock/configuration selection (included)" v="1">
-        <group name="CPU clock/configuration selection">
-          <Clock_configuration_0 v="This component enabled" />
-          <Clock_configuration_1 v="This component disabled" />
-          <Clock_configuration_2 v="This component disabled" />
-          <Clock_configuration_3 v="This component disabled" />
-          <Clock_configuration_4 v="This component disabled" />
-          <Clock_configuration_5 v="This component disabled" />
-          <Clock_configuration_6 v="This component disabled" />
-          <Clock_configuration_7 v="This component disabled" />
-        </group>
-      </list>
     </Properties>
     <Methods>
       <Init v="generate code" />

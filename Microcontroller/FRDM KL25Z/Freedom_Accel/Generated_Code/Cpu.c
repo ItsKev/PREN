@@ -5,17 +5,145 @@
 **     Processor   : MKL25Z128VLK4
 **     Component   : MKL25Z128LK4
 **     Version     : Component 01.025, Driver 01.04, CPU db: 3.00.000
+**     Repository  : Kinetis
 **     Datasheet   : KL25P80M48SF0RM, Rev.3, Sep 2012
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2017-11-04, 02:10, # CodeGen: 0
+**     Date/Time   : 2017-11-24, 19:35, # CodeGen: 2
 **     Abstract    :
 **
 **     Settings    :
-**
+**          Component name                                 : Cpu
+**          CPU type                                       : MKL25Z128VLK4
+**          CPU                                            : CPU
+**          MemModelDev                                    : MemModel_NoFlexMem
+**          Clock settings                                 : 
+**            Internal oscillator                          : 
+**              Slow internal reference clock [kHz]        : 32.768
+**              Initialize slow trim value                 : no
+**              Fast internal reference clock [MHz]        : 4
+**              Initialize fast trim value                 : no
+**            RTC clock input                              : Disabled
+**            System oscillator 0                          : Disabled
+**            Clock source settings                        : 1
+**              Clock source setting 0                     : 
+**                Internal reference clock                 : 
+**                  MCGIRCLK clock                         : Enabled
+**                  MCGIRCLK in stop                       : Disabled
+**                  MCGIRCLK source                        : Slow
+**                  MCGIRCLK clock [MHz]                   : 0.032768
+**                External reference clock                 : 
+**                  OSC0ERCLK clock                        : Enabled
+**                  OSC0ERCLK in stop                      : Disabled
+**                  OSC0ERCLK clock [MHz]                  : 0
+**                  ERCLK32K clock source                  : System oscillator 0
+**                  ERCLK32K. clock [MHz]                  : 0
+**                MCG settings                             : 
+**                  MCG mode                               : FEI
+**                  MCG output clock                       : FLL clock
+**                  MCG output [MHz]                       : 20.97152
+**                  MCG external ref. clock [MHz]          : 0
+**                  Clock monitor                          : Disabled
+**                  FLL settings                           : 
+**                    FLL module                           : Enabled
+**                    FLL output [MHz]                     : 20.97152
+**                    MCGFFCLK clock [kHz]                 : 32.768
+**                    Reference clock source               : Slow internal clock
+**                    FLL reference clock [kHz]            : 32.768
+**                    Multiplication factor                : Auto select
+**                  PLL 0 settings                         : 
+**                    PLL module                           : Disabled
+**                    PLL module in Stop                   : Disabled
+**                    PLL output [MHz]                     : 0
+**                    Reference clock divider              : Auto select
+**                    PLL reference clock [MHz]            : 1
+**                    Multiplication factor                : Auto select
+**                    Loss of lock interrupt               : Disabled
+**          Initialization priority                        : interrupts enabled
+**          Watchdog disable                               : yes
+**          Internal peripherals                           : 
+**            NMI pin                                      : Enabled
+**              NMI Pin                                    : TSI0_CH5/PTA4/I2C1_SDA/TPM0_CH1/NMI_b
+**              NMI Pin signal                             : 
+**            Reset control                                : Enabled
+**              Reset pin                                  : PTA20/RESET_b
+**              Reset pin signal                           : 
+**              Filter in STOP                             : Disabled
+**              Filter in RUN/WAIT                         : Disabled
+**              Filter width                               : 1
+**            Flash memory organization                    : 
+**              Flash blocks                               : 1
+**                Flash block 0                            : PFlash
+**                  Address                                : 0x0
+**                  Size                                   : 131072
+**                  Write unit size                        : 4
+**                  Erase unit size                        : 1024
+**                  Protection unit size                   : 4096
+**            Flash configuration field                    : Disabled
+**            MCM settings                                 : Disabled
+**            Power management controller                  : 
+**              LVD reset                                  : Enabled
+**              LVD voltage treshold                       : Low
+**              LVW voltage treshold                       : Low
+**              Bandgap buffer                             : Disabled
+**              Bandgap buffer in VLPx                     : Disabled
+**              LVD interrupt                              : 
+**                Interrupt                                : INT_LVD_LVW
+**                Interrupt request                        : Disabled
+**                Interrupt priority                       : 0 (Highest)
+**                LVD interrupt                            : Disabled
+**                LVW interrupt                            : Disabled
+**            System Integration Module                    : 
+**              CLKOUT pin control                         : Disabled
+**              Clock gating control                       : Disabled
+**          CPU interrupts/resets                          : 
+**            NMI interrupt                                : Enabled
+**              Interrupt                                  : INT_NMI
+**            Hard Fault                                   : Disabled
+**            Bus Fault                                    : Disabled
+**            Usage Fault                                  : Disabled
+**            Supervisor Call                              : Disabled
+**            Pendable Service                             : Disabled
+**            MCG                                          : Disabled
+**          Low power mode settings                        : 
+**            Allowed power modes                          : 
+**              Very low power modes                       : Not allowed
+**              Low leakage stop mode                      : Not allowed
+**              Very low leakage stop mode                 : Not allowed
+**            LLWU settings                                : Disabled
+**            Operation mode settings                      : 
+**              WAIT operation mode                        : 
+**                Return to wait after ISR                 : no
+**              SLEEP operation mode                       : 
+**                Low Power mode                           : STOP
+**                Return to stop after ISR                 : no
+**              STOP operation mode                        : Disabled
+**          Clock configurations                           : 1
+**            Clock configuration 0                        : 
+**              __IRC_32kHz                                : 0.032768
+**              __IRC_4MHz                                 : 2
+**              __SYSTEM_OSC                               : 8
+**              __RTC_CLKIN                                : 0.032768
+**              Very low power mode                        : Disabled
+**              Clock source setting                       : configuration 0
+**                MCG mode                                 : FEI
+**                MCG output [MHz]                         : 20.97152
+**                MCGIRCLK clock [MHz]                     : 0.032768
+**                OSCERCLK clock [MHz]                     : 0
+**                ERCLK32K. clock [MHz]                    : 0
+**                MCGFFCLK [kHz]                           : 32.768
+**              System clocks                              : 
+**                Core clock prescaler                     : Auto select
+**                Core clock                               : 20.97152
+**                Bus clock prescaler                      : Auto select
+**                Bus clock                                : 20.97152
+**                PLL/FLL clock selection                  : Auto select
+**                  Clock frequency [MHz]                  : 20.97152
+**                TPM clock selection                      : Auto select
+**                  Clock frequency [MHz]                  : 20.97152
 **     Contents    :
 **         No public methods
 **
-**     Copyright : 1997 - 2014 Freescale Semiconductor, Inc. 
+**     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
 **     
 **     Redistribution and use in source and binary forms, with or without modification,
@@ -147,8 +275,8 @@ void __init_hardware(void)
   }
   /* SIM_CLKDIV1: OUTDIV1=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,OUTDIV4=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0 */
   SIM_CLKDIV1 = (SIM_CLKDIV1_OUTDIV1(0x00) | SIM_CLKDIV1_OUTDIV4(0x00)); /* Update system prescalers */
-  /* SIM_SOPT2: PLLFLLSEL=0 */
-  SIM_SOPT2 &= (uint32_t)~(uint32_t)(SIM_SOPT2_PLLFLLSEL_MASK); /* Select FLL as a clock source for various peripherals */
+  /* SIM_SOPT2: ??=0,PLLFLLSEL=0 */
+  SIM_SOPT2 &= (uint32_t)~(uint32_t)((SIM_SOPT2_PLLFLLSEL_MASK | 0x00020000U)); /* Select FLL as a clock source for various peripherals */
   /* SIM_SOPT1: OSC32KSEL=0 */
   SIM_SOPT1 &= (uint32_t)~(uint32_t)(SIM_SOPT1_OSC32KSEL(0x03)); /* System oscillator drives 32 kHz clock for various peripherals */
   /* SIM_SOPT2: TPMSRC=1 */
@@ -277,7 +405,7 @@ void PE_low_level_init(void)
 /*
 ** ###################################################################
 **
-**     This file was created by Processor Expert 10.3 [05.09]
+**     This file was created by Processor Expert 10.5 [05.21]
 **     for the Freescale Kinetis series of microcontrollers.
 **
 ** ###################################################################

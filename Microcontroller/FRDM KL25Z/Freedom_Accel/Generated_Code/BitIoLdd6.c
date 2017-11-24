@@ -5,8 +5,9 @@
 **     Processor   : MKL25Z128VLK4
 **     Component   : BitIO_LDD
 **     Version     : Component 01.033, Driver 01.03, CPU db: 3.00.000
+**     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2017-11-04, 02:10, # CodeGen: 0
+**     Date/Time   : 2017-11-24, 19:35, # CodeGen: 2
 **     Abstract    :
 **         The HAL BitIO component provides a low level API for unified
 **         access to general purpose digital input/output pins across
@@ -31,7 +32,7 @@
 **         SetVal - void BitIoLdd6_SetVal(LDD_TDeviceData *DeviceDataPtr);
 **         NegVal - void BitIoLdd6_NegVal(LDD_TDeviceData *DeviceDataPtr);
 **
-**     Copyright : 1997 - 2014 Freescale Semiconductor, Inc. 
+**     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
 **     
 **     Redistribution and use in source and binary forms, with or without modification,
@@ -244,7 +245,7 @@ void BitIoLdd6_NegVal(LDD_TDeviceData *DeviceDataPtr)
 /*
 ** ###################################################################
 **
-**     This file was created by Processor Expert 10.3 [05.09]
+**     This file was created by Processor Expert 10.5 [05.21]
 **     for the Freescale Kinetis series of microcontrollers.
 **
 ** ###################################################################

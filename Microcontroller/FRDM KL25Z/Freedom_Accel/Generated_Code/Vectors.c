@@ -4,14 +4,15 @@
 **     Project     : ProcessorExpert
 **     Processor   : MKL25Z128VLK4
 **     Version     : Component 01.025, Driver 01.04, CPU db: 3.00.000
+**     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2017-11-04, 02:10, # CodeGen: 0
+**     Date/Time   : 2017-11-24, 19:35, # CodeGen: 2
 **     Abstract    :
 **
 **     Settings    :
 **
 **
-**     Copyright : 1997 - 2014 Freescale Semiconductor, Inc. 
+**     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
 **     
 **     Redistribution and use in source and binary forms, with or without modification,
@@ -107,7 +108,7 @@
     (tIsrFunc)&Cpu_Interrupt,          /* 0x14  0x00000050   -   ivINT_Reserved20              unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x15  0x00000054   -   ivINT_FTFA                    unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x16  0x00000058   -   ivINT_LVD_LVW                 unused by PE */
-    (tIsrFunc)&Cpu_Interrupt,          /* 0x17  0x0000005C   -   ivINT_LLW                     unused by PE */
+    (tIsrFunc)&Cpu_Interrupt,          /* 0x17  0x0000005C   -   ivINT_LLWU                    unused by PE */
     (tIsrFunc)&I2C2_Interrupt,         /* 0x18  0x00000060   2   ivINT_I2C0                    used by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x19  0x00000064   -   ivINT_I2C1                    unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x1A  0x00000068   -   ivINT_SPI0                    unused by PE */
@@ -128,7 +129,7 @@
     (tIsrFunc)&Cpu_Interrupt,          /* 0x29  0x000000A4   -   ivINT_DAC0                    unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x2A  0x000000A8   -   ivINT_TSI0                    unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x2B  0x000000AC   -   ivINT_MCG                     unused by PE */
-    (tIsrFunc)&Cpu_Interrupt,          /* 0x2C  0x000000B0   -   ivINT_LPTimer                 unused by PE */
+    (tIsrFunc)&Cpu_Interrupt,          /* 0x2C  0x000000B0   -   ivINT_LPTMR0                  unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x2D  0x000000B4   -   ivINT_Reserved45              unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x2E  0x000000B8   -   ivINT_PORTA                   unused by PE */
     (tIsrFunc)&Cpu_Interrupt           /* 0x2F  0x000000BC   -   ivINT_PORTD                   unused by PE */
@@ -143,7 +144,7 @@
 /*
 ** ###################################################################
 **
-**     This file was created by Processor Expert 10.3 [05.09]
+**     This file was created by Processor Expert 10.5 [05.21]
 **     for the Freescale Kinetis series of microcontrollers.
 **
 ** ###################################################################

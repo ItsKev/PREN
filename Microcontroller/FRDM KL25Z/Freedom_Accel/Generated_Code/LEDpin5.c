@@ -5,8 +5,9 @@
 **     Processor   : MKL25Z128VLK4
 **     Component   : BitIO
 **     Version     : Component 02.086, Driver 01.00, CPU db: 3.00.000
+**     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2017-11-04, 02:10, # CodeGen: 0
+**     Date/Time   : 2017-11-24, 19:35, # CodeGen: 2
 **     Abstract    :
 **         This component "BitIO" implements an one-bit input/output.
 **         It uses one bit/pin of a port.
@@ -14,33 +15,23 @@
 **         Methods of this component are mostly implemented as a macros
 **         (if supported by target language and compiler).
 **     Settings    :
-**         Used pin                    :
-**             ----------------------------------------------------
-**                Number (on package)  |    Name
-**             ----------------------------------------------------
-**                       54            |  TSI0_CH12/PTB19/TPM2_CH1
-**             ----------------------------------------------------
-**
-**         Port name                   : PTB
-**
-**         Bit number (in port)        : 19
-**         Bit mask of the port        : 0x00080000
-**
-**         Initial direction           : Output (direction cannot be changed)
-**         Initial output value        : 0
-**         Initial pull option         : off
-**
-**         Port data register          : GPIOB_PDOR [0x400FF040]
-**         Port control register       : GPIOB_PDDR [0x400FF054]
-**
-**         Optimization for            : speed
+**          Component name                                 : LEDpin5
+**          Pin for I/O                                    : TSI0_CH12/PTB19/TPM2_CH1
+**          Pin signal                                     : LED_GREEN
+**          BitIO_LDD                                      : BitIO_LDD
+**          Direction                                      : Output
+**          Initialization                                 : 
+**            Init. direction                              : Output
+**            Init. value                                  : 0
+**          Safe mode                                      : yes
+**          Optimization for                               : speed
 **     Contents    :
 **         GetVal - bool LEDpin5_GetVal(void);
 **         ClrVal - void LEDpin5_ClrVal(void);
 **         SetVal - void LEDpin5_SetVal(void);
 **         NegVal - void LEDpin5_NegVal(void);
 **
-**     Copyright : 1997 - 2014 Freescale Semiconductor, Inc. 
+**     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
 **     
 **     Redistribution and use in source and binary forms, with or without modification,
@@ -174,7 +165,7 @@ void LEDpin5_NegVal(void)
 /*
 ** ###################################################################
 **
-**     This file was created by Processor Expert 10.3 [05.09]
+**     This file was created by Processor Expert 10.5 [05.21]
 **     for the Freescale Kinetis series of microcontrollers.
 **
 ** ###################################################################

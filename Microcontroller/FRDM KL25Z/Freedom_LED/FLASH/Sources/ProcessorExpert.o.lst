@@ -53,83 +53,89 @@
   29:../Sources/ProcessorExpert.c **** #include "LEDpin1.h"
   30:../Sources/ProcessorExpert.c **** #include "BitIoLdd1.h"
   31:../Sources/ProcessorExpert.c **** #include "WAIT1.h"
-  32:../Sources/ProcessorExpert.c **** /* Including shared modules, which are used for whole project */
-  33:../Sources/ProcessorExpert.c **** #include "PE_Types.h"
-  34:../Sources/ProcessorExpert.c **** #include "PE_Error.h"
-  35:../Sources/ProcessorExpert.c **** #include "PE_Const.h"
-  36:../Sources/ProcessorExpert.c **** #include "IO_Map.h"
-  37:../Sources/ProcessorExpert.c **** 
-  38:../Sources/ProcessorExpert.c **** /* User includes (#include below this line is not maintained by Processor Expert) */
-  39:../Sources/ProcessorExpert.c **** 
-  40:../Sources/ProcessorExpert.c **** /*lint -save  -e970 Disable MISRA rule (6.3) checking. */
-  41:../Sources/ProcessorExpert.c **** int main(void)
-  42:../Sources/ProcessorExpert.c **** /*lint -restore Enable MISRA rule (6.3) checking. */
-  43:../Sources/ProcessorExpert.c **** {
-  26              		.loc 1 43 0
+  32:../Sources/ProcessorExpert.c **** #include "MCUC1.h"
+  33:../Sources/ProcessorExpert.c **** /* Including shared modules, which are used for whole project */
+  34:../Sources/ProcessorExpert.c **** #include "PE_Types.h"
+  35:../Sources/ProcessorExpert.c **** #include "PE_Error.h"
+  36:../Sources/ProcessorExpert.c **** #include "PE_Const.h"
+  37:../Sources/ProcessorExpert.c **** #include "IO_Map.h"
+  38:../Sources/ProcessorExpert.c **** 
+  39:../Sources/ProcessorExpert.c **** /* User includes (#include below this line is not maintained by Processor Expert) */
+  40:../Sources/ProcessorExpert.c **** 
+  41:../Sources/ProcessorExpert.c **** /*lint -save  -e970 Disable MISRA rule (6.3) checking. */
+  42:../Sources/ProcessorExpert.c **** int main(void)
+  43:../Sources/ProcessorExpert.c **** /*lint -restore Enable MISRA rule (6.3) checking. */
+  44:../Sources/ProcessorExpert.c **** {
+  26              		.loc 1 44 0
   27              		.cfi_startproc
   28 0000 10B5     		push	{r4, lr}
   29              	.LCFI0:
   30              		.cfi_def_cfa_offset 8
   31              		.cfi_offset 4, -8
   32              		.cfi_offset 14, -4
-  33 0002 0A4C     		ldr	r4, .L4
-  34              	.L2:
-  44:../Sources/ProcessorExpert.c ****   /* Write your local variable definition here */
-  45:../Sources/ProcessorExpert.c **** 
-  46:../Sources/ProcessorExpert.c ****   /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
-  47:../Sources/ProcessorExpert.c ****   /*** End of Processor Expert internal initialization.                    ***/
-  48:../Sources/ProcessorExpert.c **** 
-  49:../Sources/ProcessorExpert.c ****   /* Write your code here */
-  50:../Sources/ProcessorExpert.c ****   for(;;) {
-  51:../Sources/ProcessorExpert.c **** 	  WAIT1_Waitms(100);
-  35              		.loc 1 51 0
-  36 0004 6420     		mov	r0, #100
-  37 0006 FFF7FEFF 		bl	WAIT1_Waitms
-  38              	.LVL0:
-  52:../Sources/ProcessorExpert.c ****     LEDR_Neg();
-  39              		.loc 1 52 0
-  40 000a 2068     		ldr	r0, [r4]
-  41 000c FFF7FEFF 		bl	BitIoLdd3_NegVal
-  42              	.LVL1:
-  53:../Sources/ProcessorExpert.c **** 	  WAIT1_Waitms(200);
-  43              		.loc 1 53 0
-  44 0010 C820     		mov	r0, #200
-  45 0012 FFF7FEFF 		bl	WAIT1_Waitms
-  46              	.LVL2:
-  54:../Sources/ProcessorExpert.c ****     LEDG_Neg();
-  47              		.loc 1 54 0
-  48 0016 6068     		ldr	r0, [r4, #4]
-  49 0018 FFF7FEFF 		bl	BitIoLdd2_NegVal
-  50              	.LVL3:
-  55:../Sources/ProcessorExpert.c **** 	  WAIT1_Waitms(400);
-  51              		.loc 1 55 0
-  52 001c C820     		mov	r0, #200
-  53 001e 4000     		lsl	r0, r0, #1
-  54 0020 FFF7FEFF 		bl	WAIT1_Waitms
-  55              	.LVL4:
-  56:../Sources/ProcessorExpert.c ****     LEDB_Neg();
-  56              		.loc 1 56 0
-  57 0024 A068     		ldr	r0, [r4, #8]
-  58 0026 FFF7FEFF 		bl	BitIoLdd1_NegVal
-  59              	.LVL5:
-  60 002a EBE7     		b	.L2
-  61              	.L5:
-  62              		.align	2
-  63              	.L4:
-  64 002c 00000000 		.word	PE_LDD_DeviceDataList
-  65              		.cfi_endproc
-  66              	.LFE0:
-  68              		.text
-  69              	.Letext0:
-  70              		.file 2 "D:/15. MyFactory/PREN/Microcontroller/FRDM KL25Z/Freedom_LED/Generated_Code/PE_LDD.h"
+  45:../Sources/ProcessorExpert.c ****   /* Write your local variable definition here */
+  46:../Sources/ProcessorExpert.c **** 
+  47:../Sources/ProcessorExpert.c ****   /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
+  48:../Sources/ProcessorExpert.c ****   PE_low_level_init();
+  33              		.loc 1 48 0
+  34 0002 FFF7FEFF 		bl	PE_low_level_init
+  35              	.LVL0:
+  36 0006 0A4C     		ldr	r4, .L4
+  37              	.L2:
+  49:../Sources/ProcessorExpert.c ****   /*** End of Processor Expert internal initialization.                    ***/
+  50:../Sources/ProcessorExpert.c **** 
+  51:../Sources/ProcessorExpert.c ****   /* Write your code here */
+  52:../Sources/ProcessorExpert.c ****   for(;;) {
+  53:../Sources/ProcessorExpert.c **** 	  WAIT1_Waitms(100);
+  38              		.loc 1 53 0
+  39 0008 6420     		mov	r0, #100
+  40 000a FFF7FEFF 		bl	WAIT1_Waitms
+  41              	.LVL1:
+  54:../Sources/ProcessorExpert.c ****     LEDR_Neg();
+  42              		.loc 1 54 0
+  43 000e 2068     		ldr	r0, [r4]
+  44 0010 FFF7FEFF 		bl	BitIoLdd3_NegVal
+  45              	.LVL2:
+  55:../Sources/ProcessorExpert.c **** 	  WAIT1_Waitms(200);
+  46              		.loc 1 55 0
+  47 0014 C820     		mov	r0, #200
+  48 0016 FFF7FEFF 		bl	WAIT1_Waitms
+  49              	.LVL3:
+  56:../Sources/ProcessorExpert.c ****     LEDG_Neg();
+  50              		.loc 1 56 0
+  51 001a 6068     		ldr	r0, [r4, #4]
+  52 001c FFF7FEFF 		bl	BitIoLdd2_NegVal
+  53              	.LVL4:
+  57:../Sources/ProcessorExpert.c **** 	  WAIT1_Waitms(400);
+  54              		.loc 1 57 0
+  55 0020 C820     		mov	r0, #200
+  56 0022 4000     		lsl	r0, r0, #1
+  57 0024 FFF7FEFF 		bl	WAIT1_Waitms
+  58              	.LVL5:
+  58:../Sources/ProcessorExpert.c ****     LEDB_Neg();
+  59              		.loc 1 58 0
+  60 0028 A068     		ldr	r0, [r4, #8]
+  61 002a FFF7FEFF 		bl	BitIoLdd1_NegVal
+  62              	.LVL6:
+  63 002e EBE7     		b	.L2
+  64              	.L5:
+  65              		.align	2
+  66              	.L4:
+  67 0030 00000000 		.word	PE_LDD_DeviceDataList
+  68              		.cfi_endproc
+  69              	.LFE0:
+  71              		.text
+  72              	.Letext0:
+  73              		.file 2 "D:/15. MyFactory/PREN/Microcontroller/FRDM KL25Z/Freedom_LED/Generated_Code/PE_Types.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 ProcessorExpert.c
-C:\Users\burak\AppData\Local\Temp\cctym5p2.s:18     .text.startup.main:00000000 $t
-C:\Users\burak\AppData\Local\Temp\cctym5p2.s:23     .text.startup.main:00000000 main
-C:\Users\burak\AppData\Local\Temp\cctym5p2.s:64     .text.startup.main:0000002c $d
+C:\Users\burak\AppData\Local\Temp\cc9kEzVu.s:18     .text.startup.main:00000000 $t
+C:\Users\burak\AppData\Local\Temp\cc9kEzVu.s:23     .text.startup.main:00000000 main
+C:\Users\burak\AppData\Local\Temp\cc9kEzVu.s:67     .text.startup.main:00000030 $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS
+PE_low_level_init
 WAIT1_Waitms
 BitIoLdd3_NegVal
 BitIoLdd2_NegVal

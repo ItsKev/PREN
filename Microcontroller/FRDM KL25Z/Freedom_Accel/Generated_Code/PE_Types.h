@@ -6,16 +6,15 @@
 **     Component   : PE_Types
 **     Version     : Driver 01.01
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2017-11-04, 02:10, # CodeGen: 0
+**     Date/Time   : 2017-11-24, 19:35, # CodeGen: 2
 **     Abstract    :
 **         PE_Types.h - contains definitions of basic types,
 **         register access macros and hardware specific macros
 **         which can be used in user application.
-**     Settings    :
 **     Contents    :
 **         No public methods
 **
-**     Copyright : 1997 - 2014 Freescale Semiconductor, Inc. 
+**     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
 **     
 **     Redistribution and use in source and binary forms, with or without modification,
@@ -125,6 +124,7 @@ typedef unsigned long int       uint32;
  } while(0)
 
 
+
 /* Save status register and disable interrupts */
 #define EnterCritical() \
  do {\
@@ -142,6 +142,7 @@ typedef unsigned long int       uint32;
    }\
  } while(0)
 
+ 
 /* Restore status register  */
 #define ExitCritical() \
  do {\
@@ -2462,7 +2463,7 @@ typedef enum {
 #define LDD_ivIndex_INT_Reserved20              0x14u
 #define LDD_ivIndex_INT_FTFA                    0x15u
 #define LDD_ivIndex_INT_LVD_LVW                 0x16u
-#define LDD_ivIndex_INT_LLW                     0x17u
+#define LDD_ivIndex_INT_LLWU                    0x17u
 #define LDD_ivIndex_INT_I2C0                    0x18u
 #define LDD_ivIndex_INT_I2C1                    0x19u
 #define LDD_ivIndex_INT_SPI0                    0x1Au
@@ -2483,7 +2484,7 @@ typedef enum {
 #define LDD_ivIndex_INT_DAC0                    0x29u
 #define LDD_ivIndex_INT_TSI0                    0x2Au
 #define LDD_ivIndex_INT_MCG                     0x2Bu
-#define LDD_ivIndex_INT_LPTimer                 0x2Cu
+#define LDD_ivIndex_INT_LPTMR0                  0x2Cu
 #define LDD_ivIndex_INT_Reserved45              0x2Du
 #define LDD_ivIndex_INT_PORTA                   0x2Eu
 #define LDD_ivIndex_INT_PORTD                   0x2Fu
@@ -2496,7 +2497,7 @@ typedef enum {
 /*
 ** ###################################################################
 **
-**     This file was created by Processor Expert 10.3 [05.09]
+**     This file was created by Processor Expert 10.5 [05.21]
 **     for the Freescale Kinetis series of microcontrollers.
 **
 ** ###################################################################

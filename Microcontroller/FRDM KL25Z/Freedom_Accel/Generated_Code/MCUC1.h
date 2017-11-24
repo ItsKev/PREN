@@ -5,13 +5,15 @@
 **     Processor   : MKL25Z128VLK4
 **     Component   : McuLibConfig
 **     Version     : Component 01.008, Driver 01.00, CPU db: 3.00.000
+**     Repository  : My Components
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2017-11-04, 02:10, # CodeGen: 0
+**     Date/Time   : 2017-11-24, 17:51, # CodeGen: 1
 **     Abstract    :
 **
 **     Settings    :
 **          Component name                                 : MCUC1
 **          SDK                                            : Processor Expert
+**          Config Files Folder                            : 
 **     Contents    :
 **         No public methods
 **
@@ -171,7 +173,7 @@ extern "C" {
 /*
 ** ###################################################################
 **
-**     This file was created by Processor Expert 10.3 [05.09]
+**     This file was created by Processor Expert 10.5 [05.21]
 **     for the Freescale Kinetis series of microcontrollers.
 **
 ** ###################################################################
