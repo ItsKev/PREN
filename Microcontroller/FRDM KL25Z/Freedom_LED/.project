@@ -3,6 +3,8 @@
 	<name>Freedom_LED</name>
 	<comment></comment>
 	<projects>
+		<project location="PARENT-1-PROJECT_LOC/Freedom_Servo">
+Freedom_Servo		</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

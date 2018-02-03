@@ -6,15 +6,17 @@
 **     Component   : IO_Map
 **     Version     : Driver 01.00
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2017-11-24, 19:35, # CodeGen: 2
+**     Date/Time   : 2017-12-17, 22:11, # CodeGen: 4
 **     Abstract    :
 **         IO_Map.h - implements an IO device's mapping. 
 **         This module contains symbol definitions of all peripheral 
 **         registers and bits. 
+**     Settings    :
+**
 **     Contents    :
 **         No public methods
 **
-**     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
+**     Copyright : 1997 - 2014 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
 **     
 **     Redistribution and use in source and binary forms, with or without modification,
@@ -72,7 +74,7 @@
 /*
 ** ###################################################################
 **
-**     This file was created by Processor Expert 10.5 [05.21]
+**     This file was created by Processor Expert 10.3 [05.09]
 **     for the Freescale Kinetis series of microcontrollers.
 **
 ** ###################################################################

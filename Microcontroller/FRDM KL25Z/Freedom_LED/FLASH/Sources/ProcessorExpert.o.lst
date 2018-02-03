@@ -23,97 +23,96 @@
   24              	.LFB0:
   25              		.file 1 "../Sources/ProcessorExpert.c"
    1:../Sources/ProcessorExpert.c **** /** ###################################################################
-   2:../Sources/ProcessorExpert.c **** **     Filename    : ProcessorExpert.c
-   3:../Sources/ProcessorExpert.c **** **     Project     : ProcessorExpert
-   4:../Sources/ProcessorExpert.c **** **     Processor   : MKL25Z128VLK4
-   5:../Sources/ProcessorExpert.c **** **     Version     : Driver 01.01
-   6:../Sources/ProcessorExpert.c **** **     Compiler    : GNU C Compiler
-   7:../Sources/ProcessorExpert.c **** **     Date/Time   : 2012-08-23, 07:53, # CodeGen: 0
-   8:../Sources/ProcessorExpert.c **** **     Abstract    :
-   9:../Sources/ProcessorExpert.c **** **         Main module.
-  10:../Sources/ProcessorExpert.c **** **         This module contains user's application code.
-  11:../Sources/ProcessorExpert.c **** **     Settings    :
-  12:../Sources/ProcessorExpert.c **** **     Contents    :
-  13:../Sources/ProcessorExpert.c **** **         No public methods
-  14:../Sources/ProcessorExpert.c **** **
-  15:../Sources/ProcessorExpert.c **** ** ###################################################################*/
+   2:../Sources/ProcessorExpert.c ****  **     Filename    : ProcessorExpert.c
+   3:../Sources/ProcessorExpert.c ****  **     Project     : ProcessorExpert
+   4:../Sources/ProcessorExpert.c ****  **     Processor   : MKL25Z128VLK4
+   5:../Sources/ProcessorExpert.c ****  **     Version     : Driver 01.01
+   6:../Sources/ProcessorExpert.c ****  **     Compiler    : GNU C Compiler
+   7:../Sources/ProcessorExpert.c ****  **     Date/Time   : 2012-08-23, 07:53, # CodeGen: 0
+   8:../Sources/ProcessorExpert.c ****  **     Abstract    :
+   9:../Sources/ProcessorExpert.c ****  **         Main module.
+  10:../Sources/ProcessorExpert.c ****  **         This module contains user's application code.
+  11:../Sources/ProcessorExpert.c ****  **     Settings    :
+  12:../Sources/ProcessorExpert.c ****  **     Contents    :
+  13:../Sources/ProcessorExpert.c ****  **         No public methods
+  14:../Sources/ProcessorExpert.c ****  **
+  15:../Sources/ProcessorExpert.c ****  ** ###################################################################*/
   16:../Sources/ProcessorExpert.c **** /* MODULE ProcessorExpert */
   17:../Sources/ProcessorExpert.c **** 
-  18:../Sources/ProcessorExpert.c **** 
-  19:../Sources/ProcessorExpert.c **** /* Including needed modules to compile this module/procedure */
-  20:../Sources/ProcessorExpert.c **** #include "Cpu.h"
-  21:../Sources/ProcessorExpert.c **** #include "Events.h"
-  22:../Sources/ProcessorExpert.c **** #include "LEDR.h"
-  23:../Sources/ProcessorExpert.c **** #include "LEDpin3.h"
-  24:../Sources/ProcessorExpert.c **** #include "BitIoLdd3.h"
-  25:../Sources/ProcessorExpert.c **** #include "LEDG.h"
-  26:../Sources/ProcessorExpert.c **** #include "LEDpin2.h"
-  27:../Sources/ProcessorExpert.c **** #include "BitIoLdd2.h"
-  28:../Sources/ProcessorExpert.c **** #include "LEDB.h"
-  29:../Sources/ProcessorExpert.c **** #include "LEDpin1.h"
-  30:../Sources/ProcessorExpert.c **** #include "BitIoLdd1.h"
-  31:../Sources/ProcessorExpert.c **** #include "WAIT1.h"
-  32:../Sources/ProcessorExpert.c **** #include "MCUC1.h"
-  33:../Sources/ProcessorExpert.c **** /* Including shared modules, which are used for whole project */
-  34:../Sources/ProcessorExpert.c **** #include "PE_Types.h"
-  35:../Sources/ProcessorExpert.c **** #include "PE_Error.h"
-  36:../Sources/ProcessorExpert.c **** #include "PE_Const.h"
-  37:../Sources/ProcessorExpert.c **** #include "IO_Map.h"
-  38:../Sources/ProcessorExpert.c **** 
-  39:../Sources/ProcessorExpert.c **** /* User includes (#include below this line is not maintained by Processor Expert) */
-  40:../Sources/ProcessorExpert.c **** 
-  41:../Sources/ProcessorExpert.c **** /*lint -save  -e970 Disable MISRA rule (6.3) checking. */
-  42:../Sources/ProcessorExpert.c **** int main(void)
-  43:../Sources/ProcessorExpert.c **** /*lint -restore Enable MISRA rule (6.3) checking. */
-  44:../Sources/ProcessorExpert.c **** {
-  26              		.loc 1 44 0
+  18:../Sources/ProcessorExpert.c **** /* Including needed modules to compile this module/procedure */
+  19:../Sources/ProcessorExpert.c **** #include "Cpu.h"
+  20:../Sources/ProcessorExpert.c **** #include "Events.h"
+  21:../Sources/ProcessorExpert.c **** #include "LEDR.h"
+  22:../Sources/ProcessorExpert.c **** #include "LEDpin3.h"
+  23:../Sources/ProcessorExpert.c **** #include "BitIoLdd3.h"
+  24:../Sources/ProcessorExpert.c **** #include "LEDG.h"
+  25:../Sources/ProcessorExpert.c **** #include "LEDpin2.h"
+  26:../Sources/ProcessorExpert.c **** #include "BitIoLdd2.h"
+  27:../Sources/ProcessorExpert.c **** #include "LEDB.h"
+  28:../Sources/ProcessorExpert.c **** #include "LEDpin1.h"
+  29:../Sources/ProcessorExpert.c **** #include "BitIoLdd1.h"
+  30:../Sources/ProcessorExpert.c **** #include "WAIT1.h"
+  31:../Sources/ProcessorExpert.c **** #include "MCUC1.h"
+  32:../Sources/ProcessorExpert.c **** /* Including shared modules, which are used for whole project */
+  33:../Sources/ProcessorExpert.c **** #include "PE_Types.h"
+  34:../Sources/ProcessorExpert.c **** #include "PE_Error.h"
+  35:../Sources/ProcessorExpert.c **** #include "PE_Const.h"
+  36:../Sources/ProcessorExpert.c **** #include "IO_Map.h"
+  37:../Sources/ProcessorExpert.c **** 
+  38:../Sources/ProcessorExpert.c **** /* User includes (#include below this line is not maintained by Processor Expert) */
+  39:../Sources/ProcessorExpert.c **** 
+  40:../Sources/ProcessorExpert.c **** /*lint -save  -e970 Disable MISRA rule (6.3) checking. */
+  41:../Sources/ProcessorExpert.c **** int main(void)
+  42:../Sources/ProcessorExpert.c **** /*lint -restore Enable MISRA rule (6.3) checking. */
+  43:../Sources/ProcessorExpert.c **** {
+  26              		.loc 1 43 0
   27              		.cfi_startproc
   28 0000 10B5     		push	{r4, lr}
   29              	.LCFI0:
   30              		.cfi_def_cfa_offset 8
   31              		.cfi_offset 4, -8
   32              		.cfi_offset 14, -4
-  45:../Sources/ProcessorExpert.c ****   /* Write your local variable definition here */
-  46:../Sources/ProcessorExpert.c **** 
-  47:../Sources/ProcessorExpert.c ****   /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
-  48:../Sources/ProcessorExpert.c ****   PE_low_level_init();
-  33              		.loc 1 48 0
+  44:../Sources/ProcessorExpert.c **** 	/* Write your local variable definition here */
+  45:../Sources/ProcessorExpert.c **** 
+  46:../Sources/ProcessorExpert.c **** 	/*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
+  47:../Sources/ProcessorExpert.c **** 	PE_low_level_init();
+  33              		.loc 1 47 0
   34 0002 FFF7FEFF 		bl	PE_low_level_init
   35              	.LVL0:
   36 0006 0A4C     		ldr	r4, .L4
   37              	.L2:
-  49:../Sources/ProcessorExpert.c ****   /*** End of Processor Expert internal initialization.                    ***/
-  50:../Sources/ProcessorExpert.c **** 
-  51:../Sources/ProcessorExpert.c ****   /* Write your code here */
-  52:../Sources/ProcessorExpert.c ****   for(;;) {
-  53:../Sources/ProcessorExpert.c **** 	  WAIT1_Waitms(100);
-  38              		.loc 1 53 0
+  48:../Sources/ProcessorExpert.c **** 	/*** End of Processor Expert internal initialization.                    ***/
+  49:../Sources/ProcessorExpert.c **** 
+  50:../Sources/ProcessorExpert.c **** 	/* Write your code here */
+  51:../Sources/ProcessorExpert.c **** 	for (;;) {
+  52:../Sources/ProcessorExpert.c **** 		WAIT1_Waitms(100);
+  38              		.loc 1 52 0
   39 0008 6420     		mov	r0, #100
   40 000a FFF7FEFF 		bl	WAIT1_Waitms
   41              	.LVL1:
-  54:../Sources/ProcessorExpert.c ****     LEDR_Neg();
-  42              		.loc 1 54 0
+  53:../Sources/ProcessorExpert.c **** 		LEDR_Neg();
+  42              		.loc 1 53 0
   43 000e 2068     		ldr	r0, [r4]
   44 0010 FFF7FEFF 		bl	BitIoLdd3_NegVal
   45              	.LVL2:
-  55:../Sources/ProcessorExpert.c **** 	  WAIT1_Waitms(200);
-  46              		.loc 1 55 0
+  54:../Sources/ProcessorExpert.c **** 		WAIT1_Waitms(200);
+  46              		.loc 1 54 0
   47 0014 C820     		mov	r0, #200
   48 0016 FFF7FEFF 		bl	WAIT1_Waitms
   49              	.LVL3:
-  56:../Sources/ProcessorExpert.c ****     LEDG_Neg();
-  50              		.loc 1 56 0
+  55:../Sources/ProcessorExpert.c **** 		LEDG_Neg();
+  50              		.loc 1 55 0
   51 001a 6068     		ldr	r0, [r4, #4]
   52 001c FFF7FEFF 		bl	BitIoLdd2_NegVal
   53              	.LVL4:
-  57:../Sources/ProcessorExpert.c **** 	  WAIT1_Waitms(400);
-  54              		.loc 1 57 0
+  56:../Sources/ProcessorExpert.c **** 		WAIT1_Waitms(400);
+  54              		.loc 1 56 0
   55 0020 C820     		mov	r0, #200
   56 0022 4000     		lsl	r0, r0, #1
   57 0024 FFF7FEFF 		bl	WAIT1_Waitms
   58              	.LVL5:
-  58:../Sources/ProcessorExpert.c ****     LEDB_Neg();
-  59              		.loc 1 58 0
+  57:../Sources/ProcessorExpert.c **** 		LEDB_Neg();
+  59              		.loc 1 57 0
   60 0028 A068     		ldr	r0, [r4, #8]
   61 002a FFF7FEFF 		bl	BitIoLdd1_NegVal
   62              	.LVL6:
@@ -129,9 +128,9 @@
   73              		.file 2 "D:/15. MyFactory/PREN/Microcontroller/FRDM KL25Z/Freedom_LED/Generated_Code/PE_Types.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 ProcessorExpert.c
-C:\Users\burak\AppData\Local\Temp\cc9kEzVu.s:18     .text.startup.main:00000000 $t
-C:\Users\burak\AppData\Local\Temp\cc9kEzVu.s:23     .text.startup.main:00000000 main
-C:\Users\burak\AppData\Local\Temp\cc9kEzVu.s:67     .text.startup.main:00000030 $d
+C:\Users\burak\AppData\Local\Temp\ccGipZKn.s:18     .text.startup.main:00000000 $t
+C:\Users\burak\AppData\Local\Temp\ccGipZKn.s:23     .text.startup.main:00000000 main
+C:\Users\burak\AppData\Local\Temp\ccGipZKn.s:67     .text.startup.main:00000030 $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS

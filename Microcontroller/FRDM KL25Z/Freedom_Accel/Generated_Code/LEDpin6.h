@@ -5,9 +5,8 @@
 **     Processor   : MKL25Z128VLK4
 **     Component   : BitIO
 **     Version     : Component 02.086, Driver 01.00, CPU db: 3.00.000
-**     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2017-11-24, 19:35, # CodeGen: 2
+**     Date/Time   : 2017-12-17, 22:11, # CodeGen: 4
 **     Abstract    :
 **         This component "BitIO" implements an one-bit input/output.
 **         It uses one bit/pin of a port.
@@ -15,23 +14,33 @@
 **         Methods of this component are mostly implemented as a macros
 **         (if supported by target language and compiler).
 **     Settings    :
-**          Component name                                 : LEDpin6
-**          Pin for I/O                                    : ADC0_SE5b/PTD1/SPI0_SCK/TPM0_CH1
-**          Pin signal                                     : LED_BLUE
-**          BitIO_LDD                                      : BitIO_LDD
-**          Direction                                      : Output
-**          Initialization                                 : 
-**            Init. direction                              : Output
-**            Init. value                                  : 0
-**          Safe mode                                      : yes
-**          Optimization for                               : speed
+**         Used pin                    :
+**             ----------------------------------------------------
+**                Number (on package)  |    Name
+**             ----------------------------------------------------
+**                       74            |  ADC0_SE5b/PTD1/SPI0_SCK/TPM0_CH1
+**             ----------------------------------------------------
+**
+**         Port name                   : PTD
+**
+**         Bit number (in port)        : 1
+**         Bit mask of the port        : 0x0002
+**
+**         Initial direction           : Output (direction cannot be changed)
+**         Initial output value        : 0
+**         Initial pull option         : off
+**
+**         Port data register          : GPIOD_PDOR [0x400FF0C0]
+**         Port control register       : GPIOD_PDDR [0x400FF0D4]
+**
+**         Optimization for            : speed
 **     Contents    :
 **         GetVal - bool LEDpin6_GetVal(void);
 **         ClrVal - void LEDpin6_ClrVal(void);
 **         SetVal - void LEDpin6_SetVal(void);
 **         NegVal - void LEDpin6_NegVal(void);
 **
-**     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
+**     Copyright : 1997 - 2014 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
 **     
 **     Redistribution and use in source and binary forms, with or without modification,
@@ -165,7 +174,7 @@ extern "C" {
 /*
 ** ###################################################################
 **
-**     This file was created by Processor Expert 10.5 [05.21]
+**     This file was created by Processor Expert 10.3 [05.09]
 **     for the Freescale Kinetis series of microcontrollers.
 **
 ** ###################################################################

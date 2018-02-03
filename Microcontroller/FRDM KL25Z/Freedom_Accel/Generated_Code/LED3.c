@@ -5,20 +5,18 @@
 **     Processor   : MKL25Z128VLK4
 **     Component   : LED
 **     Version     : Component 01.074, Driver 01.00, CPU db: 3.00.000
-**     Repository  : My Components
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2017-11-24, 19:35, # CodeGen: 2
+**     Date/Time   : 2017-12-17, 22:11, # CodeGen: 4
 **     Abstract    :
 **          This component implements a universal driver for a single LED.
 **     Settings    :
 **          Component name                                 : LED3
-**          SDK                                            : MCUC1
 **          Turned On with initialization                  : no
 **          HW Interface                                   : 
-**            Anode on port side, HIGH is ON               : no
 **            On/Off                                       : Enabled
 **              Pin                                        : LEDpin
 **            PWM                                          : Disabled
+**            High Value means ON                          : no
 **          Shell                                          : Disabled
 **     Contents    :
 **         On         - void LED3_On(void);
@@ -221,7 +219,7 @@ void LED3_SetRatio16(uint16_t ratio)
 /*
 ** ###################################################################
 **
-**     This file was created by Processor Expert 10.5 [05.21]
+**     This file was created by Processor Expert 10.3 [05.09]
 **     for the Freescale Kinetis series of microcontrollers.
 **
 ** ###################################################################

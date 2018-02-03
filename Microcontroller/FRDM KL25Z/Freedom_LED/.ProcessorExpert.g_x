@@ -30,18 +30,18 @@
       <File Name="Generated_Code/MCUC1.h" FileDate="2017-11-24, 20:36:47" FileAge="1511552207986" FileType="45637" CompNumb="25" />
       <File Name="Generated_Code/BitIoLdd1.h" FileDate="2017-11-24, 20:36:47" FileAge="1511552207959" FileType="45637" CompNumb="17" />
       <File Name="Generated_Code/PDD/PORT_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
-      <File Name="Sources/ProcessorExpert.c" FileDate="2017-11-24, 20:36:47" FileAge="1511552207988" FileType="128" />
+      <File Name="Sources/ProcessorExpert.c" FileDate="2017-12-15, 00:03:32" FileAge="1513292612597" FileType="128" />
       <File Name="Generated_Code/IO_Map/MKL25Z4.h" FileDate="2013-04-18, 01:55:42" FileAge="1366242942000" FileType="262144" />
       <File Name="Generated_Code/MCUC1.c" FileDate="2017-11-24, 20:36:47" FileAge="1511552207985" FileType="45637" CompNumb="25" />
       <File Name="Generated_Code/BitIoLdd1.c" FileDate="2017-11-24, 20:36:47" FileAge="1511552207958" FileType="45637" CompNumb="17" />
       <File Name="Generated_Code/Vectors.c" FileDate="2017-11-24, 20:36:47" FileAge="1511552207926" FileType="45637" CompNumb="2" />
       <File Name="Documentation/doxygen/pex.doxyfile" FileDate="2017-11-24, 20:36:47" FileAge="1511552207933" FileType="45637" CompNumb="2" />
       <File Name="Generated_Code/PDD/I2C_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
-      <File Name="Documentation/ProcessorExpert_SIGNALS.txt" FileDate="2017-11-24, 20:36:48" FileAge="1511552208006" FileType="3072" />
+      <File Name="Documentation/ProcessorExpert_SIGNALS.txt" FileDate="2017-12-15, 00:03:32" FileAge="1513292612623" FileType="3072" />
       <File Name="Generated_Code/PDD/RTC_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
       <File Name="Generated_Code/PDD/USB_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
       <File Name="Generated_Code/LEDG.h" FileDate="2017-11-24, 20:36:47" FileAge="1511552207963" FileType="45637" CompNumb="8" />
-      <File Name="ProjectInfo.xml" FileDate="2017-11-24, 20:36:50" FileAge="1511552210361" FileType="45637" />
+      <File Name="ProjectInfo.xml" FileDate="2017-12-15, 00:03:35" FileAge="1513292615002" FileType="45637" />
       <File Name="Sources/Events.h" FileDate="2017-11-24, 20:36:47" FileAge="1511552207991" FileType="131328" />
       <File Name="Generated_Code/LEDBconfig.h" FileDate="2017-11-24, 20:36:47" FileAge="1511552207949" FileType="45637" CompNumb="9" />
       <File Name="Generated_Code/PDD/UART_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
@@ -82,12 +82,12 @@
       <File Name="Documentation/ProcessorExpert_Settings.xml" FileDate="2017-11-24, 20:36:48" FileAge="1511552208025" FileType="3072" />
       <File Name="Generated_Code/WAIT1.c" FileDate="2017-11-24, 20:36:47" FileAge="1511552207947" FileType="45637" CompNumb="12" />
       <File Name="Generated_Code/MCUC1config.h" FileDate="2017-11-24, 20:36:47" FileAge="1511552207984" FileType="45637" CompNumb="25" />
-      <File Name="Generated_Code/LEDRconfig.h" FileDate="2017-11-24, 20:36:47" FileAge="1511552207971" FileType="45637" CompNumb="7" />
       <File Name="Project_Settings/Debugger/MKL25Z128.mem" FileDate="2012-08-23, 06:53:58" FileAge="1345697638000" FileType="45637" CompNumb="2" />
+      <File Name="Generated_Code/LEDRconfig.h" FileDate="2017-11-24, 20:36:47" FileAge="1511552207971" FileType="45637" CompNumb="7" />
       <File Name="Generated_Code/PDD/PDD_Types.h" FileDate="2013-04-18, 01:55:42" FileAge="1366242942000" FileType="262144" />
       <File Name="Generated_Code/LEDR.h" FileDate="2017-11-24, 20:36:47" FileAge="1511552207974" FileType="45637" CompNumb="7" />
       <File Name="Generated_Code/LEDR.c" FileDate="2017-11-24, 20:36:47" FileAge="1511552207973" FileType="45637" CompNumb="7" />
     </GeneratedByPE>
   </GeneratedFilesList>
-  <CodeGenReference>1</CodeGenReference>
+  <CodeGenReference>2</CodeGenReference>
 </CodeGenerationInfo>

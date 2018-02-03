@@ -75,6 +75,7 @@
       <PathName>D:\15. MyFactory\PREN\Microcontroller\FRDM KL25Z\Freedom_LED\Generated_Code\BitIoLdd2.h</PathName>
       <PathName>D:\15. MyFactory\PREN\Microcontroller\FRDM KL25Z\Freedom_LED\Generated_Code\BitIoLdd3.h</PathName>
       <PathName>D:\15. MyFactory\PREN\Microcontroller\FRDM KL25Z\Freedom_LED\Generated_Code\Cpu.h</PathName>
+      <PathName>C:\Freescale\CW MCU v10.7\MCU\ProcessorExpert\lib\Kinetis\iofiles\MKL25Z4.h</PathName>
       <PathName>D:\15. MyFactory\PREN\Microcontroller\FRDM KL25Z\Freedom_LED\Generated_Code\IO_Map.h</PathName>
       <PathName>D:\15. MyFactory\PREN\Microcontroller\FRDM KL25Z\Freedom_LED\Generated_Code\LEDB.h</PathName>
       <PathName>D:\15. MyFactory\PREN\Microcontroller\FRDM KL25Z\Freedom_LED\Generated_Code\LEDBconfig.h</PathName>
@@ -87,16 +88,6 @@
       <PathName>D:\15. MyFactory\PREN\Microcontroller\FRDM KL25Z\Freedom_LED\Generated_Code\LEDpin3.h</PathName>
       <PathName>D:\15. MyFactory\PREN\Microcontroller\FRDM KL25Z\Freedom_LED\Generated_Code\MCUC1.h</PathName>
       <PathName>D:\15. MyFactory\PREN\Microcontroller\FRDM KL25Z\Freedom_LED\Generated_Code\MCUC1config.h</PathName>
-      <PathName>D:\15. MyFactory\PREN\Microcontroller\FRDM KL25Z\Freedom_LED\Generated_Code\PE_Const.h</PathName>
-      <PathName>D:\15. MyFactory\PREN\Microcontroller\FRDM KL25Z\Freedom_LED\Generated_Code\PE_Error.h</PathName>
-      <PathName>D:\15. MyFactory\PREN\Microcontroller\FRDM KL25Z\Freedom_LED\Generated_Code\PE_LDD.h</PathName>
-      <PathName>D:\15. MyFactory\PREN\Microcontroller\FRDM KL25Z\Freedom_LED\Generated_Code\PE_Types.h</PathName>
-      <PathName>D:\15. MyFactory\PREN\Microcontroller\FRDM KL25Z\Freedom_LED\Generated_Code\WAIT1.h</PathName>
-      <PathName>D:\15. MyFactory\PREN\Microcontroller\FRDM KL25Z\Freedom_LED\Generated_Code\WAIT1config.h</PathName>
-      <PathName>D:\15. MyFactory\PREN\Microcontroller\FRDM KL25Z\Freedom_LED\Project_Settings\Startup_Code\runtime_configuration.h</PathName>
-      <PathName>D:\15. MyFactory\PREN\Microcontroller\FRDM KL25Z\Freedom_LED\Sources\Events.h</PathName>
-      <PathName>C:\Freescale\CW MCU v10.7\MCU\ProcessorExpert\lib\Kinetis\iofiles\MKL25Z4.h</PathName>
-      <PathName>C:\Freescale\CW MCU v10.7\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\PDD_Types.h</PathName>
       <PathName>C:\Freescale\CW MCU v10.7\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\ADC_PDD.h</PathName>
       <PathName>C:\Freescale\CW MCU v10.7\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\CMP_PDD.h</PathName>
       <PathName>C:\Freescale\CW MCU v10.7\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\COP_PDD.h</PathName>
@@ -108,6 +99,7 @@
       <PathName>C:\Freescale\CW MCU v10.7\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\I2C_PDD.h</PathName>
       <PathName>C:\Freescale\CW MCU v10.7\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\LPTMR_PDD.h</PathName>
       <PathName>C:\Freescale\CW MCU v10.7\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\MCM_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v10.7\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\PDD_Types.h</PathName>
       <PathName>C:\Freescale\CW MCU v10.7\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\PIT_PDD.h</PathName>
       <PathName>C:\Freescale\CW MCU v10.7\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\PORT_PDD.h</PathName>
       <PathName>C:\Freescale\CW MCU v10.7\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\RTC_PDD.h</PathName>
@@ -118,6 +110,14 @@
       <PathName>C:\Freescale\CW MCU v10.7\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\UART0_PDD.h</PathName>
       <PathName>C:\Freescale\CW MCU v10.7\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\UART_PDD.h</PathName>
       <PathName>C:\Freescale\CW MCU v10.7\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\USB_PDD.h</PathName>
+      <PathName>D:\15. MyFactory\PREN\Microcontroller\FRDM KL25Z\Freedom_LED\Generated_Code\PE_Const.h</PathName>
+      <PathName>D:\15. MyFactory\PREN\Microcontroller\FRDM KL25Z\Freedom_LED\Generated_Code\PE_Error.h</PathName>
+      <PathName>D:\15. MyFactory\PREN\Microcontroller\FRDM KL25Z\Freedom_LED\Generated_Code\PE_LDD.h</PathName>
+      <PathName>D:\15. MyFactory\PREN\Microcontroller\FRDM KL25Z\Freedom_LED\Generated_Code\PE_Types.h</PathName>
+      <PathName>D:\15. MyFactory\PREN\Microcontroller\FRDM KL25Z\Freedom_LED\Generated_Code\WAIT1.h</PathName>
+      <PathName>D:\15. MyFactory\PREN\Microcontroller\FRDM KL25Z\Freedom_LED\Generated_Code\WAIT1config.h</PathName>
+      <PathName>D:\15. MyFactory\PREN\Microcontroller\FRDM KL25Z\Freedom_LED\Project_Settings\Startup_Code\runtime_configuration.h</PathName>
+      <PathName>D:\15. MyFactory\PREN\Microcontroller\FRDM KL25Z\Freedom_LED\Sources\Events.h</PathName>
     </GeneratedHs>
   </FILES>
   <OPTIONS>

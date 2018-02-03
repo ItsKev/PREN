@@ -5,9 +5,8 @@
 **     Processor   : MKL25Z128VLK4
 **     Component   : I2C_LDD
 **     Version     : Component 01.016, Driver 01.07, CPU db: 3.00.000
-**     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2017-11-24, 19:35, # CodeGen: 2
+**     Date/Time   : 2017-12-17, 22:11, # CodeGen: 4
 **     Abstract    :
 **          This component encapsulates the internal I2C communication
 **          interface. The implementation of the interface is based
@@ -36,7 +35,7 @@
 **            MASTER mode                                  : Enabled
 **              Initialization                             : 
 **                Address mode                             : 7-bit addressing
-**                Target slave address init                : 0x1D
+**                Target slave address init                : 1D
 **            SLAVE mode                                   : Disabled
 **            Pins                                         : 
 **              SDA pin                                    : 
@@ -90,7 +89,7 @@
 **         SelectSlaveDevice  - LDD_TError I2C2_SelectSlaveDevice(LDD_TDeviceData *DeviceDataPtr,...
 **         GetError           - LDD_TError I2C2_GetError(LDD_TDeviceData *DeviceDataPtr, LDD_I2C_TErrorMask...
 **
-**     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
+**     Copyright : 1997 - 2014 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
 **     
 **     Redistribution and use in source and binary forms, with or without modification,
@@ -407,7 +406,7 @@ PE_ISR(I2C2_Interrupt);
 /*
 ** ###################################################################
 **
-**     This file was created by Processor Expert 10.5 [05.21]
+**     This file was created by Processor Expert 10.3 [05.09]
 **     for the Freescale Kinetis series of microcontrollers.
 **
 ** ###################################################################
