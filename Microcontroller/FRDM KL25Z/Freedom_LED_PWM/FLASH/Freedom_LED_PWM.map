@@ -848,80 +848,80 @@ OUTPUT(Freedom_LED_PWM.elf elf32-littlearm)
  .debug_macinfo
                 0x00158149    0x30a97 ./Sources/Events.o
 
-.debug_line     0x00000000     0x2e4a
+.debug_line     0x00000000     0x2e43
  .debug_line    0x00000000      0x2c8 ./Generated_Code/WAIT1.o
- .debug_line    0x000002c8      0x3c6 ./Generated_Code/Vectors.o
- .debug_line    0x0000068e      0x353 ./Generated_Code/TU1.o
- .debug_line    0x000009e1      0x319 ./Generated_Code/PwmLdd1.o
- .debug_line    0x00000cfa      0x2fe ./Generated_Code/PE_LDD.o
- .debug_line    0x00000ff8      0x42b ./Generated_Code/Cpu.o
- .debug_line    0x00001423      0x2b1 ./Project_Settings/Startup_Code/__arm_start.o
- .debug_line    0x000016d4      0x265 ./Project_Settings/Startup_Code/__arm_end.o
- .debug_line    0x00001939      0x31c ./Sources/main.o
- .debug_line    0x00001c55      0x319 ./Sources/Events.o
- .debug_line    0x00001f6e       0x8d C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
- .debug_line    0x00001ffb       0x90 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
- .debug_line    0x0000208b       0xf6 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
- .debug_line    0x00002181      0x2c3 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
- .debug_line    0x00002444      0x2be C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
- .debug_line    0x00002702      0x1be C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
- .debug_line    0x000028c0      0x11e C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
- .debug_line    0x000029de       0x7d C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
- .debug_line    0x00002a5b       0x8b C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
- .debug_line    0x00002ae6       0x85 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
- .debug_line    0x00002b6b       0x9f C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
- .debug_line    0x00002c0a       0x6c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
- .debug_line    0x00002c76      0x117 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
- .debug_line    0x00002d8d       0xbd C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+ .debug_line    0x000002c8      0x3c4 ./Generated_Code/Vectors.o
+ .debug_line    0x0000068c      0x353 ./Generated_Code/TU1.o
+ .debug_line    0x000009df      0x319 ./Generated_Code/PwmLdd1.o
+ .debug_line    0x00000cf8      0x2fe ./Generated_Code/PE_LDD.o
+ .debug_line    0x00000ff6      0x429 ./Generated_Code/Cpu.o
+ .debug_line    0x0000141f      0x2b0 ./Project_Settings/Startup_Code/__arm_start.o
+ .debug_line    0x000016cf      0x265 ./Project_Settings/Startup_Code/__arm_end.o
+ .debug_line    0x00001934      0x31b ./Sources/main.o
+ .debug_line    0x00001c4f      0x318 ./Sources/Events.o
+ .debug_line    0x00001f67       0x8d C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+ .debug_line    0x00001ff4       0x90 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
+ .debug_line    0x00002084       0xf6 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+ .debug_line    0x0000217a      0x2c3 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+ .debug_line    0x0000243d      0x2be C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
+ .debug_line    0x000026fb      0x1be C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+ .debug_line    0x000028b9      0x11e C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
+ .debug_line    0x000029d7       0x7d C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
+ .debug_line    0x00002a54       0x8b C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+ .debug_line    0x00002adf       0x85 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
+ .debug_line    0x00002b64       0x9f C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+ .debug_line    0x00002c03       0x6c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+ .debug_line    0x00002c6f      0x117 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+ .debug_line    0x00002d86       0xbd C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
 
-.debug_str      0x00000000     0x12d6
+.debug_str      0x00000000     0x131c
  .debug_str     0x00000000      0x1a0 ./Generated_Code/WAIT1.o
                                 0x1d2 (size before relaxing)
- .debug_str     0x000001a0       0x55 ./Generated_Code/Vectors.o
-                                0x182 (size before relaxing)
- .debug_str     0x000001f5      0x34c ./Generated_Code/TU1.o
-                                0x496 (size before relaxing)
- .debug_str     0x00000541       0xf3 ./Generated_Code/PwmLdd1.o
-                                0x2b8 (size before relaxing)
- .debug_str     0x00000634      0x172 ./Generated_Code/PE_LDD.o
-                                0x2e5 (size before relaxing)
- .debug_str     0x000007a6      0x1bb ./Generated_Code/Cpu.o
-                                0x431 (size before relaxing)
- .debug_str     0x00000961       0x85 ./Project_Settings/Startup_Code/__arm_start.o
-                                0x1b0 (size before relaxing)
- .debug_str     0x000009e6       0x41 ./Project_Settings/Startup_Code/__arm_end.o
-                                 0xe7 (size before relaxing)
- .debug_str     0x00000a27       0x17 ./Sources/main.o
-                                0x161 (size before relaxing)
- .debug_str     0x00000a3e       0x21 ./Sources/Events.o
-                                0x145 (size before relaxing)
- .debug_str     0x00000a5f       0x54 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
-                                0x157 (size before relaxing)
- .debug_str     0x00000ab3       0x23 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
-                                0x140 (size before relaxing)
- .debug_str     0x00000ad6       0x2d C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
-                                0x152 (size before relaxing)
- .debug_str     0x00000b03      0x233 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
-                                0x3b3 (size before relaxing)
- .debug_str     0x00000d36      0x184 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
-                                0x3f9 (size before relaxing)
- .debug_str     0x00000eba       0x9d C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
-                                0x1bc (size before relaxing)
- .debug_str     0x00000f57       0x61 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
-                                0x1fb (size before relaxing)
- .debug_str     0x00000fb8       0x1c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
-                                0x137 (size before relaxing)
- .debug_str     0x00000fd4       0x1c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
-                                0x138 (size before relaxing)
- .debug_str     0x00000ff0       0x1c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
-                                0x140 (size before relaxing)
- .debug_str     0x0000100c       0x1c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
-                                0x148 (size before relaxing)
- .debug_str     0x00001028      0x126 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+ .debug_str     0x000001a0       0x9b ./Generated_Code/Vectors.o
                                 0x181 (size before relaxing)
- .debug_str     0x0000114e       0xee C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+ .debug_str     0x0000023b      0x34c ./Generated_Code/TU1.o
+                                0x496 (size before relaxing)
+ .debug_str     0x00000587       0xf3 ./Generated_Code/PwmLdd1.o
+                                0x2b8 (size before relaxing)
+ .debug_str     0x0000067a      0x172 ./Generated_Code/PE_LDD.o
+                                0x2e5 (size before relaxing)
+ .debug_str     0x000007ec      0x1bb ./Generated_Code/Cpu.o
+                                0x430 (size before relaxing)
+ .debug_str     0x000009a7       0x85 ./Project_Settings/Startup_Code/__arm_start.o
+                                0x1af (size before relaxing)
+ .debug_str     0x00000a2c       0x41 ./Project_Settings/Startup_Code/__arm_end.o
+                                 0xe7 (size before relaxing)
+ .debug_str     0x00000a6d       0x17 ./Sources/main.o
+                                0x160 (size before relaxing)
+ .debug_str     0x00000a84       0x21 ./Sources/Events.o
+                                0x144 (size before relaxing)
+ .debug_str     0x00000aa5       0x54 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+                                0x157 (size before relaxing)
+ .debug_str     0x00000af9       0x23 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
+                                0x140 (size before relaxing)
+ .debug_str     0x00000b1c       0x2d C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+                                0x152 (size before relaxing)
+ .debug_str     0x00000b49      0x233 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+                                0x3b3 (size before relaxing)
+ .debug_str     0x00000d7c      0x184 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
+                                0x3f9 (size before relaxing)
+ .debug_str     0x00000f00       0x9d C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+                                0x1bc (size before relaxing)
+ .debug_str     0x00000f9d       0x61 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
+                                0x1fb (size before relaxing)
+ .debug_str     0x00000ffe       0x1c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
+                                0x137 (size before relaxing)
+ .debug_str     0x0000101a       0x1c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+                                0x138 (size before relaxing)
+ .debug_str     0x00001036       0x1c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
+                                0x140 (size before relaxing)
+ .debug_str     0x00001052       0x1c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+                                0x148 (size before relaxing)
+ .debug_str     0x0000106e      0x126 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+                                0x181 (size before relaxing)
+ .debug_str     0x00001194       0xee C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
                                 0x1b5 (size before relaxing)
- .debug_str     0x0000123c       0x9a C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+ .debug_str     0x00001282       0x9a C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
                                 0x13c (size before relaxing)
 
 .comment        0x00000000       0x79

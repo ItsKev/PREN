@@ -28,7 +28,7 @@
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration artifactName="Freedom_Accel" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" description="" errorParsers="org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GmakeErrorParser;org.eclipse.cdt.core.VCErrorParser;org.eclipse.cdt.core.CWDLocator;com.freescale.core.ide.cdt.errorParsers.AsmErrorParser;com.freescale.core.ide.cdt.errorParsers.CobjErrorParser;com.freescale.core.ide.cdt.errorParsers.FssccErrorParser;com.freescale.core.ide.cdt.errorParsers.GCCErrorParser;com.freescale.core.ide.cdt.errorParsers.IcodeErrorParser;com.freescale.core.ide.cdt.errorParsers.LltErrorParser;com.freescale.core.ide.cdt.errorParsers.LnkErrorParser;com.freescale.core.ide.cdt.errorParsers.S08ErrorParser;com.freescale.core.ide.cdt.errorParsers.MPWErrorParser;com.freescale.core.ide.cdt.errorParsers.MwErrorParser;com.freescale.core.ide.cdt.errorParsers.MwfeErrorParser;" id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.elf.debug.437763967" isPrebuildInvalidatingBuild="false" name="FLASH">
+				<configuration artifactName="Freedom_Accel" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" buildReferences="true" buildReferencingConfigurations="false" description="" errorParsers="org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GmakeErrorParser;org.eclipse.cdt.core.VCErrorParser;org.eclipse.cdt.core.CWDLocator;com.freescale.core.ide.cdt.errorParsers.AsmErrorParser;com.freescale.core.ide.cdt.errorParsers.CobjErrorParser;com.freescale.core.ide.cdt.errorParsers.FssccErrorParser;com.freescale.core.ide.cdt.errorParsers.GCCErrorParser;com.freescale.core.ide.cdt.errorParsers.IcodeErrorParser;com.freescale.core.ide.cdt.errorParsers.LltErrorParser;com.freescale.core.ide.cdt.errorParsers.LnkErrorParser;com.freescale.core.ide.cdt.errorParsers.S08ErrorParser;com.freescale.core.ide.cdt.errorParsers.MPWErrorParser;com.freescale.core.ide.cdt.errorParsers.MwErrorParser;com.freescale.core.ide.cdt.errorParsers.MwfeErrorParser;" id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.elf.debug.437763967" isPrebuildInvalidatingBuild="false" name="FLASH" parent="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.elf.debug.437763967" produceBuildErrorsWithMissingReferences="true">
 					<folderInfo id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.elf.debug.437763967." name="/" resourcePath="">
 						<toolChain id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.elf.toolchain.debug.104293304" name="ARM Ltd Windows GCC (G++ Lite)">
 							<option id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.option.debugging.level.1066152467" name="Debug level" superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.option.debugging.level" value="org.eclipse.cdt.cross.arm.gnu.base.option.debugging.level.max" valueType="enumerated"/>
@@ -37,12 +37,14 @@
 							<option id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.option.addtools.createflash.809221456" name="Create Flash Image" superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.option.addtools.createflash" value="true" valueType="boolean"/>
 							<option id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.option.addtools.printsize.1318362196" name="Print Size" superClass="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.option.addtools.printsize" value="true" valueType="boolean"/>
 							<targetPlatform id="org.eclipse.cdt.cross.arm.gnu.sourcery.windows.elf.platform.debug.1015237116" isAbstract="false" name="Windows Platform"/>
-							<builder buildPath="${workspace_loc:/Freedom_Accel}/FLASH" id="org.eclipse.linuxtools.cdt.autotools.core.toolchain.builder.2082068542" parallelBuildWorkspaceOn="true"/>
+							<builder buildPath="${workspace_loc:/Freedom_Accel}/FLASH" id="org.eclipse.linuxtools.cdt.autotools.core.toolchain.builder.2082068542" keepEnvironmentInBuildfile="false" parallelBuildWorkspaceOn="true"/>
 						</toolChain>
 					</folderInfo>
 				</configuration>
 			</storageModule>
-			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings">
+				<externalSettings containerId="FRDM-KL25Z_Shell_PEx" factoryId="org.eclipse.cdt.core.cfg.export.settings.sipplier"/>
+			</storageModule>
 		</cconfiguration>
 	</storageModule>
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
@@ -57,6 +59,10 @@
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.cross.arm.gnu.ARM_CS_GCCWinManagedMakePerProjectProfileC"/>
 		</scannerConfigBuildInfo>
 	</storageModule>
-	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="FLASH">
+			<resource resourceType="PROJECT" workspacePath="/Freedom_Accel"/>
+		</configuration>
+	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 </cproject>

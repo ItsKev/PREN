@@ -74,8 +74,11 @@ Freedom_LED.siz \
 # All Target
 all: warning-messages explicit-dependencies Freedom_LED.elf secondary-outputs
 
+dependents:
+	-cd "$(FREEDOM_SERVO)/FLASH" && $(MAKE) all
+
 # Tool invocations
-Freedom_LED.elf: $(OBJS) $(USER_OBJS) ../Project_Settings/Linker_Files/ProcessorExpert.ld
+Freedom_LED.elf: $(OBJS) $(USER_OBJS) $(FREEDOM_SERVO_ESCAPED)/FLASH/Freedom_Servo.elf ../Project_Settings/Linker_Files/ProcessorExpert.ld
 	@echo 'Building target: $@'
 	@echo 'Executing target #20 $@'
 	@echo 'Invoking: ARM Ltd Windows GCC C Linker'
@@ -106,6 +109,7 @@ secondary-outputs: $(SECONDARY_FLASH) $(SECONDARY_SIZE)
 
 .PHONY: all clean dependents explicit-dependencies warning-messages
 .SECONDARY:
+$(FREEDOM_SERVO)/FLASH/Freedom_Servo.elf:
 
 -include ../makefile.targets
 

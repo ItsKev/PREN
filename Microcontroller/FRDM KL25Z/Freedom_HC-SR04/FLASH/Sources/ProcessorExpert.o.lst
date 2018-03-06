@@ -1,0 +1,355 @@
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"ProcessorExpert.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.Measure,"ax",%progbits
+  18              		.align	2
+  19              		.code	16
+  20              		.thumb_func
+  22              	Measure:
+  23              	.LFB0:
+  24              		.file 1 "../Sources/ProcessorExpert.c"
+   1:../Sources/ProcessorExpert.c **** /** ###################################################################
+   2:../Sources/ProcessorExpert.c **** **     Filename    : ProcessorExpert.c
+   3:../Sources/ProcessorExpert.c **** **     Project     : ProcessorExpert
+   4:../Sources/ProcessorExpert.c **** **     Processor   : MKL25Z128VLK4
+   5:../Sources/ProcessorExpert.c **** **     Version     : Driver 01.01
+   6:../Sources/ProcessorExpert.c **** **     Compiler    : GNU C Compiler
+   7:../Sources/ProcessorExpert.c **** **     Date/Time   : 2012-12-12, 19:34, # CodeGen: 0
+   8:../Sources/ProcessorExpert.c **** **     Abstract    :
+   9:../Sources/ProcessorExpert.c **** **         Main module.
+  10:../Sources/ProcessorExpert.c **** **         This module contains user's application code.
+  11:../Sources/ProcessorExpert.c **** **     Settings    :
+  12:../Sources/ProcessorExpert.c **** **     Contents    :
+  13:../Sources/ProcessorExpert.c **** **         No public methods
+  14:../Sources/ProcessorExpert.c **** **
+  15:../Sources/ProcessorExpert.c **** ** ###################################################################*/
+  16:../Sources/ProcessorExpert.c **** /* MODULE ProcessorExpert */
+  17:../Sources/ProcessorExpert.c **** 
+  18:../Sources/ProcessorExpert.c **** 
+  19:../Sources/ProcessorExpert.c **** /* Including needed modules to compile this module/procedure */
+  20:../Sources/ProcessorExpert.c **** #include "Cpu.h"
+  21:../Sources/ProcessorExpert.c **** #include "Events.h"
+  22:../Sources/ProcessorExpert.c **** #include "WAIT1.h"
+  23:../Sources/ProcessorExpert.c **** #include "TRIG.h"
+  24:../Sources/ProcessorExpert.c **** #include "LEDR.h"
+  25:../Sources/ProcessorExpert.c **** #include "LEDpin1.h"
+  26:../Sources/ProcessorExpert.c **** #include "BitIoLdd1.h"
+  27:../Sources/ProcessorExpert.c **** #include "LEDG.h"
+  28:../Sources/ProcessorExpert.c **** #include "LEDpin2.h"
+  29:../Sources/ProcessorExpert.c **** #include "BitIoLdd2.h"
+  30:../Sources/ProcessorExpert.c **** #include "LEDB.h"
+  31:../Sources/ProcessorExpert.c **** #include "LEDpin3.h"
+  32:../Sources/ProcessorExpert.c **** #include "BitIoLdd3.h"
+  33:../Sources/ProcessorExpert.c **** #include "TU1.h"
+  34:../Sources/ProcessorExpert.c **** #include "LCD1.h"
+  35:../Sources/ProcessorExpert.c **** #include "RW1.h"
+  36:../Sources/ProcessorExpert.c **** #include "BitIoLdd15.h"
+  37:../Sources/ProcessorExpert.c **** #include "EN1.h"
+  38:../Sources/ProcessorExpert.c **** #include "BitIoLdd4.h"
+  39:../Sources/ProcessorExpert.c **** #include "RS1.h"
+  40:../Sources/ProcessorExpert.c **** #include "BitIoLdd5.h"
+  41:../Sources/ProcessorExpert.c **** #include "DB41.h"
+  42:../Sources/ProcessorExpert.c **** #include "BitIoLdd10.h"
+  43:../Sources/ProcessorExpert.c **** #include "DB51.h"
+  44:../Sources/ProcessorExpert.c **** #include "BitIoLdd11.h"
+  45:../Sources/ProcessorExpert.c **** #include "DB61.h"
+  46:../Sources/ProcessorExpert.c **** #include "BitIoLdd12.h"
+  47:../Sources/ProcessorExpert.c **** #include "DB71.h"
+  48:../Sources/ProcessorExpert.c **** #include "BitIoLdd13.h"
+  49:../Sources/ProcessorExpert.c **** #include "MCUC1.h"
+  50:../Sources/ProcessorExpert.c **** #include "UTIL1.h"
+  51:../Sources/ProcessorExpert.c **** /* Including shared modules, which are used for whole project */
+  52:../Sources/ProcessorExpert.c **** #include "PE_Types.h"
+  53:../Sources/ProcessorExpert.c **** #include "PE_Error.h"
+  54:../Sources/ProcessorExpert.c **** #include "PE_Const.h"
+  55:../Sources/ProcessorExpert.c **** #include "IO_Map.h"
+  56:../Sources/ProcessorExpert.c **** 
+  57:../Sources/ProcessorExpert.c **** /* User includes (#include below this line is not maintained by Processor Expert) */
+  58:../Sources/ProcessorExpert.c **** #include "Ultrasonic.h"
+  59:../Sources/ProcessorExpert.c **** 
+  60:../Sources/ProcessorExpert.c **** static void Measure(void) {
+  25              		.loc 1 60 0
+  26              		.cfi_startproc
+  27 0000 90B5     		push	{r4, r7, lr}
+  28              	.LCFI0:
+  29              		.cfi_def_cfa_offset 12
+  30              		.cfi_offset 4, -12
+  31              		.cfi_offset 7, -8
+  32              		.cfi_offset 14, -4
+  33 0002 87B0     		sub	sp, sp, #28
+  34              	.LCFI1:
+  35              		.cfi_def_cfa_offset 40
+  36 0004 02AF     		add	r7, sp, #8
+  37              	.LCFI2:
+  38              		.cfi_def_cfa 7, 32
+  61:../Sources/ProcessorExpert.c ****   uint16_t us, cm;
+  62:../Sources/ProcessorExpert.c ****   uint8_t buf[8];
+  63:../Sources/ProcessorExpert.c **** 
+  64:../Sources/ProcessorExpert.c ****   us = US_Measure_us();
+  39              		.loc 1 64 0
+  40 0006 3C1C     		mov	r4, r7
+  41 0008 0E34     		add	r4, r4, #14
+  42 000a FFF7FEFF 		bl	US_Measure_us
+  43 000e 031C     		mov	r3, r0
+  44 0010 2380     		strh	r3, [r4]
+  65:../Sources/ProcessorExpert.c ****   UTIL1_Num16uToStrFormatted(buf, sizeof(buf), us, ' ', 5);
+  45              		.loc 1 65 0
+  46 0012 3A1D     		add	r2, r7, #4
+  47 0014 3B1C     		mov	r3, r7
+  48 0016 0E33     		add	r3, r3, #14
+  49 0018 1B88     		ldrh	r3, [r3]
+  50 001a 0521     		mov	r1, #5
+  51 001c 0091     		str	r1, [sp]
+  52 001e 101C     		mov	r0, r2
+  53 0020 0821     		mov	r1, #8
+  54 0022 1A1C     		mov	r2, r3
+  55 0024 2023     		mov	r3, #32
+  56 0026 FFF7FEFF 		bl	UTIL1_Num16uToStrFormatted
+  66:../Sources/ProcessorExpert.c ****   LCD1_GotoXY(1,5);
+  57              		.loc 1 66 0
+  58 002a 0120     		mov	r0, #1
+  59 002c 0521     		mov	r1, #5
+  60 002e FFF7FEFF 		bl	LCD1_GotoXY
+  67:../Sources/ProcessorExpert.c ****   LCD1_WriteString((char*)buf);
+  61              		.loc 1 67 0
+  62 0032 3B1D     		add	r3, r7, #4
+  63 0034 181C     		mov	r0, r3
+  64 0036 FFF7FEFF 		bl	LCD1_WriteString
+  68:../Sources/ProcessorExpert.c **** 
+  69:../Sources/ProcessorExpert.c ****   cm = US_usToCentimeters(us, 22);
+  65              		.loc 1 69 0
+  66 003a 3C1C     		mov	r4, r7
+  67 003c 0C34     		add	r4, r4, #12
+  68 003e 3B1C     		mov	r3, r7
+  69 0040 0E33     		add	r3, r3, #14
+  70 0042 1B88     		ldrh	r3, [r3]
+  71 0044 181C     		mov	r0, r3
+  72 0046 1621     		mov	r1, #22
+  73 0048 FFF7FEFF 		bl	US_usToCentimeters
+  74 004c 031C     		mov	r3, r0
+  75 004e 2380     		strh	r3, [r4]
+  70:../Sources/ProcessorExpert.c ****   UTIL1_Num16uToStrFormatted(buf, sizeof(buf), cm, ' ', 5);
+  76              		.loc 1 70 0
+  77 0050 3A1D     		add	r2, r7, #4
+  78 0052 3B1C     		mov	r3, r7
+  79 0054 0C33     		add	r3, r3, #12
+  80 0056 1B88     		ldrh	r3, [r3]
+  81 0058 0521     		mov	r1, #5
+  82 005a 0091     		str	r1, [sp]
+  83 005c 101C     		mov	r0, r2
+  84 005e 0821     		mov	r1, #8
+  85 0060 1A1C     		mov	r2, r3
+  86 0062 2023     		mov	r3, #32
+  87 0064 FFF7FEFF 		bl	UTIL1_Num16uToStrFormatted
+  71:../Sources/ProcessorExpert.c ****   LCD1_GotoXY(2,5);
+  88              		.loc 1 71 0
+  89 0068 0220     		mov	r0, #2
+  90 006a 0521     		mov	r1, #5
+  91 006c FFF7FEFF 		bl	LCD1_GotoXY
+  72:../Sources/ProcessorExpert.c ****   LCD1_WriteString((char*)buf);
+  92              		.loc 1 72 0
+  93 0070 3B1D     		add	r3, r7, #4
+  94 0072 181C     		mov	r0, r3
+  95 0074 FFF7FEFF 		bl	LCD1_WriteString
+  73:../Sources/ProcessorExpert.c ****   
+  74:../Sources/ProcessorExpert.c ****   LEDR_Put(cm<10); /* red LED if object closer than 10 cm */
+  96              		.loc 1 74 0
+  97 0078 3B1C     		mov	r3, r7
+  98 007a 0C33     		add	r3, r3, #12
+  99 007c 1B88     		ldrh	r3, [r3]
+ 100 007e 092B     		cmp	r3, #9
+ 101 0080 05D8     		bhi	.L2
+ 102              		.loc 1 74 0 is_stmt 0
+ 103 0082 194B     		ldr	r3, .L8
+ 104 0084 9B68     		ldr	r3, [r3, #8]
+ 105 0086 181C     		mov	r0, r3
+ 106 0088 FFF7FEFF 		bl	BitIoLdd1_ClrVal
+ 107 008c 04E0     		b	.L3
+ 108              	.L2:
+ 109              		.loc 1 74 0
+ 110 008e 164B     		ldr	r3, .L8
+ 111 0090 9B68     		ldr	r3, [r3, #8]
+ 112 0092 181C     		mov	r0, r3
+ 113 0094 FFF7FEFF 		bl	BitIoLdd1_SetVal
+ 114              	.L3:
+  75:../Sources/ProcessorExpert.c ****   LEDB_Put(cm>=10&&cm<=100); /* blue LED if object is in 10..100 cm range */
+ 115              		.loc 1 75 0 is_stmt 1
+ 116 0098 3B1C     		mov	r3, r7
+ 117 009a 0C33     		add	r3, r3, #12
+ 118 009c 1B88     		ldrh	r3, [r3]
+ 119 009e 092B     		cmp	r3, #9
+ 120 00a0 0AD9     		bls	.L4
+ 121              		.loc 1 75 0 is_stmt 0
+ 122 00a2 3B1C     		mov	r3, r7
+ 123 00a4 0C33     		add	r3, r3, #12
+ 124 00a6 1B88     		ldrh	r3, [r3]
+ 125 00a8 642B     		cmp	r3, #100
+ 126 00aa 05D8     		bhi	.L4
+ 127              		.loc 1 75 0
+ 128 00ac 0E4B     		ldr	r3, .L8
+ 129 00ae 1B69     		ldr	r3, [r3, #16]
+ 130 00b0 181C     		mov	r0, r3
+ 131 00b2 FFF7FEFF 		bl	BitIoLdd3_ClrVal
+ 132 00b6 04E0     		b	.L5
+ 133              	.L4:
+ 134              		.loc 1 75 0
+ 135 00b8 0B4B     		ldr	r3, .L8
+ 136 00ba 1B69     		ldr	r3, [r3, #16]
+ 137 00bc 181C     		mov	r0, r3
+ 138 00be FFF7FEFF 		bl	BitIoLdd3_SetVal
+ 139              	.L5:
+  76:../Sources/ProcessorExpert.c ****   LEDG_Put(cm>100); /* blue LED if object is in 10..100 cm range */
+ 140              		.loc 1 76 0 is_stmt 1
+ 141 00c2 3B1C     		mov	r3, r7
+ 142 00c4 0C33     		add	r3, r3, #12
+ 143 00c6 1B88     		ldrh	r3, [r3]
+ 144 00c8 642B     		cmp	r3, #100
+ 145 00ca 05D9     		bls	.L6
+ 146              		.loc 1 76 0 is_stmt 0
+ 147 00cc 064B     		ldr	r3, .L8
+ 148 00ce DB68     		ldr	r3, [r3, #12]
+ 149 00d0 181C     		mov	r0, r3
+ 150 00d2 FFF7FEFF 		bl	BitIoLdd2_ClrVal
+ 151 00d6 04E0     		b	.L1
+ 152              	.L6:
+ 153              		.loc 1 76 0
+ 154 00d8 034B     		ldr	r3, .L8
+ 155 00da DB68     		ldr	r3, [r3, #12]
+ 156 00dc 181C     		mov	r0, r3
+ 157 00de FFF7FEFF 		bl	BitIoLdd2_SetVal
+ 158              	.L1:
+  77:../Sources/ProcessorExpert.c **** }
+ 159              		.loc 1 77 0 is_stmt 1
+ 160 00e2 BD46     		mov	sp, r7
+ 161 00e4 05B0     		add	sp, sp, #20
+ 162              		@ sp needed for prologue
+ 163 00e6 90BD     		pop	{r4, r7, pc}
+ 164              	.L9:
+ 165              		.align	2
+ 166              	.L8:
+ 167 00e8 00000000 		.word	PE_LDD_DeviceDataList
+ 168              		.cfi_endproc
+ 169              	.LFE0:
+ 171              		.section	.rodata
+ 172              		.align	2
+ 173              	.LC1:
+ 174 0000 75733A20 		.ascii	"us: \000"
+ 174      00
+ 175 0005 000000   		.align	2
+ 176              	.LC3:
+ 177 0008 636D3A20 		.ascii	"cm: \000"
+ 177      00
+ 178 000d 000000   		.section	.text.main,"ax",%progbits
+ 179              		.align	2
+ 180              		.global	main
+ 181              		.code	16
+ 182              		.thumb_func
+ 184              	main:
+ 185              	.LFB1:
+  78:../Sources/ProcessorExpert.c **** 
+  79:../Sources/ProcessorExpert.c **** /*lint -save  -e970 Disable MISRA rule (6.3) checking. */
+  80:../Sources/ProcessorExpert.c **** int main(void)
+  81:../Sources/ProcessorExpert.c **** /*lint -restore Enable MISRA rule (6.3) checking. */
+  82:../Sources/ProcessorExpert.c **** {
+ 186              		.loc 1 82 0
+ 187              		.cfi_startproc
+ 188 0000 80B5     		push	{r7, lr}
+ 189              	.LCFI3:
+ 190              		.cfi_def_cfa_offset 8
+ 191              		.cfi_offset 7, -8
+ 192              		.cfi_offset 14, -4
+ 193 0002 00AF     		add	r7, sp, #0
+ 194              	.LCFI4:
+ 195              		.cfi_def_cfa_register 7
+  83:../Sources/ProcessorExpert.c ****   /* Write your local variable definition here */
+  84:../Sources/ProcessorExpert.c **** 
+  85:../Sources/ProcessorExpert.c ****   /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
+  86:../Sources/ProcessorExpert.c ****   PE_low_level_init();
+ 196              		.loc 1 86 0
+ 197 0004 FFF7FEFF 		bl	PE_low_level_init
+  87:../Sources/ProcessorExpert.c ****   /*** End of Processor Expert internal initialization.                    ***/
+  88:../Sources/ProcessorExpert.c **** 
+  89:../Sources/ProcessorExpert.c ****   /* Write your code here */
+  90:../Sources/ProcessorExpert.c ****   US_Init();
+ 198              		.loc 1 90 0
+ 199 0008 FFF7FEFF 		bl	US_Init
+  91:../Sources/ProcessorExpert.c ****   LCD1_Clear();
+ 200              		.loc 1 91 0
+ 201 000c FFF7FEFF 		bl	LCD1_Clear
+  92:../Sources/ProcessorExpert.c ****   LCD1_WriteLineStr(1, "us: ");
+ 202              		.loc 1 92 0
+ 203 0010 074B     		ldr	r3, .L12
+ 204 0012 0120     		mov	r0, #1
+ 205 0014 191C     		mov	r1, r3
+ 206 0016 FFF7FEFF 		bl	LCD1_WriteLineStr
+  93:../Sources/ProcessorExpert.c ****   LCD1_WriteLineStr(2, "cm: ");
+ 207              		.loc 1 93 0
+ 208 001a 064B     		ldr	r3, .L12+4
+ 209 001c 0220     		mov	r0, #2
+ 210 001e 191C     		mov	r1, r3
+ 211 0020 FFF7FEFF 		bl	LCD1_WriteLineStr
+ 212              	.L11:
+  94:../Sources/ProcessorExpert.c ****   for(;;) {
+  95:../Sources/ProcessorExpert.c ****     Measure();
+ 213              		.loc 1 95 0
+ 214 0024 FFF7FEFF 		bl	Measure
+  96:../Sources/ProcessorExpert.c ****     WAIT1_Waitms(50); /* wait at least for 50 ms until the next measurement to avoid echos */
+ 215              		.loc 1 96 0
+ 216 0028 3220     		mov	r0, #50
+ 217 002a FFF7FEFF 		bl	WAIT1_Waitms
+  97:../Sources/ProcessorExpert.c ****   }
+ 218              		.loc 1 97 0
+ 219 002e F9E7     		b	.L11
+ 220              	.L13:
+ 221              		.align	2
+ 222              	.L12:
+ 223 0030 00000000 		.word	.LC1
+ 224 0034 08000000 		.word	.LC3
+ 225              		.cfi_endproc
+ 226              	.LFE1:
+ 228              		.text
+ 229              	.Letext0:
+ 230              		.file 2 "C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdint"
+ 231              		.file 3 "D:/15_MyFactory/PREN/Microcontroller/FRDM KL25Z/Freedom_HC-SR04/Generated_Code/PE_Types.h
+DEFINED SYMBOLS
+                            *ABS*:00000000 ProcessorExpert.c
+C:\Users\burak\AppData\Local\Temp\ccZCXK1w.s:18     .text.Measure:00000000 $t
+C:\Users\burak\AppData\Local\Temp\ccZCXK1w.s:22     .text.Measure:00000000 Measure
+C:\Users\burak\AppData\Local\Temp\ccZCXK1w.s:167    .text.Measure:000000e8 $d
+C:\Users\burak\AppData\Local\Temp\ccZCXK1w.s:172    .rodata:00000000 $d
+C:\Users\burak\AppData\Local\Temp\ccZCXK1w.s:179    .text.main:00000000 $t
+C:\Users\burak\AppData\Local\Temp\ccZCXK1w.s:184    .text.main:00000000 main
+C:\Users\burak\AppData\Local\Temp\ccZCXK1w.s:223    .text.main:00000030 $d
+                     .debug_frame:00000010 $d
+
+UNDEFINED SYMBOLS
+US_Measure_us
+UTIL1_Num16uToStrFormatted
+LCD1_GotoXY
+LCD1_WriteString
+US_usToCentimeters
+BitIoLdd1_ClrVal
+BitIoLdd1_SetVal
+BitIoLdd3_ClrVal
+BitIoLdd3_SetVal
+BitIoLdd2_ClrVal
+BitIoLdd2_SetVal
+PE_LDD_DeviceDataList
+PE_low_level_init
+US_Init
+LCD1_Clear
+LCD1_WriteLineStr
+WAIT1_Waitms

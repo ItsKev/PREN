@@ -1,0 +1,209 @@
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"Events.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.Cpu_OnNMIINT,"ax",%progbits
+  18              		.align	2
+  19              		.global	Cpu_OnNMIINT
+  20              		.code	16
+  21              		.thumb_func
+  23              	Cpu_OnNMIINT:
+  24              	.LFB0:
+  25              		.file 1 "../Sources/Events.c"
+   1:../Sources/Events.c **** /** ###################################################################
+   2:../Sources/Events.c **** **     Filename    : Events.c
+   3:../Sources/Events.c **** **     Project     : ProcessorExpert
+   4:../Sources/Events.c **** **     Processor   : MKL25Z128VLK4
+   5:../Sources/Events.c **** **     Component   : Events
+   6:../Sources/Events.c **** **     Version     : Driver 01.00
+   7:../Sources/Events.c **** **     Compiler    : GNU C Compiler
+   8:../Sources/Events.c **** **     Date/Time   : 2012-12-12, 19:34, # CodeGen: 0
+   9:../Sources/Events.c **** **     Abstract    :
+  10:../Sources/Events.c **** **         This is user's event module.
+  11:../Sources/Events.c **** **         Put your event handler code here.
+  12:../Sources/Events.c **** **     Settings    :
+  13:../Sources/Events.c **** **     Contents    :
+  14:../Sources/Events.c **** **         Cpu_OnNMIINT - void Cpu_OnNMIINT(void);
+  15:../Sources/Events.c **** **
+  16:../Sources/Events.c **** ** ###################################################################*/
+  17:../Sources/Events.c **** /* MODULE Events */
+  18:../Sources/Events.c **** 
+  19:../Sources/Events.c **** #include "Cpu.h"
+  20:../Sources/Events.c **** #include "Events.h"
+  21:../Sources/Events.c **** 
+  22:../Sources/Events.c **** /* User includes (#include below this line is not maintained by Processor Expert) */
+  23:../Sources/Events.c **** #include "Ultrasonic.h"
+  24:../Sources/Events.c **** 
+  25:../Sources/Events.c **** /*
+  26:../Sources/Events.c **** ** ===================================================================
+  27:../Sources/Events.c **** **     Event       :  Cpu_OnNMIINT (module Events)
+  28:../Sources/Events.c **** **
+  29:../Sources/Events.c **** **     Component   :  Cpu [MKL25Z128LK4]
+  30:../Sources/Events.c **** **     Description :
+  31:../Sources/Events.c **** **         This event is called when the Non maskable interrupt had
+  32:../Sources/Events.c **** **         occurred. This event is automatically enabled when the <NMI
+  33:../Sources/Events.c **** **         interrrupt> property is set to 'Enabled'.
+  34:../Sources/Events.c **** **     Parameters  : None
+  35:../Sources/Events.c **** **     Returns     : Nothing
+  36:../Sources/Events.c **** ** ===================================================================
+  37:../Sources/Events.c **** */
+  38:../Sources/Events.c **** void Cpu_OnNMIINT(void)
+  39:../Sources/Events.c **** {
+  26              		.loc 1 39 0
+  27              		.cfi_startproc
+  28 0000 80B5     		push	{r7, lr}
+  29              	.LCFI0:
+  30              		.cfi_def_cfa_offset 8
+  31              		.cfi_offset 7, -8
+  32              		.cfi_offset 14, -4
+  33 0002 00AF     		add	r7, sp, #0
+  34              	.LCFI1:
+  35              		.cfi_def_cfa_register 7
+  40:../Sources/Events.c ****   /* Write your code here ... */
+  41:../Sources/Events.c **** }
+  36              		.loc 1 41 0
+  37 0004 BD46     		mov	sp, r7
+  38              		@ sp needed for prologue
+  39 0006 80BD     		pop	{r7, pc}
+  40              		.cfi_endproc
+  41              	.LFE0:
+  43              		.section	.text.TU1_OnChannel0,"ax",%progbits
+  44              		.align	2
+  45              		.global	TU1_OnChannel0
+  46              		.code	16
+  47              		.thumb_func
+  49              	TU1_OnChannel0:
+  50              	.LFB1:
+  42:../Sources/Events.c **** 
+  43:../Sources/Events.c **** /*
+  44:../Sources/Events.c **** ** ===================================================================
+  45:../Sources/Events.c **** **     Event       :  TU1_OnChannel0 (module Events)
+  46:../Sources/Events.c **** **
+  47:../Sources/Events.c **** **     Component   :  TU1 [TimerUnit_LDD]
+  48:../Sources/Events.c **** **     Description :
+  49:../Sources/Events.c **** **         Called if compare register match the counter registers or
+  50:../Sources/Events.c **** **         capture register has a new content. OnChannel0 event and
+  51:../Sources/Events.c **** **         Timer unit must be enabled. See <SetEventMask> and
+  52:../Sources/Events.c **** **         <GetEventMask> methods. This event is available only if a
+  53:../Sources/Events.c **** **         <Interrupt> is enabled.
+  54:../Sources/Events.c **** **     Parameters  :
+  55:../Sources/Events.c **** **         NAME            - DESCRIPTION
+  56:../Sources/Events.c **** **       * UserDataPtr     - Pointer to the user or
+  57:../Sources/Events.c **** **                           RTOS specific data. The pointer passed as
+  58:../Sources/Events.c **** **                           the parameter of Init method.
+  59:../Sources/Events.c **** **     Returns     : Nothing
+  60:../Sources/Events.c **** ** ===================================================================
+  61:../Sources/Events.c **** */
+  62:../Sources/Events.c **** void TU1_OnChannel0(LDD_TUserData *UserDataPtr)
+  63:../Sources/Events.c **** {
+  51              		.loc 1 63 0
+  52              		.cfi_startproc
+  53 0000 80B5     		push	{r7, lr}
+  54              	.LCFI2:
+  55              		.cfi_def_cfa_offset 8
+  56              		.cfi_offset 7, -8
+  57              		.cfi_offset 14, -4
+  58 0002 82B0     		sub	sp, sp, #8
+  59              	.LCFI3:
+  60              		.cfi_def_cfa_offset 16
+  61 0004 00AF     		add	r7, sp, #0
+  62              	.LCFI4:
+  63              		.cfi_def_cfa_register 7
+  64 0006 7860     		str	r0, [r7, #4]
+  64:../Sources/Events.c ****   US_EventEchoCapture(UserDataPtr);
+  65              		.loc 1 64 0
+  66 0008 7B68     		ldr	r3, [r7, #4]
+  67 000a 181C     		mov	r0, r3
+  68 000c FFF7FEFF 		bl	US_EventEchoCapture
+  65:../Sources/Events.c **** }
+  69              		.loc 1 65 0
+  70 0010 BD46     		mov	sp, r7
+  71 0012 02B0     		add	sp, sp, #8
+  72              		@ sp needed for prologue
+  73 0014 80BD     		pop	{r7, pc}
+  74              		.cfi_endproc
+  75              	.LFE1:
+  77 0016 C046     		.section	.text.TU1_OnCounterRestart,"ax",%progbits
+  78              		.align	2
+  79              		.global	TU1_OnCounterRestart
+  80              		.code	16
+  81              		.thumb_func
+  83              	TU1_OnCounterRestart:
+  84              	.LFB2:
+  66:../Sources/Events.c **** 
+  67:../Sources/Events.c **** /*
+  68:../Sources/Events.c **** ** ===================================================================
+  69:../Sources/Events.c **** **     Event       :  TU1_OnCounterRestart (module Events)
+  70:../Sources/Events.c **** **
+  71:../Sources/Events.c **** **     Component   :  TU1 [TimerUnit_LDD]
+  72:../Sources/Events.c **** **     Description :
+  73:../Sources/Events.c **** **         Called if counter overflow/underflow or counter is
+  74:../Sources/Events.c **** **         reinitialized by modulo or compare register matching.
+  75:../Sources/Events.c **** **         OnCounterRestart event and Timer unit must be enabled. See
+  76:../Sources/Events.c **** **         <SetEventMask> and <GetEventMask> methods. This event is
+  77:../Sources/Events.c **** **         available only if a <Interrupt> is enabled.
+  78:../Sources/Events.c **** **     Parameters  :
+  79:../Sources/Events.c **** **         NAME            - DESCRIPTION
+  80:../Sources/Events.c **** **       * UserDataPtr     - Pointer to the user or
+  81:../Sources/Events.c **** **                           RTOS specific data. The pointer passed as
+  82:../Sources/Events.c **** **                           the parameter of Init method.
+  83:../Sources/Events.c **** **     Returns     : Nothing
+  84:../Sources/Events.c **** ** ===================================================================
+  85:../Sources/Events.c **** */
+  86:../Sources/Events.c **** void TU1_OnCounterRestart(LDD_TUserData *UserDataPtr)
+  87:../Sources/Events.c **** {
+  85              		.loc 1 87 0
+  86              		.cfi_startproc
+  87 0000 80B5     		push	{r7, lr}
+  88              	.LCFI5:
+  89              		.cfi_def_cfa_offset 8
+  90              		.cfi_offset 7, -8
+  91              		.cfi_offset 14, -4
+  92 0002 82B0     		sub	sp, sp, #8
+  93              	.LCFI6:
+  94              		.cfi_def_cfa_offset 16
+  95 0004 00AF     		add	r7, sp, #0
+  96              	.LCFI7:
+  97              		.cfi_def_cfa_register 7
+  98 0006 7860     		str	r0, [r7, #4]
+  88:../Sources/Events.c ****   US_EventEchoOverflow(UserDataPtr);
+  99              		.loc 1 88 0
+ 100 0008 7B68     		ldr	r3, [r7, #4]
+ 101 000a 181C     		mov	r0, r3
+ 102 000c FFF7FEFF 		bl	US_EventEchoOverflow
+  89:../Sources/Events.c **** }
+ 103              		.loc 1 89 0
+ 104 0010 BD46     		mov	sp, r7
+ 105 0012 02B0     		add	sp, sp, #8
+ 106              		@ sp needed for prologue
+ 107 0014 80BD     		pop	{r7, pc}
+ 108              		.cfi_endproc
+ 109              	.LFE2:
+ 111 0016 C046     		.text
+ 112              	.Letext0:
+ 113              		.file 2 "D:/15_MyFactory/PREN/Microcontroller/FRDM KL25Z/Freedom_HC-SR04/Generated_Code/PE_Types.h
+DEFINED SYMBOLS
+                            *ABS*:00000000 Events.c
+C:\Users\burak\AppData\Local\Temp\ccHzuTXh.s:18     .text.Cpu_OnNMIINT:00000000 $t
+C:\Users\burak\AppData\Local\Temp\ccHzuTXh.s:23     .text.Cpu_OnNMIINT:00000000 Cpu_OnNMIINT
+C:\Users\burak\AppData\Local\Temp\ccHzuTXh.s:44     .text.TU1_OnChannel0:00000000 $t
+C:\Users\burak\AppData\Local\Temp\ccHzuTXh.s:49     .text.TU1_OnChannel0:00000000 TU1_OnChannel0
+C:\Users\burak\AppData\Local\Temp\ccHzuTXh.s:78     .text.TU1_OnCounterRestart:00000000 $t
+C:\Users\burak\AppData\Local\Temp\ccHzuTXh.s:83     .text.TU1_OnCounterRestart:00000000 TU1_OnCounterRestart
+                     .debug_frame:00000010 $d
+
+UNDEFINED SYMBOLS
+US_EventEchoCapture
+US_EventEchoOverflow

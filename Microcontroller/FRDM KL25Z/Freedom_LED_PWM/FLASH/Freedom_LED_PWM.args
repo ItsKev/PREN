@@ -17,7 +17,7 @@
 -g3
 -gdwarf-2
 -gstrict-dwarf
--T"D:/15. MyFactory/PREN/Microcontroller/FRDM KL25Z/Freedom_LED_PWM/Project_Settings/Linker_Files/ProcessorExpert.ld"
+-T"D:/15_MyFactory/PREN/Microcontroller/FRDM KL25Z/Freedom_LED_PWM/Project_Settings/Linker_Files/ProcessorExpert.ld"
 -Xlinker
 --gc-sections
 -L"C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m"
