@@ -1,0 +1,271 @@
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 4
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"ProcessorExpert.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.Task2,"ax",%progbits
+  18              		.align	1
+  19              		.code	16
+  20              		.thumb_func
+  22              	Task2:
+  23              	.LFB1:
+  24              		.file 1 "../Sources/ProcessorExpert.c"
+   1:../Sources/ProcessorExpert.c **** /** ###################################################################
+   2:../Sources/ProcessorExpert.c **** **     Filename    : ProcessorExpert.c
+   3:../Sources/ProcessorExpert.c **** **     Project     : ProcessorExpert
+   4:../Sources/ProcessorExpert.c **** **     Processor   : MKL25Z128VLK4
+   5:../Sources/ProcessorExpert.c **** **     Version     : Driver 01.01
+   6:../Sources/ProcessorExpert.c **** **     Compiler    : GNU C Compiler
+   7:../Sources/ProcessorExpert.c **** **     Date/Time   : 2012-09-25, 10:04, # CodeGen: 0
+   8:../Sources/ProcessorExpert.c **** **     Abstract    :
+   9:../Sources/ProcessorExpert.c **** **         Main module.
+  10:../Sources/ProcessorExpert.c **** **         This module contains user's application code.
+  11:../Sources/ProcessorExpert.c **** **     Settings    :
+  12:../Sources/ProcessorExpert.c **** **     Contents    :
+  13:../Sources/ProcessorExpert.c **** **         No public methods
+  14:../Sources/ProcessorExpert.c **** **
+  15:../Sources/ProcessorExpert.c **** ** ###################################################################*/
+  16:../Sources/ProcessorExpert.c **** /* MODULE ProcessorExpert */
+  17:../Sources/ProcessorExpert.c **** 
+  18:../Sources/ProcessorExpert.c **** 
+  19:../Sources/ProcessorExpert.c **** /* Including needed modules to compile this module/procedure */
+  20:../Sources/ProcessorExpert.c **** #include "Cpu.h"
+  21:../Sources/ProcessorExpert.c **** #include "Events.h"
+  22:../Sources/ProcessorExpert.c **** #include "FRTOS1.h"
+  23:../Sources/ProcessorExpert.c **** #include "RTOSTICKLDD1.h"
+  24:../Sources/ProcessorExpert.c **** #include "UTIL1.h"
+  25:../Sources/ProcessorExpert.c **** #include "LED1.h"
+  26:../Sources/ProcessorExpert.c **** #include "LEDpin3.h"
+  27:../Sources/ProcessorExpert.c **** #include "BitIoLdd3.h"
+  28:../Sources/ProcessorExpert.c **** #include "LED2.h"
+  29:../Sources/ProcessorExpert.c **** #include "LEDpin4.h"
+  30:../Sources/ProcessorExpert.c **** #include "BitIoLdd4.h"
+  31:../Sources/ProcessorExpert.c **** #include "MCUC1.h"
+  32:../Sources/ProcessorExpert.c **** /* Including shared modules, which are used for whole project */
+  33:../Sources/ProcessorExpert.c **** #include "PE_Types.h"
+  34:../Sources/ProcessorExpert.c **** #include "PE_Error.h"
+  35:../Sources/ProcessorExpert.c **** #include "PE_Const.h"
+  36:../Sources/ProcessorExpert.c **** #include "IO_Map.h"
+  37:../Sources/ProcessorExpert.c **** 
+  38:../Sources/ProcessorExpert.c **** /* User includes (#include below this line is not maintained by Processor Expert) */
+  39:../Sources/ProcessorExpert.c **** static portTASK_FUNCTION(Task1, pvParameters) {
+  40:../Sources/ProcessorExpert.c ****   (void)pvParameters; /* parameter not used */
+  41:../Sources/ProcessorExpert.c ****   for(;;) {
+  42:../Sources/ProcessorExpert.c ****     LED1_Neg();
+  43:../Sources/ProcessorExpert.c ****     FRTOS1_vTaskDelay(1000/portTICK_RATE_MS);
+  44:../Sources/ProcessorExpert.c ****   }
+  45:../Sources/ProcessorExpert.c **** }
+  46:../Sources/ProcessorExpert.c **** 
+  47:../Sources/ProcessorExpert.c **** static portTASK_FUNCTION(Task2, pvParameters) {
+  25              		.loc 1 47 0
+  26              		.cfi_startproc
+  27              	.LVL0:
+  28 0000 08B5     		push	{r3, lr}
+  29              	.LCFI0:
+  30              		.cfi_def_cfa_offset 8
+  31              		.cfi_offset 3, -8
+  32              		.cfi_offset 14, -4
+  33              	.LVL1:
+  34              	.L2:
+  48:../Sources/ProcessorExpert.c ****   (void)pvParameters; /* parameter not used */
+  49:../Sources/ProcessorExpert.c ****   for(;;) {
+  50:../Sources/ProcessorExpert.c ****     LED2_Neg();
+  35              		.loc 1 50 0
+  36 0002 044B     		ldr	r3, .L4
+  37 0004 5868     		ldr	r0, [r3, #4]
+  38 0006 FFF7FEFF 		bl	BitIoLdd4_NegVal
+  39              	.LVL2:
+  51:../Sources/ProcessorExpert.c ****     FRTOS1_vTaskDelay(1050/portTICK_RATE_MS);
+  40              		.loc 1 51 0
+  41 000a 6920     		mov	r0, #105
+  42 000c FFF7FEFF 		bl	vTaskDelay
+  43              	.LVL3:
+  44 0010 F7E7     		b	.L2
+  45              	.L5:
+  46 0012 C046     		.align	2
+  47              	.L4:
+  48 0014 00000000 		.word	PE_LDD_DeviceDataList
+  49              		.cfi_endproc
+  50              	.LFE1:
+  52              		.section	.text.Task1,"ax",%progbits
+  53              		.align	1
+  54              		.code	16
+  55              		.thumb_func
+  57              	Task1:
+  58              	.LFB0:
+  39:../Sources/ProcessorExpert.c **** static portTASK_FUNCTION(Task1, pvParameters) {
+  59              		.loc 1 39 0
+  60              		.cfi_startproc
+  61              	.LVL4:
+  62 0000 08B5     		push	{r3, lr}
+  63              	.LCFI1:
+  64              		.cfi_def_cfa_offset 8
+  65              		.cfi_offset 3, -8
+  66              		.cfi_offset 14, -4
+  67              	.LVL5:
+  68              	.L7:
+  42:../Sources/ProcessorExpert.c ****     LED1_Neg();
+  69              		.loc 1 42 0
+  70 0002 044B     		ldr	r3, .L8
+  71 0004 1868     		ldr	r0, [r3]
+  72 0006 FFF7FEFF 		bl	BitIoLdd3_NegVal
+  73              	.LVL6:
+  43:../Sources/ProcessorExpert.c ****     FRTOS1_vTaskDelay(1000/portTICK_RATE_MS);
+  74              		.loc 1 43 0
+  75 000a 6420     		mov	r0, #100
+  76 000c FFF7FEFF 		bl	vTaskDelay
+  77              	.LVL7:
+  78 0010 F7E7     		b	.L7
+  79              	.L9:
+  80 0012 C046     		.align	2
+  81              	.L8:
+  82 0014 00000000 		.word	PE_LDD_DeviceDataList
+  83              		.cfi_endproc
+  84              	.LFE0:
+  86              		.section	.text.startup.main,"ax",%progbits
+  87              		.align	1
+  88              		.global	main
+  89              		.code	16
+  90              		.thumb_func
+  92              	main:
+  93              	.LFB2:
+  52:../Sources/ProcessorExpert.c ****   }
+  53:../Sources/ProcessorExpert.c **** }
+  54:../Sources/ProcessorExpert.c **** 
+  55:../Sources/ProcessorExpert.c **** /*lint -save  -e970 Disable MISRA rule (6.3) checking. */
+  56:../Sources/ProcessorExpert.c **** int main(void)
+  57:../Sources/ProcessorExpert.c **** /*lint -restore Enable MISRA rule (6.3) checking. */
+  58:../Sources/ProcessorExpert.c **** {
+  94              		.loc 1 58 0
+  95              		.cfi_startproc
+  96 0000 13B5     		push	{r0, r1, r4, lr}
+  97              	.LCFI2:
+  98              		.cfi_def_cfa_offset 16
+  99              		.cfi_offset 0, -16
+ 100              		.cfi_offset 1, -12
+ 101              		.cfi_offset 4, -8
+ 102              		.cfi_offset 14, -4
+  59:../Sources/ProcessorExpert.c ****   /* Write your local variable definition here */
+  60:../Sources/ProcessorExpert.c **** 
+  61:../Sources/ProcessorExpert.c ****   /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
+  62:../Sources/ProcessorExpert.c ****   PE_low_level_init();
+  63:../Sources/ProcessorExpert.c ****   /*** End of Processor Expert internal initialization.                    ***/
+  64:../Sources/ProcessorExpert.c **** 
+  65:../Sources/ProcessorExpert.c ****   if (FRTOS1_xTaskCreate(
+ 103              		.loc 1 65 0
+ 104 0002 0024     		mov	r4, #0
+  62:../Sources/ProcessorExpert.c ****   PE_low_level_init();
+ 105              		.loc 1 62 0
+ 106 0004 FFF7FEFF 		bl	PE_low_level_init
+ 107              	.LVL8:
+ 108              		.loc 1 65 0
+ 109 0008 0094     		str	r4, [sp]
+ 110 000a 0194     		str	r4, [sp, #4]
+ 111 000c 0B48     		ldr	r0, .L18
+ 112 000e 0C49     		ldr	r1, .L18+4
+ 113 0010 6422     		mov	r2, #100
+ 114 0012 231C     		mov	r3, r4
+ 115 0014 FFF7FEFF 		bl	xTaskCreate
+ 116              	.LVL9:
+ 117 0018 0128     		cmp	r0, #1
+ 118 001a 00D0     		beq	.L11
+ 119              	.L16:
+ 120 001c FEE7     		b	.L16
+ 121              	.L11:
+  66:../Sources/ProcessorExpert.c ****         Task1,  /* pointer to the task */
+  67:../Sources/ProcessorExpert.c ****         (signed portCHAR *)"Task1", /* task name for kernel awareness debugging */
+  68:../Sources/ProcessorExpert.c ****         configMINIMAL_STACK_SIZE, /* task stack size */
+  69:../Sources/ProcessorExpert.c ****         (void*)NULL, /* optional task startup argument */
+  70:../Sources/ProcessorExpert.c ****         tskIDLE_PRIORITY,  /* initial priority */
+  71:../Sources/ProcessorExpert.c ****         (xTaskHandle*)NULL /* optional task handle to create */
+  72:../Sources/ProcessorExpert.c ****       ) != pdPASS) {
+  73:../Sources/ProcessorExpert.c ****     for(;;){}; /* Out of heap memory? */
+  74:../Sources/ProcessorExpert.c ****   }
+  75:../Sources/ProcessorExpert.c ****   if (FRTOS1_xTaskCreate(
+ 122              		.loc 1 75 0
+ 123 001e 0094     		str	r4, [sp]
+ 124 0020 0194     		str	r4, [sp, #4]
+ 125 0022 0848     		ldr	r0, .L18+8
+ 126 0024 0849     		ldr	r1, .L18+12
+ 127 0026 6422     		mov	r2, #100
+ 128 0028 231C     		mov	r3, r4
+ 129 002a FFF7FEFF 		bl	xTaskCreate
+ 130              	.LVL10:
+ 131 002e 0128     		cmp	r0, #1
+ 132 0030 00D0     		beq	.L13
+ 133              	.L17:
+ 134 0032 FEE7     		b	.L17
+ 135              	.L13:
+  76:../Sources/ProcessorExpert.c ****         Task2,  /* pointer to the task */
+  77:../Sources/ProcessorExpert.c ****         (signed portCHAR *)"Task2", /* task name for kernel awareness debugging */
+  78:../Sources/ProcessorExpert.c ****         configMINIMAL_STACK_SIZE, /* task stack size */
+  79:../Sources/ProcessorExpert.c ****         (void*)NULL, /* optional task startup argument */
+  80:../Sources/ProcessorExpert.c ****         tskIDLE_PRIORITY,  /* initial priority */
+  81:../Sources/ProcessorExpert.c ****         (xTaskHandle*)NULL /* optional task handle to create */
+  82:../Sources/ProcessorExpert.c ****       ) != pdPASS) {
+  83:../Sources/ProcessorExpert.c ****     for(;;){}; /* Out of heap memory */
+  84:../Sources/ProcessorExpert.c ****   }
+  85:../Sources/ProcessorExpert.c **** 
+  86:../Sources/ProcessorExpert.c ****   /*** Don't write any code pass this line, or it will be deleted during code generation. ***/
+  87:../Sources/ProcessorExpert.c ****   /*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS 
+  88:../Sources/ProcessorExpert.c ****   #ifdef PEX_RTOS_START
+  89:../Sources/ProcessorExpert.c ****     PEX_RTOS_START();                  /* Startup of the selected RTOS. Macro is defined by the RTO
+ 136              		.loc 1 89 0
+ 137 0034 FFF7FEFF 		bl	vTaskStartScheduler
+ 138              	.LVL11:
+ 139              	.L15:
+ 140 0038 FEE7     		b	.L15
+ 141              	.L19:
+ 142 003a C046     		.align	2
+ 143              	.L18:
+ 144 003c 00000000 		.word	Task1
+ 145 0040 00000000 		.word	.LC3
+ 146 0044 00000000 		.word	Task2
+ 147 0048 06000000 		.word	.LC6
+ 148              		.cfi_endproc
+ 149              	.LFE2:
+ 151              		.section	.rodata.str1.1,"aMS",%progbits,1
+ 152              	.LC3:
+ 153 0000 5461736B 		.ascii	"Task1\000"
+ 153      3100
+ 154              	.LC6:
+ 155 0006 5461736B 		.ascii	"Task2\000"
+ 155      3200
+ 156              		.text
+ 157              	.Letext0:
+ 158              		.file 2 "C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdint"
+ 159              		.file 3 "D:/15_MyFactory/PREN/Microcontroller/FRDM KL25Z/Freedom_RTOS/Generated_Code/portmacro.h"
+ 160              		.file 4 "D:/15_MyFactory/PREN/Microcontroller/FRDM KL25Z/Freedom_RTOS/Generated_Code/task.h"
+ 161              		.file 5 "D:/15_MyFactory/PREN/Microcontroller/FRDM KL25Z/Freedom_RTOS/Generated_Code/PE_Types.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 ProcessorExpert.c
+C:\Users\burak\AppData\Local\Temp\cc0mqcUg.s:18     .text.Task2:00000000 $t
+C:\Users\burak\AppData\Local\Temp\cc0mqcUg.s:22     .text.Task2:00000000 Task2
+C:\Users\burak\AppData\Local\Temp\cc0mqcUg.s:48     .text.Task2:00000014 $d
+C:\Users\burak\AppData\Local\Temp\cc0mqcUg.s:53     .text.Task1:00000000 $t
+C:\Users\burak\AppData\Local\Temp\cc0mqcUg.s:57     .text.Task1:00000000 Task1
+C:\Users\burak\AppData\Local\Temp\cc0mqcUg.s:82     .text.Task1:00000014 $d
+C:\Users\burak\AppData\Local\Temp\cc0mqcUg.s:87     .text.startup.main:00000000 $t
+C:\Users\burak\AppData\Local\Temp\cc0mqcUg.s:92     .text.startup.main:00000000 main
+C:\Users\burak\AppData\Local\Temp\cc0mqcUg.s:144    .text.startup.main:0000003c $d
+                     .debug_frame:00000010 $d
+
+UNDEFINED SYMBOLS
+BitIoLdd4_NegVal
+vTaskDelay
+PE_LDD_DeviceDataList
+BitIoLdd3_NegVal
+PE_low_level_init
+xTaskCreate
+vTaskStartScheduler

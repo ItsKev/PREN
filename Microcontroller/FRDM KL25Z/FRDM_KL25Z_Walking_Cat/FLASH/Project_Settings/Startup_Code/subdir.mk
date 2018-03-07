@@ -17,27 +17,27 @@ OBJS += \
 ./Project_Settings/Startup_Code/__arm_end.o \
 ./Project_Settings/Startup_Code/__arm_start.o \
 
-C_DEPS += \
-./Project_Settings/Startup_Code/__arm_end.d \
-./Project_Settings/Startup_Code/__arm_start.d \
-
 OBJS_QUOTED += \
 "./Project_Settings/Startup_Code/__arm_end.o" \
 "./Project_Settings/Startup_Code/__arm_start.o" \
 
-C_DEPS_QUOTED += \
-"./Project_Settings/Startup_Code/__arm_end.d" \
-"./Project_Settings/Startup_Code/__arm_start.d" \
+C_DEPS += \
+./Project_Settings/Startup_Code/__arm_end.d \
+./Project_Settings/Startup_Code/__arm_start.d \
 
 OBJS_OS_FORMAT += \
 ./Project_Settings/Startup_Code/__arm_end.o \
 ./Project_Settings/Startup_Code/__arm_start.o \
 
+C_DEPS_QUOTED += \
+"./Project_Settings/Startup_Code/__arm_end.d" \
+"./Project_Settings/Startup_Code/__arm_start.d" \
+
 
 # Each subdirectory must supply rules for building sources it contributes
 Project_Settings/Startup_Code/__arm_end.o: ../Project_Settings/Startup_Code/__arm_end.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #4 $<'
+	@echo 'Executing target #7 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Project_Settings/Startup_Code/__arm_end.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Project_Settings/Startup_Code/__arm_end.o"
 	@echo 'Finished building: $<'
@@ -45,7 +45,7 @@ Project_Settings/Startup_Code/__arm_end.o: ../Project_Settings/Startup_Code/__ar
 
 Project_Settings/Startup_Code/__arm_start.o: ../Project_Settings/Startup_Code/__arm_start.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #5 $<'
+	@echo 'Executing target #8 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Project_Settings/Startup_Code/__arm_start.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Project_Settings/Startup_Code/__arm_start.o"
 	@echo 'Finished building: $<'

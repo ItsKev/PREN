@@ -100,7 +100,7 @@
 #endif
 
 #ifndef configUSE_SHELL
-  #define configUSE_SHELL                         (0)
+  #define configUSE_SHELL                         (1)
    /*!< 1: enable Shell and command line support; 0: disabled */
 #endif
 

@@ -3,8 +3,6 @@
 	<name>Freedom_Accel</name>
 	<comment></comment>
 	<projects>
-		<project location="PARENT-1-PROJECT_LOC/FRDM-KL25Z_Shell_PEx">
-FRDM-KL25Z_Shell_PEx		</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

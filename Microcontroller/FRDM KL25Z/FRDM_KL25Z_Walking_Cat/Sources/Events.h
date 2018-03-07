@@ -37,6 +37,18 @@
 #include "UTIL1.h"
 #include "MCUC1.h"
 #include "FRTOS1.h"
+#include "CLS1.h"
+#include "WAIT1.h"
+#include "CS1.h"
+#include "XF1.h"
+#include "AS1.h"
+#include "ASerialLdd1.h"
+#include "LED_Onboard_R.h"
+#include "LEDpin1.h"
+#include "BitIoLdd1.h"
+#include "LED_Onboard_Green.h"
+#include "LEDpin2.h"
+#include "BitIoLdd2.h"
 
 #ifdef __cplusplus
 extern "C" {

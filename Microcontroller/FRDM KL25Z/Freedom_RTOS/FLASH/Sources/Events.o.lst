@@ -1,0 +1,248 @@
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 4
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"Events.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.Cpu_OnNMIINT,"ax",%progbits
+  18              		.align	1
+  19              		.global	Cpu_OnNMIINT
+  20              		.code	16
+  21              		.thumb_func
+  23              	Cpu_OnNMIINT:
+  24              	.LFB0:
+  25              		.file 1 "../Sources/Events.c"
+   1:../Sources/Events.c **** /** ###################################################################
+   2:../Sources/Events.c **** **     Filename    : Events.c
+   3:../Sources/Events.c **** **     Project     : ProcessorExpert
+   4:../Sources/Events.c **** **     Processor   : MKL25Z128VLK4
+   5:../Sources/Events.c **** **     Component   : Events
+   6:../Sources/Events.c **** **     Version     : Driver 01.00
+   7:../Sources/Events.c **** **     Compiler    : GNU C Compiler
+   8:../Sources/Events.c **** **     Date/Time   : 2012-09-25, 10:04, # CodeGen: 0
+   9:../Sources/Events.c **** **     Abstract    :
+  10:../Sources/Events.c **** **         This is user's event module.
+  11:../Sources/Events.c **** **         Put your event handler code here.
+  12:../Sources/Events.c **** **     Settings    :
+  13:../Sources/Events.c **** **     Contents    :
+  14:../Sources/Events.c **** **         Cpu_OnNMIINT - void Cpu_OnNMIINT(void);
+  15:../Sources/Events.c **** **
+  16:../Sources/Events.c **** ** ###################################################################*/
+  17:../Sources/Events.c **** /* MODULE Events */
+  18:../Sources/Events.c **** 
+  19:../Sources/Events.c **** #include "Cpu.h"
+  20:../Sources/Events.c **** #include "Events.h"
+  21:../Sources/Events.c **** 
+  22:../Sources/Events.c **** /* User includes (#include below this line is not maintained by Processor Expert) */
+  23:../Sources/Events.c **** 
+  24:../Sources/Events.c **** /*
+  25:../Sources/Events.c **** ** ===================================================================
+  26:../Sources/Events.c **** **     Event       :  Cpu_OnNMIINT (module Events)
+  27:../Sources/Events.c **** **
+  28:../Sources/Events.c **** **     Component   :  Cpu [MKL25Z128LK4]
+  29:../Sources/Events.c **** **     Description :
+  30:../Sources/Events.c **** **         This event is called when the Non maskable interrupt had
+  31:../Sources/Events.c **** **         occurred. This event is automatically enabled when the <NMI
+  32:../Sources/Events.c **** **         interrrupt> property is set to 'Enabled'.
+  33:../Sources/Events.c **** **     Parameters  : None
+  34:../Sources/Events.c **** **     Returns     : Nothing
+  35:../Sources/Events.c **** ** ===================================================================
+  36:../Sources/Events.c **** */
+  37:../Sources/Events.c **** void Cpu_OnNMIINT(void)
+  38:../Sources/Events.c **** {
+  26              		.loc 1 38 0
+  27              		.cfi_startproc
+  39:../Sources/Events.c ****   /* Write your code here ... */
+  40:../Sources/Events.c **** }
+  28              		.loc 1 40 0
+  29              		@ sp needed for prologue
+  30 0000 7047     		bx	lr
+  31              		.cfi_endproc
+  32              	.LFE0:
+  34              		.section	.text.FRTOS1_vApplicationStackOverflowHook,"ax",%progbits
+  35              		.align	1
+  36              		.global	FRTOS1_vApplicationStackOverflowHook
+  37              		.code	16
+  38              		.thumb_func
+  40              	FRTOS1_vApplicationStackOverflowHook:
+  41              	.LFB1:
+  41:../Sources/Events.c **** 
+  42:../Sources/Events.c **** /*
+  43:../Sources/Events.c **** ** ===================================================================
+  44:../Sources/Events.c **** **     Event       :  FRTOS1_vApplicationStackOverflowHook (module Events)
+  45:../Sources/Events.c **** **
+  46:../Sources/Events.c **** **     Component   :  FRTOS1 [FreeRTOS]
+  47:../Sources/Events.c **** **     Description :
+  48:../Sources/Events.c **** **         if enabled, this hook will be called in case of a stack
+  49:../Sources/Events.c **** **         overflow.
+  50:../Sources/Events.c **** **     Parameters  :
+  51:../Sources/Events.c **** **         NAME            - DESCRIPTION
+  52:../Sources/Events.c **** **       * pxTask          - Pointer to task handle
+  53:../Sources/Events.c **** **       * pcTaskName      - Pointer to 
+  54:../Sources/Events.c **** **     Returns     : Nothing
+  55:../Sources/Events.c **** ** ===================================================================
+  56:../Sources/Events.c **** */
+  57:../Sources/Events.c **** void FRTOS1_vApplicationStackOverflowHook(TaskHandle_t pxTask, char *pcTaskName)
+  58:../Sources/Events.c **** {
+  42              		.loc 1 58 0
+  43              		.cfi_startproc
+  44              	.LVL0:
+  45 0000 00B5     		push	{lr}
+  46              	.LCFI0:
+  47              		.cfi_def_cfa_offset 4
+  48              		.cfi_offset 14, -4
+  59:../Sources/Events.c ****   /* This will get called if a stack overflow is detected during the context
+  60:../Sources/Events.c ****      switch.  Set configCHECK_FOR_STACK_OVERFLOWS to 2 to also check for stack
+  61:../Sources/Events.c ****      problems within nested interrupts, but only do this for debug purposes as
+  62:../Sources/Events.c ****      it will increase the context switch time. */
+  63:../Sources/Events.c ****   (void)pxTask;
+  64:../Sources/Events.c ****   (void)pcTaskName;
+  65:../Sources/Events.c ****   taskDISABLE_INTERRUPTS();
+  49              		.loc 1 65 0
+  50              	@ 65 "../Sources/Events.c" 1
+  51 0002 72B6     		cpsid i
+  52              	@ 0 "" 2
+  53              		.code	16
+  54              	.L3:
+  55 0004 FEE7     		b	.L3
+  56              		.cfi_endproc
+  57              	.LFE1:
+  59              		.section	.text.FRTOS1_vApplicationTickHook,"ax",%progbits
+  60              		.align	1
+  61              		.global	FRTOS1_vApplicationTickHook
+  62              		.code	16
+  63              		.thumb_func
+  65              	FRTOS1_vApplicationTickHook:
+  66              	.LFB2:
+  66:../Sources/Events.c ****   /* Write your code here ... */
+  67:../Sources/Events.c ****   for(;;) {}
+  68:../Sources/Events.c **** }
+  69:../Sources/Events.c **** 
+  70:../Sources/Events.c **** /*
+  71:../Sources/Events.c **** ** ===================================================================
+  72:../Sources/Events.c **** **     Event       :  FRTOS1_vApplicationTickHook (module Events)
+  73:../Sources/Events.c **** **
+  74:../Sources/Events.c **** **     Component   :  FRTOS1 [FreeRTOS]
+  75:../Sources/Events.c **** **     Description :
+  76:../Sources/Events.c **** **         If enabled, this hook will be called by the RTOS for every
+  77:../Sources/Events.c **** **         tick increment.
+  78:../Sources/Events.c **** **     Parameters  : None
+  79:../Sources/Events.c **** **     Returns     : Nothing
+  80:../Sources/Events.c **** ** ===================================================================
+  81:../Sources/Events.c **** */
+  82:../Sources/Events.c **** void FRTOS1_vApplicationTickHook(void)
+  83:../Sources/Events.c **** {
+  67              		.loc 1 83 0
+  68              		.cfi_startproc
+  84:../Sources/Events.c ****   /* Called for every RTOS tick. */
+  85:../Sources/Events.c ****   /* Write your code here ... */
+  86:../Sources/Events.c **** }
+  69              		.loc 1 86 0
+  70              		@ sp needed for prologue
+  71 0000 7047     		bx	lr
+  72              		.cfi_endproc
+  73              	.LFE2:
+  75              		.section	.text.FRTOS1_vApplicationIdleHook,"ax",%progbits
+  76              		.align	1
+  77              		.global	FRTOS1_vApplicationIdleHook
+  78              		.code	16
+  79              		.thumb_func
+  81              	FRTOS1_vApplicationIdleHook:
+  82              	.LFB3:
+  87:../Sources/Events.c **** 
+  88:../Sources/Events.c **** /*
+  89:../Sources/Events.c **** ** ===================================================================
+  90:../Sources/Events.c **** **     Event       :  FRTOS1_vApplicationIdleHook (module Events)
+  91:../Sources/Events.c **** **
+  92:../Sources/Events.c **** **     Component   :  FRTOS1 [FreeRTOS]
+  93:../Sources/Events.c **** **     Description :
+  94:../Sources/Events.c **** **         If enabled, this hook will be called when the RTOS is idle.
+  95:../Sources/Events.c **** **         This might be a good place to go into low power mode.
+  96:../Sources/Events.c **** **     Parameters  : None
+  97:../Sources/Events.c **** **     Returns     : Nothing
+  98:../Sources/Events.c **** ** ===================================================================
+  99:../Sources/Events.c **** */
+ 100:../Sources/Events.c **** void FRTOS1_vApplicationIdleHook(void)
+ 101:../Sources/Events.c **** {
+  83              		.loc 1 101 0
+  84              		.cfi_startproc
+ 102:../Sources/Events.c ****   /* Called whenever the RTOS is idle (from the IDLE task).
+ 103:../Sources/Events.c ****      Here would be a good place to put the CPU into low power mode. */
+ 104:../Sources/Events.c ****   /* Write your code here ... */
+ 105:../Sources/Events.c **** }
+  85              		.loc 1 105 0
+  86              		@ sp needed for prologue
+  87 0000 7047     		bx	lr
+  88              		.cfi_endproc
+  89              	.LFE3:
+  91              		.section	.text.FRTOS1_vApplicationMallocFailedHook,"ax",%progbits
+  92              		.align	1
+  93              		.global	FRTOS1_vApplicationMallocFailedHook
+  94              		.code	16
+  95              		.thumb_func
+  97              	FRTOS1_vApplicationMallocFailedHook:
+  98              	.LFB4:
+ 106:../Sources/Events.c **** 
+ 107:../Sources/Events.c **** /*
+ 108:../Sources/Events.c **** ** ===================================================================
+ 109:../Sources/Events.c **** **     Event       :  FRTOS1_vApplicationMallocFailedHook (module Events)
+ 110:../Sources/Events.c **** **
+ 111:../Sources/Events.c **** **     Component   :  FRTOS1 [FreeRTOS]
+ 112:../Sources/Events.c **** **     Description :
+ 113:../Sources/Events.c **** **         If enabled, the RTOS will call this hook in case memory
+ 114:../Sources/Events.c **** **         allocation failed.
+ 115:../Sources/Events.c **** **     Parameters  : None
+ 116:../Sources/Events.c **** **     Returns     : Nothing
+ 117:../Sources/Events.c **** ** ===================================================================
+ 118:../Sources/Events.c **** */
+ 119:../Sources/Events.c **** void FRTOS1_vApplicationMallocFailedHook(void)
+ 120:../Sources/Events.c **** {
+  99              		.loc 1 120 0
+ 100              		.cfi_startproc
+ 101 0000 00B5     		push	{lr}
+ 102              	.LCFI1:
+ 103              		.cfi_def_cfa_offset 4
+ 104              		.cfi_offset 14, -4
+ 121:../Sources/Events.c ****   /* Called if a call to pvPortMalloc() fails because there is insufficient
+ 122:../Sources/Events.c ****      free memory available in the FreeRTOS heap.  pvPortMalloc() is called
+ 123:../Sources/Events.c ****      internally by FreeRTOS API functions that create tasks, queues, software
+ 124:../Sources/Events.c ****      timers, and semaphores.  The size of the FreeRTOS heap is set by the
+ 125:../Sources/Events.c ****      configTOTAL_HEAP_SIZE configuration constant in FreeRTOSConfig.h. */
+ 126:../Sources/Events.c ****   taskDISABLE_INTERRUPTS();
+ 105              		.loc 1 126 0
+ 106              	@ 126 "../Sources/Events.c" 1
+ 107 0002 72B6     		cpsid i
+ 108              	@ 0 "" 2
+ 109              		.code	16
+ 110              	.L8:
+ 111 0004 FEE7     		b	.L8
+ 112              		.cfi_endproc
+ 113              	.LFE4:
+ 115              		.text
+ 116              	.Letext0:
+ 117              		.file 2 "D:/15_MyFactory/PREN/Microcontroller/FRDM KL25Z/Freedom_RTOS/Generated_Code/task.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 Events.c
+C:\Users\burak\AppData\Local\Temp\cck3A7l9.s:18     .text.Cpu_OnNMIINT:00000000 $t
+C:\Users\burak\AppData\Local\Temp\cck3A7l9.s:23     .text.Cpu_OnNMIINT:00000000 Cpu_OnNMIINT
+C:\Users\burak\AppData\Local\Temp\cck3A7l9.s:35     .text.FRTOS1_vApplicationStackOverflowHook:00000000 $t
+C:\Users\burak\AppData\Local\Temp\cck3A7l9.s:40     .text.FRTOS1_vApplicationStackOverflowHook:00000000 FRTOS1_vApplicationStackOverflowHook
+C:\Users\burak\AppData\Local\Temp\cck3A7l9.s:60     .text.FRTOS1_vApplicationTickHook:00000000 $t
+C:\Users\burak\AppData\Local\Temp\cck3A7l9.s:65     .text.FRTOS1_vApplicationTickHook:00000000 FRTOS1_vApplicationTickHook
+C:\Users\burak\AppData\Local\Temp\cck3A7l9.s:76     .text.FRTOS1_vApplicationIdleHook:00000000 $t
+C:\Users\burak\AppData\Local\Temp\cck3A7l9.s:81     .text.FRTOS1_vApplicationIdleHook:00000000 FRTOS1_vApplicationIdleHook
+C:\Users\burak\AppData\Local\Temp\cck3A7l9.s:92     .text.FRTOS1_vApplicationMallocFailedHook:00000000 $t
+C:\Users\burak\AppData\Local\Temp\cck3A7l9.s:97     .text.FRTOS1_vApplicationMallocFailedHook:00000000 FRTOS1_vApplicationMallocFailedHook
+                     .debug_frame:00000010 $d
+
+NO UNDEFINED SYMBOLS

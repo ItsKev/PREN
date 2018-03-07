@@ -4,7 +4,7 @@
     <Name>FRDM-KL25Z_Shell_PEx</Name>
     <SavedBy>burak</SavedBy>
     <ModificationStamp>14</ModificationStamp>
-    <Date>2018-03-05</Date>
+    <Date>2018-03-07</Date>
     <IDE>Eclipse IDE</IDE>
     <PEversion>1.9.2.RT6_b1446-0504</PEversion>
   </Header>
@@ -29,7 +29,7 @@
     <UseExistingModules>true</UseExistingModules>
     <RenamePeripheries>false</RenamePeripheries>
     <Autodependency>true</Autodependency>
-    <ProjectCompNumb>49</ProjectCompNumb>
+    <ProjectCompNumb>58</ProjectCompNumb>
     <DelUnusedPreviouslyGenFiles>true</DelUnusedPreviouslyGenFiles>
     <GeneratedCodeFrozen>false</GeneratedCodeFrozen>
     <AssignInitComponentNameToPrph>true</AssignInitComponentNameToPrph>
@@ -5407,7 +5407,7 @@
           <ComponentUUID>com.freescale.processorexpert.ldd.serial_ldd</ComponentUUID>
           <BeanType>Serial_LDD</BeanType>
           <Name>ASerialLdd1</Name>
-          <CompNumb>40</CompNumb>
+          <CompNumb>49</CompNumb>
           <CompEnabled>true</CompEnabled>
           <GenCodeMode>ALWAYS_WRITE</GenCodeMode>
           <IconName>PHONE_LDD</IconName>
@@ -10234,7 +10234,7 @@
           <ComponentUUID>com.freescale.processorexpert.ldd.serial_ldd</ComponentUUID>
           <BeanType>Serial_LDD</BeanType>
           <Name>ASerialLdd2</Name>
-          <CompNumb>41</CompNumb>
+          <CompNumb>50</CompNumb>
           <CompEnabled>true</CompEnabled>
           <GenCodeMode>ALWAYS_WRITE</GenCodeMode>
           <IconName>PHONE_LDD</IconName>
@@ -12741,7 +12741,7 @@
           <ComponentUUID>com.freescale.processorexpert.bitio</ComponentUUID>
           <BeanType>BitIO</BeanType>
           <Name>LEDpin1</Name>
-          <CompNumb>42</CompNumb>
+          <CompNumb>51</CompNumb>
           <CompEnabled>true</CompEnabled>
           <GenCodeMode>ALWAYS_WRITE</GenCodeMode>
           <IconName>BITIO</IconName>
@@ -12787,7 +12787,7 @@
                 <ComponentUUID>com.freescale.processorexpert.ldd.bitio_ldd</ComponentUUID>
                 <BeanType>BitIO_LDD</BeanType>
                 <Name>BitIoLdd1</Name>
-                <CompNumb>43</CompNumb>
+                <CompNumb>52</CompNumb>
                 <CompEnabled>true</CompEnabled>
                 <GenCodeMode>ALWAYS_WRITE</GenCodeMode>
                 <IconName>PORT_LDD</IconName>
@@ -13536,7 +13536,7 @@
           <ComponentUUID>com.freescale.processorexpert.bitio</ComponentUUID>
           <BeanType>BitIO</BeanType>
           <Name>LEDpin2</Name>
-          <CompNumb>44</CompNumb>
+          <CompNumb>53</CompNumb>
           <CompEnabled>true</CompEnabled>
           <GenCodeMode>ALWAYS_WRITE</GenCodeMode>
           <IconName>BITIO</IconName>
@@ -13582,7 +13582,7 @@
                 <ComponentUUID>com.freescale.processorexpert.ldd.bitio_ldd</ComponentUUID>
                 <BeanType>BitIO_LDD</BeanType>
                 <Name>BitIoLdd2</Name>
-                <CompNumb>45</CompNumb>
+                <CompNumb>54</CompNumb>
                 <CompEnabled>true</CompEnabled>
                 <GenCodeMode>ALWAYS_WRITE</GenCodeMode>
                 <IconName>PORT_LDD</IconName>
@@ -14331,7 +14331,7 @@
           <ComponentUUID>com.freescale.processorexpert.bitio</ComponentUUID>
           <BeanType>BitIO</BeanType>
           <Name>LEDpin3</Name>
-          <CompNumb>46</CompNumb>
+          <CompNumb>55</CompNumb>
           <CompEnabled>true</CompEnabled>
           <GenCodeMode>ALWAYS_WRITE</GenCodeMode>
           <IconName>BITIO</IconName>
@@ -14377,7 +14377,7 @@
                 <ComponentUUID>com.freescale.processorexpert.ldd.bitio_ldd</ComponentUUID>
                 <BeanType>BitIO_LDD</BeanType>
                 <Name>BitIoLdd3</Name>
-                <CompNumb>47</CompNumb>
+                <CompNumb>56</CompNumb>
                 <CompEnabled>true</CompEnabled>
                 <GenCodeMode>ALWAYS_WRITE</GenCodeMode>
                 <IconName>PORT_LDD</IconName>
@@ -16494,7 +16494,7 @@
           <ComponentUUID>com.freescale.processorexpert.interruptvector</ComponentUUID>
           <BeanType>InterruptVector</BeanType>
           <Name>RTOSSWI1</Name>
-          <CompNumb>48</CompNumb>
+          <CompNumb>57</CompNumb>
           <CompEnabled>true</CompEnabled>
           <GenCodeMode>ALWAYS_WRITE</GenCodeMode>
           <IconName>PERIPHINSP</IconName>

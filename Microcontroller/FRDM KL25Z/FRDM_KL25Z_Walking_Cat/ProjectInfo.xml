@@ -50,12 +50,24 @@
   </PATHS>
   <FILES>
     <GeneratedCs>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\AS1.c</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\ASerialLdd1.c</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\BitIoLdd1.c</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\BitIoLdd2.c</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\CLS1.c</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\CS1.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\Cpu.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\FRTOS1.c</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LED_Onboard_Green.c</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LED_Onboard_R.c</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LEDpin1.c</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LEDpin2.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\MCUC1.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\PE_LDD.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\UTIL1.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\Vectors.c</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\WAIT1.c</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\XF1.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\croutine.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\event_groups.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\heap_1.c</PathName>
@@ -72,17 +84,33 @@
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\timers.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Project_Settings\Startup_Code\__arm_end.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Project_Settings\Startup_Code\__arm_start.c</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Sources\Application.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Sources\Events.c</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Sources\Shell.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Sources\main.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Sources\sa_mtb.c</PathName>
     </GeneratedCs>
     <GeneratedHs>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\AS1.h</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\ASerialLdd1.h</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\BitIoLdd1.h</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\BitIoLdd2.h</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\CLS1.h</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\CLS1config.h</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\CS1.h</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\CS1config.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\Cpu.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\FRTOS1.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\FRTOS1config.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\FreeRTOS.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\FreeRTOSConfig.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\IO_Map.h</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LED_Onboard_Green.h</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LED_Onboard_Greenconfig.h</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LED_Onboard_R.h</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LED_Onboard_Rconfig.h</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LEDpin1.h</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LEDpin2.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\MCUC1.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\MCUC1config.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\PE_Const.h</PathName>
@@ -92,6 +120,10 @@
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\StackMacros.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\UTIL1.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\UTIL1config.h</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\WAIT1.h</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\WAIT1config.h</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\XF1.h</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\XF1config.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\croutine.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\deprecated_definitions.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\event_groups.h</PathName>
@@ -109,7 +141,9 @@
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\timers.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Project_Headers\bme.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Project_Settings\Startup_Code\runtime_configuration.h</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Sources\Application.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Sources\Events.h</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Sources\Shell.h</PathName>
       <PathName>C:\Freescale\CW MCU v10.7\MCU\ProcessorExpert\lib\Kinetis\iofiles\MKL25Z4.h</PathName>
       <PathName>C:\Freescale\CW MCU v10.7\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\ADC_PDD.h</PathName>
       <PathName>C:\Freescale\CW MCU v10.7\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\CMP_PDD.h</PathName>

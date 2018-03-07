@@ -6,7 +6,7 @@
 **     Component   : FreeRTOS
 **     Version     : Component 01.549, Driver 01.00, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2018-03-05, 23:47, # CodeGen: 1
+**     Date/Time   : 2018-03-07, 11:02, # CodeGen: 13
 **     Abstract    :
 **          This component implements the FreeRTOS Realtime Operating System
 **     Settings    :
@@ -35,10 +35,10 @@
 **            ColdFire V1                                  : Disabled
 **            ColdFire V2                                  : Disabled
 **            ARM (Kinetis)                                : Enabled
-**              ARM Family                                 : Cortex-M0+
-**              Max SysCall Interrupt Priority             : 1
-**              RTOS Interrupt Priority                    : 3
-**              Lowest Interrupt Priority                  : 3
+**              ARM Family                                 : Cortex-M4
+**              Max SysCall Interrupt Priority             : 5
+**              RTOS Interrupt Priority                    : 15
+**              Lowest Interrupt Priority                  : 15
 **              Compiler Optimization Level                : 0
 **              MPU                                        : no
 **              SysTick                                    : Enabled
@@ -50,8 +50,8 @@
 **            Time Slicing                                 : yes
 **            Use Co-Routines                              : no
 **            Idle should yield                            : yes
-**            Task Name Length                             : 12
-**            Minimal Stack Size                           : 200
+**            Task Name Length                             : 15
+**            Minimal Stack Size                           : 100
 **            Record Stack High Address                    : yes
 **            Maximum Priorities                           : 6
 **            Maximum Coroutine Priorities                 : 2
@@ -73,9 +73,9 @@
 **          Timers                                         : Disabled
 **          Memory                                         : Settings for the memory and heap allocation
 **            Dynamic Allocation                           : Enabled
-**              Heap Size                                  : 2048
+**              Heap Size                                  : 7500
 **              Application allocated Heap                 : no
-**              Memory Allocation Scheme                   : Scheme 4: merge free blocks
+**              Memory Allocation Scheme                   : Scheme 1: alloc only
 **            Static Allocation                            : Disabled
 **            User Memory Section                          : Disabled
 **          RTOS Adaptor                                   : Configures the RTOS adapter settings
@@ -85,7 +85,9 @@
 **            Critical section                             : Configures how critical sections are handled.
 **              User function for entering critical section : no
 **              User function for exiting critical section : no
-**          Shell                                          : Disabled
+**          Shell                                          : Enabled
+**            Max number of tasks                          : 16
+**            Shell                                        : CLS1
 **          Utility                                        : UTIL1
 **     Contents    :
 **         xTaskCreate                          - portBASE_TYPE FRTOS1_xTaskCreate(pdTASK_CODE pvTaskCode, const portCHAR *...
@@ -194,6 +196,7 @@
 **         pvTaskGetThreadLocalStoragePointer   - void* FRTOS1_pvTaskGetThreadLocalStoragePointer(TaskHandle_t xTaskToQuery,...
 **         pcTaskGetName                        - char* FRTOS1_pcTaskGetName(TaskHandle_t xTaskToQuery);
 **         vTaskGetInfo                         - void FRTOS1_vTaskGetInfo(TaskHandle_t xTask, TaskStatus_t *pxTaskStatus,...
+**         ParseCommand                         - uint8_t FRTOS1_ParseCommand(const unsigned char *cmd, bool *handled, const...
 **         AppConfigureTimerForRuntimeStats     - void FRTOS1_AppConfigureTimerForRuntimeStats(void);
 **         AppGetRuntimeCounterValueFromISR     - uint32_t FRTOS1_AppGetRuntimeCounterValueFromISR(void);
 **         Init                                 - void FRTOS1_Init(void);
@@ -249,7 +252,7 @@
 #include "FRTOS1config.h" /* configuration */
 
 #if configUSE_SHELL
-  #include "McuShell.h"
+  #include "CLS1.h"
 #endif
 
 /* other includes needed */
@@ -281,6 +284,7 @@
 #endif
 
 /* Prototypes for interrupt service handlers */
+void vPortSVCHandler(void);
 void vPortPendSVHandler(void);
 void vPortTickHandler(void);
 
@@ -1605,6 +1609,25 @@ extern "C" {
 **         ---             - Returns pdTRUE if the semaphore was given.
 ** ===================================================================
 */
+
+#if configUSE_SHELL
+uint8_t FRTOS1_ParseCommand(const unsigned char *cmd, bool *handled, const CLS1_StdIOType *io);
+/*
+** ===================================================================
+**     Method      :  FRTOS1_ParseCommand (component FreeRTOS)
+**     Description :
+**         Shell Command Line Parser
+**     Parameters  :
+**         NAME            - DESCRIPTION
+**       * cmd             - Pointer to command string
+**       * handled         - Pointer to variable which tells if
+**                           the command has been handled or not
+**       * io              - Pointer to I/O structure
+**     Returns     :
+**         ---             - Error code
+** ===================================================================
+*/
+#endif
 
 void FRTOS1_Init(void);
 /*

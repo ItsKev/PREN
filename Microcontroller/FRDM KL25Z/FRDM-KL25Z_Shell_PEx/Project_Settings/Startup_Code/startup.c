@@ -12,7 +12,6 @@
  */
 #include <string.h>
 #include <stdlib.h>
-#include "IO_Map.h"
 
 #ifndef __ATOLLIC__
 extern void _start(void);

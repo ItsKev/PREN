@@ -560,12 +560,131 @@ Module "FRTOS1"    (component FreeRTOS)
                 vTaskGetInfo() populates a TaskStatus_t structures for just a single task. The TaskStatus_t structure contains, 
                 among other things, members for the task handle, task name, task priority, task state, and total amount of run 
                 time consumed by the task.
+   - FRTOS1_ParseCommand -Shell Command Line Parser
    - FRTOS1_AppConfigureTimerForRuntimeStats -Configures the timer for generating runtime statistics
    - FRTOS1_AppGetRuntimeCounterValueFromISR -returns the current runtime counter. Function can be called from an interrupt 
                 service routine.
    - FRTOS1_Init -Low level initialization routine called from startup code. This method ensures that the tick timer is  not 
                 enabled.
    - FRTOS1_Deinit -Module deinitialization method
+
+Module "CLS1"      (component Shell)
+   - CLS1_PrintPrompt -Prints the prompt to the stdOut channel
+   - CLS1_SendNum8u -Sends an 8bit unsigned number to the given I/O
+   - CLS1_SendNum8s -Sends an 8bit signed number to the given I/O
+   - CLS1_SendNum16u -Sends a 16bit unsigned number to the given I/O
+   - CLS1_SendNum16s -Sends a 16bit signed number to the given I/O
+   - CLS1_SendNum32u -Sends a 32bit unsigned number to the given I/O
+   - CLS1_SendNum32s -Sends a 32bit signed number to the given I/O
+   - CLS1_SendCh -Prints a character using an I/O function
+   - CLS1_SendStr -Prints a string using an I/O function
+   - CLS1_printfIO -Printf() style function using XFormat component, using a custom I/O handler.
+   - CLS1_printf -Printf() style function using XFormat component, using the shell default I/O handler.
+   - CLS1_SendData -Sends data using an I/O function. Unlike SendStr(), with this method it is possible to send binary data, 
+                including zero bytes.
+   - CLS1_PrintStatus -Prints various available system status information
+   - CLS1_ParseCommand -Parses a shell command. Use 'help' to get a list of supported commands.
+   - CLS1_IsHistoryCharacter -Returns TRUE if character is a history character
+   - CLS1_ReadLine -Reads a line from stdIn and returns TRUE if we have a line, FALSE otherwise.
+   - CLS1_PrintCommandFailed -Prints a standard message for failed or unknown commands
+   - CLS1_IterateTable -Parses a shell command. It handles first the internal commands and will call the provided callback.
+   - CLS1_SetStdio -Sets an StdIO structure which is returned by GetStdio()
+   - CLS1_GetStdio -Returns the default stdio channel. This method is only available if a shell is enabled in the component 
+                properties.
+   - CLS1_RequestSerial -Used to get mutual access to the shell console. Only has an effect if using an RTOS with semaphore for 
+                the console access.
+   - CLS1_ReleaseSerial -Used to release mutual access to the shell console. Only has an effect if using an RTOS with semaphore 
+                for the console access.
+   - CLS1_ReadAndParseWithCommandTable -Reads characters from the default input channel and appends it to the buffer. Once a 
+                new line has been detected, the line will be parsed using the handlers in the table.
+   - CLS1_ParseWithCommandTable -Parses a shell command. It handles first the internal commands and will call the provided 
+                callback.
+   - CLS1_GetSemaphore -Return the semaphore of the shell.
+   - CLS1_SendStatusStr -Prints a status string using an I/O function, formated for the 'status' command
+   - CLS1_SendHelpStr -Prints a string using an I/O function, formated for the 'help' command
+   - CLS1_ReadChar -Reads a character (blocking)
+   - CLS1_SendChar -Sends a character (blocking)
+   - CLS1_KeyPressed -Checks if a key has been pressed (a character is present in the input buffer)
+   - CLS1_SendCharFct -Method to send a character using a standard I/O handle.
+   - CLS1_Init -Initializes the module, especially creates the mutex semaphore if an RTOS is used.
+   - CLS1_Deinit -De-Initializes the module, especially frees the mutex semaphore if an RTOS is used.
+
+Module "WAIT1"     (component Wait)
+   - WAIT1_Wait10Cycles -Wait for 10 CPU cycles.
+   - WAIT1_Wait100Cycles -Wait for 100 CPU cycles.
+   - WAIT1_WaitCycles -Wait for a specified number of CPU cycles (16bit data type).
+   - WAIT1_WaitLongCycles -Wait for a specified number of CPU cycles (32bit data type).
+   - WAIT1_Waitms -Wait for a specified time in milliseconds.
+   - WAIT1_Waitus -Wait for a specified time in microseconds.
+   - WAIT1_Waitns -Wait for a specified time in nano seconds.
+   - WAIT1_WaitOSms -If an RTOS is enabled, this routine will use a non-blocking wait method. Otherwise it will do a 
+                busy/blocking wait.
+   - WAIT1_Init -Driver initialization routine.
+   - WAIT1_DeInit -Driver de-initialization routine
+
+Module "CS1"       (component CriticalSection)
+   - CS1_CriticalVariable -Defines a variable if necessary. This is a macro.
+   - CS1_EnterCritical -Enters a critical section
+   - CS1_ExitCritical -Exits a critical section
+
+Module "XF1"       (component XFormat)
+   - XF1_xvformat -Printf() like format function
+   - XF1_xformat -Printf() like function using variable arguments
+   - XF1_xsprintf -sprintf() like function
+   - XF1_xsnprintf -snprintf() like function, returns the number of characters written, negative in case of error.
+
+Module "AS1"       (component Serial)
+   - AS1_RecvChar -If any data is received, this method returns one character, otherwise it returns an error code (it does not 
+                wait for data). This method is enabled only if the receiver property is enabled.  [Note:] Because the preferred 
+                method to handle error and break exception in the interrupt mode is to use events <OnError> and <OnBreak> the 
+                return value ERR_RXEMPTY has higher priority than other error codes. As a consequence the information about an 
+                exception in interrupt mode is returned only if there is a valid character ready to be read.
+   - AS1_SendChar -Sends one character to the channel. If the component is temporarily disabled (Disable method) SendChar 
+                method only stores data into an output buffer. In case of a zero output buffer size, only one character can be 
+                stored. Enabling the component (Enable method) starts the transmission of the stored data. This method is 
+                available only if the transmitter property is enabled.
+   - AS1_RecvBlock -If any data is received, this method returns the block of the data and its length (and incidental error), 
+                otherwise it returns an error code (it does not wait for data).  This method is available only if non-zero 
+                length of the input buffer is defined and the receiver property is enabled.  If less than requested number of 
+                characters is received only the available data is copied from the receive buffer to the user specified 
+                destination. The value ERR_EXEMPTY is returned and the value of variable pointed by the Rcv parameter is set to 
+                the number of received characters.
+   - AS1_SendBlock -Sends a block of characters to the channel.  This method is available only if non-zero length of the output 
+                buffer is defined and the transmitter property is enabled.
+   - AS1_ClearRxBuf -Clears the receive buffer.  This method is available only if non-zero length of the input buffer is 
+                defined and the receiver property is enabled.
+   - AS1_ClearTxBuf -Clears the transmit buffer.  This method is available only if non-zero length of the output buffer is 
+                defined and the receiver property is enabled.
+   - AS1_GetCharsInRxBuf -Returns the number of characters in the input buffer. This method is available only if the receiver 
+                property is enabled.
+   - AS1_GetCharsInTxBuf -Returns the number of characters in the output buffer. This method is available only if the 
+                transmitter property is enabled.
+
+Module "LED_Onboard_R" (component LED)
+   - LED_Onboard_R_On -This turns the LED on.
+   - LED_Onboard_R_Off -This turns the LED off.
+   - LED_Onboard_R_Neg -This negates/toggles the LED
+   - LED_Onboard_R_Get -This returns logical 1 in case the LED is on, 0 otherwise.
+   - LED_Onboard_R_Put -Turns the LED on or off.
+   - LED_Onboard_R_SetRatio16 -Method to specify the duty cycle. If using a PWM pin, this means the duty cycle is set. For 
+                On/off pins, values smaller 0x7FFF means off, while values greater means on.
+   - LED_Onboard_R_ParseCommand -Shell Command Line parser. This method is enabled/disabled depending on if you have the Shell 
+                enabled/disabled in the properties.
+   - LED_Onboard_R_Deinit -Deinitializes the driver
+   - LED_Onboard_R_Init -Performs the LED driver initialization.
+
+Module "LED_Onboard_Green" (component LED)
+   - LED_Onboard_Green_On -This turns the LED on.
+   - LED_Onboard_Green_Off -This turns the LED off.
+   - LED_Onboard_Green_Neg -This negates/toggles the LED
+   - LED_Onboard_Green_Get -This returns logical 1 in case the LED is on, 0 otherwise.
+   - LED_Onboard_Green_Put -Turns the LED on or off.
+   - LED_Onboard_Green_SetRatio16 -Method to specify the duty cycle. If using a PWM pin, this means the duty cycle is set. For 
+                On/off pins, values smaller 0x7FFF means off, while values greater means on.
+   - LED_Onboard_Green_ParseCommand -Shell Command Line parser. This method is enabled/disabled depending on if you have the 
+                Shell enabled/disabled in the properties.
+   - LED_Onboard_Green_Deinit -Deinitializes the driver
+   - LED_Onboard_Green_Init -Performs the LED driver initialization.
 
 Module "Cpu"       (component MKL25Z128LK4)
 

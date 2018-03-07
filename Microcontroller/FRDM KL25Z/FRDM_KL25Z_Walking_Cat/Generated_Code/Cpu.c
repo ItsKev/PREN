@@ -7,7 +7,7 @@
 **     Version     : Component 01.025, Driver 01.04, CPU db: 3.00.000
 **     Datasheet   : KL25P80M48SF0RM, Rev.3, Sep 2012
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2018-03-05, 23:47, # CodeGen: 1
+**     Date/Time   : 2018-03-07, 11:02, # CodeGen: 13
 **     Abstract    :
 **
 **     Settings    :
@@ -63,6 +63,18 @@
 #include "UTIL1.h"
 #include "MCUC1.h"
 #include "FRTOS1.h"
+#include "CLS1.h"
+#include "WAIT1.h"
+#include "CS1.h"
+#include "XF1.h"
+#include "AS1.h"
+#include "ASerialLdd1.h"
+#include "LED_Onboard_R.h"
+#include "LEDpin1.h"
+#include "BitIoLdd1.h"
+#include "LED_Onboard_Green.h"
+#include "LEDpin2.h"
+#include "BitIoLdd2.h"
 #include "PE_Types.h"
 #include "PE_Error.h"
 #include "PE_Const.h"
@@ -156,8 +168,8 @@ void __init_hardware(void)
   /* System clock initialization */
   /* SIM_CLKDIV1: OUTDIV1=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,OUTDIV4=3,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0 */
   SIM_CLKDIV1 = (SIM_CLKDIV1_OUTDIV1(0x00) | SIM_CLKDIV1_OUTDIV4(0x03)); /* Set the system prescalers to safe value */
-  /* SIM_SCGC5: PORTA=1 */
-  SIM_SCGC5 |= SIM_SCGC5_PORTA_MASK;   /* Enable clock gate for ports to enable pin routing */
+  /* SIM_SCGC5: PORTB=1,PORTA=1 */
+  SIM_SCGC5 |= (SIM_SCGC5_PORTB_MASK | SIM_SCGC5_PORTA_MASK); /* Enable clock gate for ports to enable pin routing */
   if ((PMC_REGSC & PMC_REGSC_ACKISO_MASK) != 0x0U) {
     /* PMC_REGSC: ACKISO=1 */
     PMC_REGSC |= PMC_REGSC_ACKISO_MASK; /* Release IO pads after wakeup from VLLS mode. */
@@ -272,8 +284,23 @@ void PE_low_level_init(void)
   /* SCB_SHPR3: PRI_14=0 */
   SCB_SHPR3 &= (uint32_t)~(uint32_t)(SCB_SHPR3_PRI_14(0xFF));
   /* ### McuLibConfig "MCUC1" init code ... */
+  WAIT1_Init();
+  /* ### CriticalSection "CS1" init code ... */
+  /* ### XFormat "XF1" init code ... */
+  /* ### Asynchro serial "AS1" init code ... */
+  AS1_Init();
+  /* ### Shell "CLS1" init code ... */
+  CLS1_Init(); /* initialize shell */
   /* ### FreeRTOS "FRTOS1" init code ... */
   /* PEX_RTOS_INIT() should have been called at this time already with the most critical setup */
+  /* ### BitIO_LDD "BitIoLdd1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)BitIoLdd1_Init(NULL);
+  /* ### LED "LED_Onboard_R" init code ... */
+  LED_Onboard_R_Init(); /* initialize LED driver */
+  /* ### BitIO_LDD "BitIoLdd2" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)BitIoLdd2_Init(NULL);
+  /* ### LED "LED_Onboard_Green" init code ... */
+  LED_Onboard_Green_Init(); /* initialize LED driver */
 }
   /* Flash configuration field */
   __attribute__ ((section (".cfmconfig"))) const uint8_t _cfm[0x10] = {

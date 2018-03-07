@@ -30,10 +30,27 @@ Generated_Code/PE_LDD.o: ../Generated_Code/PE_LDD.c \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/string.h \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstring \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/string_api.h \
- ../Generated_Code/FRTOS1.h ../Generated_Code/task.h \
- ../Generated_Code/list.h ../Generated_Code/semphr.h \
- ../Generated_Code/queue.h ../Generated_Code/event_groups.h \
- ../Generated_Code/timers.h
+ ../Generated_Code/FRTOS1.h ../Generated_Code/CLS1.h \
+ ../Generated_Code/CLS1config.h ../Generated_Code/WAIT1.h \
+ ../Generated_Code/WAIT1config.h ../Generated_Code/AS1.h \
+ ../Generated_Code/ASerialLdd1.h ../Generated_Code/XF1.h \
+ ../Generated_Code/XF1config.h \
+ C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdarg.h \
+ C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdarg \
+ C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/va_list.h \
+ C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/arm/stdarg.ARM.h \
+ ../Generated_Code/CS1.h ../Generated_Code/CS1config.h \
+ ../Generated_Code/task.h ../Generated_Code/list.h \
+ ../Generated_Code/semphr.h ../Generated_Code/queue.h \
+ ../Generated_Code/event_groups.h ../Generated_Code/timers.h \
+ ../Generated_Code/LED_Onboard_R.h \
+ ../Generated_Code/LED_Onboard_Rconfig.h ../Generated_Code/LEDpin1.h \
+ ../Generated_Code/BitIoLdd1.h \
+ C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/GPIO_PDD.h \
+ C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/PDD_Types.h \
+ ../Generated_Code/LED_Onboard_Green.h \
+ ../Generated_Code/LED_Onboard_Greenconfig.h ../Generated_Code/LEDpin2.h \
+ ../Generated_Code/BitIoLdd2.h
 
 C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/lib_ewl.prefix:
 
@@ -115,6 +132,34 @@ C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/string_api.h:
 
 ../Generated_Code/FRTOS1.h:
 
+../Generated_Code/CLS1.h:
+
+../Generated_Code/CLS1config.h:
+
+../Generated_Code/WAIT1.h:
+
+../Generated_Code/WAIT1config.h:
+
+../Generated_Code/AS1.h:
+
+../Generated_Code/ASerialLdd1.h:
+
+../Generated_Code/XF1.h:
+
+../Generated_Code/XF1config.h:
+
+C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdarg.h:
+
+C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdarg:
+
+C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/va_list.h:
+
+C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/arm/stdarg.ARM.h:
+
+../Generated_Code/CS1.h:
+
+../Generated_Code/CS1config.h:
+
 ../Generated_Code/task.h:
 
 ../Generated_Code/list.h:
@@ -126,3 +171,23 @@ C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/string_api.h:
 ../Generated_Code/event_groups.h:
 
 ../Generated_Code/timers.h:
+
+../Generated_Code/LED_Onboard_R.h:
+
+../Generated_Code/LED_Onboard_Rconfig.h:
+
+../Generated_Code/LEDpin1.h:
+
+../Generated_Code/BitIoLdd1.h:
+
+C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/GPIO_PDD.h:
+
+C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/PDD_Types.h:
+
+../Generated_Code/LED_Onboard_Green.h:
+
+../Generated_Code/LED_Onboard_Greenconfig.h:
+
+../Generated_Code/LEDpin2.h:
+
+../Generated_Code/BitIoLdd2.h:
