@@ -10,6 +10,7 @@
 #define ULTRASONIC_H_
 
 #include "PE_LDD.h"
+#include "TU1.h"
 
 /* 
  * \brief Called in case of an overflow during input capture. This function is called from an interrupt!

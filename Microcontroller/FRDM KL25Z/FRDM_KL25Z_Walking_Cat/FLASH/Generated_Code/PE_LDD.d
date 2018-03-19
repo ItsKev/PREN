@@ -50,7 +50,21 @@ Generated_Code/PE_LDD.o: ../Generated_Code/PE_LDD.c \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/PDD_Types.h \
  ../Generated_Code/LED_Onboard_Green.h \
  ../Generated_Code/LED_Onboard_Greenconfig.h ../Generated_Code/LEDpin2.h \
- ../Generated_Code/BitIoLdd2.h
+ ../Generated_Code/BitIoLdd2.h ../Generated_Code/US_Trig.h \
+ ../Generated_Code/InfraredTOF_I2C.h ../Generated_Code/TU1.h \
+ C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/TPM_PDD.h \
+ ../Generated_Code/GI2C1.h ../Generated_Code/GI2C1config.h \
+ ../Generated_Code/LiftingMotor_MS1.h ../Generated_Code/BitIoLdd3.h \
+ ../Generated_Code/LiftingMotor.h ../Generated_Code/PpgLdd1.h \
+ ../Generated_Code/LiftingMotor_MS2.h ../Generated_Code/BitIoLdd4.h \
+ ../Generated_Code/LiftingMotor_Enable.h ../Generated_Code/BitIoLdd5.h \
+ ../Generated_Code/LiftingMotor_Direction.h ../Generated_Code/BitIoLdd6.h \
+ ../Generated_Code/DrivingMotor.h ../Generated_Code/PpgLdd2.h \
+ ../Generated_Code/DrivingMotor_MS1.h ../Generated_Code/BitIoLdd7.h \
+ ../Generated_Code/DrivingMotor_MS2.h ../Generated_Code/BitIoLdd8.h \
+ ../Generated_Code/DrivingMotor_Enable.h ../Generated_Code/BitIoLdd9.h \
+ ../Generated_Code/DrivingMotor_Direction.h \
+ ../Generated_Code/BitIoLdd10.h
 
 C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/lib_ewl.prefix:
 
@@ -191,3 +205,55 @@ C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/PDD_Types.h:
 ../Generated_Code/LEDpin2.h:
 
 ../Generated_Code/BitIoLdd2.h:
+
+../Generated_Code/US_Trig.h:
+
+../Generated_Code/InfraredTOF_I2C.h:
+
+../Generated_Code/TU1.h:
+
+C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/TPM_PDD.h:
+
+../Generated_Code/GI2C1.h:
+
+../Generated_Code/GI2C1config.h:
+
+../Generated_Code/LiftingMotor_MS1.h:
+
+../Generated_Code/BitIoLdd3.h:
+
+../Generated_Code/LiftingMotor.h:
+
+../Generated_Code/PpgLdd1.h:
+
+../Generated_Code/LiftingMotor_MS2.h:
+
+../Generated_Code/BitIoLdd4.h:
+
+../Generated_Code/LiftingMotor_Enable.h:
+
+../Generated_Code/BitIoLdd5.h:
+
+../Generated_Code/LiftingMotor_Direction.h:
+
+../Generated_Code/BitIoLdd6.h:
+
+../Generated_Code/DrivingMotor.h:
+
+../Generated_Code/PpgLdd2.h:
+
+../Generated_Code/DrivingMotor_MS1.h:
+
+../Generated_Code/BitIoLdd7.h:
+
+../Generated_Code/DrivingMotor_MS2.h:
+
+../Generated_Code/BitIoLdd8.h:
+
+../Generated_Code/DrivingMotor_Enable.h:
+
+../Generated_Code/BitIoLdd9.h:
+
+../Generated_Code/DrivingMotor_Direction.h:
+
+../Generated_Code/BitIoLdd10.h:

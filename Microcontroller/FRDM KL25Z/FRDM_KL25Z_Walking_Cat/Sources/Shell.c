@@ -13,19 +13,24 @@
 #include "PE_Error.h"
 #include "UTIL1.h"
 #include "LED.h"
+#include "Ultasonic.h"
+#include "InfraredTOF.h"
 
 static const char* COMMAND_TABLE[] = { 
 		"\t help\n",
-		"\t LED_Onboard_R status\n",
-		"\t LED_Onboard_R on|off|neg\n",
-		"\t LED_Onboard_Green status\n",
-		"\t LED_Onboard_Green on|off|neg\n",
-		"\n"};
+		"\t LED_Onboard_R status\n\r",
+		"\t LED_Onboard_R on|off|neg\n\r",
+		"\t LED_Onboard_Green status\n\r",
+		"\t LED_Onboard_Green on|off|neg\n\r",
+		"\t US status|start\n\r",
+		"\t INF TOF status|start\n\r",
+		"\n\r"};
 
 static void TerminalInitText(void) {
 	int i;
 
-	CLS1_SendStr((unsigned char*) "Walking Cat, Team33 Terminal ;)\n",	CLS1_GetStdio()->stdOut);
+	CLS1_SendStr((unsigned char*) "Walking Cat, Team33 Terminal ;)\n\r",	CLS1_GetStdio()->stdOut);
+	
 	for (i = 0; i < (sizeof(COMMAND_TABLE) / sizeof(const char*)); i++) {
 		CLS1_SendStr(COMMAND_TABLE[i], CLS1_GetStdio()->stdOut);
 	}
@@ -39,9 +44,12 @@ static uint8_t DoCommand(uint8_t* cmd){
 		return result; 
 	} else if(strncmp(cmd, "LED", 3)==0){
 		result = LEDOnboardParseCommand(cmd); 
-	}	
-	else {
-		CLS1_SendStr((unsigned char*)"Unknown CMD!\n", CLS1_GetStdio()->stdOut);
+	} else if(strncmp(cmd, "US", 2)==0){
+		result = US_ParseCommand(cmd); 
+	} else if(strncmp(cmd, "INF", 3)==0){
+		result = VL_ParseCommand(cmd);
+	} else {
+		CLS1_SendStr((unsigned char*)"Unknown CMD!\n\r", CLS1_GetStdio()->stdOut);
 		return result = ERR_FAILED; 
 	}
 	
@@ -71,6 +79,7 @@ static uint8_t ReadAndParseCommand(uint8_t *cmdBuf, size_t cmdBufSize, CLS1_Cons
 		} else if (cmdBuf[len - 1] == '\n' || cmdBuf[len - 1] == '\r') { /* line end: parse command */
 			cmdBuf[len - 1] = '\0'; /* remove line end character for parser */
 			DoCommand(cmdBuf);
+			CLS1_SendStr((unsigned char*)"\n", CLS1_GetStdio()->stdOut); 
 			CLS1_PrintPrompt(CLS1_GetStdio());
 			cmdBuf[0] = '\0'; /* start again */
 		} else {

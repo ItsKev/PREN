@@ -2,7 +2,7 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-#Progress monitor hint: 41
+#Progress monitor hint: 69
 first : all
 -include ../makefile.init
 
@@ -77,21 +77,21 @@ all: warning-messages explicit-dependencies FRDM_KL25Z_Walking_Cat.elf secondary
 # Tool invocations
 FRDM_KL25Z_Walking_Cat.elf: $(OBJS) $(USER_OBJS) ../Project_Settings/Linker_Files/ProcessorExpert.ld
 	@echo 'Building target: $@'
-	@echo 'Executing target #42 $@'
+	@echo 'Executing target #70 $@'
 	@echo 'Invoking: ARM Ltd Windows GCC C Linker'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc"  $(USER_OBJS_QUOTED) $(LIBS_QUOTED) @"FRDM_KL25Z_Walking_Cat.args" -o"FRDM_KL25Z_Walking_Cat.elf"
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 FRDM_KL25Z_Walking_Cat.hex: FRDM_KL25Z_Walking_Cat.elf
-	@echo 'Executing target #43 $@'
+	@echo 'Executing target #71 $@'
 	@echo 'Invoking: ARM Ltd Windows GNU Create Flash Image'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-objcopy"  -O ihex FRDM_KL25Z_Walking_Cat.elf "FRDM_KL25Z_Walking_Cat.hex"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 FRDM_KL25Z_Walking_Cat.siz: FRDM_KL25Z_Walking_Cat.elf
-	@echo 'Executing target #44 $@'
+	@echo 'Executing target #72 $@'
 	@echo 'Invoking: ARM Ltd Windows GNU Print Size'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-size"  --format=berkeley FRDM_KL25Z_Walking_Cat.elf
 	@echo 'Finished building: $@'

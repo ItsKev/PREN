@@ -49,6 +49,30 @@
 #include "LED_Onboard_Green.h"
 #include "LEDpin2.h"
 #include "BitIoLdd2.h"
+#include "US_Trig.h"
+#include "InfraredTOF_I2C.h"
+#include "GI2C1.h"
+#include "LiftingMotor_MS1.h"
+#include "BitIoLdd3.h"
+#include "LiftingMotor.h"
+#include "PpgLdd1.h"
+#include "LiftingMotor_MS2.h"
+#include "BitIoLdd4.h"
+#include "LiftingMotor_Enable.h"
+#include "BitIoLdd5.h"
+#include "LiftingMotor_Direction.h"
+#include "BitIoLdd6.h"
+#include "DrivingMotor.h"
+#include "PpgLdd2.h"
+#include "DrivingMotor_MS1.h"
+#include "BitIoLdd7.h"
+#include "DrivingMotor_MS2.h"
+#include "BitIoLdd8.h"
+#include "DrivingMotor_Enable.h"
+#include "BitIoLdd9.h"
+#include "DrivingMotor_Direction.h"
+#include "BitIoLdd10.h"
+#include "TU1.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -158,6 +182,82 @@ void Cpu_OnSupervisorCall(void);
 */
 /* ===================================================================*/
 void Cpu_OnPendableService(void);
+
+/*
+** ===================================================================
+**     Event       :  TU1_OnCounterRestart (module Events)
+**
+**     Component   :  TU1 [TimerUnit_LDD]
+*/
+/*!
+**     @brief
+**         Called if counter overflow/underflow or counter is
+**         reinitialized by modulo or compare register matching.
+**         OnCounterRestart event and Timer unit must be enabled. See
+**         [SetEventMask] and [GetEventMask] methods. This event is
+**         available only if a [Interrupt] is enabled.
+**     @param
+**         UserDataPtr     - Pointer to the user or
+**                           RTOS specific data. The pointer passed as
+**                           the parameter of Init method.
+*/
+/* ===================================================================*/
+void TU1_OnCounterRestart(LDD_TUserData *UserDataPtr);
+
+/*
+** ===================================================================
+**     Event       :  TU1_OnChannel0 (module Events)
+**
+**     Component   :  TU1 [TimerUnit_LDD]
+*/
+/*!
+**     @brief
+**         Called if compare register match the counter registers or
+**         capture register has a new content. OnChannel0 event and
+**         Timer unit must be enabled. See [SetEventMask] and
+**         [GetEventMask] methods. This event is available only if a
+**         [Interrupt] is enabled.
+**     @param
+**         UserDataPtr     - Pointer to the user or
+**                           RTOS specific data. The pointer passed as
+**                           the parameter of Init method.
+*/
+/* ===================================================================*/
+void TU1_OnChannel0(LDD_TUserData *UserDataPtr);
+
+/*
+** ===================================================================
+**     Event       :  DrivingMotor_OnEnd (module Events)
+**
+**     Component   :  DrivingMotor [PPG]
+**     Description :
+**         This event is called when the specified number of iterations
+**         is generated. (Only when the component is enabled - <Enable>
+**         and the events are enabled - <EnableEvent>). The event is
+**         available only when the peripheral supports an interrupt,
+**         that is generated at the end of the PWM period.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+void DrivingMotor_OnEnd(void);
+
+/*
+** ===================================================================
+**     Event       :  LiftingMotor_OnEnd (module Events)
+**
+**     Component   :  LiftingMotor [PPG]
+**     Description :
+**         This event is called when the specified number of iterations
+**         is generated. (Only when the component is enabled - <Enable>
+**         and the events are enabled - <EnableEvent>). The event is
+**         available only when the peripheral supports an interrupt,
+**         that is generated at the end of the PWM period.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+void LiftingMotor_OnEnd(void);
 
 /* END Events */
 

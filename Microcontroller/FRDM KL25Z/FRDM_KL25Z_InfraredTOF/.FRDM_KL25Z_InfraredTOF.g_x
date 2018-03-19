@@ -1,0 +1,83 @@
+<CodeGenerationInfo>
+  <ToolchainSettings>
+    <option>
+      <name>PE_G_4PEx_ToolChain_Compiler_SearchUserPaths</name>
+      <values lines_count="4">
+        <Line>"${ProcessorExpertPath}/lib/Kinetis/pdd/inc"</Line>
+        <Line>"${ProcessorExpertPath}/lib/Kinetis/iofiles"</Line>
+        <Line>"${ProjDirPath}/Sources"</Line>
+        <Line>"${ProjDirPath}/Generated_Code"</Line>
+      </values>
+    </option>
+  </ToolchainSettings>
+  <GeneratedFilesList>
+    <GeneratedByPE>
+      <File Name="Documentation/doxygen/InfraredTOF_I2C.txt" FileDate="2018-03-10, 14:25:34" FileAge="1520688334807" FileType="45637" CompNumb="6" />
+      <File Name="Static_Code/IO_Map/MKL25Z4.h" FileDate="2013-04-18, 01:55:42" FileAge="1366242942000" FileType="262144" />
+      <File Name="Static_Code/PDD/GPIO_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
+      <File Name="Static_Code/PDD/DMA_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
+      <File Name="Static_Code/PDD/ADC_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
+      <File Name="Static_Code/PDD/DAC_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
+      <File Name="Project_Settings/Debugger/MKL25Z128.mem" FileDate="2018-03-10, 10:48:18" FileAge="1520675298974" FileType="45637" CompNumb="2" />
+      <File Name="Static_Code/PDD/MCM_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
+      <File Name="Static_Code/PDD/TPM_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
+      <File Name="Generated_Code/PE_LDD.h" FileDate="2018-03-11, 15:43:21" FileAge="1520779401509" FileType="45637" CompNumb="2" />
+      <File Name="Static_Code/PDD/SIM_PDD.h" FileDate="2014-05-14, 13:09:28" FileAge="1400065768000" FileType="262144" />
+      <File Name="Generated_Code/LEDpin1.h" FileDate="2018-03-10, 14:03:59" FileAge="1520687039443" FileType="45637" CompNumb="21" />
+      <File Name="Documentation/doxygen/FRDM_KL25Z_InfraredTOF.txt" FileDate="2018-03-10, 14:03:59" FileAge="1520687039499" FileType="45637" CompNumb="2" />
+      <File Name="Generated_Code/PE_LDD.c" FileDate="2018-03-10, 14:03:59" FileAge="1520687039503" FileType="45637" CompNumb="2" />
+      <File Name="Static_Code/PDD/PORT_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
+      <File Name="Generated_Code/LEDpin1.c" FileDate="2018-03-10, 14:03:59" FileAge="1520687039443" FileType="45637" CompNumb="21" />
+      <File Name="Documentation/doxygen/RoutingReport.txt" FileDate="2018-03-10, 10:48:18" FileAge="1520675298995" FileType="45637" CompNumb="2" />
+      <File Name="Documentation/doxygen/pex.css" FileDate="2018-03-10, 10:48:18" FileAge="1520675298880" FileType="16384" CompNumb="2" />
+      <File Name="Static_Code/PDD/FTFA_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
+      <File Name="Static_Code/PDD/UART_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
+      <File Name="Generated_Code/MCUC1.h" FileDate="2018-03-10, 11:48:23" FileAge="1520678903316" FileType="45637" CompNumb="10" />
+      <File Name="Generated_Code/GI2C1config.h" FileDate="2018-03-11, 15:43:21" FileAge="1520779401413" FileType="45637" CompNumb="23" />
+      <File Name="Documentation/doxygen/pex.doxyfile" FileDate="2018-03-10, 10:48:18" FileAge="1520675298992" FileType="45637" CompNumb="2" />
+      <File Name="Generated_Code/MCUC1.c" FileDate="2018-03-10, 11:48:23" FileAge="1520678903312" FileType="45637" CompNumb="10" />
+      <File Name="Project_Settings/Linker_Files/ProcessorExpert.ld" FileDate="2018-03-10, 10:48:18" FileAge="1520675298974" FileType="8" CompNumb="2" />
+      <File Name="Static_Code/PDD/DMAMUX_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
+      <File Name="Static_Code/PDD/LPTMR_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
+      <File Name="ProjectInfo.xml" FileDate="2018-03-11, 15:43:24" FileAge="1520779404559" FileType="45637" />
+      <File Name="Sources/Events.h" FileDate="2018-03-11, 15:43:21" FileAge="1520779401510" FileType="131328" />
+      <File Name="Generated_Code/PE_Const.h" FileDate="2018-03-10, 10:48:19" FileAge="1520675299015" FileType="45637" />
+      <File Name="Generated_Code/PE_Types.h" FileDate="2018-03-10, 14:03:59" FileAge="1520687039474" FileType="45637" />
+      <File Name="Generated_Code/PE_Error.h" FileDate="2018-03-10, 10:48:19" FileAge="1520675299017" FileType="45637" />
+      <File Name="Generated_Code/LED_Onboard_Greenconfig.h" FileDate="2018-03-10, 14:03:59" FileAge="1520687039433" FileType="45637" CompNumb="20" />
+      <File Name="Sources/Events.c" FileDate="2018-03-10, 14:18:44" FileAge="1520687924851" FileType="131328" />
+      <File Name="Static_Code/PDD/SysTick_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
+      <File Name="Documentation/FRDM_KL25Z_InfraredTOF.txt" FileDate="2018-03-11, 15:43:24" FileAge="1520779404570" FileType="3072" />
+      <File Name="Generated_Code/Cpu.h" FileDate="2018-03-10, 10:48:19" FileAge="1520675299004" FileType="45637" CompNumb="2" />
+      <File Name="Generated_Code/WAIT1.h" FileDate="2018-03-10, 11:48:23" FileAge="1520678903306" FileType="45637" CompNumb="8" />
+      <File Name="Generated_Code/MCUC1config.h" FileDate="2018-03-10, 11:48:23" FileAge="1520678903309" FileType="45637" CompNumb="10" />
+      <File Name="Generated_Code/Cpu.c" FileDate="2018-03-11, 15:43:21" FileAge="1520779401504" FileType="45637" CompNumb="2" />
+      <File Name="Static_Code/PDD/RTC_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
+      <File Name="Static_Code/PDD/I2C_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
+      <File Name="Generated_Code/WAIT1.c" FileDate="2018-03-10, 11:48:23" FileAge="1520678903304" FileType="45637" CompNumb="8" />
+      <File Name="Documentation/doxygen/BitIoLdd1.txt" FileDate="2018-03-10, 14:03:59" FileAge="1520687039443" FileType="45637" CompNumb="22" />
+      <File Name="Sources/main.c" FileDate="2018-03-11, 15:43:21" FileAge="1520779401497" FileType="128" />
+      <File Name="Static_Code/PDD/CMP_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
+      <File Name="Static_Code/PDD/SPI_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
+      <File Name="Generated_Code/IO_Map.h" FileDate="2018-03-10, 10:48:19" FileAge="1520675299010" FileType="45637" />
+      <File Name="Generated_Code/GI2C1.h" FileDate="2018-03-11, 15:43:21" FileAge="1520779401430" FileType="45637" CompNumb="23" />
+      <File Name="Static_Code/PDD/UART0_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
+      <File Name="Generated_Code/InfraredTOF_I2C.h" FileDate="2018-03-11, 15:43:21" FileAge="1520779401482" FileType="45637" CompNumb="6" />
+      <File Name="Generated_Code/GI2C1.c" FileDate="2018-03-11, 15:43:21" FileAge="1520779401427" FileType="45637" CompNumb="23" />
+      <File Name="Static_Code/PDD/USB_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
+      <File Name="Generated_Code/WAIT1config.h" FileDate="2018-03-10, 11:48:23" FileAge="1520678903286" FileType="45637" CompNumb="8" />
+      <File Name="Generated_Code/InfraredTOF_I2C.c" FileDate="2018-03-11, 15:43:21" FileAge="1520779401488" FileType="45637" CompNumb="6" />
+      <File Name="Generated_Code/LED_Onboard_Green.h" FileDate="2018-03-10, 14:03:59" FileAge="1520687039439" FileType="45637" CompNumb="20" />
+      <File Name="Documentation/FRDM_KL25Z_InfraredTOF_SIGNALS.txt" FileDate="2018-03-11, 15:43:21" FileAge="1520779401557" FileType="3072" />
+      <File Name="Static_Code/PDD/COP_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
+      <File Name="Static_Code/PDD/PDD_Types.h" FileDate="2013-04-18, 01:55:42" FileAge="1366242942000" FileType="262144" />
+      <File Name="Generated_Code/LED_Onboard_Green.c" FileDate="2018-03-10, 14:03:59" FileAge="1520687039436" FileType="45637" CompNumb="20" />
+      <File Name="Static_Code/PDD/PIT_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
+      <File Name="Generated_Code/BitIoLdd1.h" FileDate="2018-03-10, 14:03:59" FileAge="1520687039458" FileType="45637" CompNumb="22" />
+      <File Name="Generated_Code/Vectors.c" FileDate="2018-03-11, 15:43:21" FileAge="1520779401510" FileType="45637" CompNumb="2" />
+      <File Name="Generated_Code/BitIoLdd1.c" FileDate="2018-03-10, 14:03:59" FileAge="1520687039443" FileType="45637" CompNumb="22" />
+      <File Name="Documentation/FRDM_KL25Z_InfraredTOF_Settings.xml" FileDate="2018-03-11, 15:43:21" FileAge="1520779401646" FileType="3072" />
+    </GeneratedByPE>
+  </GeneratedFilesList>
+  <CodeGenReference>14</CodeGenReference>
+</CodeGenerationInfo>
