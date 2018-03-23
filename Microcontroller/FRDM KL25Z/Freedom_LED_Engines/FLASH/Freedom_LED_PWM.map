@@ -54,16 +54,12 @@ c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm
                               ./Generated_Code/PpgLdd2.o (__aeabi_i2f)
 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(floatunsisf.o)
                               ./Generated_Code/PpgLdd2.o (__aeabi_ui2f)
-c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(divdf3.o)
-                              ./Sources/Stepper.o (__aeabi_ddiv)
 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(muldf3.o)
                               ./Sources/Stepper.o (__aeabi_dmul)
 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(subdf3.o)
                               c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_fixunsdfsi.o) (__aeabi_dsub)
 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(fixdfsi.o)
                               c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_fixunsdfsi.o) (__aeabi_d2iz)
-c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(floatsidf.o)
-                              ./Sources/Stepper.o (__aeabi_i2d)
 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(floatunsidf.o)
                               ./Sources/Stepper.o (__aeabi_ui2d)
 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_arm_cmpdf2.o)
@@ -95,6 +91,16 @@ Discarded input sections
  .text          0x00000000        0x0 ./Generated_Code/WAIT1.o
  .data          0x00000000        0x0 ./Generated_Code/WAIT1.o
  .bss           0x00000000        0x0 ./Generated_Code/WAIT1.o
+ .text.WAIT1_Wait10Cycles
+                0x00000000        0x8 ./Generated_Code/WAIT1.o
+ .text.WAIT1_Wait100Cycles
+                0x00000000       0x24 ./Generated_Code/WAIT1.o
+ .text.WAIT1_WaitCycles
+                0x00000000       0x44 ./Generated_Code/WAIT1.o
+ .text.WAIT1_WaitLongCycles
+                0x00000000       0x3c ./Generated_Code/WAIT1.o
+ .text.WAIT1_Waitms
+                0x00000000       0x38 ./Generated_Code/WAIT1.o
  .text.WAIT1_DeInit
                 0x00000000        0x8 ./Generated_Code/WAIT1.o
  .text          0x00000000        0x0 ./Generated_Code/Vectors.o
@@ -103,16 +109,20 @@ Discarded input sections
  .text          0x00000000        0x0 ./Generated_Code/PpgLdd2.o
  .data          0x00000000        0x0 ./Generated_Code/PpgLdd2.o
  .bss           0x00000000        0x0 ./Generated_Code/PpgLdd2.o
+ .text.PpgLdd2_Enable
+                0x00000000       0x30 ./Generated_Code/PpgLdd2.o
  .text.PpgLdd2_SetPeriodUS
-                0x00000000       0x7c ./Generated_Code/PpgLdd2.o
- .text.PpgLdd2_SetPeriodMS
                 0x00000000       0x84 ./Generated_Code/PpgLdd2.o
- .text.PpgLdd2_SetPeriodSec
-                0x00000000       0x7c ./Generated_Code/PpgLdd2.o
- .text.PpgLdd2_SetPeriodReal
+ .text.PpgLdd2_SetPeriodMS
                 0x00000000       0x80 ./Generated_Code/PpgLdd2.o
- .text.PpgLdd2_SetFrequencykHz
+ .text.PpgLdd2_SetPeriodSec
                 0x00000000       0x18 ./Generated_Code/PpgLdd2.o
+ .text.PpgLdd2_SetPeriodReal
+                0x00000000       0x84 ./Generated_Code/PpgLdd2.o
+ .text.PpgLdd2_SetFrequencyHz
+                0x00000000       0x7c ./Generated_Code/PpgLdd2.o
+ .text.PpgLdd2_SetFrequencykHz
+                0x00000000       0x84 ./Generated_Code/PpgLdd2.o
  .text.PpgLdd2_SetFrequencyMHz
                 0x00000000       0x18 ./Generated_Code/PpgLdd2.o
  .text.PpgLdd2_SetRatio16
@@ -121,23 +131,21 @@ Discarded input sections
                 0x00000000       0x7c ./Generated_Code/PpgLdd2.o
  .text.PpgLdd2_SetDutyMS
                 0x00000000       0x7c ./Generated_Code/PpgLdd2.o
+ .text.SetRatio
+                0x00000000       0x40 ./Generated_Code/PpgLdd2.o
  .text          0x00000000        0x0 ./Generated_Code/PpgLdd1.o
  .data          0x00000000        0x0 ./Generated_Code/PpgLdd1.o
  .bss           0x00000000        0x0 ./Generated_Code/PpgLdd1.o
- .text.PpgLdd1_Enable
-                0x00000000       0x30 ./Generated_Code/PpgLdd1.o
  .text.PpgLdd1_SetPeriodUS
-                0x00000000       0x7c ./Generated_Code/PpgLdd1.o
- .text.PpgLdd1_SetPeriodMS
                 0x00000000       0x84 ./Generated_Code/PpgLdd1.o
+ .text.PpgLdd1_SetPeriodMS
+                0x00000000       0x80 ./Generated_Code/PpgLdd1.o
  .text.PpgLdd1_SetPeriodSec
-                0x00000000       0x7c ./Generated_Code/PpgLdd1.o
- .text.PpgLdd1_SetPeriodReal
-                0x00000000       0x80 ./Generated_Code/PpgLdd1.o
- .text.PpgLdd1_SetFrequencyHz
-                0x00000000       0x80 ./Generated_Code/PpgLdd1.o
- .text.PpgLdd1_SetFrequencykHz
                 0x00000000       0x18 ./Generated_Code/PpgLdd1.o
+ .text.PpgLdd1_SetPeriodReal
+                0x00000000       0x84 ./Generated_Code/PpgLdd1.o
+ .text.PpgLdd1_SetFrequencykHz
+                0x00000000       0x84 ./Generated_Code/PpgLdd1.o
  .text.PpgLdd1_SetFrequencyMHz
                 0x00000000       0x18 ./Generated_Code/PpgLdd1.o
  .text.PpgLdd1_SetRatio8
@@ -148,8 +156,6 @@ Discarded input sections
                 0x00000000       0x7c ./Generated_Code/PpgLdd1.o
  .text.PpgLdd1_SetDutyMS
                 0x00000000       0x7c ./Generated_Code/PpgLdd1.o
- .text.SetRatio
-                0x00000000       0x40 ./Generated_Code/PpgLdd1.o
  .text          0x00000000        0x0 ./Generated_Code/PE_LDD.o
  .data          0x00000000        0x0 ./Generated_Code/PE_LDD.o
  .bss           0x00000000        0x0 ./Generated_Code/PE_LDD.o
@@ -158,7 +164,7 @@ Discarded input sections
  .text.PE_FillMemory
                 0x00000000       0x28 ./Generated_Code/PE_LDD.o
  .text.PE_PeripheralUsed
-                0x00000000       0x5c ./Generated_Code/PE_LDD.o
+                0x00000000       0x68 ./Generated_Code/PE_LDD.o
  .text.LDD_SetClockConfiguration
                 0x00000000       0x14 ./Generated_Code/PE_LDD.o
  .text          0x00000000        0x0 ./Generated_Code/MCUC1.o
@@ -169,12 +175,31 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 ./Generated_Code/MCUC1.o
  .debug_macinfo
-                0x00000000    0x2e242 ./Generated_Code/MCUC1.o
+                0x00000000    0x2e269 ./Generated_Code/MCUC1.o
  .debug_line    0x00000000      0x219 ./Generated_Code/MCUC1.o
  .debug_str     0x00000000      0x141 ./Generated_Code/MCUC1.o
  .comment       0x00000000       0x7a ./Generated_Code/MCUC1.o
  .ARM.attributes
                 0x00000000       0x31 ./Generated_Code/MCUC1.o
+ .text          0x00000000        0x0 ./Generated_Code/LiftingMotor_Step.o
+ .data          0x00000000        0x0 ./Generated_Code/LiftingMotor_Step.o
+ .bss           0x00000000        0x0 ./Generated_Code/LiftingMotor_Step.o
+ .text.LiftingMotor_Step_SetPeriodUS
+                0x00000000       0x48 ./Generated_Code/LiftingMotor_Step.o
+ .text.LiftingMotor_Step_SetPeriodMS
+                0x00000000       0x48 ./Generated_Code/LiftingMotor_Step.o
+ .text.LiftingMotor_Step_SetPeriodSec
+                0x00000000       0x48 ./Generated_Code/LiftingMotor_Step.o
+ .text.LiftingMotor_Step_SetPeriodReal
+                0x00000000       0x40 ./Generated_Code/LiftingMotor_Step.o
+ .text.LiftingMotor_Step_SetFreqkHz
+                0x00000000       0x48 ./Generated_Code/LiftingMotor_Step.o
+ .text.LiftingMotor_Step_SetFreqMHz
+                0x00000000       0x48 ./Generated_Code/LiftingMotor_Step.o
+ .text.LiftingMotor_Step_SetDutyUS
+                0x00000000       0x48 ./Generated_Code/LiftingMotor_Step.o
+ .text.LiftingMotor_Step_SetDutyMS
+                0x00000000       0x48 ./Generated_Code/LiftingMotor_Step.o
  .text          0x00000000        0x0 ./Generated_Code/LiftingMotor_MS2.o
  .data          0x00000000        0x0 ./Generated_Code/LiftingMotor_MS2.o
  .bss           0x00000000        0x0 ./Generated_Code/LiftingMotor_MS2.o
@@ -183,7 +208,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 ./Generated_Code/LiftingMotor_MS2.o
  .debug_macinfo
-                0x00000000    0x2eebf ./Generated_Code/LiftingMotor_MS2.o
+                0x00000000    0x2eee6 ./Generated_Code/LiftingMotor_MS2.o
  .debug_line    0x00000000      0x28c ./Generated_Code/LiftingMotor_MS2.o
  .debug_str     0x00000000      0x14c ./Generated_Code/LiftingMotor_MS2.o
  .comment       0x00000000       0x7a ./Generated_Code/LiftingMotor_MS2.o
@@ -197,7 +222,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 ./Generated_Code/LiftingMotor_MS1.o
  .debug_macinfo
-                0x00000000    0x2eebf ./Generated_Code/LiftingMotor_MS1.o
+                0x00000000    0x2eee6 ./Generated_Code/LiftingMotor_MS1.o
  .debug_line    0x00000000      0x28c ./Generated_Code/LiftingMotor_MS1.o
  .debug_str     0x00000000      0x14c ./Generated_Code/LiftingMotor_MS1.o
  .comment       0x00000000       0x7a ./Generated_Code/LiftingMotor_MS1.o
@@ -211,7 +236,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 ./Generated_Code/LiftingMotor_Enable.o
  .debug_macinfo
-                0x00000000    0x2eece ./Generated_Code/LiftingMotor_Enable.o
+                0x00000000    0x2eef5 ./Generated_Code/LiftingMotor_Enable.o
  .debug_line    0x00000000      0x292 ./Generated_Code/LiftingMotor_Enable.o
  .debug_str     0x00000000      0x14f ./Generated_Code/LiftingMotor_Enable.o
  .comment       0x00000000       0x7a ./Generated_Code/LiftingMotor_Enable.o
@@ -225,33 +250,47 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 ./Generated_Code/LiftingMotor_Direction.o
  .debug_macinfo
-                0x00000000    0x2eedd ./Generated_Code/LiftingMotor_Direction.o
+                0x00000000    0x2ef04 ./Generated_Code/LiftingMotor_Direction.o
  .debug_line    0x00000000      0x298 ./Generated_Code/LiftingMotor_Direction.o
  .debug_str     0x00000000      0x152 ./Generated_Code/LiftingMotor_Direction.o
  .comment       0x00000000       0x7a ./Generated_Code/LiftingMotor_Direction.o
  .ARM.attributes
                 0x00000000       0x31 ./Generated_Code/LiftingMotor_Direction.o
- .text          0x00000000        0x0 ./Generated_Code/LiftingMotor.o
- .data          0x00000000        0x0 ./Generated_Code/LiftingMotor.o
- .bss           0x00000000        0x0 ./Generated_Code/LiftingMotor.o
- .text.LiftingMotor_SetPeriodUS
-                0x00000000       0x48 ./Generated_Code/LiftingMotor.o
- .text.LiftingMotor_SetPeriodMS
-                0x00000000       0x48 ./Generated_Code/LiftingMotor.o
- .text.LiftingMotor_SetPeriodSec
-                0x00000000       0x48 ./Generated_Code/LiftingMotor.o
- .text.LiftingMotor_SetPeriodReal
-                0x00000000       0x40 ./Generated_Code/LiftingMotor.o
- .text.LiftingMotor_SetFreqHz
-                0x00000000       0x48 ./Generated_Code/LiftingMotor.o
- .text.LiftingMotor_SetFreqkHz
-                0x00000000       0x48 ./Generated_Code/LiftingMotor.o
- .text.LiftingMotor_SetFreqMHz
-                0x00000000       0x48 ./Generated_Code/LiftingMotor.o
- .text.LiftingMotor_SetDutyUS
-                0x00000000       0x48 ./Generated_Code/LiftingMotor.o
- .text.LiftingMotor_SetDutyMS
-                0x00000000       0x48 ./Generated_Code/LiftingMotor.o
+ .text          0x00000000        0x0 ./Generated_Code/Electromagnet.o
+ .data          0x00000000        0x0 ./Generated_Code/Electromagnet.o
+ .bss           0x00000000        0x0 ./Generated_Code/Electromagnet.o
+ .debug_info    0x00000000       0x76 ./Generated_Code/Electromagnet.o
+ .debug_abbrev  0x00000000       0x28 ./Generated_Code/Electromagnet.o
+ .debug_aranges
+                0x00000000       0x18 ./Generated_Code/Electromagnet.o
+ .debug_macinfo
+                0x00000000    0x2eedb ./Generated_Code/Electromagnet.o
+ .debug_line    0x00000000      0x286 ./Generated_Code/Electromagnet.o
+ .debug_str     0x00000000      0x149 ./Generated_Code/Electromagnet.o
+ .comment       0x00000000       0x7a ./Generated_Code/Electromagnet.o
+ .ARM.attributes
+                0x00000000       0x31 ./Generated_Code/Electromagnet.o
+ .text          0x00000000        0x0 ./Generated_Code/DrivingMotor_Step.o
+ .data          0x00000000        0x0 ./Generated_Code/DrivingMotor_Step.o
+ .bss           0x00000000        0x0 ./Generated_Code/DrivingMotor_Step.o
+ .text.DrivingMotor_Step_SetPeriodUS
+                0x00000000       0x48 ./Generated_Code/DrivingMotor_Step.o
+ .text.DrivingMotor_Step_SetPeriodMS
+                0x00000000       0x48 ./Generated_Code/DrivingMotor_Step.o
+ .text.DrivingMotor_Step_SetPeriodSec
+                0x00000000       0x48 ./Generated_Code/DrivingMotor_Step.o
+ .text.DrivingMotor_Step_SetPeriodReal
+                0x00000000       0x40 ./Generated_Code/DrivingMotor_Step.o
+ .text.DrivingMotor_Step_SetFreqHz
+                0x00000000       0x48 ./Generated_Code/DrivingMotor_Step.o
+ .text.DrivingMotor_Step_SetFreqkHz
+                0x00000000       0x48 ./Generated_Code/DrivingMotor_Step.o
+ .text.DrivingMotor_Step_SetFreqMHz
+                0x00000000       0x48 ./Generated_Code/DrivingMotor_Step.o
+ .text.DrivingMotor_Step_SetDutyUS
+                0x00000000       0x48 ./Generated_Code/DrivingMotor_Step.o
+ .text.DrivingMotor_Step_SetDutyMS
+                0x00000000       0x48 ./Generated_Code/DrivingMotor_Step.o
  .text          0x00000000        0x0 ./Generated_Code/DrivingMotor_MS2.o
  .data          0x00000000        0x0 ./Generated_Code/DrivingMotor_MS2.o
  .bss           0x00000000        0x0 ./Generated_Code/DrivingMotor_MS2.o
@@ -260,7 +299,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 ./Generated_Code/DrivingMotor_MS2.o
  .debug_macinfo
-                0x00000000    0x2eebd ./Generated_Code/DrivingMotor_MS2.o
+                0x00000000    0x2eee4 ./Generated_Code/DrivingMotor_MS2.o
  .debug_line    0x00000000      0x28c ./Generated_Code/DrivingMotor_MS2.o
  .debug_str     0x00000000      0x14c ./Generated_Code/DrivingMotor_MS2.o
  .comment       0x00000000       0x7a ./Generated_Code/DrivingMotor_MS2.o
@@ -274,7 +313,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 ./Generated_Code/DrivingMotor_MS1.o
  .debug_macinfo
-                0x00000000    0x2eebd ./Generated_Code/DrivingMotor_MS1.o
+                0x00000000    0x2eee4 ./Generated_Code/DrivingMotor_MS1.o
  .debug_line    0x00000000      0x28c ./Generated_Code/DrivingMotor_MS1.o
  .debug_str     0x00000000      0x14c ./Generated_Code/DrivingMotor_MS1.o
  .comment       0x00000000       0x7a ./Generated_Code/DrivingMotor_MS1.o
@@ -288,7 +327,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 ./Generated_Code/DrivingMotor_Enable.o
  .debug_macinfo
-                0x00000000    0x2eecc ./Generated_Code/DrivingMotor_Enable.o
+                0x00000000    0x2eef3 ./Generated_Code/DrivingMotor_Enable.o
  .debug_line    0x00000000      0x292 ./Generated_Code/DrivingMotor_Enable.o
  .debug_str     0x00000000      0x14f ./Generated_Code/DrivingMotor_Enable.o
  .comment       0x00000000       0x7a ./Generated_Code/DrivingMotor_Enable.o
@@ -302,31 +341,12 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 ./Generated_Code/DrivingMotor_Direction.o
  .debug_macinfo
-                0x00000000    0x2eedb ./Generated_Code/DrivingMotor_Direction.o
+                0x00000000    0x2ef02 ./Generated_Code/DrivingMotor_Direction.o
  .debug_line    0x00000000      0x298 ./Generated_Code/DrivingMotor_Direction.o
  .debug_str     0x00000000      0x152 ./Generated_Code/DrivingMotor_Direction.o
  .comment       0x00000000       0x7a ./Generated_Code/DrivingMotor_Direction.o
  .ARM.attributes
                 0x00000000       0x31 ./Generated_Code/DrivingMotor_Direction.o
- .text          0x00000000        0x0 ./Generated_Code/DrivingMotor.o
- .data          0x00000000        0x0 ./Generated_Code/DrivingMotor.o
- .bss           0x00000000        0x0 ./Generated_Code/DrivingMotor.o
- .text.DrivingMotor_SetPeriodUS
-                0x00000000       0x48 ./Generated_Code/DrivingMotor.o
- .text.DrivingMotor_SetPeriodMS
-                0x00000000       0x48 ./Generated_Code/DrivingMotor.o
- .text.DrivingMotor_SetPeriodSec
-                0x00000000       0x48 ./Generated_Code/DrivingMotor.o
- .text.DrivingMotor_SetPeriodReal
-                0x00000000       0x40 ./Generated_Code/DrivingMotor.o
- .text.DrivingMotor_SetFreqkHz
-                0x00000000       0x48 ./Generated_Code/DrivingMotor.o
- .text.DrivingMotor_SetFreqMHz
-                0x00000000       0x48 ./Generated_Code/DrivingMotor.o
- .text.DrivingMotor_SetDutyUS
-                0x00000000       0x48 ./Generated_Code/DrivingMotor.o
- .text.DrivingMotor_SetDutyMS
-                0x00000000       0x48 ./Generated_Code/DrivingMotor.o
  .text          0x00000000        0x0 ./Generated_Code/Cpu.o
  .data          0x00000000        0x0 ./Generated_Code/Cpu.o
  .bss           0x00000000        0x0 ./Generated_Code/Cpu.o
@@ -348,7 +368,7 @@ Discarded input sections
                 0x00000000       0x28 ./Generated_Code/BitIoLdd8.o
  .text.BitIoLdd8_PutVal
                 0x00000000       0x30 ./Generated_Code/BitIoLdd8.o
- .text.BitIoLdd8_SetVal
+ .text.BitIoLdd8_ClrVal
                 0x00000000       0x18 ./Generated_Code/BitIoLdd8.o
  .text          0x00000000        0x0 ./Generated_Code/BitIoLdd7.o
  .data          0x00000000        0x0 ./Generated_Code/BitIoLdd7.o
@@ -357,6 +377,8 @@ Discarded input sections
                 0x00000000       0x28 ./Generated_Code/BitIoLdd7.o
  .text.BitIoLdd7_PutVal
                 0x00000000       0x30 ./Generated_Code/BitIoLdd7.o
+ .text.BitIoLdd7_ClrVal
+                0x00000000       0x18 ./Generated_Code/BitIoLdd7.o
  .text.BitIoLdd7_SetVal
                 0x00000000       0x18 ./Generated_Code/BitIoLdd7.o
  .text          0x00000000        0x0 ./Generated_Code/BitIoLdd6.o
@@ -366,6 +388,8 @@ Discarded input sections
                 0x00000000       0x28 ./Generated_Code/BitIoLdd6.o
  .text.BitIoLdd6_PutVal
                 0x00000000       0x30 ./Generated_Code/BitIoLdd6.o
+ .text.BitIoLdd6_ClrVal
+                0x00000000       0x18 ./Generated_Code/BitIoLdd6.o
  .text.BitIoLdd6_SetVal
                 0x00000000       0x18 ./Generated_Code/BitIoLdd6.o
  .text          0x00000000        0x0 ./Generated_Code/BitIoLdd5.o
@@ -375,7 +399,7 @@ Discarded input sections
                 0x00000000       0x28 ./Generated_Code/BitIoLdd5.o
  .text.BitIoLdd5_PutVal
                 0x00000000       0x34 ./Generated_Code/BitIoLdd5.o
- .text.BitIoLdd5_ClrVal
+ .text.BitIoLdd5_SetVal
                 0x00000000       0x1c ./Generated_Code/BitIoLdd5.o
  .text          0x00000000        0x0 ./Generated_Code/BitIoLdd4.o
  .data          0x00000000        0x0 ./Generated_Code/BitIoLdd4.o
@@ -384,8 +408,6 @@ Discarded input sections
                 0x00000000       0x28 ./Generated_Code/BitIoLdd4.o
  .text.BitIoLdd4_PutVal
                 0x00000000       0x34 ./Generated_Code/BitIoLdd4.o
- .text.BitIoLdd4_SetVal
-                0x00000000       0x1c ./Generated_Code/BitIoLdd4.o
  .text          0x00000000        0x0 ./Generated_Code/BitIoLdd3.o
  .data          0x00000000        0x0 ./Generated_Code/BitIoLdd3.o
  .bss           0x00000000        0x0 ./Generated_Code/BitIoLdd3.o
@@ -393,8 +415,19 @@ Discarded input sections
                 0x00000000       0x28 ./Generated_Code/BitIoLdd3.o
  .text.BitIoLdd3_PutVal
                 0x00000000       0x34 ./Generated_Code/BitIoLdd3.o
+ .text.BitIoLdd3_ClrVal
+                0x00000000       0x1c ./Generated_Code/BitIoLdd3.o
  .text.BitIoLdd3_SetVal
                 0x00000000       0x1c ./Generated_Code/BitIoLdd3.o
+ .text          0x00000000        0x0 ./Generated_Code/BitIoLdd2.o
+ .data          0x00000000        0x0 ./Generated_Code/BitIoLdd2.o
+ .bss           0x00000000        0x0 ./Generated_Code/BitIoLdd2.o
+ .text.BitIoLdd2_GetVal
+                0x00000000       0x28 ./Generated_Code/BitIoLdd2.o
+ .text.BitIoLdd2_PutVal
+                0x00000000       0x34 ./Generated_Code/BitIoLdd2.o
+ .text.BitIoLdd2_ClrVal
+                0x00000000       0x1c ./Generated_Code/BitIoLdd2.o
  .text          0x00000000        0x0 ./Generated_Code/BitIoLdd1.o
  .data          0x00000000        0x0 ./Generated_Code/BitIoLdd1.o
  .bss           0x00000000        0x0 ./Generated_Code/BitIoLdd1.o
@@ -402,6 +435,8 @@ Discarded input sections
                 0x00000000       0x28 ./Generated_Code/BitIoLdd1.o
  .text.BitIoLdd1_PutVal
                 0x00000000       0x34 ./Generated_Code/BitIoLdd1.o
+ .text.BitIoLdd1_ClrVal
+                0x00000000       0x1c ./Generated_Code/BitIoLdd1.o
  .text.BitIoLdd1_SetVal
                 0x00000000       0x1c ./Generated_Code/BitIoLdd1.o
  .text          0x00000000        0x0 ./Project_Settings/Startup_Code/__arm_start.o
@@ -432,14 +467,22 @@ Discarded input sections
  .text          0x00000000        0x0 ./Sources/Stepper.o
  .data          0x00000000        0x0 ./Sources/Stepper.o
  .bss           0x00000000        0x0 ./Sources/Stepper.o
- .text.DrivingMotorSetDirection
-                0x00000000       0x44 ./Sources/Stepper.o
- .text.LifitingMotorSetDirection
-                0x00000000       0x44 ./Sources/Stepper.o
- .text.LifitingMotorSetSpeed
-                0x00000000       0x98 ./Sources/Stepper.o
- .text.LiftingMotor_Stop
-                0x00000000       0x34 ./Sources/Stepper.o
+ .bss.drivingMotor_accelarationSteps
+                0x00000000        0x4 ./Sources/Stepper.o
+ .bss.drivingMotor_cruisungSteps
+                0x00000000        0x4 ./Sources/Stepper.o
+ .rodata.LUP_StepperMotor_TargetFreq
+                0x00000000       0x94 ./Sources/Stepper.o
+ .text.DrivingMotor_Brakes
+                0x00000000       0x18 ./Sources/Stepper.o
+ .text.DrivingMotor_MoveContinuous
+                0x00000000        0xc ./Sources/Stepper.o
+ .text.LiftingMotor_Brakes
+                0x00000000       0x18 ./Sources/Stepper.o
+ .text.LiftingMotor_MoveContinuous
+                0x00000000        0xc ./Sources/Stepper.o
+ .text.DrivingMotorMove
+                0x00000000       0x90 ./Sources/Stepper.o
  .text          0x00000000        0x0 ./Sources/Events.o
  .data          0x00000000        0x0 ./Sources/Events.o
  .bss           0x00000000        0x0 ./Sources/Events.o
@@ -517,8 +560,12 @@ Discarded input sections
  .bss           0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_arm_cmpsf2.o)
  .data          0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_fixunssfsi.o)
  .bss           0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_fixunssfsi.o)
+ .text          0x00000000       0x40 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_fixunsdfsi.o)
  .data          0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_fixunsdfsi.o)
  .bss           0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_fixunsdfsi.o)
+ .ARM.attributes
+                0x00000000       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_fixunsdfsi.o)
+ .debug_frame   0x00000000       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_fixunsdfsi.o)
  .data          0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(divsf3.o)
  .bss           0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(divsf3.o)
  .data          0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(eqsf2.o)
@@ -546,28 +593,56 @@ Discarded input sections
  .ARM.attributes
                 0x00000000       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(floatunsisf.o)
  .debug_frame   0x00000000       0x28 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(floatunsisf.o)
- .data          0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(divdf3.o)
- .bss           0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(divdf3.o)
+ .text          0x00000000      0x4e4 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(muldf3.o)
  .data          0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(muldf3.o)
  .bss           0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(muldf3.o)
+ .rodata        0x00000000       0x40 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(muldf3.o)
+ .ARM.attributes
+                0x00000000       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(muldf3.o)
+ .debug_frame   0x00000000       0x3c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(muldf3.o)
+ .text          0x00000000      0x6f8 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(subdf3.o)
  .data          0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(subdf3.o)
  .bss           0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(subdf3.o)
+ .ARM.attributes
+                0x00000000       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(subdf3.o)
+ .debug_frame   0x00000000       0x38 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(subdf3.o)
+ .text          0x00000000       0x68 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(fixdfsi.o)
  .data          0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(fixdfsi.o)
  .bss           0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(fixdfsi.o)
- .data          0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(floatsidf.o)
- .bss           0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(floatsidf.o)
+ .ARM.attributes
+                0x00000000       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(fixdfsi.o)
+ .debug_frame   0x00000000       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(fixdfsi.o)
+ .text          0x00000000       0x64 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(floatunsidf.o)
  .data          0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(floatunsidf.o)
  .bss           0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(floatunsidf.o)
+ .ARM.attributes
+                0x00000000       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(floatunsidf.o)
+ .debug_frame   0x00000000       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(floatunsidf.o)
+ .text          0x00000000       0x7c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_arm_cmpdf2.o)
  .data          0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_arm_cmpdf2.o)
  .bss           0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_arm_cmpdf2.o)
+ .ARM.attributes
+                0x00000000       0x1e c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_arm_cmpdf2.o)
  .data          0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_clzsi2.o)
  .bss           0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_clzsi2.o)
+ .text          0x00000000       0x7c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(eqdf2.o)
  .data          0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(eqdf2.o)
  .bss           0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(eqdf2.o)
+ .ARM.attributes
+                0x00000000       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(eqdf2.o)
+ .debug_frame   0x00000000       0x34 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(eqdf2.o)
+ .text          0x00000000       0xe8 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(gedf2.o)
  .data          0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(gedf2.o)
  .bss           0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(gedf2.o)
+ .ARM.attributes
+                0x00000000       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(gedf2.o)
+ .debug_frame   0x00000000       0x38 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(gedf2.o)
+ .text          0x00000000       0xd8 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(ledf2.o)
  .data          0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(ledf2.o)
  .bss           0x00000000        0x0 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(ledf2.o)
+ .ARM.attributes
+                0x00000000       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(ledf2.o)
+ .debug_frame   0x00000000       0x38 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(ledf2.o)
  .text          0x00000000        0x0 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
  .data          0x00000000        0x0 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
  .bss           0x00000000        0x0 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
@@ -613,16 +688,17 @@ LOAD ./Generated_Code/PpgLdd2.o
 LOAD ./Generated_Code/PpgLdd1.o
 LOAD ./Generated_Code/PE_LDD.o
 LOAD ./Generated_Code/MCUC1.o
+LOAD ./Generated_Code/LiftingMotor_Step.o
 LOAD ./Generated_Code/LiftingMotor_MS2.o
 LOAD ./Generated_Code/LiftingMotor_MS1.o
 LOAD ./Generated_Code/LiftingMotor_Enable.o
 LOAD ./Generated_Code/LiftingMotor_Direction.o
-LOAD ./Generated_Code/LiftingMotor.o
+LOAD ./Generated_Code/Electromagnet.o
+LOAD ./Generated_Code/DrivingMotor_Step.o
 LOAD ./Generated_Code/DrivingMotor_MS2.o
 LOAD ./Generated_Code/DrivingMotor_MS1.o
 LOAD ./Generated_Code/DrivingMotor_Enable.o
 LOAD ./Generated_Code/DrivingMotor_Direction.o
-LOAD ./Generated_Code/DrivingMotor.o
 LOAD ./Generated_Code/Cpu.o
 LOAD ./Generated_Code/BitIoLdd9.o
 LOAD ./Generated_Code/BitIoLdd8.o
@@ -631,6 +707,7 @@ LOAD ./Generated_Code/BitIoLdd6.o
 LOAD ./Generated_Code/BitIoLdd5.o
 LOAD ./Generated_Code/BitIoLdd4.o
 LOAD ./Generated_Code/BitIoLdd3.o
+LOAD ./Generated_Code/BitIoLdd2.o
 LOAD ./Generated_Code/BitIoLdd1.o
 LOAD ./Project_Settings/Startup_Code/__arm_start.o
 LOAD ./Project_Settings/Startup_Code/__arm_end.o
@@ -639,8 +716,8 @@ LOAD ./Sources/main.o
 LOAD ./Sources/Stepper.o
 LOAD ./Sources/Events.o
 LOAD ./Sources/Application.o
-                0x0000354c                __pformatter = __pformatter_
-                [0x00003974]                __sformatter = __sformatter
+                0x00001ed0                __pformatter = __pformatter_
+                [0x000022f8]                __sformatter = __sformatter
 START GROUP
 LOAD C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a
 LOAD C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libm.a
@@ -668,7 +745,7 @@ END GROUP
                 0x00000400                _cfm
                 0x00000410                . = ALIGN (0x4)
 
-.text           0x00000410     0x4174
+.text           0x00000410     0x2a8c
                 0x00000410                . = ALIGN (0x4)
  *(.text)
  .text          0x00000410       0x14 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_thumb1_case_sqi.o)
@@ -694,276 +771,224 @@ END GROUP
  .text          0x0000054c       0x30 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_fixunssfsi.o)
                 0x0000054c                __fixunssfsi
                 0x0000054c                __aeabi_f2uiz
- *fill*         0x0000057c        0x4 00
- .text          0x00000580       0x40 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_fixunsdfsi.o)
-                0x00000580                __aeabi_d2uiz
-                0x00000580                __fixunsdfsi
- .text          0x000005c0      0x274 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(divsf3.o)
-                0x000005c0                __aeabi_fdiv
- .text          0x00000834       0x50 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(eqsf2.o)
-                0x00000834                __eqsf2
-                0x00000834                __nesf2
- .text          0x00000884       0x90 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(gesf2.o)
-                0x00000884                __gesf2
-                0x00000884                __gtsf2
- .text          0x00000914       0x90 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(lesf2.o)
-                0x00000914                __ltsf2
-                0x00000914                __lesf2
- .text          0x000009a4      0x3ac c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(subsf3.o)
-                0x000009a4                __aeabi_fsub
- .text          0x00000d50       0x40 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(fixsfsi.o)
-                0x00000d50                __aeabi_f2iz
- .text          0x00000d90       0xa8 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(floatsisf.o)
-                0x00000d90                __aeabi_i2f
- .text          0x00000e38      0x5b8 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(divdf3.o)
-                0x00000e38                __aeabi_ddiv
- .text          0x000013f0      0x4e4 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(muldf3.o)
-                0x000013f0                __aeabi_dmul
- .text          0x000018d4      0x6f8 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(subdf3.o)
-                0x000018d4                __aeabi_dsub
- .text          0x00001fcc       0x68 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(fixdfsi.o)
-                0x00001fcc                __aeabi_d2iz
- .text          0x00002034       0x74 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(floatsidf.o)
-                0x00002034                __aeabi_i2d
- .text          0x000020a8       0x64 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(floatunsidf.o)
-                0x000020a8                __aeabi_ui2d
- .text          0x0000210c       0x7c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_arm_cmpdf2.o)
-                0x0000210c                __aeabi_cdrcmple
-                0x0000211c                __aeabi_cdcmple
-                0x0000211c                __aeabi_cdcmpeq
-                0x0000212c                __aeabi_dcmpeq
-                0x00002138                __aeabi_dcmplt
-                0x0000214c                __aeabi_dcmple
-                0x00002160                __aeabi_dcmpgt
-                0x00002174                __aeabi_dcmpge
- .text          0x00002188       0x3c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_clzsi2.o)
-                0x00002188                __clzsi2
- .text          0x000021c4       0x7c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(eqdf2.o)
-                0x000021c4                __nedf2
-                0x000021c4                __eqdf2
- .text          0x00002240       0xe8 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(gedf2.o)
-                0x00002240                __gedf2
-                0x00002240                __gtdf2
- .text          0x00002328       0xd8 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(ledf2.o)
-                0x00002328                __ledf2
-                0x00002328                __ltdf2
+ .text          0x0000057c      0x274 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(divsf3.o)
+                0x0000057c                __aeabi_fdiv
+ .text          0x000007f0       0x50 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(eqsf2.o)
+                0x000007f0                __eqsf2
+                0x000007f0                __nesf2
+ .text          0x00000840       0x90 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(gesf2.o)
+                0x00000840                __gesf2
+                0x00000840                __gtsf2
+ .text          0x000008d0       0x90 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(lesf2.o)
+                0x000008d0                __ltsf2
+                0x000008d0                __lesf2
+ .text          0x00000960      0x3ac c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(subsf3.o)
+                0x00000960                __aeabi_fsub
+ .text          0x00000d0c       0x40 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(fixsfsi.o)
+                0x00000d0c                __aeabi_f2iz
+ .text          0x00000d4c       0xa8 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(floatsisf.o)
+                0x00000d4c                __aeabi_i2f
+ .text          0x00000df4       0x3c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_clzsi2.o)
+                0x00000df4                __clzsi2
  *(.text*)
- .text.WAIT1_Wait10Cycles
-                0x00002400        0x8 ./Generated_Code/WAIT1.o
-                0x00002400                WAIT1_Wait10Cycles
- .text.WAIT1_Wait100Cycles
-                0x00002408       0x24 ./Generated_Code/WAIT1.o
-                0x00002408                WAIT1_Wait100Cycles
- .text.WAIT1_WaitCycles
-                0x0000242c       0x44 ./Generated_Code/WAIT1.o
-                0x0000242c                WAIT1_WaitCycles
- .text.WAIT1_WaitLongCycles
-                0x00002470       0x3c ./Generated_Code/WAIT1.o
-                0x00002470                WAIT1_WaitLongCycles
- .text.WAIT1_Waitms
-                0x000024ac       0x38 ./Generated_Code/WAIT1.o
-                0x000024ac                WAIT1_Waitms
  .text.WAIT1_Init
-                0x000024e4        0x8 ./Generated_Code/WAIT1.o
-                0x000024e4                WAIT1_Init
+                0x00000e30        0x8 ./Generated_Code/WAIT1.o
+                0x00000e30                WAIT1_Init
  .text.PpgLdd2_Init
-                0x000024ec      0x108 ./Generated_Code/PpgLdd2.o
-                0x000024ec                PpgLdd2_Init
- .text.PpgLdd2_Enable
-                0x000025f4       0x30 ./Generated_Code/PpgLdd2.o
-                0x000025f4                PpgLdd2_Enable
+                0x00000e38      0x10c ./Generated_Code/PpgLdd2.o
+                0x00000e38                PpgLdd2_Init
  .text.PpgLdd2_Disable
-                0x00002624       0x28 ./Generated_Code/PpgLdd2.o
-                0x00002624                PpgLdd2_Disable
- .text.PpgLdd2_SetFrequencyHz
-                0x0000264c       0x84 ./Generated_Code/PpgLdd2.o
-                0x0000264c                PpgLdd2_SetFrequencyHz
+                0x00000f44       0x28 ./Generated_Code/PpgLdd2.o
+                0x00000f44                PpgLdd2_Disable
  .text.PpgLdd2_Interrupt
-                0x000026d0       0x30 ./Generated_Code/PpgLdd2.o
-                0x000026d0                PpgLdd2_Interrupt
- .text.SetRatio
-                0x00002700       0x40 ./Generated_Code/PpgLdd2.o
+                0x00000f6c       0x30 ./Generated_Code/PpgLdd2.o
+                0x00000f6c                PpgLdd2_Interrupt
  .text.PpgLdd1_Init
-                0x00002740       0xe4 ./Generated_Code/PpgLdd1.o
-                0x00002740                PpgLdd1_Init
+                0x00000f9c       0xf4 ./Generated_Code/PpgLdd1.o
+                0x00000f9c                PpgLdd1_Init
+ .text.PpgLdd1_Enable
+                0x00001090       0x30 ./Generated_Code/PpgLdd1.o
+                0x00001090                PpgLdd1_Enable
  .text.PpgLdd1_Disable
-                0x00002824       0x28 ./Generated_Code/PpgLdd1.o
-                0x00002824                PpgLdd1_Disable
+                0x000010c0       0x28 ./Generated_Code/PpgLdd1.o
+                0x000010c0                PpgLdd1_Disable
+ .text.PpgLdd1_SetFrequencyHz
+                0x000010e8       0x7c ./Generated_Code/PpgLdd1.o
+                0x000010e8                PpgLdd1_SetFrequencyHz
  .text.PpgLdd1_Interrupt
-                0x0000284c       0x30 ./Generated_Code/PpgLdd1.o
-                0x0000284c                PpgLdd1_Interrupt
+                0x00001164       0x30 ./Generated_Code/PpgLdd1.o
+                0x00001164                PpgLdd1_Interrupt
+ .text.SetRatio
+                0x00001194       0x40 ./Generated_Code/PpgLdd1.o
+ .text.LiftingMotor_Step_SetFreqHz
+                0x000011d4       0x48 ./Generated_Code/LiftingMotor_Step.o
+                0x000011d4                LiftingMotor_Step_SetFreqHz
  .text.PpgLdd1_OnEnd
-                0x0000287c       0x14 ./Generated_Code/LiftingMotor.o
-                0x0000287c                PpgLdd1_OnEnd
- .text.DrivingMotor_SetFreqHz
-                0x00002890       0x48 ./Generated_Code/DrivingMotor.o
-                0x00002890                DrivingMotor_SetFreqHz
+                0x0000121c       0x14 ./Generated_Code/LiftingMotor_Step.o
+                0x0000121c                PpgLdd1_OnEnd
  .text.PpgLdd2_OnEnd
-                0x000028d8       0x14 ./Generated_Code/DrivingMotor.o
-                0x000028d8                PpgLdd2_OnEnd
+                0x00001230       0x14 ./Generated_Code/DrivingMotor_Step.o
+                0x00001230                PpgLdd2_OnEnd
  .text.Cpu_INT_NMIInterrupt
-                0x000028ec        0xc ./Generated_Code/Cpu.o
-                0x000028ec                Cpu_INT_NMIInterrupt
+                0x00001244        0xc ./Generated_Code/Cpu.o
+                0x00001244                Cpu_INT_NMIInterrupt
  .text.Cpu_Interrupt
-                0x000028f8        0xc ./Generated_Code/Cpu.o
-                0x000028f8                Cpu_Interrupt
+                0x00001250        0xc ./Generated_Code/Cpu.o
+                0x00001250                Cpu_Interrupt
  .text.__init_hardware
-                0x00002904      0x108 ./Generated_Code/Cpu.o
-                0x00002904                __init_hardware
+                0x0000125c      0x110 ./Generated_Code/Cpu.o
+                0x0000125c                __init_hardware
  .text.PE_low_level_init
-                0x00002a0c      0x108 ./Generated_Code/Cpu.o
-                0x00002a0c                PE_low_level_init
+                0x0000136c      0x110 ./Generated_Code/Cpu.o
+                0x0000136c                PE_low_level_init
  .text.BitIoLdd9_Init
-                0x00002b14       0x60 ./Generated_Code/BitIoLdd9.o
-                0x00002b14                BitIoLdd9_Init
+                0x0000147c       0x60 ./Generated_Code/BitIoLdd9.o
+                0x0000147c                BitIoLdd9_Init
  .text.BitIoLdd9_SetVal
-                0x00002b74       0x18 ./Generated_Code/BitIoLdd9.o
-                0x00002b74                BitIoLdd9_SetVal
+                0x000014dc       0x18 ./Generated_Code/BitIoLdd9.o
+                0x000014dc                BitIoLdd9_SetVal
  .text.BitIoLdd8_Init
-                0x00002b8c       0x60 ./Generated_Code/BitIoLdd8.o
-                0x00002b8c                BitIoLdd8_Init
- .text.BitIoLdd8_ClrVal
-                0x00002bec       0x18 ./Generated_Code/BitIoLdd8.o
-                0x00002bec                BitIoLdd8_ClrVal
+                0x000014f4       0x60 ./Generated_Code/BitIoLdd8.o
+                0x000014f4                BitIoLdd8_Init
+ .text.BitIoLdd8_SetVal
+                0x00001554       0x18 ./Generated_Code/BitIoLdd8.o
+                0x00001554                BitIoLdd8_SetVal
  .text.BitIoLdd7_Init
-                0x00002c04       0x60 ./Generated_Code/BitIoLdd7.o
-                0x00002c04                BitIoLdd7_Init
- .text.BitIoLdd7_ClrVal
-                0x00002c64       0x18 ./Generated_Code/BitIoLdd7.o
-                0x00002c64                BitIoLdd7_ClrVal
+                0x0000156c       0x60 ./Generated_Code/BitIoLdd7.o
+                0x0000156c                BitIoLdd7_Init
  .text.BitIoLdd6_Init
-                0x00002c7c       0x60 ./Generated_Code/BitIoLdd6.o
-                0x00002c7c                BitIoLdd6_Init
- .text.BitIoLdd6_ClrVal
-                0x00002cdc       0x18 ./Generated_Code/BitIoLdd6.o
-                0x00002cdc                BitIoLdd6_ClrVal
+                0x000015cc       0x60 ./Generated_Code/BitIoLdd6.o
+                0x000015cc                BitIoLdd6_Init
  .text.BitIoLdd5_Init
-                0x00002cf4       0x68 ./Generated_Code/BitIoLdd5.o
-                0x00002cf4                BitIoLdd5_Init
- .text.BitIoLdd5_SetVal
-                0x00002d5c       0x1c ./Generated_Code/BitIoLdd5.o
-                0x00002d5c                BitIoLdd5_SetVal
+                0x0000162c       0x68 ./Generated_Code/BitIoLdd5.o
+                0x0000162c                BitIoLdd5_Init
+ .text.BitIoLdd5_ClrVal
+                0x00001694       0x1c ./Generated_Code/BitIoLdd5.o
+                0x00001694                BitIoLdd5_ClrVal
  .text.BitIoLdd4_Init
-                0x00002d78       0x68 ./Generated_Code/BitIoLdd4.o
-                0x00002d78                BitIoLdd4_Init
+                0x000016b0       0x68 ./Generated_Code/BitIoLdd4.o
+                0x000016b0                BitIoLdd4_Init
  .text.BitIoLdd4_ClrVal
-                0x00002de0       0x1c ./Generated_Code/BitIoLdd4.o
-                0x00002de0                BitIoLdd4_ClrVal
+                0x00001718       0x1c ./Generated_Code/BitIoLdd4.o
+                0x00001718                BitIoLdd4_ClrVal
+ .text.BitIoLdd4_SetVal
+                0x00001734       0x1c ./Generated_Code/BitIoLdd4.o
+                0x00001734                BitIoLdd4_SetVal
  .text.BitIoLdd3_Init
-                0x00002dfc       0x68 ./Generated_Code/BitIoLdd3.o
-                0x00002dfc                BitIoLdd3_Init
- .text.BitIoLdd3_ClrVal
-                0x00002e64       0x1c ./Generated_Code/BitIoLdd3.o
-                0x00002e64                BitIoLdd3_ClrVal
+                0x00001750       0x68 ./Generated_Code/BitIoLdd3.o
+                0x00001750                BitIoLdd3_Init
+ .text.BitIoLdd2_Init
+                0x000017b8       0x68 ./Generated_Code/BitIoLdd2.o
+                0x000017b8                BitIoLdd2_Init
+ .text.BitIoLdd2_SetVal
+                0x00001820       0x1c ./Generated_Code/BitIoLdd2.o
+                0x00001820                BitIoLdd2_SetVal
  .text.BitIoLdd1_Init
-                0x00002e80       0x68 ./Generated_Code/BitIoLdd1.o
-                0x00002e80                BitIoLdd1_Init
- .text.BitIoLdd1_ClrVal
-                0x00002ee8       0x1c ./Generated_Code/BitIoLdd1.o
-                0x00002ee8                BitIoLdd1_ClrVal
+                0x0000183c       0x68 ./Generated_Code/BitIoLdd1.o
+                0x0000183c                BitIoLdd1_Init
  .text.zero_fill_bss
-                0x00002f04       0x24 ./Project_Settings/Startup_Code/__arm_start.o
+                0x000018a4       0x24 ./Project_Settings/Startup_Code/__arm_start.o
  .text.__thumb_startup
-                0x00002f28       0x30 ./Project_Settings/Startup_Code/__arm_start.o
-                0x00002f28                __thumb_startup
+                0x000018c8       0x30 ./Project_Settings/Startup_Code/__arm_start.o
+                0x000018c8                __thumb_startup
  .text._ExitProcess
-                0x00002f58        0xc ./Project_Settings/Startup_Code/__arm_end.o
-                0x00002f58                _ExitProcess
- .text.main     0x00002f64       0x14 ./Sources/main.o
-                0x00002f64                main
+                0x000018f8        0xc ./Project_Settings/Startup_Code/__arm_end.o
+                0x000018f8                _ExitProcess
+ .text.main     0x00001904       0x14 ./Sources/main.o
+                0x00001904                main
  .text.StepperInit
-                0x00002f78       0xf4 ./Sources/Stepper.o
-                0x00002f78                StepperInit
+                0x00001918       0xfc ./Sources/Stepper.o
+                0x00001918                StepperInit
  .text.Stepper_TestApplication
-                0x0000306c       0x24 ./Sources/Stepper.o
-                0x0000306c                Stepper_TestApplication
- .text.DrivingMotorSetSpeed
-                0x00003090       0x98 ./Sources/Stepper.o
-                0x00003090                DrivingMotorSetSpeed
- .text.DrivingMotorMove
-                0x00003128      0x108 ./Sources/Stepper.o
-                0x00003128                DrivingMotorMove
- .text.DrivingMotor_Stop
-                0x00003230       0x30 ./Sources/Stepper.o
-                0x00003230                DrivingMotor_Stop
+                0x00001a14       0x20 ./Sources/Stepper.o
+                0x00001a14                Stepper_TestApplication
+ .text.LiftingMotor_Move
+                0x00001a34       0xbc ./Sources/Stepper.o
+                0x00001a34                LiftingMotor_Move
+ .text.DrivingMotor_Event
+                0x00001af0        0x8 ./Sources/Stepper.o
+                0x00001af0                DrivingMotor_Event
+ .text.LiftingMotor_Event
+                0x00001af8      0x158 ./Sources/Stepper.o
+                0x00001af8                LiftingMotor_Event
  .text.Cpu_OnNMIINT
-                0x00003260        0x8 ./Sources/Events.o
-                0x00003260                Cpu_OnNMIINT
- .text.DrivingMotor_OnEnd
-                0x00003268       0x7c ./Sources/Events.o
-                0x00003268                DrivingMotor_OnEnd
- .text.LiftingMotor_OnEnd
-                0x000032e4        0x8 ./Sources/Events.o
-                0x000032e4                LiftingMotor_OnEnd
- .text.exit     0x000032ec       0x38 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
-                0x000032ec                exit
- .text.memset   0x00003324        0xc C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
-                0x00003324                memset
+                0x00001c50        0x8 ./Sources/Events.o
+                0x00001c50                Cpu_OnNMIINT
+ .text.DrivingMotor_Step_OnEnd
+                0x00001c58        0xc ./Sources/Events.o
+                0x00001c58                DrivingMotor_Step_OnEnd
+ .text.LiftingMotor_Step_OnEnd
+                0x00001c64        0xc ./Sources/Events.o
+                0x00001c64                LiftingMotor_Step_OnEnd
+ .text.exit     0x00001c70       0x38 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+                0x00001c70                exit
+ .text.memset   0x00001ca8        0xc C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
+                0x00001ca8                memset
  .text.__fill_mem
-                0x00003330       0x7e C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
-                0x00003330                __fill_mem
- *fill*         0x000033ae        0x2 00
+                0x00001cb4       0x7e C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+                0x00001cb4                __fill_mem
+ *fill*         0x00001d32        0x2 00
  .text.long2str.isra.0
-                0x000033b0      0x19c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+                0x00001d34      0x19c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
  .text.__pformatter_
-                0x0000354c      0x428 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
-                0x0000354c                __pformatter_
+                0x00001ed0      0x428 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+                0x00001ed0                __pformatter_
  .text.__sformatter
-                0x00003974      0x698 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
-                0x00003974                __sformatter
- .text.isalpha  0x0000400c       0x20 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
-                0x0000400c                isalpha
- .text.isspace  0x0000402c       0x20 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
-                0x0000402c                isspace
- .text.toupper  0x0000404c        0xe C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
-                0x0000404c                toupper
+                0x000022f8      0x698 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
+                0x000022f8                __sformatter
+ .text.isalpha  0x00002990       0x20 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+                0x00002990                isalpha
+ .text.isspace  0x000029b0       0x20 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+                0x000029b0                isspace
+ .text.toupper  0x000029d0        0xe C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+                0x000029d0                toupper
  .text.__strtoul
-                0x0000405a      0x1ce C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
-                0x0000405a                __strtoul
- .text.strchr   0x00004228       0x1e C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
-                0x00004228                strchr
- .text.memcpy   0x00004246       0x12 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
-                0x00004246                memcpy
- .text.strlen   0x00004258       0x10 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
-                0x00004258                strlen
- .text.memchr   0x00004268       0x1a C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
-                0x00004268                memchr
- *fill*         0x00004282        0x2 00
+                0x000029de      0x1ce C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
+                0x000029de                __strtoul
+ .text.strchr   0x00002bac       0x1e C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
+                0x00002bac                strchr
+ .text.memcpy   0x00002bca       0x12 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+                0x00002bca                memcpy
+ .text.strlen   0x00002bdc       0x10 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
+                0x00002bdc                strlen
+ .text.memchr   0x00002bec       0x1a C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+                0x00002bec                memchr
+ *fill*         0x00002c06        0x2 00
  .text.__init_cpp
-                0x00004284       0x48 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
-                0x00004284                __init_cpp
+                0x00002c08       0x48 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+                0x00002c08                __init_cpp
  .text.__fini_cpp
-                0x000042cc       0x34 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
-                0x000042cc                __fini_cpp
+                0x00002c50       0x34 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+                0x00002c50                __fini_cpp
  .text.__destroy_global_chain
-                0x00004300       0x1c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
-                0x00004300                __destroy_global_chain
+                0x00002c84       0x1c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+                0x00002c84                __destroy_global_chain
  .text.__init_registers
-                0x0000431c       0x1c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
-                0x0000431c                __init_registers
+                0x00002ca0       0x1c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+                0x00002ca0                __init_registers
  .text.__init_user
-                0x00004338        0x4 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
-                0x00004338                __init_user
+                0x00002cbc        0x4 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+                0x00002cbc                __init_user
  .text.__copy_rom_section
-                0x0000433c       0x48 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
-                0x0000433c                __copy_rom_section
+                0x00002cc0       0x48 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+                0x00002cc0                __copy_rom_section
  .text.__copy_rom_sections_to_ram
-                0x00004384       0x34 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
-                0x00004384                __copy_rom_sections_to_ram
+                0x00002d08       0x34 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+                0x00002d08                __copy_rom_sections_to_ram
  *(.rodata)
- .rodata        0x000043b8       0x40 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(divsf3.o)
- .rodata        0x000043f8       0x40 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(divdf3.o)
- .rodata        0x00004438       0x40 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(muldf3.o)
+ .rodata        0x00002d3c       0x40 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(divsf3.o)
  *(.rodata*)
+ .rodata.LiftingMotor_Event
+                0x00002d7c       0x14 ./Sources/Stepper.o
  .rodata.str1.1
-                0x00004478        0x1 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+                0x00002d90        0x1 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
  .rodata.CSWTCH.20
-                0x00004479        0x5 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+                0x00002d91        0x5 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
  .rodata.CSWTCH.21
-                0x0000447e        0x5 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+                0x00002d96        0x5 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
  .rodata.__aeabi_ctype_table_C
-                0x00004483      0x101 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
-                0x00004483                __aeabi_ctype_table_C
+                0x00002d9b      0x101 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+                0x00002d9b                __aeabi_ctype_table_C
  *(.glue_7)
  .glue_7        0x00000000        0x0 linker stubs
  *(.glue_7t)
@@ -971,62 +996,62 @@ END GROUP
  *(.eh_frame)
  *(.init)
  *(.fini)
-                0x00004584                . = ALIGN (0x4)
-                0x00004584                _etext = .
+                0x00002e9c                . = ALIGN (0x4)
+                0x00002e9c                _etext = .
 
-.vfp11_veneer   0x00004584        0x0
+.vfp11_veneer   0x00002e9c        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x00004584        0x0
+.v4_bx          0x00002e9c        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00004584        0x0
+.iplt           0x00002e9c        0x0
  .iplt          0x00000000        0x0 ./Generated_Code/WAIT1.o
 
-.rel.dyn        0x00004584        0x0
+.rel.dyn        0x00002e9c        0x0
  .rel.iplt      0x00000000        0x0 ./Generated_Code/WAIT1.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x00004584        0x0
-                0x00004584                __exidx_start = .
+.ARM            0x00002e9c        0x0
+                0x00002e9c                __exidx_start = .
  *(.ARM.exidx*)
-                0x00004584                __exidx_end = .
+                0x00002e9c                __exidx_end = .
 
-.ctors          0x00004584        0x0
-                0x00004584                __CTOR_LIST__ = .
+.ctors          0x00002e9c        0x0
+                0x00002e9c                __CTOR_LIST__ = .
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *(.ctors)
-                0x00004584                __CTOR_END__ = .
+                0x00002e9c                __CTOR_END__ = .
 
-.dtors          0x00004584        0x0
-                0x00004584                __DTOR_LIST__ = .
+.dtors          0x00002e9c        0x0
+                0x00002e9c                __DTOR_LIST__ = .
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *(.dtors)
-                0x00004584                __DTOR_END__ = .
+                0x00002e9c                __DTOR_END__ = .
 
-.preinit_array  0x00004584        0x0
-                0x00004584                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x00002e9c        0x0
+                0x00002e9c                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x00004584                PROVIDE (__preinit_array_end, .)
+                0x00002e9c                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x00004584        0x0
-                0x00004584                PROVIDE (__init_array_start, .)
+.init_array     0x00002e9c        0x0
+                0x00002e9c                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array*)
-                0x00004584                PROVIDE (__init_array_end, .)
+                0x00002e9c                PROVIDE (__init_array_end, .)
 
-.fini_array     0x00004584        0x0
-                0x00004584                PROVIDE (__fini_array_start, .)
+.fini_array     0x00002e9c        0x0
+                0x00002e9c                PROVIDE (__fini_array_start, .)
  *(SORT(.fini_array.*))
  *(.fini_array*)
-                0x00004584                PROVIDE (__fini_array_end, .)
-                0x00004584                ___ROM_AT = .
+                0x00002e9c                PROVIDE (__fini_array_end, .)
+                0x00002e9c                ___ROM_AT = .
 
 .mtb            0x1ffff000        0x0
                 0x1ffff000                . = ALIGN (0x8)
@@ -1035,90 +1060,114 @@ END GROUP
                 0x1ffff000                . = ALIGN (0x8)
                 0x1ffff000                _mtb_end = .
 
-.data           0x1ffff000        0x0 load address 0x00004584
+.data           0x1ffff000        0x4 load address 0x00002e9c
                 0x1ffff000                . = ALIGN (0x4)
                 0x1ffff000                _sdata = .
  *(.data)
  *(.data*)
-                0x1ffff000                . = ALIGN (0x4)
-                0x1ffff000                _edata = .
-                0x00000000                ___data_size = (_edata - _sdata)
+ .data.liftingMotor_accelarationInkrement
+                0x1ffff000        0x1 ./Sources/Stepper.o
+                0x1ffff004                . = ALIGN (0x4)
+ *fill*         0x1ffff001        0x3 00
+                0x1ffff004                _edata = .
+                0x00000004                ___data_size = (_edata - _sdata)
 
-.igot.plt       0x1ffff000        0x0
+.igot.plt       0x1ffff004        0x0 load address 0x00002ea0
  .igot.plt      0x00000000        0x0 ./Generated_Code/WAIT1.o
-                0x1ffff000                . = ALIGN (0x4)
+                0x1ffff004                . = ALIGN (0x4)
 
-.bss            0x1ffff000       0xb4
-                0x1ffff000                __START_BSS = .
-                0x1ffff000                PROVIDE (__bss_start__, __START_BSS)
+.bss            0x1ffff004       0xcc load address 0x00002ea0
+                0x1ffff004                __START_BSS = .
+                0x1ffff004                PROVIDE (__bss_start__, __START_BSS)
  *(.bss)
  *(.bss*)
  .bss.DeviceDataPrv__DEFAULT_RTOS_ALLOC
-                0x1ffff000       0x10 ./Generated_Code/PpgLdd2.o
+                0x1ffff004       0x10 ./Generated_Code/PpgLdd2.o
  .bss.INT_TPM0__DEFAULT_RTOS_ISRPARAM
-                0x1ffff010        0x4 ./Generated_Code/PpgLdd2.o
+                0x1ffff014        0x4 ./Generated_Code/PpgLdd2.o
  .bss.DeviceDataPrv__DEFAULT_RTOS_ALLOC
-                0x1ffff014       0x10 ./Generated_Code/PpgLdd1.o
- .bss.INT_TPM2__DEFAULT_RTOS_ISRPARAM
-                0x1ffff024        0x4 ./Generated_Code/PpgLdd1.o
+                0x1ffff018       0x10 ./Generated_Code/PpgLdd1.o
+ .bss.INT_TPM1__DEFAULT_RTOS_ISRPARAM
+                0x1ffff028        0x4 ./Generated_Code/PpgLdd1.o
  .bss.PE_LDD_DeviceDataList
-                0x1ffff028       0x28 ./Generated_Code/PE_LDD.o
-                0x1ffff028                PE_LDD_DeviceDataList
+                0x1ffff02c       0x2c ./Generated_Code/PE_LDD.o
+                0x1ffff02c                PE_LDD_DeviceDataList
  .bss.DeviceDataPrv__DEFAULT_RTOS_ALLOC
-                0x1ffff050        0x4 ./Generated_Code/BitIoLdd9.o
+                0x1ffff058        0x4 ./Generated_Code/BitIoLdd9.o
  .bss.DeviceDataPrv__DEFAULT_RTOS_ALLOC
-                0x1ffff054        0x4 ./Generated_Code/BitIoLdd8.o
+                0x1ffff05c        0x4 ./Generated_Code/BitIoLdd8.o
  .bss.DeviceDataPrv__DEFAULT_RTOS_ALLOC
-                0x1ffff058        0x4 ./Generated_Code/BitIoLdd7.o
+                0x1ffff060        0x4 ./Generated_Code/BitIoLdd7.o
  .bss.DeviceDataPrv__DEFAULT_RTOS_ALLOC
-                0x1ffff05c        0x4 ./Generated_Code/BitIoLdd6.o
+                0x1ffff064        0x4 ./Generated_Code/BitIoLdd6.o
  .bss.DeviceDataPrv__DEFAULT_RTOS_ALLOC
-                0x1ffff060        0x4 ./Generated_Code/BitIoLdd5.o
+                0x1ffff068        0x4 ./Generated_Code/BitIoLdd5.o
  .bss.DeviceDataPrv__DEFAULT_RTOS_ALLOC
-                0x1ffff064        0x4 ./Generated_Code/BitIoLdd4.o
+                0x1ffff06c        0x4 ./Generated_Code/BitIoLdd4.o
  .bss.DeviceDataPrv__DEFAULT_RTOS_ALLOC
-                0x1ffff068        0x4 ./Generated_Code/BitIoLdd3.o
+                0x1ffff070        0x4 ./Generated_Code/BitIoLdd3.o
  .bss.DeviceDataPrv__DEFAULT_RTOS_ALLOC
-                0x1ffff06c        0x4 ./Generated_Code/BitIoLdd1.o
- .bss.argv      0x1ffff070        0x4 ./Project_Settings/Startup_Code/__arm_start.o
+                0x1ffff074        0x4 ./Generated_Code/BitIoLdd2.o
+ .bss.DeviceDataPrv__DEFAULT_RTOS_ALLOC
+                0x1ffff078        0x4 ./Generated_Code/BitIoLdd1.o
+ .bss.argv      0x1ffff07c        0x4 ./Project_Settings/Startup_Code/__arm_start.o
+ .bss.liftingMotor_accelarationSteps
+                0x1ffff080        0x4 ./Sources/Stepper.o
+ .bss.liftingMotor_cruisingSteps
+                0x1ffff084        0x4 ./Sources/Stepper.o
+ .bss.liftingMotor_continuous
+                0x1ffff088        0x1 ./Sources/Stepper.o
+ .bss.liftingMotor_stopped
+                0x1ffff089        0x1 ./Sources/Stepper.o
+ .bss.liftingMotor_brakes
+                0x1ffff08a        0x1 ./Sources/Stepper.o
+ .bss.liftingMotor_finished
+                0x1ffff08b        0x1 ./Sources/Stepper.o
+ .bss.drivingMotor_continuous
+                0x1ffff08c        0x1 ./Sources/Stepper.o
+ .bss.drivingMotor_stopped
+                0x1ffff08d        0x1 ./Sources/Stepper.o
+ .bss.drivingMotor_brakes
+                0x1ffff08e        0x1 ./Sources/Stepper.o
+ *fill*         0x1ffff08f        0x1 00
  .bss.__stdio_exit
-                0x1ffff074        0x4 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
-                0x1ffff074                __stdio_exit
+                0x1ffff090        0x4 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+                0x1ffff090                __stdio_exit
  .bss.__console_exit
-                0x1ffff078        0x4 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
-                0x1ffff078                __console_exit
+                0x1ffff094        0x4 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+                0x1ffff094                __console_exit
  .bss.__global_destructor_chain
-                0x1ffff07c        0x4 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
-                0x1ffff07c                __global_destructor_chain
- .bss.__S_romp  0x1ffff080        0xc C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+                0x1ffff098        0x4 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+                0x1ffff098                __global_destructor_chain
+ .bss.__S_romp  0x1ffff09c        0xc C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
  *(COMMON)
- COMMON         0x1ffff08c       0x28 ./Sources/Stepper.o
-                0x1ffff08c                DrivingMotor
-                0x1ffff0a0                LiftingMotor
-                0x1ffff0b4                . = ALIGN (0x4)
-                0x1ffff0b4                __END_BSS = .
-                0x1ffff0b4                PROVIDE (__bss_end__, __END_BSS)
-                0x00004584                _romp_at = (___ROM_AT + SIZEOF (.data))
+ COMMON         0x1ffff0a8       0x28 ./Sources/Stepper.o
+                0x1ffff0a8                DrivingMotor
+                0x1ffff0bc                LiftingMotor
+                0x1ffff0d0                . = ALIGN (0x4)
+                0x1ffff0d0                __END_BSS = .
+                0x1ffff0d0                PROVIDE (__bss_end__, __END_BSS)
+                0x00002ea0                _romp_at = (___ROM_AT + SIZEOF (.data))
 
-.romp           0x1ffff0b4       0x18 load address 0x00004584
-                0x00004584                __S_romp = _romp_at
-                0x1ffff0b4        0x4 LONG 0x4584 ___ROM_AT
-                0x1ffff0b8        0x4 LONG 0x1ffff000 _sdata
-                0x1ffff0bc        0x4 LONG 0x0 ___data_size
-                0x1ffff0c0        0x4 LONG 0x0
-                0x1ffff0c4        0x4 LONG 0x0
-                0x1ffff0c8        0x4 LONG 0x0
+.romp           0x1ffff0d0       0x18 load address 0x00002ea0
+                0x00002ea0                __S_romp = _romp_at
+                0x1ffff0d0        0x4 LONG 0x2e9c ___ROM_AT
+                0x1ffff0d4        0x4 LONG 0x1ffff000 _sdata
+                0x1ffff0d8        0x4 LONG 0x4 ___data_size
+                0x1ffff0dc        0x4 LONG 0x0
+                0x1ffff0e0        0x4 LONG 0x0
+                0x1ffff0e4        0x4 LONG 0x0
 
 ._user_heap_stack
-                0x1ffff0cc      0x400 load address 0x0000459c
-                0x1ffff0cc                . = ALIGN (0x4)
-                0x1ffff0cc                PROVIDE (end, .)
-                0x1ffff0cc                PROVIDE (_end, .)
-                0x1ffff0cc                __heap_addr = .
-                0x1ffff0cc                . = (. + __heap_size)
-                0x1ffff4cc                . = (. + __stack_size)
- *fill*         0x1ffff0cc      0x400 00
-                0x1ffff4cc                . = ALIGN (0x4)
+                0x1ffff0e8      0x400 load address 0x00002eb8
+                0x1ffff0e8                . = ALIGN (0x4)
+                0x1ffff0e8                PROVIDE (end, .)
+                0x1ffff0e8                PROVIDE (_end, .)
+                0x1ffff0e8                __heap_addr = .
+                0x1ffff0e8                . = (. + __heap_size)
+                0x1ffff4e8                . = (. + __stack_size)
+ *fill*         0x1ffff0e8      0x400 00
+                0x1ffff4e8                . = ALIGN (0x4)
 
 .ARM.attributes
                 0x00000000       0x31
@@ -1134,9 +1183,9 @@ END GROUP
  .ARM.attributes
                 0x000000c4       0x31 ./Generated_Code/PE_LDD.o
  .ARM.attributes
-                0x000000f5       0x31 ./Generated_Code/LiftingMotor.o
+                0x000000f5       0x31 ./Generated_Code/LiftingMotor_Step.o
  .ARM.attributes
-                0x00000126       0x31 ./Generated_Code/DrivingMotor.o
+                0x00000126       0x31 ./Generated_Code/DrivingMotor_Step.o
  .ARM.attributes
                 0x00000157       0x31 ./Generated_Code/Cpu.o
  .ARM.attributes
@@ -1154,105 +1203,85 @@ END GROUP
  .ARM.attributes
                 0x000002ae       0x31 ./Generated_Code/BitIoLdd3.o
  .ARM.attributes
-                0x000002df       0x31 ./Generated_Code/BitIoLdd1.o
+                0x000002df       0x31 ./Generated_Code/BitIoLdd2.o
  .ARM.attributes
-                0x00000310       0x31 ./Project_Settings/Startup_Code/__arm_start.o
+                0x00000310       0x31 ./Generated_Code/BitIoLdd1.o
  .ARM.attributes
-                0x00000341       0x31 ./Project_Settings/Startup_Code/__arm_end.o
+                0x00000341       0x31 ./Project_Settings/Startup_Code/__arm_start.o
  .ARM.attributes
-                0x00000372       0x31 ./Sources/main.o
+                0x00000372       0x31 ./Project_Settings/Startup_Code/__arm_end.o
  .ARM.attributes
-                0x000003a3       0x31 ./Sources/Stepper.o
+                0x000003a3       0x31 ./Sources/main.o
  .ARM.attributes
-                0x000003d4       0x31 ./Sources/Events.o
+                0x000003d4       0x31 ./Sources/Stepper.o
  .ARM.attributes
-                0x00000405       0x31 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+                0x00000405       0x31 ./Sources/Events.o
  .ARM.attributes
-                0x00000436       0x31 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
+                0x00000436       0x31 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
  .ARM.attributes
-                0x00000467       0x31 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+                0x00000467       0x31 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
  .ARM.attributes
-                0x00000498       0x31 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+                0x00000498       0x31 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
  .ARM.attributes
-                0x000004c9       0x31 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
+                0x000004c9       0x31 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
  .ARM.attributes
-                0x000004fa       0x31 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+                0x000004fa       0x31 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
  .ARM.attributes
-                0x0000052b       0x31 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
+                0x0000052b       0x31 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
  .ARM.attributes
-                0x0000055c       0x31 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
+                0x0000055c       0x31 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
  .ARM.attributes
-                0x0000058d       0x31 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+                0x0000058d       0x31 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
  .ARM.attributes
-                0x000005be       0x31 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
+                0x000005be       0x31 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
  .ARM.attributes
-                0x000005ef       0x31 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+                0x000005ef       0x31 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
  .ARM.attributes
-                0x00000620       0x1e c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_thumb1_case_sqi.o)
+                0x00000620       0x31 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
  .ARM.attributes
-                0x0000063e       0x1e c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_thumb1_case_uqi.o)
+                0x00000651       0x1e c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_thumb1_case_sqi.o)
  .ARM.attributes
-                0x0000065c       0x1e c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_udivsi3.o)
+                0x0000066f       0x1e c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_thumb1_case_uqi.o)
  .ARM.attributes
-                0x0000067a       0x1e c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_dvmd_tls.o)
+                0x0000068d       0x1e c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_udivsi3.o)
  .ARM.attributes
-                0x00000698       0x1e c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_arm_cmpsf2.o)
+                0x000006ab       0x1e c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_dvmd_tls.o)
  .ARM.attributes
-                0x000006b6       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_fixunssfsi.o)
+                0x000006c9       0x1e c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_arm_cmpsf2.o)
  .ARM.attributes
-                0x000006e2       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_fixunsdfsi.o)
+                0x000006e7       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_fixunssfsi.o)
  .ARM.attributes
-                0x0000070e       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(divsf3.o)
+                0x00000713       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(divsf3.o)
  .ARM.attributes
-                0x0000073a       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(eqsf2.o)
+                0x0000073f       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(eqsf2.o)
  .ARM.attributes
-                0x00000766       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(gesf2.o)
+                0x0000076b       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(gesf2.o)
  .ARM.attributes
-                0x00000792       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(lesf2.o)
+                0x00000797       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(lesf2.o)
  .ARM.attributes
-                0x000007be       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(subsf3.o)
+                0x000007c3       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(subsf3.o)
  .ARM.attributes
-                0x000007ea       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(fixsfsi.o)
+                0x000007ef       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(fixsfsi.o)
  .ARM.attributes
-                0x00000816       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(floatsisf.o)
+                0x0000081b       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(floatsisf.o)
  .ARM.attributes
-                0x00000842       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(divdf3.o)
+                0x00000847       0x1e c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_clzsi2.o)
  .ARM.attributes
-                0x0000086e       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(muldf3.o)
+                0x00000865       0x31 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
  .ARM.attributes
-                0x0000089a       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(subdf3.o)
+                0x00000896       0x31 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
  .ARM.attributes
-                0x000008c6       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(fixdfsi.o)
- .ARM.attributes
-                0x000008f2       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(floatsidf.o)
- .ARM.attributes
-                0x0000091e       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(floatunsidf.o)
- .ARM.attributes
-                0x0000094a       0x1e c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_arm_cmpdf2.o)
- .ARM.attributes
-                0x00000968       0x1e c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_clzsi2.o)
- .ARM.attributes
-                0x00000986       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(eqdf2.o)
- .ARM.attributes
-                0x000009b2       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(gedf2.o)
- .ARM.attributes
-                0x000009de       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(ledf2.o)
- .ARM.attributes
-                0x00000a0a       0x31 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
- .ARM.attributes
-                0x00000a3b       0x31 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
- .ARM.attributes
-                0x00000a6c       0x31 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+                0x000008c7       0x31 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
 OUTPUT(Freedom_LED_PWM.elf elf32-littlearm)
 
-.debug_info     0x00000000     0x68c5
+.debug_info     0x00000000     0x6c0a
  .debug_info    0x00000000      0x165 ./Generated_Code/WAIT1.o
  .debug_info    0x00000165      0x104 ./Generated_Code/Vectors.o
  .debug_info    0x00000269      0xa45 ./Generated_Code/PpgLdd2.o
  .debug_info    0x00000cae      0xa8f ./Generated_Code/PpgLdd1.o
  .debug_info    0x0000173d      0x24e ./Generated_Code/PE_LDD.o
- .debug_info    0x0000198b      0x334 ./Generated_Code/LiftingMotor.o
- .debug_info    0x00001cbf      0x334 ./Generated_Code/DrivingMotor.o
+ .debug_info    0x0000198b      0x334 ./Generated_Code/LiftingMotor_Step.o
+ .debug_info    0x00001cbf      0x334 ./Generated_Code/DrivingMotor_Step.o
  .debug_info    0x00001ff3      0x8e1 ./Generated_Code/Cpu.o
  .debug_info    0x000028d4      0x399 ./Generated_Code/BitIoLdd9.o
  .debug_info    0x00002c6d      0x399 ./Generated_Code/BitIoLdd8.o
@@ -1261,35 +1290,36 @@ OUTPUT(Freedom_LED_PWM.elf elf32-littlearm)
  .debug_info    0x00003738      0x399 ./Generated_Code/BitIoLdd5.o
  .debug_info    0x00003ad1      0x399 ./Generated_Code/BitIoLdd4.o
  .debug_info    0x00003e6a      0x399 ./Generated_Code/BitIoLdd3.o
- .debug_info    0x00004203      0x399 ./Generated_Code/BitIoLdd1.o
- .debug_info    0x0000459c      0x12a ./Project_Settings/Startup_Code/__arm_start.o
- .debug_info    0x000046c6       0x54 ./Project_Settings/Startup_Code/__arm_end.o
- .debug_info    0x0000471a       0x8f ./Sources/main.o
- .debug_info    0x000047a9      0x355 ./Sources/Stepper.o
- .debug_info    0x00004afe      0x1af ./Sources/Events.o
- .debug_info    0x00004cad       0xe8 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
- .debug_info    0x00004d95       0xec C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
- .debug_info    0x00004e81      0x137 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
- .debug_info    0x00004fb8      0x50d C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
- .debug_info    0x000054c5      0x568 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
- .debug_info    0x00005a2d      0x313 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
- .debug_info    0x00005d40      0x1d6 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
- .debug_info    0x00005f16      0x10b C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
- .debug_info    0x00006021      0x10f C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
- .debug_info    0x00006130       0xea C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
- .debug_info    0x0000621a      0x121 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
- .debug_info    0x0000633b      0x136 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
- .debug_info    0x00006471      0x2b9 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
- .debug_info    0x0000672a      0x19b C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+ .debug_info    0x00004203      0x399 ./Generated_Code/BitIoLdd2.o
+ .debug_info    0x0000459c      0x399 ./Generated_Code/BitIoLdd1.o
+ .debug_info    0x00004935      0x12a ./Project_Settings/Startup_Code/__arm_start.o
+ .debug_info    0x00004a5f       0x54 ./Project_Settings/Startup_Code/__arm_end.o
+ .debug_info    0x00004ab3       0xaf ./Sources/main.o
+ .debug_info    0x00004b62      0x3db ./Sources/Stepper.o
+ .debug_info    0x00004f3d       0xb5 ./Sources/Events.o
+ .debug_info    0x00004ff2       0xe8 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+ .debug_info    0x000050da       0xec C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
+ .debug_info    0x000051c6      0x137 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+ .debug_info    0x000052fd      0x50d C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+ .debug_info    0x0000580a      0x568 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
+ .debug_info    0x00005d72      0x313 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+ .debug_info    0x00006085      0x1d6 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
+ .debug_info    0x0000625b      0x10b C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
+ .debug_info    0x00006366      0x10f C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+ .debug_info    0x00006475       0xea C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
+ .debug_info    0x0000655f      0x121 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+ .debug_info    0x00006680      0x136 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+ .debug_info    0x000067b6      0x2b9 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+ .debug_info    0x00006a6f      0x19b C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
 
-.debug_abbrev   0x00000000     0x20d4
+.debug_abbrev   0x00000000     0x2205
  .debug_abbrev  0x00000000       0xa3 ./Generated_Code/WAIT1.o
  .debug_abbrev  0x000000a3       0xa3 ./Generated_Code/Vectors.o
  .debug_abbrev  0x00000146      0x18d ./Generated_Code/PpgLdd2.o
  .debug_abbrev  0x000002d3      0x18d ./Generated_Code/PpgLdd1.o
  .debug_abbrev  0x00000460      0x102 ./Generated_Code/PE_LDD.o
- .debug_abbrev  0x00000562       0xfa ./Generated_Code/LiftingMotor.o
- .debug_abbrev  0x0000065c       0xfa ./Generated_Code/DrivingMotor.o
+ .debug_abbrev  0x00000562       0xfa ./Generated_Code/LiftingMotor_Step.o
+ .debug_abbrev  0x0000065c       0xfa ./Generated_Code/DrivingMotor_Step.o
  .debug_abbrev  0x00000756      0x122 ./Generated_Code/Cpu.o
  .debug_abbrev  0x00000878      0x12b ./Generated_Code/BitIoLdd9.o
  .debug_abbrev  0x000009a3      0x12b ./Generated_Code/BitIoLdd8.o
@@ -1298,34 +1328,35 @@ OUTPUT(Freedom_LED_PWM.elf elf32-littlearm)
  .debug_abbrev  0x00000d24      0x12b ./Generated_Code/BitIoLdd5.o
  .debug_abbrev  0x00000e4f      0x12b ./Generated_Code/BitIoLdd4.o
  .debug_abbrev  0x00000f7a      0x12b ./Generated_Code/BitIoLdd3.o
- .debug_abbrev  0x000010a5      0x12b ./Generated_Code/BitIoLdd1.o
- .debug_abbrev  0x000011d0       0x92 ./Project_Settings/Startup_Code/__arm_start.o
- .debug_abbrev  0x00001262       0x4c ./Project_Settings/Startup_Code/__arm_end.o
- .debug_abbrev  0x000012ae       0x3f ./Sources/main.o
- .debug_abbrev  0x000012ed      0x11d ./Sources/Stepper.o
- .debug_abbrev  0x0000140a       0x9c ./Sources/Events.o
- .debug_abbrev  0x000014a6       0x7a C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
- .debug_abbrev  0x00001520       0x62 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
- .debug_abbrev  0x00001582       0x78 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
- .debug_abbrev  0x000015fa      0x200 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
- .debug_abbrev  0x000017fa      0x1f0 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
- .debug_abbrev  0x000019ea       0x9e C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
- .debug_abbrev  0x00001a88       0xc2 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
- .debug_abbrev  0x00001b4a       0x7a C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
- .debug_abbrev  0x00001bc4       0x95 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
- .debug_abbrev  0x00001c59       0x7a C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
- .debug_abbrev  0x00001cd3       0x95 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
- .debug_abbrev  0x00001d68       0x99 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
- .debug_abbrev  0x00001e01      0x1b3 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
- .debug_abbrev  0x00001fb4      0x120 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+ .debug_abbrev  0x000010a5      0x12b ./Generated_Code/BitIoLdd2.o
+ .debug_abbrev  0x000011d0      0x12b ./Generated_Code/BitIoLdd1.o
+ .debug_abbrev  0x000012fb       0x92 ./Project_Settings/Startup_Code/__arm_start.o
+ .debug_abbrev  0x0000138d       0x4c ./Project_Settings/Startup_Code/__arm_end.o
+ .debug_abbrev  0x000013d9       0x5b ./Sources/main.o
+ .debug_abbrev  0x00001434      0x166 ./Sources/Stepper.o
+ .debug_abbrev  0x0000159a       0x3d ./Sources/Events.o
+ .debug_abbrev  0x000015d7       0x7a C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+ .debug_abbrev  0x00001651       0x62 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
+ .debug_abbrev  0x000016b3       0x78 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+ .debug_abbrev  0x0000172b      0x200 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+ .debug_abbrev  0x0000192b      0x1f0 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
+ .debug_abbrev  0x00001b1b       0x9e C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+ .debug_abbrev  0x00001bb9       0xc2 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
+ .debug_abbrev  0x00001c7b       0x7a C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
+ .debug_abbrev  0x00001cf5       0x95 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+ .debug_abbrev  0x00001d8a       0x7a C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
+ .debug_abbrev  0x00001e04       0x95 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+ .debug_abbrev  0x00001e99       0x99 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+ .debug_abbrev  0x00001f32      0x1b3 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+ .debug_abbrev  0x000020e5      0x120 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
 
-.debug_loc      0x00000000     0x3ffb
+.debug_loc      0x00000000     0x411b
  .debug_loc     0x00000000      0x100 ./Generated_Code/WAIT1.o
  .debug_loc     0x00000100      0x348 ./Generated_Code/PpgLdd2.o
  .debug_loc     0x00000448      0x380 ./Generated_Code/PpgLdd1.o
  .debug_loc     0x000007c8       0x9c ./Generated_Code/PE_LDD.o
- .debug_loc     0x00000864      0x230 ./Generated_Code/LiftingMotor.o
- .debug_loc     0x00000a94      0x230 ./Generated_Code/DrivingMotor.o
+ .debug_loc     0x00000864      0x230 ./Generated_Code/LiftingMotor_Step.o
+ .debug_loc     0x00000a94      0x230 ./Generated_Code/DrivingMotor_Step.o
  .debug_loc     0x00000cc4       0xb0 ./Generated_Code/Cpu.o
  .debug_loc     0x00000d74      0x118 ./Generated_Code/BitIoLdd9.o
  .debug_loc     0x00000e8c      0x118 ./Generated_Code/BitIoLdd8.o
@@ -1334,28 +1365,29 @@ OUTPUT(Freedom_LED_PWM.elf elf32-littlearm)
  .debug_loc     0x000011d4      0x118 ./Generated_Code/BitIoLdd5.o
  .debug_loc     0x000012ec      0x118 ./Generated_Code/BitIoLdd4.o
  .debug_loc     0x00001404      0x118 ./Generated_Code/BitIoLdd3.o
- .debug_loc     0x0000151c      0x118 ./Generated_Code/BitIoLdd1.o
- .debug_loc     0x00001634       0x2c ./Project_Settings/Startup_Code/__arm_start.o
- .debug_loc     0x00001660       0x38 ./Project_Settings/Startup_Code/__arm_end.o
- .debug_loc     0x00001698       0x2c ./Sources/main.o
- .debug_loc     0x000016c4      0x1c8 ./Sources/Stepper.o
- .debug_loc     0x0000188c       0x84 ./Sources/Events.o
- .debug_loc     0x00001910       0x3e C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
- .debug_loc     0x0000194e       0x6f C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
- .debug_loc     0x000019bd      0x14a C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
- .debug_loc     0x00001b07     0x104b C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
- .debug_loc     0x00002b52      0x9d8 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
- .debug_loc     0x0000352a      0x30d C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
- .debug_loc     0x00003837      0x305 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
- .debug_loc     0x00003b3c       0xaf C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
- .debug_loc     0x00003beb       0x59 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
- .debug_loc     0x00003c44       0x33 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
- .debug_loc     0x00003c77       0x77 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
- .debug_loc     0x00003cee       0x9d C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
- .debug_loc     0x00003d8b      0x197 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
- .debug_loc     0x00003f22       0xd9 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+ .debug_loc     0x0000151c      0x118 ./Generated_Code/BitIoLdd2.o
+ .debug_loc     0x00001634      0x118 ./Generated_Code/BitIoLdd1.o
+ .debug_loc     0x0000174c       0x2c ./Project_Settings/Startup_Code/__arm_start.o
+ .debug_loc     0x00001778       0x38 ./Project_Settings/Startup_Code/__arm_end.o
+ .debug_loc     0x000017b0       0x2c ./Sources/main.o
+ .debug_loc     0x000017dc      0x1d0 ./Sources/Stepper.o
+ .debug_loc     0x000019ac       0x84 ./Sources/Events.o
+ .debug_loc     0x00001a30       0x3e C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+ .debug_loc     0x00001a6e       0x6f C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
+ .debug_loc     0x00001add      0x14a C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+ .debug_loc     0x00001c27     0x104b C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+ .debug_loc     0x00002c72      0x9d8 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
+ .debug_loc     0x0000364a      0x30d C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+ .debug_loc     0x00003957      0x305 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
+ .debug_loc     0x00003c5c       0xaf C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
+ .debug_loc     0x00003d0b       0x59 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+ .debug_loc     0x00003d64       0x33 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
+ .debug_loc     0x00003d97       0x77 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+ .debug_loc     0x00003e0e       0x9d C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+ .debug_loc     0x00003eab      0x197 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+ .debug_loc     0x00004042       0xd9 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
 
-.debug_aranges  0x00000000      0x848
+.debug_aranges  0x00000000      0x890
  .debug_aranges
                 0x00000000       0x50 ./Generated_Code/WAIT1.o
  .debug_aranges
@@ -1367,9 +1399,9 @@ OUTPUT(Freedom_LED_PWM.elf elf32-littlearm)
  .debug_aranges
                 0x00000190       0x30 ./Generated_Code/PE_LDD.o
  .debug_aranges
-                0x000001c0       0x68 ./Generated_Code/LiftingMotor.o
+                0x000001c0       0x68 ./Generated_Code/LiftingMotor_Step.o
  .debug_aranges
-                0x00000228       0x68 ./Generated_Code/DrivingMotor.o
+                0x00000228       0x68 ./Generated_Code/DrivingMotor_Step.o
  .debug_aranges
                 0x00000290       0x38 ./Generated_Code/Cpu.o
  .debug_aranges
@@ -1387,128 +1419,133 @@ OUTPUT(Freedom_LED_PWM.elf elf32-littlearm)
  .debug_aranges
                 0x00000448       0x40 ./Generated_Code/BitIoLdd3.o
  .debug_aranges
-                0x00000488       0x40 ./Generated_Code/BitIoLdd1.o
+                0x00000488       0x40 ./Generated_Code/BitIoLdd2.o
  .debug_aranges
-                0x000004c8       0x30 ./Project_Settings/Startup_Code/__arm_start.o
+                0x000004c8       0x40 ./Generated_Code/BitIoLdd1.o
  .debug_aranges
-                0x000004f8       0x20 ./Project_Settings/Startup_Code/__arm_end.o
+                0x00000508       0x30 ./Project_Settings/Startup_Code/__arm_start.o
  .debug_aranges
-                0x00000518       0x20 ./Sources/main.o
+                0x00000538       0x20 ./Project_Settings/Startup_Code/__arm_end.o
  .debug_aranges
-                0x00000538       0x60 ./Sources/Stepper.o
+                0x00000558       0x20 ./Sources/main.o
  .debug_aranges
-                0x00000598       0x30 ./Sources/Events.o
+                0x00000578       0x68 ./Sources/Stepper.o
  .debug_aranges
-                0x000005c8       0x20 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+                0x000005e0       0x30 ./Sources/Events.o
  .debug_aranges
-                0x000005e8       0x20 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
+                0x00000610       0x20 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
  .debug_aranges
-                0x00000608       0x20 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+                0x00000630       0x20 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
  .debug_aranges
-                0x00000628       0x28 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+                0x00000650       0x20 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
  .debug_aranges
-                0x00000650       0x20 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
+                0x00000670       0x28 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
  .debug_aranges
-                0x00000670       0x88 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+                0x00000698       0x20 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
  .debug_aranges
-                0x000006f8       0x20 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
+                0x000006b8       0x88 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
  .debug_aranges
-                0x00000718       0x20 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
+                0x00000740       0x20 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
  .debug_aranges
-                0x00000738       0x20 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+                0x00000760       0x20 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
  .debug_aranges
-                0x00000758       0x20 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
+                0x00000780       0x20 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
  .debug_aranges
-                0x00000778       0x20 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+                0x000007a0       0x20 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
  .debug_aranges
-                0x00000798       0x28 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+                0x000007c0       0x20 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
  .debug_aranges
-                0x000007c0       0x58 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+                0x000007e0       0x28 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
  .debug_aranges
-                0x00000818       0x30 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+                0x00000808       0x58 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+ .debug_aranges
+                0x00000860       0x30 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
 
-.debug_macinfo  0x00000000   0x3a80cb
+.debug_macinfo  0x00000000   0x3d9612
  .debug_macinfo
-                0x00000000    0x2e651 ./Generated_Code/WAIT1.o
+                0x00000000    0x2e678 ./Generated_Code/WAIT1.o
  .debug_macinfo
-                0x0002e651    0x33621 ./Generated_Code/Vectors.o
+                0x0002e678    0x33a33 ./Generated_Code/Vectors.o
  .debug_macinfo
-                0x00061c72    0x304cd ./Generated_Code/PpgLdd2.o
+                0x000620ab    0x30561 ./Generated_Code/PpgLdd2.o
  .debug_macinfo
-                0x0009213f    0x30543 ./Generated_Code/PpgLdd1.o
+                0x0009260c    0x305dc ./Generated_Code/PpgLdd1.o
  .debug_macinfo
-                0x000c2682    0x335b9 ./Generated_Code/PE_LDD.o
+                0x000c2be8    0x339c3 ./Generated_Code/PE_LDD.o
  .debug_macinfo
-                0x000f5c3b    0x335fa ./Generated_Code/LiftingMotor.o
+                0x000f65ab    0x33a08 ./Generated_Code/LiftingMotor_Step.o
  .debug_macinfo
-                0x00129235    0x335fa ./Generated_Code/DrivingMotor.o
+                0x00129fb3    0x33a07 ./Generated_Code/DrivingMotor_Step.o
  .debug_macinfo
-                0x0015c82f    0x33621 ./Generated_Code/Cpu.o
+                0x0015d9ba    0x33a33 ./Generated_Code/Cpu.o
  .debug_macinfo
-                0x0018fe50    0x2ed7f ./Generated_Code/BitIoLdd9.o
+                0x001913ed    0x2eda6 ./Generated_Code/BitIoLdd9.o
  .debug_macinfo
-                0x001bebcf    0x2ed7f ./Generated_Code/BitIoLdd8.o
+                0x001c0193    0x2eda6 ./Generated_Code/BitIoLdd8.o
  .debug_macinfo
-                0x001ed94e    0x2ed7f ./Generated_Code/BitIoLdd7.o
+                0x001eef39    0x2eda6 ./Generated_Code/BitIoLdd7.o
  .debug_macinfo
-                0x0021c6cd    0x2ed7f ./Generated_Code/BitIoLdd6.o
+                0x0021dcdf    0x2eda6 ./Generated_Code/BitIoLdd6.o
  .debug_macinfo
-                0x0024b44c    0x2ed81 ./Generated_Code/BitIoLdd5.o
+                0x0024ca85    0x2eda8 ./Generated_Code/BitIoLdd5.o
  .debug_macinfo
-                0x0027a1cd    0x2ed81 ./Generated_Code/BitIoLdd4.o
+                0x0027b82d    0x2eda8 ./Generated_Code/BitIoLdd4.o
  .debug_macinfo
-                0x002a8f4e    0x2ed81 ./Generated_Code/BitIoLdd3.o
+                0x002aa5d5    0x2eda8 ./Generated_Code/BitIoLdd3.o
  .debug_macinfo
-                0x002d7ccf    0x2ed81 ./Generated_Code/BitIoLdd1.o
+                0x002d937d    0x2edac ./Generated_Code/BitIoLdd2.o
  .debug_macinfo
-                0x00306a50     0x3e6d ./Project_Settings/Startup_Code/__arm_start.o
+                0x00308129    0x2eda8 ./Generated_Code/BitIoLdd1.o
  .debug_macinfo
-                0x0030a8bd     0x3456 ./Project_Settings/Startup_Code/__arm_end.o
+                0x00336ed1     0x3e6d ./Project_Settings/Startup_Code/__arm_start.o
  .debug_macinfo
-                0x0030dd13    0x336b1 ./Sources/main.o
+                0x0033ad3e     0x3456 ./Project_Settings/Startup_Code/__arm_end.o
  .debug_macinfo
-                0x003413c4    0x3366c ./Sources/Stepper.o
+                0x0033e194    0x33a91 ./Sources/main.o
  .debug_macinfo
-                0x00374a30    0x3369b ./Sources/Events.o
+                0x00371c25    0x33f72 ./Sources/Stepper.o
+ .debug_macinfo
+                0x003a5b97    0x33a7b ./Sources/Events.o
 
-.debug_line     0x00000000     0x6177
+.debug_line     0x00000000     0x6625
  .debug_line    0x00000000      0x2c8 ./Generated_Code/WAIT1.o
- .debug_line    0x000002c8      0x68a ./Generated_Code/Vectors.o
- .debug_line    0x00000952      0x3f0 ./Generated_Code/PpgLdd2.o
- .debug_line    0x00000d42      0x401 ./Generated_Code/PpgLdd1.o
- .debug_line    0x00001143      0x467 ./Generated_Code/PE_LDD.o
- .debug_line    0x000015aa      0x5ac ./Generated_Code/LiftingMotor.o
- .debug_line    0x00001b56      0x5ac ./Generated_Code/DrivingMotor.o
- .debug_line    0x00002102      0x6f9 ./Generated_Code/Cpu.o
- .debug_line    0x000027fb      0x2d2 ./Generated_Code/BitIoLdd9.o
- .debug_line    0x00002acd      0x2d2 ./Generated_Code/BitIoLdd8.o
- .debug_line    0x00002d9f      0x2d2 ./Generated_Code/BitIoLdd7.o
- .debug_line    0x00003071      0x2d2 ./Generated_Code/BitIoLdd6.o
- .debug_line    0x00003343      0x2d1 ./Generated_Code/BitIoLdd5.o
- .debug_line    0x00003614      0x2d1 ./Generated_Code/BitIoLdd4.o
- .debug_line    0x000038e5      0x2d1 ./Generated_Code/BitIoLdd3.o
- .debug_line    0x00003bb6      0x2d1 ./Generated_Code/BitIoLdd1.o
- .debug_line    0x00003e87      0x2b4 ./Project_Settings/Startup_Code/__arm_start.o
- .debug_line    0x0000413b      0x265 ./Project_Settings/Startup_Code/__arm_end.o
- .debug_line    0x000043a0      0x4b2 ./Sources/main.o
- .debug_line    0x00004852      0x57d ./Sources/Stepper.o
- .debug_line    0x00004dcf      0x4cc ./Sources/Events.o
- .debug_line    0x0000529b       0x8d C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
- .debug_line    0x00005328       0x90 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
- .debug_line    0x000053b8       0xf6 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
- .debug_line    0x000054ae      0x2c3 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
- .debug_line    0x00005771      0x2be C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
- .debug_line    0x00005a2f      0x1be C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
- .debug_line    0x00005bed      0x11e C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
- .debug_line    0x00005d0b       0x7d C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
- .debug_line    0x00005d88       0x8b C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
- .debug_line    0x00005e13       0x85 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
- .debug_line    0x00005e98       0x9f C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
- .debug_line    0x00005f37       0x6c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
- .debug_line    0x00005fa3      0x117 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
- .debug_line    0x000060ba       0xbd C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+ .debug_line    0x000002c8      0x6e2 ./Generated_Code/Vectors.o
+ .debug_line    0x000009aa      0x3f5 ./Generated_Code/PpgLdd2.o
+ .debug_line    0x00000d9f      0x406 ./Generated_Code/PpgLdd1.o
+ .debug_line    0x000011a5      0x493 ./Generated_Code/PE_LDD.o
+ .debug_line    0x00001638      0x5e2 ./Generated_Code/LiftingMotor_Step.o
+ .debug_line    0x00001c1a      0x5e2 ./Generated_Code/DrivingMotor_Step.o
+ .debug_line    0x000021fc      0x751 ./Generated_Code/Cpu.o
+ .debug_line    0x0000294d      0x2d2 ./Generated_Code/BitIoLdd9.o
+ .debug_line    0x00002c1f      0x2d2 ./Generated_Code/BitIoLdd8.o
+ .debug_line    0x00002ef1      0x2d2 ./Generated_Code/BitIoLdd7.o
+ .debug_line    0x000031c3      0x2d2 ./Generated_Code/BitIoLdd6.o
+ .debug_line    0x00003495      0x2d1 ./Generated_Code/BitIoLdd5.o
+ .debug_line    0x00003766      0x2d1 ./Generated_Code/BitIoLdd4.o
+ .debug_line    0x00003a37      0x2d1 ./Generated_Code/BitIoLdd3.o
+ .debug_line    0x00003d08      0x2d1 ./Generated_Code/BitIoLdd2.o
+ .debug_line    0x00003fd9      0x2d1 ./Generated_Code/BitIoLdd1.o
+ .debug_line    0x000042aa      0x2b4 ./Project_Settings/Startup_Code/__arm_start.o
+ .debug_line    0x0000455e      0x265 ./Project_Settings/Startup_Code/__arm_end.o
+ .debug_line    0x000047c3      0x4dc ./Sources/main.o
+ .debug_line    0x00004c9f      0x5bf ./Sources/Stepper.o
+ .debug_line    0x0000525e      0x4eb ./Sources/Events.o
+ .debug_line    0x00005749       0x8d C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+ .debug_line    0x000057d6       0x90 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
+ .debug_line    0x00005866       0xf6 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+ .debug_line    0x0000595c      0x2c3 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+ .debug_line    0x00005c1f      0x2be C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
+ .debug_line    0x00005edd      0x1be C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+ .debug_line    0x0000609b      0x11e C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
+ .debug_line    0x000061b9       0x7d C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
+ .debug_line    0x00006236       0x8b C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+ .debug_line    0x000062c1       0x85 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
+ .debug_line    0x00006346       0x9f C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+ .debug_line    0x000063e5       0x6c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+ .debug_line    0x00006451      0x117 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+ .debug_line    0x00006568       0xbd C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
 
-.debug_str      0x00000000     0x1cfb
+.debug_str      0x00000000     0x1f4d
  .debug_str     0x00000000      0x1a3 ./Generated_Code/WAIT1.o
                                 0x1d5 (size before relaxing)
  .debug_str     0x000001a3       0x55 ./Generated_Code/Vectors.o
@@ -1519,65 +1556,67 @@ OUTPUT(Freedom_LED_PWM.elf elf32-littlearm)
                                 0x51f (size before relaxing)
  .debug_str     0x00000740      0x177 ./Generated_Code/PE_LDD.o
                                 0x2e8 (size before relaxing)
- .debug_str     0x000008b7      0x11f ./Generated_Code/LiftingMotor.o
-                                0x2b3 (size before relaxing)
- .debug_str     0x000009d6      0x10b ./Generated_Code/DrivingMotor.o
-                                0x2b3 (size before relaxing)
- .debug_str     0x00000ae1      0x18c ./Generated_Code/Cpu.o
+ .debug_str     0x000008b7      0x151 ./Generated_Code/LiftingMotor_Step.o
+                                0x2e5 (size before relaxing)
+ .debug_str     0x00000a08      0x13d ./Generated_Code/DrivingMotor_Step.o
+                                0x2e5 (size before relaxing)
+ .debug_str     0x00000b45      0x18c ./Generated_Code/Cpu.o
                                 0x434 (size before relaxing)
- .debug_str     0x00000c6d       0xe4 ./Generated_Code/BitIoLdd9.o
+ .debug_str     0x00000cd1       0xe4 ./Generated_Code/BitIoLdd9.o
                                 0x2f1 (size before relaxing)
- .debug_str     0x00000d51       0xa0 ./Generated_Code/BitIoLdd8.o
+ .debug_str     0x00000db5       0xa0 ./Generated_Code/BitIoLdd8.o
                                 0x2f1 (size before relaxing)
- .debug_str     0x00000df1       0xa0 ./Generated_Code/BitIoLdd7.o
+ .debug_str     0x00000e55       0xa0 ./Generated_Code/BitIoLdd7.o
                                 0x2f1 (size before relaxing)
- .debug_str     0x00000e91       0xa0 ./Generated_Code/BitIoLdd6.o
+ .debug_str     0x00000ef5       0xa0 ./Generated_Code/BitIoLdd6.o
                                 0x2f1 (size before relaxing)
- .debug_str     0x00000f31       0xa0 ./Generated_Code/BitIoLdd5.o
+ .debug_str     0x00000f95       0xa0 ./Generated_Code/BitIoLdd5.o
                                 0x2f1 (size before relaxing)
- .debug_str     0x00000fd1       0xa0 ./Generated_Code/BitIoLdd4.o
+ .debug_str     0x00001035       0xa0 ./Generated_Code/BitIoLdd4.o
                                 0x2f1 (size before relaxing)
- .debug_str     0x00001071       0xa0 ./Generated_Code/BitIoLdd3.o
+ .debug_str     0x000010d5       0xa0 ./Generated_Code/BitIoLdd3.o
                                 0x2f1 (size before relaxing)
- .debug_str     0x00001111       0xa0 ./Generated_Code/BitIoLdd1.o
+ .debug_str     0x00001175       0xa0 ./Generated_Code/BitIoLdd2.o
                                 0x2f1 (size before relaxing)
- .debug_str     0x000011b1       0x85 ./Project_Settings/Startup_Code/__arm_start.o
+ .debug_str     0x00001215       0xa0 ./Generated_Code/BitIoLdd1.o
+                                0x2f1 (size before relaxing)
+ .debug_str     0x000012b5       0x85 ./Project_Settings/Startup_Code/__arm_start.o
                                 0x1b3 (size before relaxing)
- .debug_str     0x00001236       0x41 ./Project_Settings/Startup_Code/__arm_end.o
+ .debug_str     0x0000133a       0x41 ./Project_Settings/Startup_Code/__arm_end.o
                                  0xea (size before relaxing)
- .debug_str     0x00001277       0x17 ./Sources/main.o
-                                0x13e (size before relaxing)
- .debug_str     0x0000128e      0x1af ./Sources/Stepper.o
-                                0x33e (size before relaxing)
- .debug_str     0x0000143d       0x47 ./Sources/Events.o
-                                0x22a (size before relaxing)
- .debug_str     0x00001484       0x54 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
-                                0x157 (size before relaxing)
- .debug_str     0x000014d8       0x23 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
-                                0x140 (size before relaxing)
- .debug_str     0x000014fb       0x2d C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+ .debug_str     0x0000137b       0x17 ./Sources/main.o
                                 0x152 (size before relaxing)
- .debug_str     0x00001528      0x233 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
-                                0x3b3 (size before relaxing)
- .debug_str     0x0000175b      0x184 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
-                                0x3f9 (size before relaxing)
- .debug_str     0x000018df       0x9d C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
-                                0x1bc (size before relaxing)
- .debug_str     0x0000197c       0x61 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
-                                0x1fb (size before relaxing)
- .debug_str     0x000019dd       0x1c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
-                                0x137 (size before relaxing)
- .debug_str     0x000019f9       0x1c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
-                                0x138 (size before relaxing)
- .debug_str     0x00001a15       0x1c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
+ .debug_str     0x00001392      0x2f3 ./Sources/Stepper.o
+                                0x476 (size before relaxing)
+ .debug_str     0x00001685       0x51 ./Sources/Events.o
+                                0x178 (size before relaxing)
+ .debug_str     0x000016d6       0x54 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+                                0x157 (size before relaxing)
+ .debug_str     0x0000172a       0x23 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
                                 0x140 (size before relaxing)
- .debug_str     0x00001a31       0x1c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+ .debug_str     0x0000174d       0x2d C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+                                0x152 (size before relaxing)
+ .debug_str     0x0000177a      0x233 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+                                0x3b3 (size before relaxing)
+ .debug_str     0x000019ad      0x184 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
+                                0x3f9 (size before relaxing)
+ .debug_str     0x00001b31       0x9d C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+                                0x1bc (size before relaxing)
+ .debug_str     0x00001bce       0x61 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
+                                0x1fb (size before relaxing)
+ .debug_str     0x00001c2f       0x1c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
+                                0x137 (size before relaxing)
+ .debug_str     0x00001c4b       0x1c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+                                0x138 (size before relaxing)
+ .debug_str     0x00001c67       0x1c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
+                                0x140 (size before relaxing)
+ .debug_str     0x00001c83       0x1c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
                                 0x148 (size before relaxing)
- .debug_str     0x00001a4d      0x126 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+ .debug_str     0x00001c9f      0x126 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
                                 0x181 (size before relaxing)
- .debug_str     0x00001b73       0xee C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+ .debug_str     0x00001dc5       0xee C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
                                 0x1b5 (size before relaxing)
- .debug_str     0x00001c61       0x9a C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+ .debug_str     0x00001eb3       0x9a C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
                                 0x13c (size before relaxing)
 
 .comment        0x00000000       0x79
@@ -1587,8 +1626,8 @@ OUTPUT(Freedom_LED_PWM.elf elf32-littlearm)
  .comment       0x00000000       0x7a ./Generated_Code/PpgLdd2.o
  .comment       0x00000000       0x7a ./Generated_Code/PpgLdd1.o
  .comment       0x00000000       0x7a ./Generated_Code/PE_LDD.o
- .comment       0x00000000       0x7a ./Generated_Code/LiftingMotor.o
- .comment       0x00000000       0x7a ./Generated_Code/DrivingMotor.o
+ .comment       0x00000000       0x7a ./Generated_Code/LiftingMotor_Step.o
+ .comment       0x00000000       0x7a ./Generated_Code/DrivingMotor_Step.o
  .comment       0x00000000       0x7a ./Generated_Code/Cpu.o
  .comment       0x00000000       0x7a ./Generated_Code/BitIoLdd9.o
  .comment       0x00000000       0x7a ./Generated_Code/BitIoLdd8.o
@@ -1597,6 +1636,7 @@ OUTPUT(Freedom_LED_PWM.elf elf32-littlearm)
  .comment       0x00000000       0x7a ./Generated_Code/BitIoLdd5.o
  .comment       0x00000000       0x7a ./Generated_Code/BitIoLdd4.o
  .comment       0x00000000       0x7a ./Generated_Code/BitIoLdd3.o
+ .comment       0x00000000       0x7a ./Generated_Code/BitIoLdd2.o
  .comment       0x00000000       0x7a ./Generated_Code/BitIoLdd1.o
  .comment       0x00000000       0x7a ./Project_Settings/Startup_Code/__arm_start.o
  .comment       0x00000000       0x7a ./Project_Settings/Startup_Code/__arm_end.o
@@ -1618,13 +1658,13 @@ OUTPUT(Freedom_LED_PWM.elf elf32-littlearm)
  .comment       0x00000000       0x7a C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
  .comment       0x00000000       0x7a C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
 
-.debug_frame    0x00000000     0x1824
+.debug_frame    0x00000000     0x16d4
  .debug_frame   0x00000000       0xc8 ./Generated_Code/WAIT1.o
  .debug_frame   0x000000c8      0x1f0 ./Generated_Code/PpgLdd2.o
  .debug_frame   0x000002b8      0x210 ./Generated_Code/PpgLdd1.o
  .debug_frame   0x000004c8       0x6c ./Generated_Code/PE_LDD.o
- .debug_frame   0x00000534      0x150 ./Generated_Code/LiftingMotor.o
- .debug_frame   0x00000684      0x150 ./Generated_Code/DrivingMotor.o
+ .debug_frame   0x00000534      0x150 ./Generated_Code/LiftingMotor_Step.o
+ .debug_frame   0x00000684      0x150 ./Generated_Code/DrivingMotor_Step.o
  .debug_frame   0x000007d4       0x80 ./Generated_Code/Cpu.o
  .debug_frame   0x00000854       0xb0 ./Generated_Code/BitIoLdd9.o
  .debug_frame   0x00000904       0xb0 ./Generated_Code/BitIoLdd8.o
@@ -1633,42 +1673,33 @@ OUTPUT(Freedom_LED_PWM.elf elf32-littlearm)
  .debug_frame   0x00000b14       0xb0 ./Generated_Code/BitIoLdd5.o
  .debug_frame   0x00000bc4       0xb0 ./Generated_Code/BitIoLdd4.o
  .debug_frame   0x00000c74       0xb0 ./Generated_Code/BitIoLdd3.o
- .debug_frame   0x00000d24       0xb0 ./Generated_Code/BitIoLdd1.o
- .debug_frame   0x00000dd4       0x4c ./Project_Settings/Startup_Code/__arm_start.o
- .debug_frame   0x00000e20       0x30 ./Project_Settings/Startup_Code/__arm_end.o
- .debug_frame   0x00000e50       0x2c ./Sources/main.o
- .debug_frame   0x00000e7c      0x128 ./Sources/Stepper.o
- .debug_frame   0x00000fa4       0x64 ./Sources/Events.o
- .debug_frame   0x00001008       0x2c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
- .debug_frame   0x00001034       0x28 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
- .debug_frame   0x0000105c       0x2c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
- .debug_frame   0x00001088       0x54 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
- .debug_frame   0x000010dc       0x34 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
- .debug_frame   0x00001110      0x158 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
- .debug_frame   0x00001268       0x30 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
- .debug_frame   0x00001298       0x28 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
- .debug_frame   0x000012c0       0x28 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
- .debug_frame   0x000012e8       0x28 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
- .debug_frame   0x00001310       0x28 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
- .debug_frame   0x00001338       0x20 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_udivsi3.o)
- .debug_frame   0x00001358       0x28 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_fixunssfsi.o)
- .debug_frame   0x00001380       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_fixunsdfsi.o)
- .debug_frame   0x000013ac       0x3c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(divsf3.o)
- .debug_frame   0x000013e8       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(eqsf2.o)
- .debug_frame   0x00001414       0x30 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(gesf2.o)
- .debug_frame   0x00001444       0x30 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(lesf2.o)
- .debug_frame   0x00001474       0x30 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(subsf3.o)
- .debug_frame   0x000014a4       0x28 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(fixsfsi.o)
- .debug_frame   0x000014cc       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(floatsisf.o)
- .debug_frame   0x000014f8       0x3c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(divdf3.o)
- .debug_frame   0x00001534       0x3c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(muldf3.o)
- .debug_frame   0x00001570       0x38 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(subdf3.o)
- .debug_frame   0x000015a8       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(fixdfsi.o)
- .debug_frame   0x000015d4       0x30 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(floatsidf.o)
- .debug_frame   0x00001604       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(floatunsidf.o)
- .debug_frame   0x00001630       0x34 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(eqdf2.o)
- .debug_frame   0x00001664       0x38 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(gedf2.o)
- .debug_frame   0x0000169c       0x38 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(ledf2.o)
- .debug_frame   0x000016d4       0x40 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
- .debug_frame   0x00001714       0xbc C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
- .debug_frame   0x000017d0       0x54 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)
+ .debug_frame   0x00000d24       0xb0 ./Generated_Code/BitIoLdd2.o
+ .debug_frame   0x00000dd4       0xb0 ./Generated_Code/BitIoLdd1.o
+ .debug_frame   0x00000e84       0x4c ./Project_Settings/Startup_Code/__arm_start.o
+ .debug_frame   0x00000ed0       0x30 ./Project_Settings/Startup_Code/__arm_end.o
+ .debug_frame   0x00000f00       0x2c ./Sources/main.o
+ .debug_frame   0x00000f2c      0x130 ./Sources/Stepper.o
+ .debug_frame   0x0000105c       0x64 ./Sources/Events.o
+ .debug_frame   0x000010c0       0x2c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(exit.o)
+ .debug_frame   0x000010ec       0x28 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memset.o)
+ .debug_frame   0x00001114       0x2c C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__filll_mem.o)
+ .debug_frame   0x00001140       0x54 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(printformat_.o)
+ .debug_frame   0x00001194       0x34 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(scanformat_.o)
+ .debug_frame   0x000011c8      0x158 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(ctype_aeabi.o)
+ .debug_frame   0x00001320       0x30 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(__strtoul.o)
+ .debug_frame   0x00001350       0x28 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strchr.o)
+ .debug_frame   0x00001378       0x28 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memcpy.o)
+ .debug_frame   0x000013a0       0x28 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(strlen.o)
+ .debug_frame   0x000013c8       0x28 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\libc.a(memchr.o)
+ .debug_frame   0x000013f0       0x20 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_udivsi3.o)
+ .debug_frame   0x00001410       0x28 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(_fixunssfsi.o)
+ .debug_frame   0x00001438       0x3c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(divsf3.o)
+ .debug_frame   0x00001474       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(eqsf2.o)
+ .debug_frame   0x000014a0       0x30 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(gesf2.o)
+ .debug_frame   0x000014d0       0x30 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(lesf2.o)
+ .debug_frame   0x00001500       0x30 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(subsf3.o)
+ .debug_frame   0x00001530       0x28 c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(fixsfsi.o)
+ .debug_frame   0x00001558       0x2c c:/freescale/cw mcu v10.7/cross_tools/arm-none-eabi-gcc-4_7_3/bin/../lib/gcc/arm-none-eabi/4.7.3/armv6-m\libgcc.a(floatsisf.o)
+ .debug_frame   0x00001584       0x40 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(gcc_ctor_dtor.o)
+ .debug_frame   0x000015c4       0xbc C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(__arm_eabi_init.o)
+ .debug_frame   0x00001680       0x54 C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m\librt.a(ROMCopy.o)

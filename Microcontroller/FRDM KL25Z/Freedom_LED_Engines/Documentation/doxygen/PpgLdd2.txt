@@ -45,7 +45,7 @@ by the component.
     0x0000FFFF
  </td><td>TPM0_MOD register, peripheral PpgLdd2.</td></tr>
 <tr><td>0x40038020</td><td>TPM0_C2V</td><td>
-    0x00000021
+    0x00000419
  </td><td>TPM0_C2V register, peripheral PpgLdd2.</td></tr>
 <tr><td>0x4004D074</td><td>PORTE_PCR29</td><td>
     0x00000300
@@ -662,7 +662,7 @@ registers of the peripheral(s) configured by the component.
         
 </div>
 <table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x40038020</td></tr>
-<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000021</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000419</td></tr>
 <tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
 <tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
 <tr><td>0 - 15</td><td>VAL</td><td>0x00</td><td>Channel Value</td>
@@ -826,8 +826,8 @@ registers of the peripheral(s) configured by the component.
 **            Interrupt                                    : INT_TPM0
 **            Interrupt priority                           : medium priority
 **            Iterations before action/event               : 1
-**          Period                                         : 1 Hz
-**          Starting pulse width                           : 1 ms
+**          Period                                         : 400 Hz
+**          Starting pulse width                           : 50 µs
 **          Initial polarity                               : low
 **          Initialization                                 : 
 **            Enabled in init. code                        : yes

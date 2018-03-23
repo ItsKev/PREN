@@ -26,7 +26,7 @@ Sources/Stepper.o: ../Sources/Stepper.c \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/BitIoLdd1.h \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/GPIO_PDD.h \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/PDD_Types.h \
- D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/DrivingMotor.h \
+ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/DrivingMotor_Step.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/PpgLdd2.h \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/TPM_PDD.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/LiftingMotor_MS2.h \
@@ -43,15 +43,17 @@ Sources/Stepper.o: ../Sources/Stepper.c \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/BitIoLdd8.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/DrivingMotor_Direction.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/BitIoLdd9.h \
- D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/LiftingMotor.h \
+ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/LiftingMotor_Step.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/PpgLdd1.h \
+ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/Electromagnet.h \
+ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/BitIoLdd2.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/PE_Types.h \
- D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/LiftingMotor.h \
+ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/LiftingMotor_Step.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/LiftingMotor_Direction.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/LiftingMotor_Enable.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/LiftingMotor_MS1.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/LiftingMotor_MS2.h \
- D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/DrivingMotor.h \
+ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/DrivingMotor_Step.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/DrivingMotor_Direction.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/DrivingMotor_Enable.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/DrivingMotor_MS1.h \
@@ -111,7 +113,7 @@ C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/GPIO_PDD.h:
 
 C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/PDD_Types.h:
 
-D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/DrivingMotor.h:
+D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/DrivingMotor_Step.h:
 
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/PpgLdd2.h:
 
@@ -145,13 +147,17 @@ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_C
 
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/BitIoLdd9.h:
 
-D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/LiftingMotor.h:
+D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/LiftingMotor_Step.h:
 
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/PpgLdd1.h:
 
+D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/Electromagnet.h:
+
+D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/BitIoLdd2.h:
+
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/PE_Types.h:
 
-D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/LiftingMotor.h:
+D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/LiftingMotor_Step.h:
 
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/LiftingMotor_Direction.h:
 
@@ -161,7 +167,7 @@ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_C
 
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/LiftingMotor_MS2.h:
 
-D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/DrivingMotor.h:
+D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/DrivingMotor_Step.h:
 
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/DrivingMotor_Direction.h:
 

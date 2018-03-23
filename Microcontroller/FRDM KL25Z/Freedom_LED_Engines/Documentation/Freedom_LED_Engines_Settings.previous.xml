@@ -247,8 +247,8 @@
             <enumgroup name="PLL/FLL clock selection" v="Auto select">
               <Clock_frequency__MHz_ v="20.971520000000" />
             </enumgroup>
-            <enumgroup name="TPM clock selection" v="Internal reference">
-              <Clock_frequency__MHz_ v="0.032768000000" />
+            <enumgroup name="TPM clock selection" v="Auto select">
+              <Clock_frequency__MHz_ v="20.971520000000" />
             </enumgroup>
           </group>
         </group>
@@ -456,10 +456,10 @@ PE_DEBUGHALT();
       <EmptySection_DummyValue />
     </Events>
   </Bean>
-  <Bean name="DrivingMotor" type="PPG">
+  <Bean name="DrivingMotor_Step" type="PPG">
     <Enabled v="Y" />
     <Properties>
-      <Component_name v="DrivingMotor" />
+      <Component_name v="DrivingMotor_Step" />
       <Compare___period v="TPM0_MOD" />
       <Compare___duty v="TPM0_C2V" />
       <Output_pin v="CMP0_IN5/ADC0_SE4b/PTE29/TPM0_CH2/TPM_CLKIN0" />
@@ -470,8 +470,8 @@ PE_DEBUGHALT();
         <Interrupt_priority v="medium priority" />
         <Iterations_before_action_event v="1" />
       </boolgroup>
-      <Period init="1 Hz" runtime_settings="interval" low="1 Hz" high="500 Hz" />
-      <Starting_pulse_width v="1 ms" />
+      <Period init="400 Hz" runtime_settings="interval" low="320 Hz" high="1 MHz" />
+      <Starting_pulse_width v="50 &amp;#181;s" />
       <Initial_polarity v="low" />
       <Same_period_in_modes v="no" />
       <Component_uses_entire_timer v="no" />
@@ -499,8 +499,8 @@ PE_DEBUGHALT();
               <Interrupt_priority v="medium priority" />
               <Iterations_before_action_event v="1" />
             </boolgroup>
-            <Period init="1 Hz" runtime_settings="interval" low="1 Hz" high="500 Hz" />
-            <Starting_pulse_width v="1 ms" />
+            <Period init="400 Hz" runtime_settings="interval" low="320 Hz" high="1 MHz" />
+            <Starting_pulse_width v="50 &amp;#181;s" />
             <Initial_polarity v="low" />
             <group name="Initialization">
               <Enabled_in_init__code v="yes" />
@@ -592,7 +592,7 @@ PE_DEBUGHALT();
       <event name="BeforeNewSpeed" v="don&amp;apos;t generate code" />
       <event name="AfterNewSpeed" v="don&amp;apos;t generate code" />
       <event name="OnEnd" v="generate code">
-        <Event_procedure_name v="DrivingMotor_OnEnd" />
+        <Event_procedure_name v="DrivingMotor_Step_OnEnd" />
         <Priority v="same as interrupt" />
       </event>
     </Events>
@@ -1038,22 +1038,22 @@ PE_DEBUGHALT();
       <EmptySection_DummyValue />
     </Events>
   </Bean>
-  <Bean name="LiftingMotor" type="PPG">
+  <Bean name="LiftingMotor_Step" type="PPG">
     <Enabled v="Y" />
     <Properties>
-      <Component_name v="LiftingMotor" />
-      <Compare___period v="TPM2_MOD" />
-      <Compare___duty v="TPM2_C0V" />
-      <Output_pin v="TSI0_CH11/PTB18/TPM2_CH0" />
-      <Counter v="TPM2_CNT" />
+      <Component_name v="LiftingMotor_Step" />
+      <Compare___period v="TPM1_MOD" />
+      <Compare___duty v="TPM1_C0V" />
+      <Output_pin v="ADC0_DP0/ADC0_SE0/PTE20/TPM1_CH0/UART0_TX" />
+      <Counter v="TPM1_CNT" />
       <boolgroup name="Interrupt service/event" v="Enabled">
-        <Interrupt_on_period v="INT_TPM2" />
-        <Interrupt_on_duty v="INT_TPM2" />
+        <Interrupt_on_period v="INT_TPM1" />
+        <Interrupt_on_duty v="INT_TPM1" />
         <Interrupt_priority v="medium priority" />
         <Iterations_before_action_event v="1" />
       </boolgroup>
-      <Period init="1 Hz" runtime_settings="interval" low="1 Hz" high="500 Hz" />
-      <Starting_pulse_width v="1 ms" />
+      <Period init="400 Hz" runtime_settings="interval" low="320 Hz" high="1 MHz" />
+      <Starting_pulse_width v="50 &amp;#181;s" />
       <Initial_polarity v="low" />
       <Same_period_in_modes v="no" />
       <Component_uses_entire_timer v="no" />
@@ -1071,18 +1071,18 @@ PE_DEBUGHALT();
           <Enabled v="Y" />
           <Properties>
             <Component_name v="PpgLdd1" />
-            <Module_name v="TPM2" />
-            <Counter v="TPM2_CNT" />
-            <Period_device v="TPM2_MOD" />
-            <Duty_device v="TPM2_C0V" />
-            <Output_pin v="TSI0_CH11/PTB18/TPM2_CH0" />
+            <Module_name v="TPM1" />
+            <Counter v="TPM1_CNT" />
+            <Period_device v="TPM1_MOD" />
+            <Duty_device v="TPM1_C0V" />
+            <Output_pin v="ADC0_DP0/ADC0_SE0/PTE20/TPM1_CH0/UART0_TX" />
             <boolgroup name="Interrupt service/event" v="Enabled">
-              <Interrupt v="INT_TPM2" />
+              <Interrupt v="INT_TPM1" />
               <Interrupt_priority v="medium priority" />
               <Iterations_before_action_event v="1" />
             </boolgroup>
-            <Period init="1 Hz" runtime_settings="interval" low="1 Hz" high="500 Hz" />
-            <Starting_pulse_width v="1 ms" />
+            <Period init="400 Hz" runtime_settings="interval" low="320 Hz" high="1 MHz" />
+            <Starting_pulse_width v="50 &amp;#181;s" />
             <Initial_polarity v="low" />
             <group name="Initialization">
               <Enabled_in_init__code v="yes" />
@@ -1174,9 +1174,72 @@ PE_DEBUGHALT();
       <event name="BeforeNewSpeed" v="don&amp;apos;t generate code" />
       <event name="AfterNewSpeed" v="don&amp;apos;t generate code" />
       <event name="OnEnd" v="generate code">
-        <Event_procedure_name v="LiftingMotor_OnEnd" />
+        <Event_procedure_name v="LiftingMotor_Step_OnEnd" />
         <Priority v="same as interrupt" />
       </event>
+    </Events>
+  </Bean>
+  <Bean name="Electromagnet" type="BitIO">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="Electromagnet" />
+      <Pin_for_I_O v="PTE0/UART1_TX/RTC_CLKOUT/CMP0_OUT/I2C1_SDA" />
+      <inhrbean type="BitIO_LDD">
+        <Enabled v="Y" />
+        <Template v="BitIO_LDD" />
+        <Properties>
+          <Component_name v="BitIoLdd2" />
+          <Pin_for_I_O v="PTE0/UART1_TX/RTC_CLKOUT/CMP0_OUT/I2C1_SDA" />
+          <Direction v="Output" />
+          <group name="Initialization">
+            <Init__direction v="Output" />
+            <Init__value v="0" />
+            <Auto_initialization v="yes" />
+          </group>
+          <Safe_mode v="yes" />
+        </Properties>
+        <Methods>
+          <Init v="generate code" />
+          <Deinit v="don&amp;apos;t generate code" />
+          <GetDir v="don&amp;apos;t generate code" />
+          <SetDir v="don&amp;apos;t generate code" />
+          <SetInput v="don&amp;apos;t generate code" />
+          <SetOutput v="don&amp;apos;t generate code" />
+          <GetVal v="generate code" />
+          <PutVal v="generate code" />
+          <ClrVal v="generate code" />
+          <SetVal v="generate code" />
+          <NegVal v="don&amp;apos;t generate code" />
+          <ConnectPin v="don&amp;apos;t generate code" />
+          <GetRawVal v="don&amp;apos;t generate code" />
+        </Methods>
+        <Events>
+          <EmptySection_DummyValue />
+        </Events>
+      </inhrbean>
+      <Direction v="Output" />
+      <group name="Initialization">
+        <Init__direction v="Output" />
+        <Init__value v="0" />
+      </group>
+      <Safe_mode v="yes" />
+      <Optimization_for v="speed" />
+    </Properties>
+    <Methods>
+      <GetDir v="don&amp;apos;t generate code" />
+      <SetDir v="don&amp;apos;t generate code" />
+      <SetInput v="don&amp;apos;t generate code" />
+      <SetOutput v="don&amp;apos;t generate code" />
+      <GetVal v="generate code" />
+      <PutVal v="generate code" />
+      <ClrVal v="generate code" />
+      <SetVal v="generate code" />
+      <NegVal v="don&amp;apos;t generate code" />
+      <ConnectPin v="don&amp;apos;t generate code" />
+      <GetRawVal v="don&amp;apos;t generate code" />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
     </Events>
   </Bean>
 </PE_PROJECT_SETTINGS_DOCUMENTATION>

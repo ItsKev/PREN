@@ -6,24 +6,24 @@
 **     Component   : PPG_LDD
 **     Version     : Component 01.015, Driver 01.03, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2018-03-18, 23:31, # CodeGen: 19
+**     Date/Time   : 2018-03-23, 10:56, # CodeGen: 47
 **     Abstract    :
 **          This component implements a programmable pulse generator that
 **          generates signal with variable duty and variable cycle (period).
 **     Settings    :
 **          Component name                                 : PpgLdd1
-**          Module name                                    : TPM2
-**          Counter                                        : TPM2_CNT
-**          Period device                                  : TPM2_MOD
-**          Duty device                                    : TPM2_C0V
-**          Output pin                                     : TSI0_CH11/PTB18/TPM2_CH0
+**          Module name                                    : TPM1
+**          Counter                                        : TPM1_CNT
+**          Period device                                  : TPM1_MOD
+**          Duty device                                    : TPM1_C0V
+**          Output pin                                     : ADC0_DP0/ADC0_SE0/PTE20/TPM1_CH0/UART0_TX
 **          Output pin signal                              : 
 **          Interrupt service/event                        : Enabled
-**            Interrupt                                    : INT_TPM2
+**            Interrupt                                    : INT_TPM1
 **            Interrupt priority                           : medium priority
 **            Iterations before action/event               : 1
-**          Period                                         : 1 Hz
-**          Starting pulse width                           : 1 ms
+**          Period                                         : 400 Hz
+**          Starting pulse width                           : 50 µs
 **          Initial polarity                               : low
 **          Initialization                                 : 
 **            Enabled in init. code                        : yes
@@ -117,20 +117,20 @@
 extern "C" {
 #endif 
 
-#define PpgLdd1_PERIOD_TICKS 0x8000UL  /* Initial period value in ticks of the timer. */
-#define PpgLdd1_PERIOD_TICKS_0 0x8000UL /* Period value in ticks of the timer in clock configuration 0. */
-#define PpgLdd1_SPUS_MIN   0x07DFU     /* Lower bound of interval for parameter of method SetPeriodUS */
-#define PpgLdd1_SPUS_MAX   0xFFFFU     /* Upper bound of interval for parameter of method SetPeriodUS */
-#define PpgLdd1_SPMS_MIN   0x03U       /* Lower bound of interval for parameter of method SetPeriodMS */
-#define PpgLdd1_SPMS_MAX   0x03E8U     /* Upper bound of interval for parameter of method SetPeriodMS */
-#define PpgLdd1_SPSEC_MIN  0x01U       /* Lower bound of interval for parameter of method SetPeriodSec */
-#define PpgLdd1_SPSEC_MAX  0x01U       /* Upper bound of interval for parameter of method SetPeriodSec */
-#define PpgLdd1_SPREAL_MIN 0.002014160156F /* Lower bound of interval for parameter of method SetPeriodReal */
-#define PpgLdd1_SPREAL_MAX 1.0F        /* Upper bound of interval for parameter of method SetPeriodReal */
-#define PpgLdd1_SFREQ_HZ_MIN 0x01U     /* Lower bound of interval for parameter of method SetFrequencyHz */
-#define PpgLdd1_SFREQ_HZ_MAX 0x01F0U   /* Upper bound of interval for parameter of method SetFrequencyHz */
+#define PpgLdd1_PERIOD_TICKS 0xCCCDUL  /* Initial period value in ticks of the timer. */
+#define PpgLdd1_PERIOD_TICKS_0 0xCCCDUL /* Period value in ticks of the timer in clock configuration 0. */
+#define PpgLdd1_SPUS_MIN   0x02U       /* Lower bound of interval for parameter of method SetPeriodUS */
+#define PpgLdd1_SPUS_MAX   0x0C35U     /* Upper bound of interval for parameter of method SetPeriodUS */
+#define PpgLdd1_SPMS_MIN   0x01U       /* Lower bound of interval for parameter of method SetPeriodMS */
+#define PpgLdd1_SPMS_MAX   0x03U       /* Upper bound of interval for parameter of method SetPeriodMS */
+#define PpgLdd1_SPREAL_MIN 0.000001001358F /* Lower bound of interval for parameter of method SetPeriodReal */
+#define PpgLdd1_SPREAL_MAX 0.003125F   /* Upper bound of interval for parameter of method SetPeriodReal */
+#define PpgLdd1_SFREQ_HZ_MIN 0x0140U   /* Lower bound of interval for parameter of method SetFrequencyHz */
+#define PpgLdd1_SFREQ_HZ_MAX 0xFFFFU   /* Upper bound of interval for parameter of method SetFrequencyHz */
+#define PpgLdd1_SFREQ_KHZ_MIN 0x01U    /* Lower bound of interval for parameter of method SetFrequencykHz */
+#define PpgLdd1_SFREQ_KHZ_MAX 0x03E6U  /* Upper bound of interval for parameter of method SetFrequencykHz */
 /*! Peripheral base address of a device allocated by the component. This constant can be used directly in PDD macros. */
-#define PpgLdd1_PRPH_BASE_ADDRESS  0x4003A000U
+#define PpgLdd1_PRPH_BASE_ADDRESS  0x40039000U
   
 /*! Device data structure pointer used when auto initialization property is enabled. This constant can be passed as a first parameter to all component's methods. */
 #define PpgLdd1_DeviceData  ((LDD_TDeviceData *)PE_LDD_GetDeviceStructure(PE_LDD_COMPONENT_PpgLdd1_ID))

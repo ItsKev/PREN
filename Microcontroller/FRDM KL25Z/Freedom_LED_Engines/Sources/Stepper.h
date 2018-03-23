@@ -10,55 +10,48 @@
 
 #include "PE_LDD.h"
 #include "PE_Types.h"
-#include "TU1.h"
 
 
 #define FORWARD TRUE /* Forward-Direction for the Stepper-Motors */
 #define BACKWARD FALSE /* Backward-Direction for the Stepper-Motors */
-#define RADIUS_DRIVING_WHEEL 2 /* 2cm */
-#define RADIUS_Lifting_WHEEL 2 /* 2cm */
+
 
 typedef enum{
 	STOPPED,
 	ACCELARATING,
 	CRUSING,
-	DECELERATING
+	DECELERATING,
+	CONTINIUOUS
 }StepperState;
 
-typedef struct {
-	bool AccelarationFinished; 
+typedef struct { 
 	bool Direction; 
 	uint16_t Speed; 
 	uint16_t TargetFreq; 
 	uint16_t AccelartionFreq; // Need for Accelaration
 	bool MS1; 
 	bool MS2; 
-	bool Enable;
+	bool Driver_Enable;
 	uint32_t Steps;
 	StepperState State; 
-	LDD_TDeviceData* Stepper_TimerDevice; 
 }StepperDevice;
 
-/* Variablen */
+/* Global Variables */
 extern StepperDevice DrivingMotor; 
 extern StepperDevice LiftingMotor; 
 
 
-uint8_t DrivingMotorSetDirection(bool direction); 
+uint8_t DrivingMotorSetDirection(bool direction);  
 
-uint8_t DrivingMotorSetSpeed(uint8_t speed, uint8_t radius); 
+uint8_t DrivingMotorMove(uint32_t stepsWithoutMicrosteppingRevolution); 
 
-uint8_t DrivingMotorMove(uint32_t steps); 
+uint8_t LiftingMotor_SetDirection(bool direction); 
 
-uint8_t DrivingMotor_Stop(void); 
+uint8_t LiftingMotor_Move(uint32_t stepsWithoutMicrosteppingRevolution); 
 
-uint8_t LifitingMotorSetDirection(bool direction); 
+void LiftingMotor_Event(void);
 
-uint8_t LifitingMotorSetSpeed(uint8_t speed, uint8_t radius); 
-
-uint8_t LifitingMotorMove(uint32_t steps); 
-
-uint8_t LiftingMotor_Stop(void); 
+void DrivingMotor_Event(void); 
 
 uint8_t StepperInit(void); 
 

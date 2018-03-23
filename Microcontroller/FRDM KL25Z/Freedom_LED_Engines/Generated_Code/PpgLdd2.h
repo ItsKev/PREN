@@ -6,7 +6,7 @@
 **     Component   : PPG_LDD
 **     Version     : Component 01.015, Driver 01.03, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2018-03-19, 22:07, # CodeGen: 21
+**     Date/Time   : 2018-03-21, 18:33, # CodeGen: 40
 **     Abstract    :
 **          This component implements a programmable pulse generator that
 **          generates signal with variable duty and variable cycle (period).
@@ -22,8 +22,8 @@
 **            Interrupt                                    : INT_TPM0
 **            Interrupt priority                           : medium priority
 **            Iterations before action/event               : 1
-**          Period                                         : 1 Hz
-**          Starting pulse width                           : 1 ms
+**          Period                                         : 400 Hz
+**          Starting pulse width                           : 50 µs
 **          Initial polarity                               : low
 **          Initialization                                 : 
 **            Enabled in init. code                        : yes
@@ -116,18 +116,18 @@
 extern "C" {
 #endif 
 
-#define PpgLdd2_PERIOD_TICKS 0x8000UL  /* Initial period value in ticks of the timer. */
-#define PpgLdd2_PERIOD_TICKS_0 0x8000UL /* Period value in ticks of the timer in clock configuration 0. */
-#define PpgLdd2_SPUS_MIN   0x07DFU     /* Lower bound of interval for parameter of method SetPeriodUS */
-#define PpgLdd2_SPUS_MAX   0xFFFFU     /* Upper bound of interval for parameter of method SetPeriodUS */
-#define PpgLdd2_SPMS_MIN   0x03U       /* Lower bound of interval for parameter of method SetPeriodMS */
-#define PpgLdd2_SPMS_MAX   0x03E8U     /* Upper bound of interval for parameter of method SetPeriodMS */
-#define PpgLdd2_SPSEC_MIN  0x01U       /* Lower bound of interval for parameter of method SetPeriodSec */
-#define PpgLdd2_SPSEC_MAX  0x01U       /* Upper bound of interval for parameter of method SetPeriodSec */
-#define PpgLdd2_SPREAL_MIN 0.002014160156F /* Lower bound of interval for parameter of method SetPeriodReal */
-#define PpgLdd2_SPREAL_MAX 1.0F        /* Upper bound of interval for parameter of method SetPeriodReal */
-#define PpgLdd2_SFREQ_HZ_MIN 0x01U     /* Lower bound of interval for parameter of method SetFrequencyHz */
-#define PpgLdd2_SFREQ_HZ_MAX 0x01F0U   /* Upper bound of interval for parameter of method SetFrequencyHz */
+#define PpgLdd2_PERIOD_TICKS 0xCCCDUL  /* Initial period value in ticks of the timer. */
+#define PpgLdd2_PERIOD_TICKS_0 0xCCCDUL /* Period value in ticks of the timer in clock configuration 0. */
+#define PpgLdd2_SPUS_MIN   0x02U       /* Lower bound of interval for parameter of method SetPeriodUS */
+#define PpgLdd2_SPUS_MAX   0x0C35U     /* Upper bound of interval for parameter of method SetPeriodUS */
+#define PpgLdd2_SPMS_MIN   0x01U       /* Lower bound of interval for parameter of method SetPeriodMS */
+#define PpgLdd2_SPMS_MAX   0x03U       /* Upper bound of interval for parameter of method SetPeriodMS */
+#define PpgLdd2_SPREAL_MIN 0.000001001358F /* Lower bound of interval for parameter of method SetPeriodReal */
+#define PpgLdd2_SPREAL_MAX 0.003125F   /* Upper bound of interval for parameter of method SetPeriodReal */
+#define PpgLdd2_SFREQ_HZ_MIN 0x0140U   /* Lower bound of interval for parameter of method SetFrequencyHz */
+#define PpgLdd2_SFREQ_HZ_MAX 0xFFFFU   /* Upper bound of interval for parameter of method SetFrequencyHz */
+#define PpgLdd2_SFREQ_KHZ_MIN 0x01U    /* Lower bound of interval for parameter of method SetFrequencykHz */
+#define PpgLdd2_SFREQ_KHZ_MAX 0x03E6U  /* Upper bound of interval for parameter of method SetFrequencykHz */
 /*! Peripheral base address of a device allocated by the component. This constant can be used directly in PDD macros. */
 #define PpgLdd2_PRPH_BASE_ADDRESS  0x40038000U
   

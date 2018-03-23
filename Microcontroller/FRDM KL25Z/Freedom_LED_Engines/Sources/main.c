@@ -33,7 +33,7 @@
 #include "MCUC1.h"
 #include "LiftingMotor_MS1.h"
 #include "BitIoLdd1.h"
-#include "DrivingMotor.h"
+#include "DrivingMotor_Step.h"
 #include "PpgLdd2.h"
 #include "LiftingMotor_MS2.h"
 #include "BitIoLdd3.h"
@@ -49,9 +49,10 @@
 #include "BitIoLdd8.h"
 #include "DrivingMotor_Direction.h"
 #include "BitIoLdd9.h"
-#include "LiftingMotor.h"
+#include "LiftingMotor_Step.h"
 #include "PpgLdd1.h"
-#include "TU1.h"
+#include "Electromagnet.h"
+#include "BitIoLdd2.h"
 #include "PE_Types.h"
 #include "PE_Error.h"
 #include "PE_Const.h"
@@ -67,22 +68,20 @@
 int main(void)
 /*lint -restore Enable MISRA rule (6.3) checking. */
 
-  {
+   {
 	/* Write your local variable definition here */
-
+	unsigned int i, result; 
 	/*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
 	PE_low_level_init();
 	/*** End of Processor Expert internal initialization.                    ***/
 
 	/* Write your code here */
 	/* For example: for(;;) { } */
-//	for(i=1; i<=900; i++){
-//		result = DrivingMotor_SetFreqHz(i);
-//		WAIT1_Waitms(100); 
-//	}		
 	StepperInit(); 
-	Stepper_TestApplication();
-
+	Stepper_TestApplication(); 
+	
+	
+	
 	/*** Don't write any code pass this line, or it will be deleted during code generation. ***/
   /*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/
   #ifdef PEX_RTOS_START

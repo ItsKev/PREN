@@ -56,9 +56,9 @@ void Cpu_OnNMIINT(void) {
 
 /*
  ** ===================================================================
- **     Event       :  DrivingMotor_OnEnd (module Events)
+ **     Event       :  DrivingMotor_Step_OnEnd (module Events)
  **
- **     Component   :  DrivingMotor [PPG]
+ **     Component   :  DrivingMotor_Step [PPG]
  **     Description :
  **         This event is called when the specified number of iterations
  **         is generated. (Only when the component is enabled - <Enable>
@@ -69,74 +69,31 @@ void Cpu_OnNMIINT(void) {
  **     Returns     : Nothing
  ** ===================================================================
  */
-void DrivingMotor_OnEnd(void) {
+void DrivingMotor_Step_OnEnd(void) {
 	/* Write your code here ... */
-	switch (DrivingMotor.State) {
-	case ACCELARATING:
-		DrivingMotor_SetFreqHz(DrivingMotor.AccelartionFreq++);
-		break;
+	DrivingMotor_Event(); 
 
-	case CRUSING:
-		break;
-
-	case DECELERATING:
-		DrivingMotor_SetFreqHz(DrivingMotor.AccelartionFreq--);
-		break;
-
-	case STOPPED:
-		DrivingMotor_SetFreqHz(1);
-		break;
-	}
-
-	if (DrivingMotor.Direction) {
-		DrivingMotor.Steps++;
-	} else {
-		DrivingMotor.Steps--;
-	}
-
-}
-
-/*
- ** ===================================================================
- **     Event       :  LiftingMotor_OnEnd (module Events)
- **
- **     Component   :  LiftingMotor [PPG]
- **     Description :
- **         This event is called when the specified number of iterations
- **         is generated. (Only when the component is enabled - <Enable>
- **         and the events are enabled - <EnableEvent>). The event is
- **         available only when the peripheral supports an interrupt,
- **         that is generated at the end of the PWM period.
- **     Parameters  : None
- **     Returns     : Nothing
- ** ===================================================================
- */
-void LiftingMotor_OnEnd(void) {
-	/* Write your code here ... */
 }
 
 /*
 ** ===================================================================
-**     Event       :  TU1_OnChannel0 (module Events)
+**     Event       :  LiftingMotor_Step_OnEnd (module Events)
 **
-**     Component   :  TU1 [TimerUnit_LDD]
+**     Component   :  LiftingMotor_Step [PPG]
+**     Description :
+**         This event is called when the specified number of iterations
+**         is generated. (Only when the component is enabled - <Enable>
+**         and the events are enabled - <EnableEvent>). The event is
+**         available only when the peripheral supports an interrupt,
+**         that is generated at the end of the PWM period.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
 */
-/*!
-**     @brief
-**         Called if compare register match the counter registers or
-**         capture register has a new content. OnChannel0 event and
-**         Timer unit must be enabled. See [SetEventMask] and
-**         [GetEventMask] methods. This event is available only if a
-**         [Interrupt] is enabled.
-**     @param
-**         UserDataPtr     - Pointer to the user or
-**                           RTOS specific data. The pointer passed as
-**                           the parameter of Init method.
-*/
-/* ===================================================================*/
-void TU1_OnChannel0(LDD_TUserData *UserDataPtr)
+void LiftingMotor_Step_OnEnd(void)
 {
   /* Write your code here ... */
+	LiftingMotor_Event(); 
 }
 
 /* END Events */

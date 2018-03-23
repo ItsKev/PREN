@@ -5,7 +5,7 @@
 **     Processor   : MKL25Z128VLK4
 **     Version     : Component 01.025, Driver 01.04, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2018-03-19, 22:07, # CodeGen: 21
+**     Date/Time   : 2018-03-23, 11:30, # CodeGen: 48
 **     Abstract    :
 **
 **     Settings    :
@@ -64,7 +64,7 @@
 #include "MCUC1.h"
 #include "LiftingMotor_MS1.h"
 #include "BitIoLdd1.h"
-#include "DrivingMotor.h"
+#include "DrivingMotor_Step.h"
 #include "PpgLdd2.h"
 #include "LiftingMotor_MS2.h"
 #include "BitIoLdd3.h"
@@ -80,9 +80,10 @@
 #include "BitIoLdd8.h"
 #include "DrivingMotor_Direction.h"
 #include "BitIoLdd9.h"
-#include "LiftingMotor.h"
+#include "LiftingMotor_Step.h"
 #include "PpgLdd1.h"
-#include "TU1.h"
+#include "Electromagnet.h"
+#include "BitIoLdd2.h"
 
 
 /*
