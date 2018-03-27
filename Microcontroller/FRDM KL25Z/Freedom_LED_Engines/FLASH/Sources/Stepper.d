@@ -48,6 +48,12 @@ Sources/Stepper.o: ../Sources/Stepper.c \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/Electromagnet.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/BitIoLdd2.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/PE_Types.h \
+ C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/string.h \
+ C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstring \
+ C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/null.h \
+ C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/size_t.h \
+ C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/ewl_rsize_t.h \
+ C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/string_api.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/LiftingMotor_Step.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/LiftingMotor_Direction.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/LiftingMotor_Enable.h \
@@ -156,6 +162,18 @@ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_C
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/BitIoLdd2.h:
 
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/PE_Types.h:
+
+C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/string.h:
+
+C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstring:
+
+C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/null.h:
+
+C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/size_t.h:
+
+C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/ewl_rsize_t.h:
+
+C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/string_api.h:
 
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/Freedom_LED_Engines/Generated_Code/LiftingMotor_Step.h:
 

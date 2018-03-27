@@ -177,7 +177,7 @@
     </GenFiles>
     <SignalListFile>Documentation\Freedom_LED_Engines_SIGNALS.txt</SignalListFile>
     <DestinationCompiler>GNUC</DestinationCompiler>
-    <ProjectModificationStamp>96</ProjectModificationStamp>
+    <ProjectModificationStamp>97</ProjectModificationStamp>
   </Options>
   <CpuID_2>
     <Generated>true</Generated>

@@ -77,7 +77,7 @@ int main(void)
 
 	/* Write your code here */
 	/* For example: for(;;) { } */
-	StepperInit(); 
+	Stepper_Init(); 
 	Stepper_TestApplication(); 
 	
 	

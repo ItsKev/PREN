@@ -41,19 +41,34 @@ extern StepperDevice DrivingMotor;
 extern StepperDevice LiftingMotor; 
 
 
-uint8_t DrivingMotorSetDirection(bool direction);  
 
-uint8_t DrivingMotorMove(uint32_t stepsWithoutMicrosteppingRevolution); 
+#define DrivingMotor_FORWARD() 	({DrivingMotor.Direction = FORWARD; DrivingMotor_Direction_SetVal();})
 
-uint8_t LiftingMotor_SetDirection(bool direction); 
+#define DrivingMotor_BACKWARD() ({DrivingMotor.Direction = BACKWARD; DrivingMotor_Direction_ClrVal();})
 
-uint8_t LiftingMotor_Move(uint32_t stepsWithoutMicrosteppingRevolution); 
+uint8_t DrivingMotor_Move(uint32_t stepsWithoutMicrosteppingRevolution, uint32_t targetVelocity); 
 
-void LiftingMotor_Event(void);
+uint8_t DrivingMotor_MoveContinuous(uint32_t targetFreq); 
+
+uint8_t DrivingMotor_Brakes(void); 
 
 void DrivingMotor_Event(void); 
 
-uint8_t StepperInit(void); 
+
+
+#define LiftingMotor_FORWARD()	({LiftingMotor.Direction = FORWARD; LiftingMotor_Direction_ClrVal();})
+
+#define LiftingMotor_BACKWARD()	({LiftingMotor.Direction = BACKWARD; LiftingMotor_Direction_SetVal();})
+
+uint8_t LiftingMotor_Move(uint32_t stepsWithoutMicrosteppingRevolution, uint32_t targetVelocity);
+
+uint8_t LiftingMotor_MoveContinuous(uint32_t targetFreq); 
+
+void LiftingMotor_Event(void);
+
+
+
+uint8_t Stepper_Init(void); 
 
 void Stepper_TestApplication(void); 
 
