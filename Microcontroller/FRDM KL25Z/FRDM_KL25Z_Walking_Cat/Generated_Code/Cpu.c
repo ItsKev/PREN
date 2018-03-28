@@ -7,7 +7,7 @@
 **     Version     : Component 01.025, Driver 01.04, CPU db: 3.00.000
 **     Datasheet   : KL25P80M48SF0RM, Rev.3, Sep 2012
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2018-03-18, 15:54, # CodeGen: 33
+**     Date/Time   : 2018-03-27, 22:35, # CodeGen: 34
 **     Abstract    :
 **
 **     Settings    :
@@ -81,15 +81,15 @@
 #include "GI2C1.h"
 #include "LiftingMotor_MS1.h"
 #include "BitIoLdd3.h"
-#include "LiftingMotor.h"
-#include "PpgLdd1.h"
 #include "LiftingMotor_MS2.h"
 #include "BitIoLdd4.h"
 #include "LiftingMotor_Enable.h"
 #include "BitIoLdd5.h"
 #include "LiftingMotor_Direction.h"
 #include "BitIoLdd6.h"
-#include "DrivingMotor.h"
+#include "LiftingMotor_Step.h"
+#include "PpgLdd1.h"
+#include "DrivingMotor_Step.h"
 #include "PpgLdd2.h"
 #include "DrivingMotor_MS1.h"
 #include "BitIoLdd7.h"
@@ -99,6 +99,8 @@
 #include "BitIoLdd9.h"
 #include "DrivingMotor_Direction.h"
 #include "BitIoLdd10.h"
+#include "Electromagnet.h"
+#include "BitIoLdd11.h"
 #include "PE_Types.h"
 #include "PE_Error.h"
 #include "PE_Const.h"
@@ -207,8 +209,12 @@ void __init_hardware(void)
   SIM_SOPT2 &= (uint32_t)~(uint32_t)(SIM_SOPT2_PLLFLLSEL_MASK); /* Select FLL as a clock source for various peripherals */
   /* SIM_SOPT1: OSC32KSEL=3 */
   SIM_SOPT1 |= SIM_SOPT1_OSC32KSEL(0x03); /* LPO 1kHz oscillator drives 32 kHz clock for various peripherals */
-  /* SIM_SOPT2: TPMSRC=3 */
-  SIM_SOPT2 |= SIM_SOPT2_TPMSRC(0x03); /* Set the TPM clock */
+  /* SIM_SOPT2: TPMSRC=1 */
+  SIM_SOPT2 = (uint32_t)((SIM_SOPT2 & (uint32_t)~(uint32_t)(
+               SIM_SOPT2_TPMSRC(0x02)
+              )) | (uint32_t)(
+               SIM_SOPT2_TPMSRC(0x01)
+              ));                      /* Set the TPM clock */
   /* Switch to FEI Mode */
   /* MCG_C1: CLKS=0,FRDIV=0,IREFS=1,IRCLKEN=1,IREFSTEN=0 */
   MCG_C1 = MCG_C1_CLKS(0x00) |
@@ -328,14 +334,14 @@ void PE_low_level_init(void)
   GI2C1_Init();
   /* ### BitIO_LDD "BitIoLdd3" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)BitIoLdd3_Init(NULL);
-  /* ### PPG_LDD "PpgLdd1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
-  (void)PpgLdd1_Init(NULL);
   /* ### BitIO_LDD "BitIoLdd4" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)BitIoLdd4_Init(NULL);
   /* ### BitIO_LDD "BitIoLdd5" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)BitIoLdd5_Init(NULL);
   /* ### BitIO_LDD "BitIoLdd6" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)BitIoLdd6_Init(NULL);
+  /* ### PPG_LDD "PpgLdd1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)PpgLdd1_Init(NULL);
   /* ### PPG_LDD "PpgLdd2" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)PpgLdd2_Init(NULL);
   /* ### BitIO_LDD "BitIoLdd7" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
@@ -346,6 +352,8 @@ void PE_low_level_init(void)
   (void)BitIoLdd9_Init(NULL);
   /* ### BitIO_LDD "BitIoLdd10" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)BitIoLdd10_Init(NULL);
+  /* ### BitIO_LDD "BitIoLdd11" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)BitIoLdd11_Init(NULL);
 }
   /* Flash configuration field */
   __attribute__ ((section (".cfmconfig"))) const uint8_t _cfm[0x10] = {

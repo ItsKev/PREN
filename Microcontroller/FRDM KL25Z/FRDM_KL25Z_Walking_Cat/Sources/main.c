@@ -50,15 +50,15 @@
 #include "GI2C1.h"
 #include "LiftingMotor_MS1.h"
 #include "BitIoLdd3.h"
-#include "LiftingMotor.h"
 #include "PpgLdd1.h"
+#include "DrivingMotor_Step.h"
 #include "LiftingMotor_MS2.h"
 #include "BitIoLdd4.h"
 #include "LiftingMotor_Enable.h"
 #include "BitIoLdd5.h"
 #include "LiftingMotor_Direction.h"
 #include "BitIoLdd6.h"
-#include "DrivingMotor.h"
+#include "LiftingMotor_Step.h"
 #include "PpgLdd2.h"
 #include "DrivingMotor_MS1.h"
 #include "BitIoLdd7.h"
@@ -68,6 +68,8 @@
 #include "BitIoLdd9.h"
 #include "DrivingMotor_Direction.h"
 #include "BitIoLdd10.h"
+#include "Electromagnet.h"
+#include "BitIoLdd11.h"
 #include "TU1.h"
 /* Including shared modules, which are used for whole project */
 #include "PE_Types.h"
@@ -81,6 +83,7 @@
 /*lint -save  -e970 Disable MISRA rule (6.3) checking. */
 int main(void)
 /*lint -restore Enable MISRA rule (6.3) checking. */
+
 {
   /* Write your local variable definition here */
 	

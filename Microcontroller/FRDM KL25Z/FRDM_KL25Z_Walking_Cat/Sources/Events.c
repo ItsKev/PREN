@@ -37,6 +37,7 @@ extern "C" {
 
 /* User includes (#include below this line is not maintained by Processor Expert) */
 #include "Ultasonic.h"
+#include "Stepper.h"
 
 /*
 ** ===================================================================
@@ -235,9 +236,9 @@ void TU1_OnChannel0(LDD_TUserData *UserDataPtr)
 
 /*
 ** ===================================================================
-**     Event       :  DrivingMotor_OnEnd (module Events)
+**     Event       :  DrivingMotor_Step_OnEnd (module Events)
 **
-**     Component   :  DrivingMotor [PPG]
+**     Component   :  DrivingMotor_Step [PPG]
 **     Description :
 **         This event is called when the specified number of iterations
 **         is generated. (Only when the component is enabled - <Enable>
@@ -248,16 +249,17 @@ void TU1_OnChannel0(LDD_TUserData *UserDataPtr)
 **     Returns     : Nothing
 ** ===================================================================
 */
-void DrivingMotor_OnEnd(void)
+void DrivingMotor_Step_OnEnd(void)
 {
   /* Write your code here ... */
+	DrivingMotor_Event(); 
 }
 
 /*
 ** ===================================================================
-**     Event       :  LiftingMotor_OnEnd (module Events)
+**     Event       :  LiftingMotor_Step_OnEnd (module Events)
 **
-**     Component   :  LiftingMotor [PPG]
+**     Component   :  LiftingMotor_Step [PPG]
 **     Description :
 **         This event is called when the specified number of iterations
 **         is generated. (Only when the component is enabled - <Enable>
@@ -268,9 +270,10 @@ void DrivingMotor_OnEnd(void)
 **     Returns     : Nothing
 ** ===================================================================
 */
-void LiftingMotor_OnEnd(void)
+void LiftingMotor_Step_OnEnd(void)
 {
   /* Write your code here ... */
+	LiftingMotor_Event(); 
 }
 
 /* END Events */

@@ -15,6 +15,7 @@
 
 static portTASK_FUNCTION(Task1, pvParameters) {
 	(void) pvParameters; /* parameter not used */
+	
 	for (;;) {
 		//LED_Onboard_Green_Neg(); 
 		FRTOS1_vTaskDelay(1000/portTICK_RATE_MS);
@@ -24,6 +25,7 @@ static portTASK_FUNCTION(Task1, pvParameters) {
 void APP_Run(void) {
 	Shell_Init();
 	Sensoric_Init();
+	Stepper_Init(); 
 
 	if (FRTOS1_xTaskCreate(
 			Task1, /* pointer to the task */

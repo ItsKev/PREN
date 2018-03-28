@@ -35,15 +35,16 @@
 - \subpage InfraredTOF_I2C
 - \subpage TU1
 - \subpage BitIoLdd3
-- \subpage PpgLdd1
 - \subpage BitIoLdd4
 - \subpage BitIoLdd5
 - \subpage BitIoLdd6
+- \subpage PpgLdd1
 - \subpage PpgLdd2
 - \subpage BitIoLdd7
 - \subpage BitIoLdd8
 - \subpage BitIoLdd9
 - \subpage BitIoLdd10
+- \subpage BitIoLdd11
 
 
 */

@@ -54,6 +54,7 @@
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\ASerialLdd1.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\BitIoLdd1.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\BitIoLdd10.c</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\BitIoLdd11.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\BitIoLdd2.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\BitIoLdd3.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\BitIoLdd4.c</PathName>
@@ -65,11 +66,12 @@
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\CLS1.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\CS1.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\Cpu.c</PathName>
-      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\DrivingMotor.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\DrivingMotor_Direction.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\DrivingMotor_Enable.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\DrivingMotor_MS1.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\DrivingMotor_MS2.c</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\DrivingMotor_Step.c</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\Electromagnet.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\FRTOS1.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\GI2C1.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\InfraredTOF_I2C.c</PathName>
@@ -77,11 +79,11 @@
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LED_Onboard_R.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LEDpin1.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LEDpin2.c</PathName>
-      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LiftingMotor.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LiftingMotor_Direction.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LiftingMotor_Enable.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LiftingMotor_MS1.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LiftingMotor_MS2.c</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LiftingMotor_Step.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\MCUC1.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\PE_LDD.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\PpgLdd1.c</PathName>
@@ -124,6 +126,7 @@
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\ASerialLdd1.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\BitIoLdd1.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\BitIoLdd10.h</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\BitIoLdd11.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\BitIoLdd2.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\BitIoLdd3.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\BitIoLdd4.h</PathName>
@@ -137,11 +140,12 @@
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\CS1.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\CS1config.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\Cpu.h</PathName>
-      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\DrivingMotor.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\DrivingMotor_Direction.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\DrivingMotor_Enable.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\DrivingMotor_MS1.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\DrivingMotor_MS2.h</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\DrivingMotor_Step.h</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\Electromagnet.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\FRTOS1.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\FRTOS1config.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\FreeRTOS.h</PathName>
@@ -156,11 +160,11 @@
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LED_Onboard_Rconfig.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LEDpin1.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LEDpin2.h</PathName>
-      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LiftingMotor.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LiftingMotor_Direction.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LiftingMotor_Enable.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LiftingMotor_MS1.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LiftingMotor_MS2.h</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LiftingMotor_Step.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\MCUC1.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\MCUC1config.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\PE_Const.h</PathName>

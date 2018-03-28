@@ -18,7 +18,7 @@ by the component.
     0x04000000
  </td><td>SIM_SCGC6 register, peripheral TU1.</td></tr>
 <tr><td>0x4003A000</td><td>TPM2_SC</td><td>
-    0x00000048
+    0x0000004B
  </td><td>TPM2_SC register, peripheral TU1.</td></tr>
 <tr><td>0x4003A004</td><td>TPM2_CNT</td><td>
     0x00000000
@@ -153,7 +153,7 @@ registers of the peripheral(s) configured by the component.
         
 </div>
 <table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4003A000</td></tr>
-<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000048</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x0000004B</td></tr>
 <tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
 <tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
 <tr><td>8</td><td>DMA</td><td>0x00</td><td>DMA Enable</td>
@@ -528,9 +528,9 @@ registers of the peripheral(s) configured by the component.
 **          Counter width                                  : 16 bits
 **          Value type                                     : Optimal
 **          Input clock source                             : Internal
-**            Counter frequency                            : 32.768 kHz
+**            Counter frequency                            : 2.62144 MHz
 **          Counter restart                                : On-overrun
-**            Overrun period                               : Auto select
+**            Overrun period                               : 25 ms
 **            Interrupt                                    : Enabled
 **              Interrupt                                  : INT_TPM2
 **              Interrupt priority                         : medium priority
@@ -541,7 +541,7 @@ registers of the peripheral(s) configured by the component.
 **                Capture input pin                        : ADC0_DP3/ADC0_SE3/PTE22/TPM2_CH0/UART2_TX
 **                Capture input signal                     : 
 **                Edge                                     : both edges
-**                Maximum time of event                    : 1999.999991808 ms
+**                Maximum time of event                    : 25.00001792 ms
 **                Interrupt                                : Enabled
 **                  Interrupt                              : INT_TPM2
 **                  Interrupt priority                     : medium priority

@@ -93,10 +93,10 @@ Generated_Code/TU1.o: ../Generated_Code/TU1.c \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/LiftingMotor_MS1.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/BitIoLdd3.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/BitIoLdd3.h \
- D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/LiftingMotor.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/PpgLdd1.h \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/TPM_PDD.h \
- D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/PpgLdd1.h \
+ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/DrivingMotor_Step.h \
+ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/PpgLdd2.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/LiftingMotor_MS2.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/BitIoLdd4.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/BitIoLdd4.h \
@@ -106,8 +106,8 @@ Generated_Code/TU1.o: ../Generated_Code/TU1.c \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/LiftingMotor_Direction.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/BitIoLdd6.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/BitIoLdd6.h \
- D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/DrivingMotor.h \
- D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/PpgLdd2.h \
+ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/LiftingMotor_Step.h \
+ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/PpgLdd1.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/PpgLdd2.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/DrivingMotor_MS1.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/BitIoLdd7.h \
@@ -121,6 +121,9 @@ Generated_Code/TU1.o: ../Generated_Code/TU1.c \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/DrivingMotor_Direction.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/BitIoLdd10.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/BitIoLdd10.h \
+ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/Electromagnet.h \
+ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/BitIoLdd11.h \
+ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/BitIoLdd11.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/TU1.h \
  ../Generated_Code/TU1.h ../Generated_Code/FreeRTOS.h \
  ../Generated_Code/IO_Map.h
@@ -313,13 +316,13 @@ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generate
 
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/BitIoLdd3.h:
 
-D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/LiftingMotor.h:
-
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/PpgLdd1.h:
 
 C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/TPM_PDD.h:
 
-D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/PpgLdd1.h:
+D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/DrivingMotor_Step.h:
+
+D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/PpgLdd2.h:
 
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/LiftingMotor_MS2.h:
 
@@ -339,9 +342,9 @@ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generate
 
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/BitIoLdd6.h:
 
-D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/DrivingMotor.h:
+D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/LiftingMotor_Step.h:
 
-D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/PpgLdd2.h:
+D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/PpgLdd1.h:
 
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/PpgLdd2.h:
 
@@ -368,6 +371,12 @@ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generate
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/BitIoLdd10.h:
 
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/BitIoLdd10.h:
+
+D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/Electromagnet.h:
+
+D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/BitIoLdd11.h:
+
+D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/BitIoLdd11.h:
 
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/TU1.h:
 

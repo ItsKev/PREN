@@ -2,7 +2,7 @@ Generated_Code/PpgLdd1.o: ../Generated_Code/PpgLdd1.c \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/lib_ewl.prefix \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/common.prefix \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/ewl_c_version.h \
- ../Generated_Code/LiftingMotor.h ../Generated_Code/PE_Types.h \
+ ../Generated_Code/LiftingMotor_Step.h ../Generated_Code/PE_Types.h \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdint.h \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/ansi_parms.h \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/ewlGlobals.h \
@@ -36,7 +36,7 @@ C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/common.prefix:
 
 C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/ewl_c_version.h:
 
-../Generated_Code/LiftingMotor.h:
+../Generated_Code/LiftingMotor_Step.h:
 
 ../Generated_Code/PE_Types.h:
 
