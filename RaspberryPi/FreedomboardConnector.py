@@ -97,3 +97,8 @@ class FreedomboardConnector:
     def target_found(self):
         print("FreedomboardConnector_target_found")
         self.serial_connection.write(b'lst stop')
+
+    def check_if_successful(self, method):
+        line = self.serial_connection.readline().decode()
+        if "success" not in line:
+            method()

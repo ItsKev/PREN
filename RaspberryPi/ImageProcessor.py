@@ -73,7 +73,7 @@ class ImageProcessor:
                             approximations.append(approx)
                             last_dimensions.append((w, h))
                             centers.append(np.array((cx, cy)))
-            print("FPS: " + str(1 / (time.time() - loop_time)))
+            # print("FPS: " + str(1 / (time.time() - loop_time)))
             raw_capture.truncate(0)
             raw_capture.seek(0)
         raw_capture.truncate(0)

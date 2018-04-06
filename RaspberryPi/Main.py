@@ -18,14 +18,14 @@ class Main:
         self.website_handler.initialize_callbacks(self.start, self.stop)
 
         update_website_thread = threading.Thread(target=self.website_handler.start_updating_coordinates,
-                                                 args=self.freedomboard_connector.get_values)
+                                                 args=(self.freedomboard_connector.get_values,))
         update_website_thread.start()
 
     def start(self):
         print("Main_start")
         self.freedomboard_connector.start()
         threading.Thread(target=self.freedomboard_connector.start_detecting,
-                         args=self.image_processor.start_detecting(self.target_found()))
+                         args=(self.image_processor.start_detecting(self.target_found)),)
 
     def target_found(self):
         print("Main_Target_Found")
