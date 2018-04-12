@@ -1,6 +1,14 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="graphic">
-    <h2>Coming soon: Our awesome graphics!</h2>
-</div>
+    <div is="head">
+    <form method="post" action="/">
+        <input type="submit" class="start" value="Start" name="Start">
+        <input type="submit" class="stop" value="Stop" name="Stop">
+    </form>
+    </div>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <div id="chart_div" style="width: 990px; height: 300px"></div>
+    <div class="graphic">
+        <h2>Coming soon: Our awesome graphics!</h2>
+    </div>
 {% endblock %}
