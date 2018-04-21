@@ -366,7 +366,7 @@ PE_DEBUGHALT();
         <boolgroup name="MASTER mode" v="Enabled">
           <group name="Initialization">
             <Address_mode v="7-bit addressing" />
-            <Target_slave_address_init v="41" />
+            <Target_slave_address_init v="0" />
           </group>
         </boolgroup>
         <boolgroup name="SLAVE mode" v="Disabled" />
@@ -380,13 +380,13 @@ PE_DEBUGHALT();
           <High_drive_select v="Disabled" />
           <Input_Glitch_filter v="0" />
         </group>
-        <Internal_frequency__multiplier_factor_ v="10.48576 MHz" />
-        <Bits_0_2_of_Frequency_divider_register v="011" />
-        <Bits_3_5_of_Frequency_divider_register v="000" />
-        <SCL_frequency v="403.298 kHz" />
-        <SDA_Hold v="0.763 us" />
-        <SCL_start_Hold v="0.858 us" />
-        <SCL_stop_Hold v="1.335 us" />
+        <Internal_frequency__multiplier_factor_ v="20.97152 MHz" />
+        <Bits_0_2_of_Frequency_divider_register v="110" />
+        <Bits_3_5_of_Frequency_divider_register v="001" />
+        <SCL_frequency v="374.491 kHz" />
+        <SDA_Hold v="0.62 us" />
+        <SCL_start_Hold v="1.144 us" />
+        <SCL_stop_Hold v="1.383 us" />
         <boolgroup name="Control acknowledge bit" v="Disabled" />
         <boolgroup name="Low timeout" v="Disabled" />
       </group>

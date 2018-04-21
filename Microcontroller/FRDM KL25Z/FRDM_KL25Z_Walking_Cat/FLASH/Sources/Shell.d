@@ -3,9 +3,6 @@ Sources/Shell.o: ../Sources/Shell.c \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/common.prefix \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/ewl_c_version.h \
  ../Sources/Application.h \
- D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/FRTOS1.h \
- D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/MCUC1.h \
- D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/MCUC1config.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/PE_Types.h \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdint.h \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/ansi_parms.h \
@@ -15,6 +12,10 @@ Sources/Shell.o: ../Sources/Shell.c \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdint \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/limits_api.h \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/ewl_lib_ext1.h \
+ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/FRTOS1.h \
+ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/MCUC1.h \
+ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/MCUC1config.h \
+ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/PE_Types.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/PE_Error.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/PE_Const.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/IO_Map.h \
@@ -78,11 +79,8 @@ Sources/Shell.o: ../Sources/Shell.c \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/LEDpin2.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/BitIoLdd2.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/US_Trig.h \
- D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/InfraredTOF_I2C.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/TU1.h \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/TPM_PDD.h \
- D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/GI2C1.h \
- D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/GI2C1config.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/LiftingMotor_MS1.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/BitIoLdd3.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/LiftingMotor_MS2.h \
@@ -106,9 +104,7 @@ Sources/Shell.o: ../Sources/Shell.c \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/Electromagnet.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/BitIoLdd11.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/TU1.h \
- ../Sources/InfraredTOF.h \
- D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/PE_Types.h \
- ../Sources/Stepper.h
+ ../Sources/Stepper.h ../Sources/Electromagnet_Driver.h
 
 C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/lib_ewl.prefix:
 
@@ -117,12 +113,6 @@ C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/common.prefix:
 C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/ewl_c_version.h:
 
 ../Sources/Application.h:
-
-D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/FRTOS1.h:
-
-D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/MCUC1.h:
-
-D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/MCUC1config.h:
 
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/PE_Types.h:
 
@@ -141,6 +131,14 @@ C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdint:
 C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/limits_api.h:
 
 C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/ewl_lib_ext1.h:
+
+D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/FRTOS1.h:
+
+D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/MCUC1.h:
+
+D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/MCUC1config.h:
+
+D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/PE_Types.h:
 
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/PE_Error.h:
 
@@ -270,15 +268,9 @@ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generate
 
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/US_Trig.h:
 
-D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/InfraredTOF_I2C.h:
-
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/TU1.h:
 
 C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/TPM_PDD.h:
-
-D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/GI2C1.h:
-
-D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/GI2C1config.h:
 
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/LiftingMotor_MS1.h:
 
@@ -326,8 +318,6 @@ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generate
 
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/TU1.h:
 
-../Sources/InfraredTOF.h:
-
-D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/PE_Types.h:
-
 ../Sources/Stepper.h:
+
+../Sources/Electromagnet_Driver.h:

@@ -51,9 +51,8 @@ Generated_Code/PE_LDD.o: ../Generated_Code/PE_LDD.c \
  ../Generated_Code/LED_Onboard_Green.h \
  ../Generated_Code/LED_Onboard_Greenconfig.h ../Generated_Code/LEDpin2.h \
  ../Generated_Code/BitIoLdd2.h ../Generated_Code/US_Trig.h \
- ../Generated_Code/InfraredTOF_I2C.h ../Generated_Code/TU1.h \
+ ../Generated_Code/TU1.h \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/TPM_PDD.h \
- ../Generated_Code/GI2C1.h ../Generated_Code/GI2C1config.h \
  ../Generated_Code/LiftingMotor_MS1.h ../Generated_Code/BitIoLdd3.h \
  ../Generated_Code/LiftingMotor_MS2.h ../Generated_Code/BitIoLdd4.h \
  ../Generated_Code/LiftingMotor_Enable.h ../Generated_Code/BitIoLdd5.h \
@@ -209,15 +208,9 @@ C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/PDD_Types.h:
 
 ../Generated_Code/US_Trig.h:
 
-../Generated_Code/InfraredTOF_I2C.h:
-
 ../Generated_Code/TU1.h:
 
 C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/TPM_PDD.h:
-
-../Generated_Code/GI2C1.h:
-
-../Generated_Code/GI2C1config.h:
 
 ../Generated_Code/LiftingMotor_MS1.h:
 

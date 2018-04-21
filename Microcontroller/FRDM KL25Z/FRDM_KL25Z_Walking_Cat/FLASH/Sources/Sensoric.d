@@ -73,11 +73,8 @@ Sources/Sensoric.o: ../Sources/Sensoric.c \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/BitIoLdd1.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/LED_Onboard_Green.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/US_Trig.h \
- D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/InfraredTOF_I2C.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/TU1.h \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/TPM_PDD.h \
- D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/GI2C1.h \
- D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/GI2C1config.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/LiftingMotor_MS1.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/BitIoLdd3.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/LiftingMotor_MS2.h \
@@ -101,9 +98,7 @@ Sources/Sensoric.o: ../Sources/Sensoric.c \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/Electromagnet.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/BitIoLdd11.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/PE_Error.h \
- D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/TU1.h \
- ../Sources/InfraredTOF.h \
- D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/PE_Types.h
+ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/TU1.h
 
 C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/lib_ewl.prefix:
 
@@ -253,15 +248,9 @@ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generate
 
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/US_Trig.h:
 
-D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/InfraredTOF_I2C.h:
-
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/TU1.h:
 
 C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/TPM_PDD.h:
-
-D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/GI2C1.h:
-
-D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/GI2C1config.h:
 
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/LiftingMotor_MS1.h:
 
@@ -310,7 +299,3 @@ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generate
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/PE_Error.h:
 
 D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/TU1.h:
-
-../Sources/InfraredTOF.h:
-
-D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/PE_Types.h:

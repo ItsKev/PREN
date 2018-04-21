@@ -32,8 +32,6 @@
 "./Generated_Code/LEDpin1.o"
 "./Generated_Code/LED_Onboard_R.o"
 "./Generated_Code/LED_Onboard_Green.o"
-"./Generated_Code/InfraredTOF_I2C.o"
-"./Generated_Code/GI2C1.o"
 "./Generated_Code/FRTOS1.o"
 "./Generated_Code/Electromagnet.o"
 "./Generated_Code/DrivingMotor_Step.o"
@@ -66,8 +64,8 @@
 "./Sources/Shell.o"
 "./Sources/Sensoric.o"
 "./Sources/LED.o"
-"./Sources/InfraredTOF.o"
 "./Sources/Events.o"
+"./Sources/Electromagnet_Driver.o"
 "./Sources/Application.o"
 -mcpu=cortex-m0
 -mthumb

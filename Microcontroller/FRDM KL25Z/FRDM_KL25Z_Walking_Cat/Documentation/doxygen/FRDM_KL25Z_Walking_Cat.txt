@@ -32,7 +32,6 @@
 - \subpage BitIoLdd1
 - \subpage BitIoLdd2
 - \subpage US_Trig
-- \subpage InfraredTOF_I2C
 - \subpage TU1
 - \subpage BitIoLdd3
 - \subpage BitIoLdd4

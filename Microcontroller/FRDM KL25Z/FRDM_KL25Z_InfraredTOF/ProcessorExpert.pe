@@ -3,8 +3,8 @@
   <Header>
     <Name>FRDM_KL25Z_InfraredTOF</Name>
     <SavedBy>burak</SavedBy>
-    <ModificationStamp>11</ModificationStamp>
-    <Date>2018-03-11</Date>
+    <ModificationStamp>14</ModificationStamp>
+    <Date>2018-04-04</Date>
     <IDE>Eclipse IDE</IDE>
     <PEversion>1.9.2.RT6_b1446-0504</PEversion>
   </Header>
@@ -29,7 +29,7 @@
     <UseExistingModules>true</UseExistingModules>
     <RenamePeripheries>false</RenamePeripheries>
     <Autodependency>true</Autodependency>
-    <ProjectCompNumb>24</ProjectCompNumb>
+    <ProjectCompNumb>27</ProjectCompNumb>
     <DelUnusedPreviouslyGenFiles>true</DelUnusedPreviouslyGenFiles>
     <GeneratedCodeFrozen>false</GeneratedCodeFrozen>
     <AssignInitComponentNameToPrph>true</AssignInitComponentNameToPrph>
@@ -4615,7 +4615,7 @@
         <ItemSymbol>_MasterInitGrp</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
-        <Expanded>true</Expanded>
+        <Expanded>false</Expanded>
       </ItemState>
       <ItemState>
         <ItemSymbol>AddressModeMaster</ItemSymbol>
@@ -4630,7 +4630,7 @@
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Value>41</Value>
+        <Value>0</Value>
         <Base>HEX</Base>
       </ItemState>
       <ItemState>
@@ -4819,7 +4819,7 @@
         <ItemSymbol>InternalFreq</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
-        <Value>10.48576 MHz</Value>
+        <Value>20.97152 MHz</Value>
         <RuntimeSetting>0</RuntimeSetting>
         <ReqDevPrescHigh>-1</ReqDevPrescHigh>
         <ReqDevPrescLow>-1</ReqDevPrescLow>
@@ -4845,7 +4845,7 @@
         <ReqSrcClkPrescSpeedMode5>-1</ReqSrcClkPrescSpeedMode5>
         <ReqSrcClkPrescSpeedMode6>-1</ReqSrcClkPrescSpeedMode6>
         <ReqSrcClkPrescSpeedMode7>-1</ReqSrcClkPrescSpeedMode7>
-        <InitValue>10.48576 MHz</InitValue>
+        <InitValue>20.97152 MHz</InitValue>
         <Precision>5.0</Precision>
         <PrecInProc>true</PrecInProc>
         <LowLimit />
@@ -4860,8 +4860,8 @@
         <UserReadOnly>false</UserReadOnly>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
         <TypeSpecNameState>typeHCS08ShiftTap</TypeSpecNameState>
-        <Index>3</Index>
-        <EnumSymbVal>3</EnumSymbVal>
+        <Index>6</Index>
+        <EnumSymbVal>6</EnumSymbVal>
       </ItemState>
       <ItemState>
         <ItemSymbol>PrescShift</ItemSymbol>
@@ -4869,29 +4869,29 @@
         <UserReadOnly>false</UserReadOnly>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
         <TypeSpecNameState>typeHCS08ShiftTap</TypeSpecNameState>
-        <Index>0</Index>
-        <EnumSymbVal>0</EnumSymbVal>
+        <Index>1</Index>
+        <EnumSymbVal>1</EnumSymbVal>
       </ItemState>
       <ItemState>
         <ItemSymbol>SCLfreq</ItemSymbol>
-        <Value>403.298 kHz</Value>
+        <Value>374.491 kHz</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>SclOutputFrequency</ItemSymbol>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Value>0.403298</Value>
+        <Value>0.374491</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>SDAhold</ItemSymbol>
-        <Value>0.763 us</Value>
+        <Value>0.62 us</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>SCLStartHold</ItemSymbol>
-        <Value>0.858 us</Value>
+        <Value>1.144 us</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>SCLStopHold</ItemSymbol>
-        <Value>1.335 us</Value>
+        <Value>1.383 us</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>SMBusGrp</ItemSymbol>
