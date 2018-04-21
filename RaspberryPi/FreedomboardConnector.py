@@ -11,94 +11,126 @@ class FreedomboardConnector:
 
     def start(self):
         print("FreedomboardConnector_start")
-        self.serial_connection.write(b'start\n')
+        while True:
+            self.serial_connection.write(b'start\n')
+            if self.check_if_successful():
+                break
 
     def stop(self):
         print("FreedomboardConnector_stop")
-        self.serial_connection.write(b'stop\n')
+        while True:
+            self.serial_connection.write(b'stop\n')
+            if self.check_if_successful():
+                break
 
     def drive_get_velocity(self) -> float:
-        self.serial_connection.write(b'ant status\n')
-        line = self.serial_connection.readline().decode()
-        if line[0] == 's':
-            return float(line.split(';')[1])
-        return 0
+        while True:
+            self.serial_connection.write(b'ant status\n')
+            line = self.serial_connection.readline().decode()
+            if line[0] == 's':
+                return float(line.split(';')[1])
 
     def drive_get_steps(self) -> int:
-        self.serial_connection.write(b'ant status\n')
-        line = self.serial_connection.readline().decode()
-        if line[0] == 's':
-            return int(line.split(';')[1])
-        return 0
+        while True:
+            self.serial_connection.write(b'ant status\n')
+            line = self.serial_connection.readline().decode()
+            if line[0] == 's':
+                return int(line.split(';')[2])
 
     def drive_move_steps(self, steps):
         print("drive_move_steps " + str(steps))
-        self.serial_connection.write(b'ant n ' + str(steps).encode() + b'\n')
-        print(self.serial_connection.readline())
+        while True:
+            self.serial_connection.write(b'ant n ' + str(steps).encode() + b'\n')
+            if self.check_if_successful():
+                break
 
     def drive_faster(self):
         print("drive_faster")
-        self.serial_connection.write(b'ant fast\n')
+        while True:
+            self.serial_connection.write(b'ant fast\n')
+            if self.check_if_successful():
+                break
 
     def drive_slower(self):
         print("drive_slower")
-        self.serial_connection.write(b'ant slow\n')
+        while True:
+            self.serial_connection.write(b'ant slow\n')
+            if self.check_if_successful():
+                break
 
     def drive_stop(self):
         print("drive_stop")
-        self.serial_connection.write(b'ant stop\n')
+        while True:
+            self.serial_connection.write(b'ant stop\n')
+            if self.check_if_successful():
+                break
 
     def load_get_velocity(self) -> float:
-        self.serial_connection.write(b'lst status\n')
-        line = self.serial_connection.read(7)
-        line.split()
-        return float(line[2])
+        while True:
+            self.serial_connection.write(b'lst status\n')
+            line = self.serial_connection.readline().decode()
+            if line[0] == 's':
+                return float(line.split(';')[1])
 
     def load_get_steps(self) -> int:
-        self.serial_connection.write(b'lst status\n')
-        line = self.serial_connection.read(7)
-        line.split()
-        return int(line[5])
+        while True:
+            self.serial_connection.write(b'lst status\n')
+            line = self.serial_connection.readline().decode()
+            if line[0] == 's':
+                return int(line.split(';')[2])
 
     def load_move_steps(self, steps):
         print("load_move_steps " + steps)
-        self.serial_connection.write("lst " + steps)
+        while True:
+            self.serial_connection.write(b'lst n ' + str(steps).encode() + b'\n')
+            if self.check_if_successful():
+                break
 
     def load_faster(self):
         print("load_faster")
-        self.serial_connection.write(b'lst fast')
+        while True:
+            self.serial_connection.write(b'lst fast\n')
+            if self.check_if_successful():
+                break
 
     def load_slower(self):
         print("load_slower")
-        self.serial_connection.write(b'lst slow')
+        while True:
+            self.serial_connection.write(b'lst slow\n')
+            if self.check_if_successful():
+                break
 
     def load_stop(self):
         print("load_stop")
-        self.serial_connection.write(b'lst stop')
+        while True:
+            self.serial_connection.write(b'lst stop\n')
+            if self.check_if_successful():
+                break
 
     def get_values(self) -> (int, int):
-        self.serial_connection.write(b'msg last')
-        line = self.serial_connection.read(7)
-        line.split()
-        return int(line[2]), int(line[5])
-
-    def is_finished(self) -> bool:
-        self.serial_connection.write(b'msg last')
-        line = self.serial_connection.read(7)
-        line.split()
-        return bool(line[2])
+        while True:
+            self.serial_connection.write(b'msg last\n')
+            line = self.serial_connection.readline().decode()
+            if line[0] == 's':
+                return int(line.split(';')[1]), int(line.split(';')[2])
 
     def start_detecting(self, callback):
         print("FreedomboardConnector_start_detecting")
-        self.serial_connection.read(7)
+        while True:
+            line = self.serial_connection.readline().decode()
+            if line == 'start_detecting':
+                break
         callback()
-        # TODO: Find a better solution
 
     def target_found(self):
         print("FreedomboardConnector_target_found")
-        self.serial_connection.write(b'lst stop')
+        while True:
+            self.serial_connection.write(b'ant stop\n')
+            if self.check_if_successful():
+                break
 
-    def check_if_successful(self, method):
+    def check_if_successful(self) -> bool:
         line = self.serial_connection.readline().decode()
         if "success" not in line:
-            method()
+            return False
+        return True
