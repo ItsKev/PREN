@@ -1,3 +1,5 @@
+import sqlite3
+
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
@@ -13,9 +15,10 @@ def hello_world():
         elif request.form.get('Stop') == 'Stop':
             # @ToDO Stop method
             print('Stop')
-        print('Hello')
+        elif request.form.get('dataview') == 'dataview':
+            return render_template('dataView.html')
     else:
-        print('Nope')
+        print('Error')
 
     return render_template('home.html')
 

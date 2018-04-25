@@ -1,10 +1,15 @@
 {% extends "layout.html" %}
 {% block content %}
-    <div is="head">
+    <div id="head">
     <form method="post" action="/">
         <input type="submit" class="start" value="Start" name="Start">
         <input type="submit" class="stop" value="Stop" name="Stop">
+        <input type="submit" class="dataview" value="dataview" name="dataview">
     </form>
+    </div>
+    <div id="position">
+        <h2>Position X:</h2>
+        <h2>Position Z:</h2>
     </div>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <div id="chart_div" style="width: 990px; height: 300px"></div>
