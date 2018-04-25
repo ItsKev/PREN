@@ -1,6 +1,6 @@
 /*
 ** ###################################################################
-**     Compilers:           Keil ARM C/C++ Compiler
+**     Compilers:           ARM Compiler
 **                          Freescale C/C++ for Embedded ARM
 **                          GNU C Compiler
 **                          IAR ANSI C/C++ Compiler for ARM
@@ -10,14 +10,12 @@
 **                          K20P48M50SF0RM Rev. 1, Oct 2011
 **
 **     Version:             rev. 3.4, 2013-10-29
-**     Build:               b150309
 **
 **     Abstract:
 **         This header file implements peripheral memory map for MK20D5
 **         processor.
 **
-**     Copyright (c) 1997 - 2013 Freescale Semiconductor, Inc.
-**     All Rights Reserved.
+**     Copyright: 1997 - 2013 Freescale, Inc. All Rights Reserved.
 **
 **     http:                 www.freescale.com
 **     mail:                 support@freescale.com
@@ -8833,8 +8831,8 @@ typedef struct UART_MemMap {
   uint8_t IE7816;                                  /**< UART 7816 Interrupt Enable Register, offset: 0x19 */
   uint8_t IS7816;                                  /**< UART 7816 Interrupt Status Register, offset: 0x1A */
   union {                                          /* offset: 0x1B */
-    uint8_t WP7816T0;                                /**< UART 7816 Wait Parameter Register, offset: 0x1B */
-    uint8_t WP7816T1;                                /**< UART 7816 Wait Parameter Register, offset: 0x1B */
+    uint8_t WP7816_T_TYPE0;                          /**< UART 7816 Wait Parameter Register, offset: 0x1B */
+    uint8_t WP7816_T_TYPE1;                          /**< UART 7816 Wait Parameter Register, offset: 0x1B */
   };
   uint8_t WN7816;                                  /**< UART 7816 Wait N Register, offset: 0x1C */
   uint8_t WF7816;                                  /**< UART 7816 Wait FD Register, offset: 0x1D */
@@ -8896,8 +8894,8 @@ typedef struct UART_MemMap {
 #define UART_C7816_REG(base)                     ((base)->C7816)
 #define UART_IE7816_REG(base)                    ((base)->IE7816)
 #define UART_IS7816_REG(base)                    ((base)->IS7816)
-#define UART_WP7816T0_REG(base)                  ((base)->WP7816T0)
-#define UART_WP7816T1_REG(base)                  ((base)->WP7816T1)
+#define UART_WP7816_T_TYPE0_REG(base)            ((base)->WP7816_T_TYPE0)
+#define UART_WP7816_T_TYPE1_REG(base)            ((base)->WP7816_T_TYPE1)
 #define UART_WN7816_REG(base)                    ((base)->WN7816)
 #define UART_WF7816_REG(base)                    ((base)->WF7816)
 #define UART_ET7816_REG(base)                    ((base)->ET7816)
@@ -9164,17 +9162,17 @@ typedef struct UART_MemMap {
 #define UART_IS7816_CWT_SHIFT                    6
 #define UART_IS7816_WT_MASK                      0x80u
 #define UART_IS7816_WT_SHIFT                     7
-/* WP7816T0 Bit Fields */
-#define UART_WP7816T0_WI_MASK                    0xFFu
-#define UART_WP7816T0_WI_SHIFT                   0
-#define UART_WP7816T0_WI(x)                      (((uint8_t)(((uint8_t)(x))<<UART_WP7816T0_WI_SHIFT))&UART_WP7816T0_WI_MASK)
-/* WP7816T1 Bit Fields */
-#define UART_WP7816T1_BWI_MASK                   0xFu
-#define UART_WP7816T1_BWI_SHIFT                  0
-#define UART_WP7816T1_BWI(x)                     (((uint8_t)(((uint8_t)(x))<<UART_WP7816T1_BWI_SHIFT))&UART_WP7816T1_BWI_MASK)
-#define UART_WP7816T1_CWI_MASK                   0xF0u
-#define UART_WP7816T1_CWI_SHIFT                  4
-#define UART_WP7816T1_CWI(x)                     (((uint8_t)(((uint8_t)(x))<<UART_WP7816T1_CWI_SHIFT))&UART_WP7816T1_CWI_MASK)
+/* WP7816_T_TYPE0 Bit Fields */
+#define UART_WP7816_T_TYPE0_WI_MASK              0xFFu
+#define UART_WP7816_T_TYPE0_WI_SHIFT             0
+#define UART_WP7816_T_TYPE0_WI(x)                (((uint8_t)(((uint8_t)(x))<<UART_WP7816_T_TYPE0_WI_SHIFT))&UART_WP7816_T_TYPE0_WI_MASK)
+/* WP7816_T_TYPE1 Bit Fields */
+#define UART_WP7816_T_TYPE1_BWI_MASK             0xFu
+#define UART_WP7816_T_TYPE1_BWI_SHIFT            0
+#define UART_WP7816_T_TYPE1_BWI(x)               (((uint8_t)(((uint8_t)(x))<<UART_WP7816_T_TYPE1_BWI_SHIFT))&UART_WP7816_T_TYPE1_BWI_MASK)
+#define UART_WP7816_T_TYPE1_CWI_MASK             0xF0u
+#define UART_WP7816_T_TYPE1_CWI_SHIFT            4
+#define UART_WP7816_T_TYPE1_CWI(x)               (((uint8_t)(((uint8_t)(x))<<UART_WP7816_T_TYPE1_CWI_SHIFT))&UART_WP7816_T_TYPE1_CWI_MASK)
 /* WN7816 Bit Fields */
 #define UART_WN7816_GTN_MASK                     0xFFu
 #define UART_WN7816_GTN_SHIFT                    0
@@ -9350,8 +9348,8 @@ typedef struct UART_MemMap {
 #define UART0_C7816                              UART_C7816_REG(UART0_BASE_PTR)
 #define UART0_IE7816                             UART_IE7816_REG(UART0_BASE_PTR)
 #define UART0_IS7816                             UART_IS7816_REG(UART0_BASE_PTR)
-#define UART0_WP7816T0                           UART_WP7816T0_REG(UART0_BASE_PTR)
-#define UART0_WP7816T1                           UART_WP7816T1_REG(UART0_BASE_PTR)
+#define UART0_WP7816T0                           UART_WP7816_T_TYPE0_REG(UART0_BASE_PTR)
+#define UART0_WP7816T1                           UART_WP7816_T_TYPE1_REG(UART0_BASE_PTR)
 #define UART0_WN7816                             UART_WN7816_REG(UART0_BASE_PTR)
 #define UART0_WF7816                             UART_WF7816_REG(UART0_BASE_PTR)
 #define UART0_ET7816                             UART_ET7816_REG(UART0_BASE_PTR)

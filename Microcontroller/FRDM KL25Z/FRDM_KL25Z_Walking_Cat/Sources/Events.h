@@ -50,8 +50,6 @@
 #include "LEDpin2.h"
 #include "BitIoLdd2.h"
 #include "US_Trig.h"
-#include "InfraredTOF_I2C.h"
-#include "GI2C1.h"
 #include "LiftingMotor_MS1.h"
 #include "BitIoLdd3.h"
 #include "PpgLdd1.h"

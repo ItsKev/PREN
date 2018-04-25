@@ -7,7 +7,7 @@
 **     Version     : Component 01.025, Driver 01.04, CPU db: 3.00.000
 **     Datasheet   : KL25P80M48SF0RM, Rev.3, Sep 2012
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2018-03-27, 22:35, # CodeGen: 34
+**     Date/Time   : 2018-04-04, 18:11, # CodeGen: 41
 **     Abstract    :
 **
 **     Settings    :
@@ -76,9 +76,7 @@
 #include "LEDpin2.h"
 #include "BitIoLdd2.h"
 #include "US_Trig.h"
-#include "InfraredTOF_I2C.h"
 #include "TU1.h"
-#include "GI2C1.h"
 #include "LiftingMotor_MS1.h"
 #include "BitIoLdd3.h"
 #include "LiftingMotor_MS2.h"
@@ -330,8 +328,6 @@ void PE_low_level_init(void)
   (void)BitIoLdd2_Init(NULL);
   /* ### LED "LED_Onboard_Green" init code ... */
   LED_Onboard_Green_Init(); /* initialize LED driver */
-  /* ### GenericI2C "GI2C1" init code ... */
-  GI2C1_Init();
   /* ### BitIO_LDD "BitIoLdd3" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)BitIoLdd3_Init(NULL);
   /* ### BitIO_LDD "BitIoLdd4" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */

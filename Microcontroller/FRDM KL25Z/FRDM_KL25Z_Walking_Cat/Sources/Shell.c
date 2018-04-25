@@ -14,19 +14,17 @@
 #include "UTIL1.h"
 #include "LED.h"
 #include "Ultasonic.h"
-#include "InfraredTOF.h"
 #include "Stepper.h"
+#include "Electromagnet_Driver.h"
 
 static const char* COMMAND_TABLE[] = { 
 		"\t help\r",
-		"\t LED_Onboard_R status\r",
-		"\t LED_Onboard_R on|off|neg\r",
-		"\t LED_Onboard_Green status\r",
-		"\t LED_Onboard_Green on|off|neg\r",
+		"\t LED_Onboard_R status|on|off|neg\r",
+		"\t LED_Onboard_Green status|on|off|neg\r",
 		"\t US status|start\r",
-		"\t INF TOF status|start\r",
 		"\t ant status|n|fast|slow|stop\r",
 		"\t lst status|n|fast|slow|stop\r",
+		"\t ema	status|on|off\r",
 		"\r"};
 
 static void TerminalInitText(void) {
@@ -42,20 +40,30 @@ static void TerminalInitText(void) {
 static uint8_t DoCommand(uint8_t* cmd){
 	uint8_t result = ERR_OK; 
 	
-	if (strcmp(cmd, "help")==0){
+	if (strcmp(cmd, "help") == 0) {
 		TerminalInitText();
-		return result; 
-	} else if(strncmp(cmd, "LED", 3)==0){
-		result = LEDOnboardParseCommand(cmd); 
-	} else if(strncmp(cmd, "US", 2)==0){
-		result = US_ParseCommand(cmd); 
-	} else if(strncmp(cmd, "INF", 3)==0){
-		result = VL_ParseCommand(cmd);
-	} else if((strncmp(cmd, "ant", 3)==0)||(strncmp(cmd, "lst", 3)==0)){
-		result = Stepper_ParseCommand(cmd); 
+		return result;
+	} else if (strncmp(cmd, "LED", 3) == 0) {
+		result = LEDOnboardParseCommand(cmd);
+	} else if (strncmp(cmd, "US", 2) == 0) {
+		result = US_ParseCommand(cmd);
+	} else if ((strncmp(cmd, "ant", 3) == 0) || (strncmp(cmd, "lst", 3) == 0)) {
+		result = Stepper_ParseCommand(cmd);
+	} else if (strncmp(cmd, "ema", 3) == 0) {
+		result = Electromagnet_Driver_ParseCommand(cmd);
+	} else if (strncmp(cmd, "start", 5) == 0) {
+		// Start parcour;
+	} else if (strncmp(cmd, "stop", 4) == 0) {
+		// Stop parcour;
+	} else if (strncmp(cmd, "target detected", 15) == 0) {
+		// target detected;
+	} else if (strncmp(cmd, "msg last", 8) == 0) {
+		// measurment (calculating) x and z koordinates of load;
+	} else if (strncmp(cmd, "mst 2 reached", 13) == 0) {
+		// Parcour is finished --> limit switched detected;
 	} else {
-		CLS1_SendStr((unsigned char*)"Unknown CMD!\r", CLS1_GetStdio()->stdOut);
-		return result = ERR_FAILED; 
+		CLS1_SendStr((unsigned char*) "Unknown CMD!\r", CLS1_GetStdio()->stdOut);
+		return result = ERR_FAILED;
 	}
 	
 	return result; 
@@ -84,8 +92,7 @@ static uint8_t ReadAndParseCommand(uint8_t *cmdBuf, size_t cmdBufSize, CLS1_Cons
 		} else if (cmdBuf[len - 1] == '\n' || cmdBuf[len - 1] == '\r') { /* line end: parse command */
 			cmdBuf[len - 1] = '\0'; /* remove line end character for parser */
 			DoCommand(cmdBuf);
-			CLS1_SendStr((unsigned char*)"\n\r", CLS1_GetStdio()->stdOut); // new line 
-			STRING_PROMPT(); 
+			CLS1_SendStr((unsigned char*)"\n\r", CLS1_GetStdio()->stdOut); // new line  
 			cmdBuf[0] = '\0'; /* start again */
 		} else {
 			/* continue to append to buffer */

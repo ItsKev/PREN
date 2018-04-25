@@ -7,7 +7,6 @@
 #include "LED_Onboard_Green.h"
 #include "FRTOS1.h"
 #include "Ultasonic.h"
-#include "InfraredTOF.h"
 
 
 static portTASK_FUNCTION(SensoricTask, pvParameters) {
@@ -22,7 +21,6 @@ static portTASK_FUNCTION(SensoricTask, pvParameters) {
 //	result = VL_Test(VL53L0X_DEFAULT_I2C_ADDRESS); 
 	
 	for (;;) {		 
-		LED_Onboard_Green_Neg(); 
 		FRTOS1_vTaskDelay(50/portTICK_RATE_MS);
 	}
 }

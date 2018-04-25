@@ -21,12 +21,8 @@
       !defined(MCU_MK20D7) /* USBDCD */ && \
       !defined(MCU_MK20F12) /* USBDCD */ && \
       !defined(MCU_MK20DZ10) /* USBDCD */ && \
-      !defined(MCU_MK21DA5) /* USBDCD */ && \
-      !defined(MCU_MK21DA5WS) /* USBDCD */ && \
       !defined(MCU_MK21D5) /* USBDCD */ && \
       !defined(MCU_MK21D5WS) /* USBDCD */ && \
-      !defined(MCU_MK21FA12) /* USBDCD */ && \
-      !defined(MCU_MK21FA12WS) /* USBDCD */ && \
       !defined(MCU_MK21F12) /* USBDCD */ && \
       !defined(MCU_MK21F12WS) /* USBDCD */ && \
       !defined(MCU_MK22D5) /* USBDCD */ && \
@@ -58,6 +54,9 @@
       !defined(MCU_MK63F12) /* USBDCD */ && \
       !defined(MCU_MK63F12WS) /* USBDCD */ && \
       !defined(MCU_MK64F12) /* USBDCD */ && \
+      !defined(MCU_MK65F18) /* USBDCD, USBHSDCD */ && \
+      !defined(MCU_MK65F18WS) /* USBDCD, USBHSDCD */ && \
+      !defined(MCU_MK66F18) /* USBDCD, USBHSDCD */ && \
       !defined(MCU_MK70F12) /* USBDCD */ && \
       !defined(MCU_MK70F15) /* USBDCD */ && \
       !defined(MCU_MK70F12WS) /* USBDCD */ && \
@@ -65,7 +64,8 @@
       !defined(MCU_MKW22D5) /* USBDCD */ && \
       !defined(MCU_MKW22D5WS) /* USBDCD */ && \
       !defined(MCU_MKW24D5) /* USBDCD */ && \
-      !defined(MCU_MKW24D5WS) /* USBDCD */
+      !defined(MCU_MKW24D5WS) /* USBDCD */ && \
+      !defined(MCU_PCK20L4) /* USBDCD */
   // Unsupported MCU is active
   #error USBDCD PDD library: Unsupported derivative is active.
 #endif
@@ -106,7 +106,8 @@
  *        the peripheral initialization component header file
  *        (<component_name>_DEVICE).
  * @return Returns a value of void type.
- * @remarks The macro accesses the following registers: USBDCD_CONTROL.
+ * @remarks The macro accesses the following registers: USBDCD_CONTROL,
+ *          USBHSDCD_CONTROL (depending on the peripheral).
  * @par Example:
  *      @code
  *      USBDCD_PDD_PerformSoftwareReset(<peripheral>_BASE_PTR);
@@ -129,7 +130,8 @@
  *        the peripheral initialization component header file
  *        (<component_name>_DEVICE).
  * @return Returns a value of void type.
- * @remarks The macro accesses the following registers: USBDCD_CONTROL.
+ * @remarks The macro accesses the following registers: USBDCD_CONTROL,
+ *          USBHSDCD_CONTROL (depending on the peripheral).
  * @par Example:
  *      @code
  *      USBDCD_PDD_StartChangeDetectionSequence(<peripheral>_BASE_PTR);
@@ -152,7 +154,8 @@
  *        the peripheral initialization component header file
  *        (<component_name>_DEVICE).
  * @return Returns a value of void type.
- * @remarks The macro accesses the following registers: USBDCD_CONTROL.
+ * @remarks The macro accesses the following registers: USBDCD_CONTROL,
+ *          USBHSDCD_CONTROL (depending on the peripheral).
  * @par Example:
  *      @code
  *      USBDCD_PDD_EnableInterrupt(<peripheral>_BASE_PTR);
@@ -175,7 +178,8 @@
  *        the peripheral initialization component header file
  *        (<component_name>_DEVICE).
  * @return Returns a value of void type.
- * @remarks The macro accesses the following registers: USBDCD_CONTROL.
+ * @remarks The macro accesses the following registers: USBDCD_CONTROL,
+ *          USBHSDCD_CONTROL (depending on the peripheral).
  * @par Example:
  *      @code
  *      USBDCD_PDD_DisableInterrupt(<peripheral>_BASE_PTR);
@@ -198,7 +202,8 @@
  *        the peripheral initialization component header file
  *        (<component_name>_DEVICE).
  * @return Returns a 32-bit value.
- * @remarks The macro accesses the following registers: USBDCD_CONTROL.
+ * @remarks The macro accesses the following registers: USBDCD_CONTROL,
+ *          USBHSDCD_CONTROL (depending on the peripheral).
  * @par Example:
  *      @code
  *      uint32_t result = USBDCD_PDD_GetInterruptFlag(<peripheral>_BASE_PTR);
@@ -220,7 +225,8 @@
  *        the peripheral initialization component header file
  *        (<component_name>_DEVICE).
  * @return Returns a value of void type.
- * @remarks The macro accesses the following registers: USBDCD_CONTROL.
+ * @remarks The macro accesses the following registers: USBDCD_CONTROL,
+ *          USBHSDCD_CONTROL (depending on the peripheral).
  * @par Example:
  *      @code
  *      USBDCD_PDD_ClearInterruptFlag(<peripheral>_BASE_PTR);
@@ -243,7 +249,8 @@
  *        the peripheral initialization component header file
  *        (<component_name>_DEVICE).
  * @return Returns a 32-bit value.
- * @remarks The macro accesses the following registers: USBDCD_CONTROL.
+ * @remarks The macro accesses the following registers: USBDCD_CONTROL,
+ *          USBHSDCD_CONTROL (depending on the peripheral).
  * @par Example:
  *      @code
  *      uint32_t result = USBDCD_PDD_ReadControlReg(<peripheral>_BASE_PTR);
@@ -267,7 +274,8 @@
  * @param Value Value to be written to the control register. This parameter is a
  *        32-bit value.
  * @return Returns a value of void type.
- * @remarks The macro accesses the following registers: USBDCD_CONTROL.
+ * @remarks The macro accesses the following registers: USBDCD_CONTROL,
+ *          USBHSDCD_CONTROL (depending on the peripheral).
  * @par Example:
  *      @code
  *      USBDCD_PDD_WriteControlReg(<peripheral>_BASE_PTR, 1);
@@ -292,7 +300,8 @@
  * @param Value Clock speed in kHz, value[1..1023]. This parameter is a 10-bit
  *        value.
  * @return Returns a value of void type.
- * @remarks The macro accesses the following registers: USBDCD_CLOCK.
+ * @remarks The macro accesses the following registers: USBDCD_CLOCK,
+ *          USBHSDCD_CLOCK (depending on the peripheral).
  * @par Example:
  *      @code
  *      USBDCD_PDD_SetClockSpeedInKhz(<peripheral>_BASE_PTR, 1);
@@ -322,7 +331,8 @@
  * @param Value Clock speed in MHz, value[1..1023]. This parameter is a 10-bit
  *        value.
  * @return Returns a value of void type.
- * @remarks The macro accesses the following registers: USBDCD_CLOCK.
+ * @remarks The macro accesses the following registers: USBDCD_CLOCK,
+ *          USBHSDCD_CLOCK (depending on the peripheral).
  * @par Example:
  *      @code
  *      USBDCD_PDD_SetClockSpeedInMhz(<peripheral>_BASE_PTR, 1);
@@ -350,7 +360,8 @@
  *        the peripheral initialization component header file
  *        (<component_name>_DEVICE).
  * @return Returns a 32-bit value.
- * @remarks The macro accesses the following registers: USBDCD_CLOCK.
+ * @remarks The macro accesses the following registers: USBDCD_CLOCK,
+ *          USBHSDCD_CLOCK (depending on the peripheral).
  * @par Example:
  *      @code
  *      uint32_t result = USBDCD_PDD_ReadClockReg(<peripheral>_BASE_PTR);
@@ -374,7 +385,8 @@
  * @param Value Value to be written to the clock register. This parameter is a
  *        32-bit value.
  * @return Returns a value of void type.
- * @remarks The macro accesses the following registers: USBDCD_CLOCK.
+ * @remarks The macro accesses the following registers: USBDCD_CLOCK,
+ *          USBHSDCD_CLOCK (depending on the peripheral).
  * @par Example:
  *      @code
  *      USBDCD_PDD_WriteClockReg(<peripheral>_BASE_PTR, 1);
@@ -397,7 +409,8 @@
  *        the peripheral initialization component header file
  *        (<component_name>_DEVICE).
  * @return Returns a 32-bit value.
- * @remarks The macro accesses the following registers: USBDCD_STATUS.
+ * @remarks The macro accesses the following registers: USBDCD_STATUS,
+ *          USBHSDCD_STATUS (depending on the peripheral).
  * @par Example:
  *      @code
  *      uint32_t result = USBDCD_PDD_GetStatusFlags(<peripheral>_BASE_PTR);
@@ -420,7 +433,8 @@
  *        (<component_name>_DEVICE).
  * @return Returns a value of "Receiver status bits constants" type. The value
  *         is cast to "uint32_t".
- * @remarks The macro accesses the following registers: USBDCD_STATUS.
+ * @remarks The macro accesses the following registers: USBDCD_STATUS,
+ *          USBHSDCD_STATUS (depending on the peripheral).
  * @par Example:
  *      @code
  *      uint32_t result =
@@ -444,7 +458,8 @@
  *        (<component_name>_DEVICE).
  * @return Returns a value of "Receiver status bits constants" type. The value
  *         is cast to "uint32_t".
- * @remarks The macro accesses the following registers: USBDCD_STATUS.
+ * @remarks The macro accesses the following registers: USBDCD_STATUS,
+ *          USBHSDCD_STATUS (depending on the peripheral).
  * @par Example:
  *      @code
  *      uint32_t result =
@@ -468,7 +483,8 @@
  *        (<component_name>_DEVICE).
  * @return Use constants from group "Status flags constants (for ReadStatusReg
  *         macro)." for processing return value.
- * @remarks The macro accesses the following registers: USBDCD_STATUS.
+ * @remarks The macro accesses the following registers: USBDCD_STATUS,
+ *          USBHSDCD_STATUS (depending on the peripheral).
  * @par Example:
  *      @code
  *      uint32_t result = USBDCD_PDD_ReadStatusReg(<peripheral>_BASE_PTR);
@@ -492,7 +508,8 @@
  * @param Time System latency (in ms) value[0..1023]. This parameter is a 10-bit
  *        value.
  * @return Returns a value of void type.
- * @remarks The macro accesses the following registers: USBDCD_TIMER0.
+ * @remarks The macro accesses the following registers: USBDCD_TIMER0,
+ *          USBHSDCD_TIMER0 (depending on the peripheral).
  * @par Example:
  *      @code
  *      USBDCD_PDD_SetSequenceInitiationTime(<peripheral>_BASE_PTR, 1);
@@ -519,7 +536,8 @@
  *        the peripheral initialization component header file
  *        (<component_name>_DEVICE).
  * @return Returns a 12-bit value. The value is cast to "uint16_t".
- * @remarks The macro accesses the following registers: USBDCD_TIMER0.
+ * @remarks The macro accesses the following registers: USBDCD_TIMER0,
+ *          USBHSDCD_TIMER0 (depending on the peripheral).
  * @par Example:
  *      @code
  *      uint16_t result =
@@ -542,7 +560,8 @@
  *        the peripheral initialization component header file
  *        (<component_name>_DEVICE).
  * @return Returns a 32-bit value.
- * @remarks The macro accesses the following registers: USBDCD_TIMER0.
+ * @remarks The macro accesses the following registers: USBDCD_TIMER0,
+ *          USBHSDCD_TIMER0 (depending on the peripheral).
  * @par Example:
  *      @code
  *      uint32_t result = USBDCD_PDD_ReadTimer0Reg(<peripheral>_BASE_PTR);
@@ -566,7 +585,8 @@
  * @param Value Value to be written to the timer 0 register. This parameter is a
  *        32-bit value.
  * @return Returns a value of void type.
- * @remarks The macro accesses the following registers: USBDCD_TIMER0.
+ * @remarks The macro accesses the following registers: USBDCD_TIMER0,
+ *          USBHSDCD_TIMER0 (depending on the peripheral).
  * @par Example:
  *      @code
  *      USBDCD_PDD_WriteTimer0Reg(<peripheral>_BASE_PTR, 1);
@@ -592,7 +612,8 @@
  * @param Period Time period (in ms) value[1..1023]. This parameter is a 10-bit
  *        value.
  * @return Returns a value of void type.
- * @remarks The macro accesses the following registers: USBDCD_TIMER1.
+ * @remarks The macro accesses the following registers: USBDCD_TIMER1,
+ *          USBHSDCD_TIMER1 (depending on the peripheral).
  * @par Example:
  *      @code
  *      USBDCD_PDD_SetTimePeriodToDebounceDpSignal(<peripheral>_BASE_PTR, 1);
@@ -621,7 +642,8 @@
  * @param Period Time period (in ms) value[1..1023]. This parameter is a 10-bit
  *        value.
  * @return Returns a value of void type.
- * @remarks The macro accesses the following registers: USBDCD_TIMER1.
+ * @remarks The macro accesses the following registers: USBDCD_TIMER1,
+ *          USBHSDCD_TIMER1 (depending on the peripheral).
  * @par Example:
  *      @code
  *      USBDCD_PDD_SetTimePeriodComparator(<peripheral>_BASE_PTR, 1);
@@ -648,7 +670,8 @@
  *        the peripheral initialization component header file
  *        (<component_name>_DEVICE).
  * @return Returns a 32-bit value.
- * @remarks The macro accesses the following registers: USBDCD_TIMER1.
+ * @remarks The macro accesses the following registers: USBDCD_TIMER1,
+ *          USBHSDCD_TIMER1 (depending on the peripheral).
  * @par Example:
  *      @code
  *      uint32_t result = USBDCD_PDD_ReadTimer1Reg(<peripheral>_BASE_PTR);
@@ -672,7 +695,8 @@
  * @param Value Value to be written to the timer 1 register. This parameter is a
  *        32-bit value.
  * @return Returns a value of void type.
- * @remarks The macro accesses the following registers: USBDCD_TIMER1.
+ * @remarks The macro accesses the following registers: USBDCD_TIMER1,
+ *          USBHSDCD_TIMER1 (depending on the peripheral).
  * @par Example:
  *      @code
  *      USBDCD_PDD_WriteTimer1Reg(<peripheral>_BASE_PTR, 1);

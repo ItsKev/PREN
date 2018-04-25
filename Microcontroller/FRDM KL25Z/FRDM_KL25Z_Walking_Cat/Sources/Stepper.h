@@ -52,17 +52,23 @@ uint8_t DrivingMotor_MoveContinuous(void);
 
 uint8_t DrivingMotor_Brakes(void); 
 
+uint8_t DrivingMotor_SetSpeed(uint8_t targetVelocity); 
+
 void DrivingMotor_Event(void); 
 
 
 
-#define LiftingMotor_FORWARD()	({LiftingMotor.Direction = FORWARD; LiftingMotor_Direction_ClrVal();})
+#define LiftingMotor_FORWARD()	({LiftingMotor.Direction = FORWARD; LiftingMotor_Direction_SetVal();})
 
-#define LiftingMotor_BACKWARD()	({LiftingMotor.Direction = BACKWARD; LiftingMotor_Direction_SetVal();})
+#define LiftingMotor_BACKWARD()	({LiftingMotor.Direction = BACKWARD; LiftingMotor_Direction_ClrVal();})
 
 uint8_t LiftingMotor_Move(int16_t stepsWithoutMicrosteppingRevolution);
 
 uint8_t LiftingMotor_MoveContinuous(void); 
+
+uint8_t LiftingMotor_Brakes(void);
+
+uint8_t LiftingMotor_SetSpeed(uint8_t targetVelocity); 
 
 void LiftingMotor_Event(void);
 

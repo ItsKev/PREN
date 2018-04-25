@@ -5,7 +5,7 @@
 **     Processor   : MKL25Z128VLK4
 **     Version     : Component 01.025, Driver 01.04, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2018-03-27, 22:35, # CodeGen: 34
+**     Date/Time   : 2018-04-04, 18:11, # CodeGen: 41
 **     Abstract    :
 **
 **     Settings    :
@@ -70,9 +70,7 @@
   #include "LEDpin2.h"
   #include "BitIoLdd2.h"
   #include "US_Trig.h"
-  #include "InfraredTOF_I2C.h"
   #include "TU1.h"
-  #include "GI2C1.h"
   #include "LiftingMotor_MS1.h"
   #include "BitIoLdd3.h"
   #include "LiftingMotor_MS2.h"
@@ -139,7 +137,7 @@
     (tIsrFunc)&Cpu_Interrupt,          /* 0x16  0x00000058   -   ivINT_LVD_LVW                 unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x17  0x0000005C   -   ivINT_LLW                     unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x18  0x00000060   -   ivINT_I2C0                    unused by PE */
-    (tIsrFunc)&InfraredTOF_I2C_Interrupt, /* 0x19  0x00000064   2   ivINT_I2C1                    used by PE */
+    (tIsrFunc)&Cpu_Interrupt,          /* 0x19  0x00000064   -   ivINT_I2C1                    unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x1A  0x00000068   -   ivINT_SPI0                    unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x1B  0x0000006C   -   ivINT_SPI1                    unused by PE */
     (tIsrFunc)&ASerialLdd1_Interrupt,  /* 0x1C  0x00000070   2   ivINT_UART0                   used by PE */

@@ -7,8 +7,8 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS_QUOTED += \
 "../Sources/Application.c" \
+"../Sources/Electromagnet_Driver.c" \
 "../Sources/Events.c" \
-"../Sources/InfraredTOF.c" \
 "../Sources/LED.c" \
 "../Sources/Sensoric.c" \
 "../Sources/Shell.c" \
@@ -19,8 +19,8 @@ C_SRCS_QUOTED += \
 
 C_SRCS += \
 ../Sources/Application.c \
+../Sources/Electromagnet_Driver.c \
 ../Sources/Events.c \
-../Sources/InfraredTOF.c \
 ../Sources/LED.c \
 ../Sources/Sensoric.c \
 ../Sources/Shell.c \
@@ -31,8 +31,8 @@ C_SRCS += \
 
 OBJS += \
 ./Sources/Application.o \
+./Sources/Electromagnet_Driver.o \
 ./Sources/Events.o \
-./Sources/InfraredTOF.o \
 ./Sources/LED.o \
 ./Sources/Sensoric.o \
 ./Sources/Shell.o \
@@ -43,8 +43,8 @@ OBJS += \
 
 OBJS_QUOTED += \
 "./Sources/Application.o" \
+"./Sources/Electromagnet_Driver.o" \
 "./Sources/Events.o" \
-"./Sources/InfraredTOF.o" \
 "./Sources/LED.o" \
 "./Sources/Sensoric.o" \
 "./Sources/Shell.o" \
@@ -55,8 +55,8 @@ OBJS_QUOTED += \
 
 C_DEPS += \
 ./Sources/Application.d \
+./Sources/Electromagnet_Driver.d \
 ./Sources/Events.d \
-./Sources/InfraredTOF.d \
 ./Sources/LED.d \
 ./Sources/Sensoric.d \
 ./Sources/Shell.d \
@@ -67,8 +67,8 @@ C_DEPS += \
 
 OBJS_OS_FORMAT += \
 ./Sources/Application.o \
+./Sources/Electromagnet_Driver.o \
 ./Sources/Events.o \
-./Sources/InfraredTOF.o \
 ./Sources/LED.o \
 ./Sources/Sensoric.o \
 ./Sources/Shell.o \
@@ -79,8 +79,8 @@ OBJS_OS_FORMAT += \
 
 C_DEPS_QUOTED += \
 "./Sources/Application.d" \
+"./Sources/Electromagnet_Driver.d" \
 "./Sources/Events.d" \
-"./Sources/InfraredTOF.d" \
 "./Sources/LED.d" \
 "./Sources/Sensoric.d" \
 "./Sources/Shell.d" \
@@ -99,19 +99,19 @@ Sources/Application.o: ../Sources/Application.c
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Sources/Events.o: ../Sources/Events.c
+Sources/Electromagnet_Driver.o: ../Sources/Electromagnet_Driver.c
 	@echo 'Building file: $<'
 	@echo 'Executing target #2 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
-	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/Events.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/Events.o"
+	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/Electromagnet_Driver.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/Electromagnet_Driver.o"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Sources/InfraredTOF.o: ../Sources/InfraredTOF.c
+Sources/Events.o: ../Sources/Events.c
 	@echo 'Building file: $<'
 	@echo 'Executing target #3 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
-	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/InfraredTOF.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/InfraredTOF.o"
+	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/Events.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/Events.o"
 	@echo 'Finished building: $<'
 	@echo ' '
 

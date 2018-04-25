@@ -5,7 +5,7 @@
 **     Processor   : MKL25Z128VLK4
 **     Version     : Component 01.025, Driver 01.04, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2018-03-27, 22:35, # CodeGen: 34
+**     Date/Time   : 2018-04-04, 18:11, # CodeGen: 41
 **     Abstract    :
 **
 **     Settings    :
@@ -76,9 +76,7 @@
 #include "LEDpin2.h"
 #include "BitIoLdd2.h"
 #include "US_Trig.h"
-#include "InfraredTOF_I2C.h"
 #include "TU1.h"
-#include "GI2C1.h"
 #include "LiftingMotor_MS1.h"
 #include "BitIoLdd3.h"
 #include "LiftingMotor_MS2.h"

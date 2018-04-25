@@ -54,7 +54,7 @@ by the component.
     0x80808000
  </td><td>NVIC_IPR4 register, peripheral PpgLdd2.</td></tr>
 <tr><td>0xE000E100</td><td>NVIC_ISER</td><td>
-    0x000E1200
+    0x000E1000
  </td><td>NVIC_ISER register, peripheral PpgLdd2.</td></tr>
 </table>
 <br/>
@@ -806,7 +806,7 @@ registers of the peripheral(s) configured by the component.
         
 </div>
 <table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0xE000E100</td></tr>
-<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x000E1200</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x000E1000</td></tr>
 <tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
 <tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
 <tr><td>0 - 31</td><td>SETENA</td><td>0x00</td><td>Interrupt set enable bits</td>

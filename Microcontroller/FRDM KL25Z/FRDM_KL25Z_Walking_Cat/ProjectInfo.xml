@@ -73,8 +73,6 @@
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\DrivingMotor_Step.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\Electromagnet.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\FRTOS1.c</PathName>
-      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\GI2C1.c</PathName>
-      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\InfraredTOF_I2C.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LED_Onboard_Green.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LED_Onboard_R.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LEDpin1.c</PathName>
@@ -111,8 +109,8 @@
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Project_Settings\Startup_Code\__arm_end.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Project_Settings\Startup_Code\__arm_start.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Sources\Application.c</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Sources\Electromagnet_Driver.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Sources\Events.c</PathName>
-      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Sources\InfraredTOF.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Sources\LED.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Sources\Sensoric.c</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Sources\Shell.c</PathName>
@@ -150,10 +148,7 @@
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\FRTOS1config.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\FreeRTOS.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\FreeRTOSConfig.h</PathName>
-      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\GI2C1.h</PathName>
-      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\GI2C1config.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\IO_Map.h</PathName>
-      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\InfraredTOF_I2C.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LED_Onboard_Green.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LED_Onboard_Greenconfig.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Generated_Code\LED_Onboard_R.h</PathName>
@@ -200,8 +195,8 @@
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Project_Headers\bme.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Project_Settings\Startup_Code\runtime_configuration.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Sources\Application.h</PathName>
+      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Sources\Electromagnet_Driver.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Sources\Events.h</PathName>
-      <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Sources\InfraredTOF.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Sources\LED.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Sources\Sensoric.h</PathName>
       <PathName>D:\15_MyFactory\PREN\Microcontroller\FRDM KL25Z\FRDM_KL25Z_Walking_Cat\Sources\Shell.h</PathName>

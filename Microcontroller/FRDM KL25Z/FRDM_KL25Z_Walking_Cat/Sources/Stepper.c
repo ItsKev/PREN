@@ -2,7 +2,8 @@
  * Stepper.c
  * 
  * Nützliche Infos:
- * 		Lasthebemotor: 150 Steps / 1 cm Höhe
+ * 		Liftinmotor:	150 Steps --> 1 cm height
+ * 		Drivingmotor:	1000 Steps --> 54.9 cm on the sail
  *
  *  Created on: Mar 13, 2018
  *      Author: Burak Kizilkaya
@@ -11,7 +12,6 @@
 #include "Stepper.h"
 #include "PE_Types.h"
 #include "PE_LDD.h"
-#include "TPM_PDD.h"
 #include "Shell.h"
 
 #include "LiftingMotor_Step.h"
@@ -37,10 +37,10 @@
 
 // Constants
 #define PI 										3.141592653589793238462643383 // For calculates
-#define RADIUS_DRIVING_WHEEL 					2 // cm
+#define RADIUS_DRIVING_WHEEL 					1.74 // cm
 #define RADIUS_Lifting_WHEEL 					0.5 // cm
-#define TARGET_VELOCITY_DRIVING_MOTOR 			40 // [cm/s]
-#define TARGET_VELOCITY_LIFTING_MOTOR 			10 // [cm/s]
+#define TARGET_VELOCITY_DRIVING_MOTOR 			20 // [cm/s]
+#define TARGET_VELOCITY_LIFTING_MOTOR 			40 // [cm/s]
 #define MICROSTEPPING_RESOLUTION_LIFTINGMOTOR	8 // Fullstep(1), Halfstep(2), Quarterstep(4), Eighterstep(8), Sixteenthstep(16)
 #define MICROSTEPPING_RESOLUTION_DRIVINGMOTOR	16 // Fullstep(1), Halfstep(2), Quarterstep(4), Eighterstep(8), Sixteenthstep(16)
 #define INITIAL_FREQ 							400 // Hz 
@@ -68,6 +68,8 @@ static uint32_t liftingMotor_accelarationSteps;
 static uint32_t liftingMotor_cruisingSteps; 
 static uint32_t liftingMotor_oldSteps; 
 static uint32_t liftingMotor_currentSteps; 
+static bool liftingMotor_speedChanges;
+static uint16_t liftingMotor_speedChangesSteps;
 
 static bool drivingMotor_continuous;
 static bool drivingMotor_stopped;
@@ -76,15 +78,14 @@ static bool drivingMotor_finished;
 static uint32_t drivingMotor_accelarationSteps;
 static uint32_t drivingMotor_cruisingSteps;
 static uint32_t drivingMotor_oldSteps; 
-static uint32_t drivingMotor_currentSteps; 
+static uint32_t drivingMotor_currentSteps;
+static bool drivingMotor_speedChanges;
+static uint16_t drivingMotor_speedChangesSteps;
 
 
 //--------------------------------------
 /* Methods */
 //--------------------------------------
-// Static
-
-// Public (Interface)
 /**
  * 
  */
@@ -107,11 +108,13 @@ uint8_t Stepper_Init(void) {
 	drivingMotor_accelarationSteps = 0; 
 	drivingMotor_oldSteps = 0; 
 	drivingMotor_currentSteps = 0; 
+	drivingMotor_speedChanges = 0;
+	drivingMotor_speedChangesSteps = 0;
 
 	// Lifting Motor
 	LiftingMotor_Step_Disable(); // No pulse is generated
 	LiftingMotor_FORWARD();
-	LiftingMotor_Driver_Disable(); // Motor driver is off
+	LiftingMotor_Driver_Enable(); // Motor driver is off
 
 	LiftingMotor.Speed = 0;
 	LiftingMotor.TargetFreq = INITIAL_FREQ;
@@ -126,6 +129,8 @@ uint8_t Stepper_Init(void) {
 	liftingMotor_accelarationSteps = 0; 
 	liftingMotor_oldSteps = 0; 
 	liftingMotor_currentSteps = 0; 
+	liftingMotor_speedChanges = 0;
+	liftingMotor_speedChangesSteps = 0;
 
 	return ERR_OK;
 }
@@ -154,6 +159,30 @@ uint8_t DrivingMotor_MoveContinuous(void) {
 	DrivingMotor_Move(10e3); 
 	STRING_SUCCES();
 	return ERR_OK;
+}
+
+uint8_t DrivingMotor_SetSpeed(uint8_t targetVelocity){
+	uint8_t result = ERR_OK; 
+	uint16_t tmpTargetFreq = TARGET_FREQ_DRIVING_MOTOR(targetVelocity);
+	uint32_t oldSteps = drivingMotor_cruisingSteps + 2*drivingMotor_accelarationSteps;
+	
+	if (DrivingMotor.State == CRUSING || DrivingMotor.State == CONTINIUOUS) {
+		if (tmpTargetFreq > DrivingMotor.TargetFreq) {
+			DrivingMotor.State = ACCELARATING;
+		} else if (tmpTargetFreq < DrivingMotor.TargetFreq){
+			DrivingMotor.State = DECELERATING;
+		}
+		DrivingMotor.TargetFreq = tmpTargetFreq;
+		DrivingMotor.Speed = targetVelocity;
+		drivingMotor_speedChanges = 1; // Signalisation for speed changes
+		drivingMotor_accelarationSteps = (DrivingMotor.TargetFreq - INITIAL_FREQ) / DRIVINGMOTOR_ACCELARATIONINKREMENT;
+		drivingMotor_cruisingSteps = oldSteps - 2*drivingMotor_accelarationSteps;
+		drivingMotor_speedChangesSteps = DrivingMotor.Steps + MICROSTEPPING_RESOLUTION_DRIVINGMOTOR * 400; // 2 turn for the new speed
+		STRING_SUCCES();
+		return result;
+	}
+	STRING_FAILURE();
+	return result;
 }
 
 uint8_t DrivingMotor_Move(int16_t stepsWithoutMicrosteppingRevolution) {
@@ -204,9 +233,13 @@ void DrivingMotor_Event(void) {
 			DrivingMotor_Step_SetFreqHz(DrivingMotor.AccelartionFreq += DRIVINGMOTOR_ACCELARATIONINKREMENT);
 		}
 
-		if ((drivingMotor_currentSteps >= drivingMotor_accelarationSteps)) {
+		if ((drivingMotor_currentSteps >= drivingMotor_accelarationSteps) && !drivingMotor_speedChanges) {
 			DrivingMotor.State = CRUSING;
+		} else if(drivingMotor_speedChangesSteps <= drivingMotor_currentSteps && drivingMotor_speedChanges){
+			DrivingMotor.State = CRUSING;
+			drivingMotor_speedChanges = 0;
 		}
+		
 		break;
 
 	case CRUSING:
@@ -216,14 +249,24 @@ void DrivingMotor_Event(void) {
 		break;
 
 	case DECELERATING:
-		if (DrivingMotor.AccelartionFreq > INITIAL_FREQ) {
-			DrivingMotor_Step_SetFreqHz(DrivingMotor.AccelartionFreq -= DRIVINGMOTOR_ACCELARATIONINKREMENT);
-		}
-
-		if ((drivingMotor_currentSteps >= ((drivingMotor_accelarationSteps * 2) + drivingMotor_cruisingSteps))
-			 || ((DrivingMotor.AccelartionFreq <= INITIAL_FREQ) && drivingMotor_brakes)) {
-			DrivingMotor.State = STOPPED;
-			drivingMotor_stopped = TRUE;
+		if (!drivingMotor_speedChanges) {
+			if (DrivingMotor.AccelartionFreq > INITIAL_FREQ) {
+				DrivingMotor_Step_SetFreqHz(DrivingMotor.AccelartionFreq -= DRIVINGMOTOR_ACCELARATIONINKREMENT);
+			}
+			
+			if ((drivingMotor_currentSteps >= ((drivingMotor_accelarationSteps * 2) + drivingMotor_cruisingSteps))
+				 || ((DrivingMotor.AccelartionFreq <= INITIAL_FREQ) && drivingMotor_brakes)) {
+				DrivingMotor.State = STOPPED;
+				drivingMotor_stopped = TRUE;
+			}
+		} else{
+			if(DrivingMotor.AccelartionFreq > DrivingMotor.TargetFreq){
+				DrivingMotor_Step_SetFreqHz(DrivingMotor.AccelartionFreq -= DRIVINGMOTOR_ACCELARATIONINKREMENT);
+			}
+			if((drivingMotor_speedChangesSteps <= drivingMotor_currentSteps)){
+				drivingMotor_speedChanges = 0; 
+				DrivingMotor.State = CRUSING;
+			}
 		}
 		break;
 
@@ -323,6 +366,10 @@ uint8_t LiftingMotor_MoveContinuous(void) {
 	return ERR_OK; 
 }
 
+uint8_t LiftingMotor_SetSpeed(uint8_t targetVelocity){
+	
+}
+
 void LiftingMotor_Event(void) {
 
 	switch (LiftingMotor.State) {
@@ -368,22 +415,23 @@ void LiftingMotor_Event(void) {
 			liftingMotor_brakes = FALSE; 
 			
 			LiftingMotor_Step_Disable();
-			LiftingMotor_Driver_Disable(); //--> is not required
+//			LiftingMotor_Driver_Disable(); //--> is not required
 			LiftingMotor.AccelartionFreq = INITIAL_FREQ;
 			LiftingMotor.Speed = 0; 
 			
-			if (LiftingMotor.State != STOPPED){
-				liftingMotor_currentSteps++; 
-			}
 			
-			/* Count steps */
-			if(LiftingMotor.State != STOPPED && LiftingMotor.Direction){
-				LiftingMotor.Steps++;  
-			} else if(LiftingMotor.State != STOPPED && !LiftingMotor.Direction){
-				LiftingMotor.Steps--; 
-			}
 		}
 		break;
+	}
+	if (LiftingMotor.State != STOPPED){
+		liftingMotor_currentSteps++; 
+	}
+	
+	/* Count steps */
+	if(LiftingMotor.State != STOPPED && LiftingMotor.Direction){
+		LiftingMotor.Steps++;  
+	} else if(LiftingMotor.State != STOPPED && !LiftingMotor.Direction){
+		LiftingMotor.Steps--; 
 	}
 }
 
@@ -408,12 +456,12 @@ uint8_t Stepper_ParseCommand(unsigned char* cmd){
 		 return DrivingMotor_Move(tmpValue);
 	}
 	
-	else if (strcmp(cmd, "ant fast") == 0){
-		/*Not implemented*/; 
+	else if (strcmp(cmd, "ant slow") == 0){
+		return DrivingMotor_SetSpeed(TARGET_VELOCITY_DRIVING_MOTOR*0.5); 
 	}
 	
-	else if (strcmp(cmd, "ant slow") == 0){
-		; 
+	else if (strcmp(cmd, "ant fast") == 0){
+		return DrivingMotor_SetSpeed(TARGET_VELOCITY_DRIVING_MOTOR*1.5);
 	}
 	
 	else if (strcmp(cmd, "ant stop") == 0) { 

@@ -129,7 +129,7 @@
     </GenFiles>
     <SignalListFile>Documentation\FRDM_KL25Z_InfraredTOF_SIGNALS.txt</SignalListFile>
     <DestinationCompiler>GNUC</DestinationCompiler>
-    <ProjectModificationStamp>11</ProjectModificationStamp>
+    <ProjectModificationStamp>14</ProjectModificationStamp>
   </Options>
   <CpuID_2>
     <Generated>true</Generated>
@@ -228,8 +228,8 @@
     <GenComponentVersion>01.016</GenComponentVersion>
     <GenDriverVersion>01.07</GenDriverVersion>
     <GenEventModule>Events</GenEventModule>
-    <HeaderAge>1282112874</HeaderAge>
-    <CodeAge>1282112874</CodeAge>
+    <HeaderAge>1283757025</HeaderAge>
+    <CodeAge>1283757025</CodeAge>
     <AsemblAge>-1</AsemblAge>
     <GenNumMethods>33</GenNumMethods>
     <Init>true</Init>
