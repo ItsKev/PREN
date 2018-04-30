@@ -8,7 +8,7 @@ from picamera.array import PiRGBArray
 class ImageProcessor:
     detect_image = True
 
-    def start_detecting(self, target_found):
+    def start_detecting(self, serial_connection):
         print("ImageProcessor_start_detecting")
 
         camera = PiCamera()
@@ -58,7 +58,7 @@ class ImageProcessor:
                         cy = int(moments['m01'] / m00)
                         is_duplicate = self.is_a_duplicate(last_dimensions, h, w)
                         if not is_duplicate:
-                            if self.check_if_target_found(centers, cx, cy, target_found):
+                            if self.check_if_target_found(centers, cx, cy, serial_connection):
                                 break
                             last_dimensions.append((w, h))
                             centers.append(np.array((cx, cy)))
@@ -69,19 +69,21 @@ class ImageProcessor:
         camera.close()
         cv2.destroyAllWindows()
 
-    def check_if_target_found(self, centers, cx, cy, target_found) -> bool:
+    def check_if_target_found(self, centers, cx, cy, serial_connection) -> bool:
         first_match = True
         for center in centers:
             distance = np.linalg.norm(np.array((cx, cy)) - center)
-            if distance <= 10:
+            if distance <= 20:
                 if first_match:
                     first_match = False
                 else:
-                    if self.is_target_in_center(cx, cy):
+                    if self.is_target_in_center(cy):
                         print("ImageProcessor_target_detected")
-                        target_found()
+                        serial_connection.target_found()
                         self.detect_image = False
                         return True
+                    else:
+                        serial_connection.drive_slower()
         return False
 
     def is_a_duplicate(self, last_dimensions, height, width) -> bool:
@@ -94,12 +96,10 @@ class ImageProcessor:
                 return True
         return False
 
-    def is_target_in_center(self, cx, cy) -> bool:
-        center_x = 640 / 2
+    def is_target_in_center(self, cy) -> bool:
         center_y = 480 / 2
-        offset = 20
-        if (((center_x - offset) <= cx <= (center_x + offset)) and
-                ((center_y - offset) <= cy <= (center_y + offset))):
+        offset = 60
+        if (center_y - offset) <= cy <= (center_y + offset):
             return True
         return False
 

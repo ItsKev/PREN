@@ -22,24 +22,12 @@ class Main:
         #update_website_thread.start()
 
         threading.Thread(target=self.image_processor.start_detecting,
-                         args=(self.stop,)).start()
-        self.freedomboard_connector.drive_move_steps(1500)
+                         args=(self.freedomboard_connector,)).start()
+        self.freedomboard_connector.start()
 
     def start(self):
         print("Main_start")
         self.freedomboard_connector.start()
-        threading.Thread(target=self.freedomboard_connector.start_detecting,
-                         args=(self.image_processor.start_detecting(self.target_found)),)
-
-    def target_found(self):
-        print("Main_Target_Found")
-        self.image_processor.stop_detecting()
-        self.freedomboard_connector.target_found()
-
-    def stop(self):
-        print("Main_stop")
-        self.image_processor.stop_detecting()
-        self.freedomboard_connector.drive_stop()
 
 
 if __name__ == '__main__':
