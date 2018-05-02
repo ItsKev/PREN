@@ -8,7 +8,7 @@ from picamera.array import PiRGBArray
 class ImageProcessor:
     detect_image = True
 
-    def start_detecting(self, target_found):
+    def start_detecting(self, serial_connection):
         print("ImageProcessor_start_detecting")
 
         camera = PiCamera()
@@ -29,13 +29,11 @@ class ImageProcessor:
             # detect edges in the image
             edged = cv2.Canny(gray, 100, 200)
 
-            # find contours (i.e. the 'outlines') in the image
-            new_image, contours, hierarchy = cv2.findContours(edged.copy(), cv2.RETR_CCOMP, cv2.CHAIN_APPROX_SIMPLE)
+            # find contours (in the image
+            _, contours, _ = cv2.findContours(edged.copy(), cv2.RETR_CCOMP, cv2.CHAIN_APPROX_SIMPLE)
 
             centers = []
-            approximations = []
             last_dimensions = []
-            matches = []
             for contour in contours:
                 # approximate the contour
                 peri = cv2.arcLength(contour, True)
@@ -47,30 +45,21 @@ class ImageProcessor:
                     if h == 0:
                         h = 0.01
                     aspect_ratio = w / float(h)
+
+                    # check if the rectangle is a square
                     if 0.85 <= aspect_ratio <= 1.15:
                         moments = cv2.moments(approx)
                         m00 = moments['m00']
                         if m00 == 0:
                             m00 = 0.05
+
+                        # get the center of the square
                         cx = int(moments['m10'] / m00)
                         cy = int(moments['m01'] / m00)
                         is_duplicate = self.is_a_duplicate(last_dimensions, h, w)
                         if not is_duplicate:
-                            temp = 0
-                            first_match = True
-                            for center in centers:
-                                distance = np.linalg.norm(np.array((cx, cy)) - center)
-                                if distance <= 10:
-                                    if first_match:
-                                        matches.clear()
-                                        matches.append(approximations[temp])
-                                        first_match = False
-                                    else:
-                                        print("ImageProcessor_target_detected")
-                                        target_found()
-                                        self.stop_detecting()
-                                temp += 1
-                            approximations.append(approx)
+                            if self.check_if_target_found(centers, cx, cy, serial_connection):
+                                break
                             last_dimensions.append((w, h))
                             centers.append(np.array((cx, cy)))
             # print("FPS: " + str(1 / (time.time() - loop_time)))
@@ -80,11 +69,24 @@ class ImageProcessor:
         camera.close()
         cv2.destroyAllWindows()
 
-    def stop_detecting(self):
-        print("ImageProcessor_stop_detecting")
-        self.detect_image = False
+    def check_if_target_found(self, centers, cx, cy, serial_connection) -> bool:
+        first_match = True
+        for center in centers:
+            distance = np.linalg.norm(np.array((cx, cy)) - center)
+            if distance <= 20:
+                if first_match:
+                    first_match = False
+                else:
+                    if self.is_target_in_center(cy):
+                        print("ImageProcessor_target_detected")
+                        serial_connection.target_found()
+                        self.detect_image = False
+                        return True
+                    else:
+                        serial_connection.drive_slower()
+        return False
 
-    def is_a_duplicate(self, last_dimensions, height, width):
+    def is_a_duplicate(self, last_dimensions, height, width) -> bool:
         offset = 3
         for lastDimension in last_dimensions:
             if (lastDimension[0] + offset) >= width >= (lastDimension[0] - offset):
@@ -92,6 +94,13 @@ class ImageProcessor:
 
             if (lastDimension[1] + offset) >= height >= (lastDimension[1] - offset):
                 return True
+        return False
+
+    def is_target_in_center(self, cy) -> bool:
+        center_y = 480 / 2
+        offset = 60
+        if (center_y - offset) <= cy <= (center_y + offset):
+            return True
         return False
 
 

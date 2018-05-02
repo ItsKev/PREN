@@ -28,14 +28,14 @@ class FreedomboardConnector:
             self.serial_connection.write(b'ant status\n')
             line = self.serial_connection.readline().decode()
             if line[0] == 's':
-                return float(line.split(';')[1])
+                return float((line.split(' ')[1]).split(';')[1])
 
     def drive_get_steps(self) -> int:
         while True:
             self.serial_connection.write(b'ant status\n')
             line = self.serial_connection.readline().decode()
             if line[0] == 's':
-                return int(line.split(';')[2])
+                return int((line.split(' ')[1]).split(';')[0])
 
     def drive_move_steps(self, steps):
         print("drive_move_steps " + str(steps))
@@ -53,10 +53,7 @@ class FreedomboardConnector:
 
     def drive_slower(self):
         print("drive_slower")
-        while True:
-            self.serial_connection.write(b'ant slow\n')
-            if self.check_if_successful():
-                break
+        self.serial_connection.write(b'ant slow\n')
 
     def drive_stop(self):
         print("drive_stop")
@@ -70,14 +67,14 @@ class FreedomboardConnector:
             self.serial_connection.write(b'lst status\n')
             line = self.serial_connection.readline().decode()
             if line[0] == 's':
-                return float(line.split(';')[1])
+                return float((line.split(' ')[1]).split(';')[1])
 
     def load_get_steps(self) -> int:
         while True:
             self.serial_connection.write(b'lst status\n')
             line = self.serial_connection.readline().decode()
             if line[0] == 's':
-                return int(line.split(';')[2])
+                return int((line.split(' ')[1]).split(';')[0])
 
     def load_move_steps(self, steps):
         print("load_move_steps " + steps)
@@ -112,20 +109,21 @@ class FreedomboardConnector:
             self.serial_connection.write(b'msg last\n')
             line = self.serial_connection.readline().decode()
             if line[0] == 's':
-                return int(line.split(';')[1]), int(line.split(';')[2])
+                line = line.split(' ')[1]
+                return int(line.split(';')[0]), int(line.split(';')[1])
 
     def start_detecting(self, callback):
         print("FreedomboardConnector_start_detecting")
         while True:
             line = self.serial_connection.readline().decode()
-            if line == 'start_detecting':
+            if line == 'start detecting':
                 break
         callback()
 
     def target_found(self):
         print("FreedomboardConnector_target_found")
         while True:
-            self.serial_connection.write(b'ant stop\n')
+            self.serial_connection.write(b'target found\n')
             if self.check_if_successful():
                 break
 
@@ -134,3 +132,8 @@ class FreedomboardConnector:
         if "success" not in line:
             return False
         return True
+
+
+if __name__ == '__main__':
+    freeedom = FreedomboardConnector()
+    print(str(freeedom.drive_get_steps()))
