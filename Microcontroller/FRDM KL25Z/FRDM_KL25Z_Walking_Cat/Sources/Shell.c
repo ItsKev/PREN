@@ -40,7 +40,7 @@ static void TerminalInitText(void) {
 static uint8_t DoCommand(uint8_t* cmd){
 	uint8_t result = ERR_OK; 
 	
-	if (strcmp(cmd, "help") == 0) {
+	if (strcmp(cmd, (unsigned char*)"help") == 0) {
 		TerminalInitText();
 		return result;
 	} else if (strncmp(cmd, "LED", 3) == 0) {
@@ -52,11 +52,12 @@ static uint8_t DoCommand(uint8_t* cmd){
 	} else if (strncmp(cmd, "ema", 3) == 0) {
 		result = Electromagnet_Driver_ParseCommand(cmd);
 	} else if (strncmp(cmd, "start", 5) == 0) {
-		// Start parcour;
+		// Start parcour
+		Parcour_FSM_Handler.StartSignal_FromPI = 1;
 	} else if (strncmp(cmd, "stop", 4) == 0) {
 		// Stop parcour;
-	} else if (strncmp(cmd, "target detected", 15) == 0) {
-		// target detected;
+	} else if (strncmp(cmd, "target found", 12) == 0) {
+		Parcour_FSM_Handler.z3_targetFound = 1;
 	} else if (strncmp(cmd, "msg last", 8) == 0) {
 		// measurment (calculating) x and z koordinates of load;
 	} else if (strncmp(cmd, "mst 2 reached", 13) == 0) {
@@ -107,8 +108,8 @@ static portTASK_FUNCTION(ShellTask, pvParameters) {
 
 	(void) pvParameters; /* not used */
 	buf[0] = '\0';
-	TerminalInitText();
-	STRING_PROMPT(); 
+	//TerminalInitText();
+	//STRING_PROMPT(); 
 	for (;;) {		 
 		result = ReadAndParseCommand(buf, sizeof(buf), CLS1_GetStdio()); 
 		FRTOS1_vTaskDelay(50/portTICK_RATE_MS);

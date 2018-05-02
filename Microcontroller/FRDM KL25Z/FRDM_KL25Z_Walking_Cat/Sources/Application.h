@@ -13,9 +13,9 @@
 typedef enum {
 	Z0_INITIALIZATION, 
 	Z1_CRUISING_UNTIL_ACROSS_LOAD,
-	Z2_LIFTING_IS_FINISHED,
+	Z2_LIFTING_UNTIL_FINISHED,
 	Z3_CRUISING_UNTIL_ACROSS_TARGET,
-	Z4_LOWER_LOAD_IS_FINISHED,
+	Z4_LOWER_LOAD_UNTIL_FINISHED,
 	Z5_CRUISING_UNTIL_MASTS2_IS_REACHED
 }Parcour_FSM_State;
 
@@ -28,9 +28,16 @@ typedef struct{
 	bool z1_liftingMotorStarted;
 	bool z1_drivingMotorStarted;
 	bool z1_finished;
+	bool z2_sendTargetdetection;
+	bool z2_liftingMotorStarted;
+	bool z3_drivingMotorStarted;
+	bool z3_targetFound;
+	bool z4_liftingMotorStarted;
+	bool z5_drivingMotorStarted;
 }Parcour_Handler;
 
-extern Parcour_Handler ParcourState;
+extern Parcour_Handler Parcour_FSM_Handler;
+extern bool EndSwitch;
 
 void APP_Run(void);
 

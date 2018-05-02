@@ -42,9 +42,9 @@ extern StepperDevice LiftingMotor;
 
 
 
-#define DrivingMotor_FORWARD() 	({DrivingMotor.Direction = FORWARD; DrivingMotor_Direction_ClrVal();})
+#define DrivingMotor_FORWARD() 	({DrivingMotor.Direction = FORWARD; DrivingMotor_Direction_SetVal();})
 
-#define DrivingMotor_BACKWARD() ({DrivingMotor.Direction = BACKWARD; DrivingMotor_Direction_SetVal();})
+#define DrivingMotor_BACKWARD() ({DrivingMotor.Direction = BACKWARD; DrivingMotor_Direction_ClrVal();})
 
 uint8_t DrivingMotor_Move(int16_t stepsWithoutMicrosteppingRevolution); 
 

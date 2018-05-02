@@ -39,10 +39,10 @@
 #define PI 										3.141592653589793238462643383 // For calculates
 #define RADIUS_DRIVING_WHEEL 					1.74 // cm
 #define RADIUS_Lifting_WHEEL 					0.5 // cm
-#define TARGET_VELOCITY_DRIVING_MOTOR 			20 // [cm/s]
-#define TARGET_VELOCITY_LIFTING_MOTOR 			40 // [cm/s]
+#define TARGET_VELOCITY_DRIVING_MOTOR 			10 // [cm/s]
+#define TARGET_VELOCITY_LIFTING_MOTOR 			10 // [cm/s]
 #define MICROSTEPPING_RESOLUTION_LIFTINGMOTOR	8 // Fullstep(1), Halfstep(2), Quarterstep(4), Eighterstep(8), Sixteenthstep(16)
-#define MICROSTEPPING_RESOLUTION_DRIVINGMOTOR	16 // Fullstep(1), Halfstep(2), Quarterstep(4), Eighterstep(8), Sixteenthstep(16)
+#define MICROSTEPPING_RESOLUTION_DRIVINGMOTOR	8 // Fullstep(1), Halfstep(2), Quarterstep(4), Eighterstep(8), Sixteenthstep(16)
 #define INITIAL_FREQ 							400 // Hz 
 #define LIFTINGMOTOR_ACCELARATIONINKREMENT		2 // It's variable --> Testing
 #define DRIVINGMOTOR_ACCELARATIONINKREMENT		2 // It's variable --> Testing
@@ -94,6 +94,7 @@ uint8_t Stepper_Init(void) {
 	DrivingMotor_Step_Disable(); // No pulse is generated
 	DrivingMotor_FORWARD();
 	DrivingMotor_Driver_Disable(); // Motor driver is off	
+	DrivingMotor_MS2_SetVal();
 
 	DrivingMotor.Speed = 0;
 	DrivingMotor.TargetFreq = INITIAL_FREQ;
@@ -115,6 +116,8 @@ uint8_t Stepper_Init(void) {
 	LiftingMotor_Step_Disable(); // No pulse is generated
 	LiftingMotor_FORWARD();
 	LiftingMotor_Driver_Enable(); // Motor driver is off
+	LiftingMotor_MS1_SetVal();
+	LiftingMotor_MS2_SetVal();
 
 	LiftingMotor.Speed = 0;
 	LiftingMotor.TargetFreq = INITIAL_FREQ;
@@ -149,6 +152,7 @@ uint8_t DrivingMotor_Brakes(void) {
 
 	if(DrivingMotor.State != DECELERATING && DrivingMotor.State != STOPPED){
 		DrivingMotor.State = DECELERATING; 
+		drivingMotor_speedChanges = 0;
 	}
 	STRING_SUCCES(); 
 	
@@ -177,7 +181,7 @@ uint8_t DrivingMotor_SetSpeed(uint8_t targetVelocity){
 		drivingMotor_speedChanges = 1; // Signalisation for speed changes
 		drivingMotor_accelarationSteps = (DrivingMotor.TargetFreq - INITIAL_FREQ) / DRIVINGMOTOR_ACCELARATIONINKREMENT;
 		drivingMotor_cruisingSteps = oldSteps - 2*drivingMotor_accelarationSteps;
-		drivingMotor_speedChangesSteps = DrivingMotor.Steps + MICROSTEPPING_RESOLUTION_DRIVINGMOTOR * 400; // 2 turn for the new speed
+		drivingMotor_speedChangesSteps = drivingMotor_currentSteps + MICROSTEPPING_RESOLUTION_DRIVINGMOTOR * 400; // 2 turn for the new speed
 		STRING_SUCCES();
 		return result;
 	}
@@ -249,17 +253,21 @@ void DrivingMotor_Event(void) {
 		break;
 
 	case DECELERATING:
-		if (!drivingMotor_speedChanges) {
+		// Normal-Case: without speed changing
+		if (!drivingMotor_speedChanges) { 
+			// decrement until the freq is INITIAL_FRQ
 			if (DrivingMotor.AccelartionFreq > INITIAL_FREQ) {
 				DrivingMotor_Step_SetFreqHz(DrivingMotor.AccelartionFreq -= DRIVINGMOTOR_ACCELARATIONINKREMENT);
 			}
-			
+			// change the State when the black panther has finished his Steps or the Method ..._Brakes() is actived
 			if ((drivingMotor_currentSteps >= ((drivingMotor_accelarationSteps * 2) + drivingMotor_cruisingSteps))
 				 || ((DrivingMotor.AccelartionFreq <= INITIAL_FREQ) && drivingMotor_brakes)) {
 				DrivingMotor.State = STOPPED;
 				drivingMotor_stopped = TRUE;
 			}
-		} else{
+		} 
+		// Speed-Change-Case: slower
+		else{
 			if(DrivingMotor.AccelartionFreq > DrivingMotor.TargetFreq){
 				DrivingMotor_Step_SetFreqHz(DrivingMotor.AccelartionFreq -= DRIVINGMOTOR_ACCELARATIONINKREMENT);
 			}
@@ -378,7 +386,7 @@ void LiftingMotor_Event(void) {
 			LiftingMotor_Step_SetFreqHz(LiftingMotor.AccelartionFreq += LIFTINGMOTOR_ACCELARATIONINKREMENT);
 		}
 
-		if ((liftingMotor_currentSteps == liftingMotor_accelarationSteps)) {
+		if ((liftingMotor_currentSteps >= liftingMotor_accelarationSteps)) {
 			LiftingMotor.State = CRUSING;
 		}
 		break;
@@ -444,7 +452,7 @@ uint8_t Stepper_ParseCommand(unsigned char* cmd){
 	/* For the control for Steppers with the Shell */
 	if(strcmp(cmd, (unsigned char*)"ant status")==0){
 		STRING_S();
-		UTIL1_Num32uToStrFormatted(tmpSteps, sizeof(tmpSteps), DrivingMotor.Steps, ' ', 0);
+		UTIL1_Num32uToStrFormatted(tmpSteps, sizeof(tmpSteps), DrivingMotor.Steps/8, ' ', 0);
 		CLS1_SendStr(tmpSteps, CLS1_GetStdio()->stdOut);
 		STRING_CONNECTOR(); 
 		UTIL1_Num16uToStrFormatted(tmpSpeed, sizeof(tmpSpeed), DrivingMotor.Speed, ' ', 0);
@@ -470,9 +478,9 @@ uint8_t Stepper_ParseCommand(unsigned char* cmd){
 	
 	
 	/* Lifting Motor */
-	if (strcmp(cmd, "lst status") == 0) {
+	if (strcmp(cmd, (unsigned char*)"lst status") == 0) {
 		CLS1_SendStr((unsigned char*)"s", CLS1_GetStdio()->stdOut);
-		UTIL1_Num16uToStrFormatted(tmpSteps, sizeof(tmpSteps), LiftingMotor.Steps, ' ', 0);
+		UTIL1_Num16uToStrFormatted(tmpSteps, sizeof(tmpSteps), LiftingMotor.Steps/8, ' ', 0);
 		CLS1_SendStr(tmpSteps, CLS1_GetStdio()->stdOut);
 		CLS1_SendStr((unsigned char*)";", CLS1_GetStdio()->stdOut);
 		UTIL1_Num16uToStrFormatted(tmpSpeed, sizeof(tmpSpeed), LiftingMotor.Speed, ' ', 0);
