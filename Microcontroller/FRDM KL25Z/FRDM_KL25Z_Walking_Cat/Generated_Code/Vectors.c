@@ -5,7 +5,7 @@
 **     Processor   : MKL25Z128VLK4
 **     Version     : Component 01.025, Driver 01.04, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2018-04-04, 18:11, # CodeGen: 41
+**     Date/Time   : 2018-05-03, 22:27, # CodeGen: 51
 **     Abstract    :
 **
 **     Settings    :
@@ -69,8 +69,6 @@
   #include "LED_Onboard_Green.h"
   #include "LEDpin2.h"
   #include "BitIoLdd2.h"
-  #include "US_Trig.h"
-  #include "TU1.h"
   #include "LiftingMotor_MS1.h"
   #include "BitIoLdd3.h"
   #include "LiftingMotor_MS2.h"
@@ -93,6 +91,8 @@
   #include "BitIoLdd10.h"
   #include "Electromagnet.h"
   #include "BitIoLdd11.h"
+  #include "EndSwitch.h"
+  #include "BitIoLdd12.h"
   #include "Events.h"
 
 
@@ -147,7 +147,7 @@
     (tIsrFunc)&Cpu_Interrupt,          /* 0x20  0x00000080   -   ivINT_CMP0                    unused by PE */
     (tIsrFunc)&PpgLdd2_Interrupt,      /* 0x21  0x00000084   2   ivINT_TPM0                    used by PE */
     (tIsrFunc)&PpgLdd1_Interrupt,      /* 0x22  0x00000088   2   ivINT_TPM1                    used by PE */
-    (tIsrFunc)&TU1_Interrupt,          /* 0x23  0x0000008C   2   ivINT_TPM2                    used by PE */
+    (tIsrFunc)&Cpu_Interrupt,          /* 0x23  0x0000008C   -   ivINT_TPM2                    unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x24  0x00000090   -   ivINT_RTC                     unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x25  0x00000094   -   ivINT_RTC_Seconds             unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x26  0x00000098   -   ivINT_PIT                     unused by PE */

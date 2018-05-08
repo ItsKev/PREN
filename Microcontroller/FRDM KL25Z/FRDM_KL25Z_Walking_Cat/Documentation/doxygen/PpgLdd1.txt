@@ -15,7 +15,7 @@ by the component.
 <tr><td colspan="4" class="ttitle1">PpgLdd1 Initialization</td></tr>
 <tr><td class="ttitle2">Address</td><td class="ttitle2">Register</td><td class="ttitle2">Register Value</td><td class="ttitle2">Register Description</td></tr>
 <tr><td>0x4004803C</td><td>SIM_SCGC6</td><td>
-    0x06000000
+    0x02000000
  </td><td>SIM_SCGC6 register, peripheral PpgLdd1.</td></tr>
 <tr><td>0x40039000</td><td>TPM1_SC</td><td>
     0x00000048
@@ -39,10 +39,10 @@ by the component.
     0x00000300
  </td><td>PORTE_PCR20 register, peripheral PpgLdd1.</td></tr>
 <tr><td>0xE000E410</td><td>NVIC_IPR4</td><td>
-    0x80800000
+    0x00800000
  </td><td>NVIC_IPR4 register, peripheral PpgLdd1.</td></tr>
 <tr><td>0xE000E100</td><td>NVIC_ISER</td><td>
-    0x000C1000
+    0x00041000
  </td><td>NVIC_ISER register, peripheral PpgLdd1.</td></tr>
 </table>
 <br/>
@@ -97,13 +97,13 @@ registers of the peripheral(s) configured by the component.
         
 </div>
 <table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4004803C</td></tr>
-<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x06000000</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x02000000</td></tr>
 <tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000001</td></tr>
 <tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
 <tr><td>31</td><td>DAC0</td><td>0x00</td><td>DAC0 Clock Gate Control</td>
 <tr><td>29</td><td>RTC</td><td>0x00</td><td>RTC Access Control</td>
 <tr><td>27</td><td>ADC0</td><td>0x00</td><td>ADC0 Clock Gate Control</td>
-<tr><td>26</td><td>TPM2</td><td>0x01</td><td>TPM2 Clock Gate Control</td>
+<tr><td>26</td><td>TPM2</td><td>0x00</td><td>TPM2 Clock Gate Control</td>
 <tr><td>25</td><td>TPM1</td><td>0x01</td><td>TPM1 Clock Gate Control</td>
 <tr><td>24</td><td>TPM0</td><td>0x00</td><td>TPM0 Clock Gate Control</td>
 <tr><td>23</td><td>PIT</td><td>0x00</td><td>PIT Clock Gate Control</td>
@@ -517,10 +517,10 @@ registers of the peripheral(s) configured by the component.
         
 </div>
 <table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0xE000E410</td></tr>
-<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x80800000</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00800000</td></tr>
 <tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
 <tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
-<tr><td>24 - 31</td><td>PRI_19</td><td>0x80</td><td>Priority of interrupt 20</td>
+<tr><td>24 - 31</td><td>PRI_19</td><td>0x00</td><td>Priority of interrupt 20</td>
 <tr><td>16 - 23</td><td>PRI_18</td><td>0x80</td><td>Priority of interrupt 19</td>
 <tr><td>8 - 15</td><td>PRI_17</td><td>0x00</td><td>Priority of interrupt 18</td>
 <tr><td>0 - 7</td><td>PRI_16</td><td>0x00</td><td>Priority of interrupt 17</td>
@@ -562,7 +562,7 @@ registers of the peripheral(s) configured by the component.
         
 </div>
 <table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0xE000E100</td></tr>
-<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x000C1000</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00041000</td></tr>
 <tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
 <tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
 <tr><td>0 - 31</td><td>SETENA</td><td>0x00</td><td>Interrupt set enable bits</td>

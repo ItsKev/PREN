@@ -1,4 +1,4 @@
-Generated_Code/US_Trig.o: ../Generated_Code/US_Trig.c \
+Generated_Code/BitIoLdd12.o: ../Generated_Code/BitIoLdd12.c \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/lib_ewl.prefix \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/common.prefix \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/ewl_c_version.h \
@@ -25,7 +25,7 @@ Generated_Code/US_Trig.o: ../Generated_Code/US_Trig.c \
  ../Generated_Code/Cpu.h ../Generated_Code/FRTOS1config.h \
  ../Generated_Code/projdefs.h ../Generated_Code/portable.h \
  ../Generated_Code/deprecated_definitions.h ../Generated_Code/portmacro.h \
- ../Generated_Code/mpu_wrappers.h ../Generated_Code/US_Trig.h \
+ ../Generated_Code/mpu_wrappers.h ../Generated_Code/BitIoLdd12.h \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/GPIO_PDD.h \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/PDD_Types.h
 
@@ -95,7 +95,7 @@ C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/iofiles/MKL25Z4.h:
 
 ../Generated_Code/mpu_wrappers.h:
 
-../Generated_Code/US_Trig.h:
+../Generated_Code/BitIoLdd12.h:
 
 C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/GPIO_PDD.h:
 

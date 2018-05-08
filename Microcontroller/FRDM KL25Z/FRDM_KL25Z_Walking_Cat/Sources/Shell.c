@@ -13,15 +13,14 @@
 #include "PE_Error.h"
 #include "UTIL1.h"
 #include "LED.h"
-#include "Ultasonic.h"
 #include "Stepper.h"
 #include "Electromagnet_Driver.h"
+#include "MeasurmentHandler.h"
 
 static const char* COMMAND_TABLE[] = { 
 		"\t help\r",
 		"\t LED_Onboard_R status|on|off|neg\r",
 		"\t LED_Onboard_Green status|on|off|neg\r",
-		"\t US status|start\r",
 		"\t ant status|n|fast|slow|stop\r",
 		"\t lst status|n|fast|slow|stop\r",
 		"\t ema	status|on|off\r",
@@ -45,8 +44,6 @@ static uint8_t DoCommand(uint8_t* cmd){
 		return result;
 	} else if (strncmp(cmd, "LED", 3) == 0) {
 		result = LEDOnboardParseCommand(cmd);
-	} else if (strncmp(cmd, "US", 2) == 0) {
-		result = US_ParseCommand(cmd);
 	} else if ((strncmp(cmd, "ant", 3) == 0) || (strncmp(cmd, "lst", 3) == 0)) {
 		result = Stepper_ParseCommand(cmd);
 	} else if (strncmp(cmd, "ema", 3) == 0) {
@@ -108,8 +105,6 @@ static portTASK_FUNCTION(ShellTask, pvParameters) {
 
 	(void) pvParameters; /* not used */
 	buf[0] = '\0';
-	//TerminalInitText();
-	//STRING_PROMPT(); 
 	for (;;) {		 
 		result = ReadAndParseCommand(buf, sizeof(buf), CLS1_GetStdio()); 
 		FRTOS1_vTaskDelay(50/portTICK_RATE_MS);

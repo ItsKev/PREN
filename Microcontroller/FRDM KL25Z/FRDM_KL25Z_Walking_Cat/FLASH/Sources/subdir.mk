@@ -10,10 +10,10 @@ C_SRCS_QUOTED += \
 "../Sources/Electromagnet_Driver.c" \
 "../Sources/Events.c" \
 "../Sources/LED.c" \
-"../Sources/Sensoric.c" \
+"../Sources/Lockup_Table.c" \
+"../Sources/MeasurmentHandler.c" \
 "../Sources/Shell.c" \
 "../Sources/Stepper.c" \
-"../Sources/Ultrasonic.c" \
 "../Sources/main.c" \
 "../Sources/sa_mtb.c" \
 
@@ -22,10 +22,10 @@ C_SRCS += \
 ../Sources/Electromagnet_Driver.c \
 ../Sources/Events.c \
 ../Sources/LED.c \
-../Sources/Sensoric.c \
+../Sources/Lockup_Table.c \
+../Sources/MeasurmentHandler.c \
 ../Sources/Shell.c \
 ../Sources/Stepper.c \
-../Sources/Ultrasonic.c \
 ../Sources/main.c \
 ../Sources/sa_mtb.c \
 
@@ -34,10 +34,10 @@ OBJS += \
 ./Sources/Electromagnet_Driver.o \
 ./Sources/Events.o \
 ./Sources/LED.o \
-./Sources/Sensoric.o \
+./Sources/Lockup_Table.o \
+./Sources/MeasurmentHandler.o \
 ./Sources/Shell.o \
 ./Sources/Stepper.o \
-./Sources/Ultrasonic.o \
 ./Sources/main.o \
 ./Sources/sa_mtb.o \
 
@@ -46,10 +46,10 @@ OBJS_QUOTED += \
 "./Sources/Electromagnet_Driver.o" \
 "./Sources/Events.o" \
 "./Sources/LED.o" \
-"./Sources/Sensoric.o" \
+"./Sources/Lockup_Table.o" \
+"./Sources/MeasurmentHandler.o" \
 "./Sources/Shell.o" \
 "./Sources/Stepper.o" \
-"./Sources/Ultrasonic.o" \
 "./Sources/main.o" \
 "./Sources/sa_mtb.o" \
 
@@ -58,10 +58,10 @@ C_DEPS += \
 ./Sources/Electromagnet_Driver.d \
 ./Sources/Events.d \
 ./Sources/LED.d \
-./Sources/Sensoric.d \
+./Sources/Lockup_Table.d \
+./Sources/MeasurmentHandler.d \
 ./Sources/Shell.d \
 ./Sources/Stepper.d \
-./Sources/Ultrasonic.d \
 ./Sources/main.d \
 ./Sources/sa_mtb.d \
 
@@ -70,10 +70,10 @@ OBJS_OS_FORMAT += \
 ./Sources/Electromagnet_Driver.o \
 ./Sources/Events.o \
 ./Sources/LED.o \
-./Sources/Sensoric.o \
+./Sources/Lockup_Table.o \
+./Sources/MeasurmentHandler.o \
 ./Sources/Shell.o \
 ./Sources/Stepper.o \
-./Sources/Ultrasonic.o \
 ./Sources/main.o \
 ./Sources/sa_mtb.o \
 
@@ -82,10 +82,10 @@ C_DEPS_QUOTED += \
 "./Sources/Electromagnet_Driver.d" \
 "./Sources/Events.d" \
 "./Sources/LED.d" \
-"./Sources/Sensoric.d" \
+"./Sources/Lockup_Table.d" \
+"./Sources/MeasurmentHandler.d" \
 "./Sources/Shell.d" \
 "./Sources/Stepper.d" \
-"./Sources/Ultrasonic.d" \
 "./Sources/main.d" \
 "./Sources/sa_mtb.d" \
 
@@ -123,17 +123,25 @@ Sources/LED.o: ../Sources/LED.c
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Sources/Sensoric.o: ../Sources/Sensoric.c
+Sources/Lockup_Table.o: ../Sources/Lockup_Table.c
 	@echo 'Building file: $<'
 	@echo 'Executing target #5 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
-	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/Sensoric.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/Sensoric.o"
+	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/Lockup_Table.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/Lockup_Table.o"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+Sources/MeasurmentHandler.o: ../Sources/MeasurmentHandler.c
+	@echo 'Building file: $<'
+	@echo 'Executing target #6 $<'
+	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
+	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/MeasurmentHandler.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/MeasurmentHandler.o"
 	@echo 'Finished building: $<'
 	@echo ' '
 
 Sources/Shell.o: ../Sources/Shell.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #6 $<'
+	@echo 'Executing target #7 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/Shell.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/Shell.o"
 	@echo 'Finished building: $<'
@@ -141,17 +149,9 @@ Sources/Shell.o: ../Sources/Shell.c
 
 Sources/Stepper.o: ../Sources/Stepper.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #7 $<'
-	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
-	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/Stepper.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/Stepper.o"
-	@echo 'Finished building: $<'
-	@echo ' '
-
-Sources/Ultrasonic.o: ../Sources/Ultrasonic.c
-	@echo 'Building file: $<'
 	@echo 'Executing target #8 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
-	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/Ultrasonic.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/Ultrasonic.o"
+	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/Stepper.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/Stepper.o"
 	@echo 'Finished building: $<'
 	@echo ' '
 

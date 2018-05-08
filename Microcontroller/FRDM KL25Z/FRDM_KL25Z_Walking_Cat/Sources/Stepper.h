@@ -50,7 +50,7 @@ uint8_t DrivingMotor_Move(int16_t stepsWithoutMicrosteppingRevolution);
 
 uint8_t DrivingMotor_MoveContinuous(void); 
 
-uint8_t DrivingMotor_Brakes(void); 
+uint8_t DrivingMotor_Brakes(uint32_t brakingDistanceSteps); 
 
 uint8_t DrivingMotor_SetSpeed(uint8_t targetVelocity); 
 

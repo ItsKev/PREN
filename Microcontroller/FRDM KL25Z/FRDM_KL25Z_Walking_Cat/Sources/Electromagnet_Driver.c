@@ -8,11 +8,13 @@
 #include "Electromagnet_Driver.h"
 #include "Electromagnet.h"
 #include "Shell.h"
+#include "PE_Types.h"
 
 bool Electromagnet_Driver_State; 
 
 uint8_t Electromagnet_Driver_Init(void){
 	Electromagnet_Driver_OFF();
+	return ERR_OK;
 }
 
 uint8_t Electromagnet_Driver_ParseCommand(unsigned char* cmd){

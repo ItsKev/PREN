@@ -45,7 +45,6 @@
 #include "LED_Onboard_Green.h"
 #include "LEDpin2.h"
 #include "BitIoLdd2.h"
-#include "US_Trig.h"
 #include "LiftingMotor_MS1.h"
 #include "BitIoLdd3.h"
 #include "PpgLdd1.h"
@@ -68,7 +67,8 @@
 #include "BitIoLdd10.h"
 #include "Electromagnet.h"
 #include "BitIoLdd11.h"
-#include "TU1.h"
+#include "EndSwitch.h"
+#include "BitIoLdd12.h"
 /* Including shared modules, which are used for whole project */
 #include "PE_Types.h"
 #include "PE_Error.h"

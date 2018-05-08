@@ -11,6 +11,7 @@ C_SRCS_QUOTED += \
 "../Generated_Code/BitIoLdd1.c" \
 "../Generated_Code/BitIoLdd10.c" \
 "../Generated_Code/BitIoLdd11.c" \
+"../Generated_Code/BitIoLdd12.c" \
 "../Generated_Code/BitIoLdd2.c" \
 "../Generated_Code/BitIoLdd3.c" \
 "../Generated_Code/BitIoLdd4.c" \
@@ -28,6 +29,7 @@ C_SRCS_QUOTED += \
 "../Generated_Code/DrivingMotor_MS2.c" \
 "../Generated_Code/DrivingMotor_Step.c" \
 "../Generated_Code/Electromagnet.c" \
+"../Generated_Code/EndSwitch.c" \
 "../Generated_Code/FRTOS1.c" \
 "../Generated_Code/LED_Onboard_Green.c" \
 "../Generated_Code/LED_Onboard_R.c" \
@@ -42,8 +44,6 @@ C_SRCS_QUOTED += \
 "../Generated_Code/PE_LDD.c" \
 "../Generated_Code/PpgLdd1.c" \
 "../Generated_Code/PpgLdd2.c" \
-"../Generated_Code/TU1.c" \
-"../Generated_Code/US_Trig.c" \
 "../Generated_Code/UTIL1.c" \
 "../Generated_Code/Vectors.c" \
 "../Generated_Code/WAIT1.c" \
@@ -69,6 +69,7 @@ C_SRCS += \
 ../Generated_Code/BitIoLdd1.c \
 ../Generated_Code/BitIoLdd10.c \
 ../Generated_Code/BitIoLdd11.c \
+../Generated_Code/BitIoLdd12.c \
 ../Generated_Code/BitIoLdd2.c \
 ../Generated_Code/BitIoLdd3.c \
 ../Generated_Code/BitIoLdd4.c \
@@ -86,6 +87,7 @@ C_SRCS += \
 ../Generated_Code/DrivingMotor_MS2.c \
 ../Generated_Code/DrivingMotor_Step.c \
 ../Generated_Code/Electromagnet.c \
+../Generated_Code/EndSwitch.c \
 ../Generated_Code/FRTOS1.c \
 ../Generated_Code/LED_Onboard_Green.c \
 ../Generated_Code/LED_Onboard_R.c \
@@ -100,8 +102,6 @@ C_SRCS += \
 ../Generated_Code/PE_LDD.c \
 ../Generated_Code/PpgLdd1.c \
 ../Generated_Code/PpgLdd2.c \
-../Generated_Code/TU1.c \
-../Generated_Code/US_Trig.c \
 ../Generated_Code/UTIL1.c \
 ../Generated_Code/Vectors.c \
 ../Generated_Code/WAIT1.c \
@@ -136,6 +136,7 @@ OBJS += \
 ./Generated_Code/BitIoLdd1.o \
 ./Generated_Code/BitIoLdd10.o \
 ./Generated_Code/BitIoLdd11.o \
+./Generated_Code/BitIoLdd12.o \
 ./Generated_Code/BitIoLdd2.o \
 ./Generated_Code/BitIoLdd3.o \
 ./Generated_Code/BitIoLdd4.o \
@@ -153,6 +154,7 @@ OBJS += \
 ./Generated_Code/DrivingMotor_MS2.o \
 ./Generated_Code/DrivingMotor_Step.o \
 ./Generated_Code/Electromagnet.o \
+./Generated_Code/EndSwitch.o \
 ./Generated_Code/FRTOS1.o \
 ./Generated_Code/LED_Onboard_Green.o \
 ./Generated_Code/LED_Onboard_R.o \
@@ -167,8 +169,6 @@ OBJS += \
 ./Generated_Code/PE_LDD.o \
 ./Generated_Code/PpgLdd1.o \
 ./Generated_Code/PpgLdd2.o \
-./Generated_Code/TU1.o \
-./Generated_Code/US_Trig.o \
 ./Generated_Code/UTIL1.o \
 ./Generated_Code/Vectors.o \
 ./Generated_Code/WAIT1.o \
@@ -198,6 +198,7 @@ OBJS_QUOTED += \
 "./Generated_Code/BitIoLdd1.o" \
 "./Generated_Code/BitIoLdd10.o" \
 "./Generated_Code/BitIoLdd11.o" \
+"./Generated_Code/BitIoLdd12.o" \
 "./Generated_Code/BitIoLdd2.o" \
 "./Generated_Code/BitIoLdd3.o" \
 "./Generated_Code/BitIoLdd4.o" \
@@ -215,6 +216,7 @@ OBJS_QUOTED += \
 "./Generated_Code/DrivingMotor_MS2.o" \
 "./Generated_Code/DrivingMotor_Step.o" \
 "./Generated_Code/Electromagnet.o" \
+"./Generated_Code/EndSwitch.o" \
 "./Generated_Code/FRTOS1.o" \
 "./Generated_Code/LED_Onboard_Green.o" \
 "./Generated_Code/LED_Onboard_R.o" \
@@ -229,8 +231,6 @@ OBJS_QUOTED += \
 "./Generated_Code/PE_LDD.o" \
 "./Generated_Code/PpgLdd1.o" \
 "./Generated_Code/PpgLdd2.o" \
-"./Generated_Code/TU1.o" \
-"./Generated_Code/US_Trig.o" \
 "./Generated_Code/UTIL1.o" \
 "./Generated_Code/Vectors.o" \
 "./Generated_Code/WAIT1.o" \
@@ -257,6 +257,7 @@ C_DEPS += \
 ./Generated_Code/BitIoLdd1.d \
 ./Generated_Code/BitIoLdd10.d \
 ./Generated_Code/BitIoLdd11.d \
+./Generated_Code/BitIoLdd12.d \
 ./Generated_Code/BitIoLdd2.d \
 ./Generated_Code/BitIoLdd3.d \
 ./Generated_Code/BitIoLdd4.d \
@@ -274,6 +275,7 @@ C_DEPS += \
 ./Generated_Code/DrivingMotor_MS2.d \
 ./Generated_Code/DrivingMotor_Step.d \
 ./Generated_Code/Electromagnet.d \
+./Generated_Code/EndSwitch.d \
 ./Generated_Code/FRTOS1.d \
 ./Generated_Code/LED_Onboard_Green.d \
 ./Generated_Code/LED_Onboard_R.d \
@@ -288,8 +290,6 @@ C_DEPS += \
 ./Generated_Code/PE_LDD.d \
 ./Generated_Code/PpgLdd1.d \
 ./Generated_Code/PpgLdd2.d \
-./Generated_Code/TU1.d \
-./Generated_Code/US_Trig.d \
 ./Generated_Code/UTIL1.d \
 ./Generated_Code/Vectors.d \
 ./Generated_Code/WAIT1.d \
@@ -315,6 +315,7 @@ OBJS_OS_FORMAT += \
 ./Generated_Code/BitIoLdd1.o \
 ./Generated_Code/BitIoLdd10.o \
 ./Generated_Code/BitIoLdd11.o \
+./Generated_Code/BitIoLdd12.o \
 ./Generated_Code/BitIoLdd2.o \
 ./Generated_Code/BitIoLdd3.o \
 ./Generated_Code/BitIoLdd4.o \
@@ -332,6 +333,7 @@ OBJS_OS_FORMAT += \
 ./Generated_Code/DrivingMotor_MS2.o \
 ./Generated_Code/DrivingMotor_Step.o \
 ./Generated_Code/Electromagnet.o \
+./Generated_Code/EndSwitch.o \
 ./Generated_Code/FRTOS1.o \
 ./Generated_Code/LED_Onboard_Green.o \
 ./Generated_Code/LED_Onboard_R.o \
@@ -346,8 +348,6 @@ OBJS_OS_FORMAT += \
 ./Generated_Code/PE_LDD.o \
 ./Generated_Code/PpgLdd1.o \
 ./Generated_Code/PpgLdd2.o \
-./Generated_Code/TU1.o \
-./Generated_Code/US_Trig.o \
 ./Generated_Code/UTIL1.o \
 ./Generated_Code/Vectors.o \
 ./Generated_Code/WAIT1.o \
@@ -374,6 +374,7 @@ C_DEPS_QUOTED += \
 "./Generated_Code/BitIoLdd1.d" \
 "./Generated_Code/BitIoLdd10.d" \
 "./Generated_Code/BitIoLdd11.d" \
+"./Generated_Code/BitIoLdd12.d" \
 "./Generated_Code/BitIoLdd2.d" \
 "./Generated_Code/BitIoLdd3.d" \
 "./Generated_Code/BitIoLdd4.d" \
@@ -391,6 +392,7 @@ C_DEPS_QUOTED += \
 "./Generated_Code/DrivingMotor_MS2.d" \
 "./Generated_Code/DrivingMotor_Step.d" \
 "./Generated_Code/Electromagnet.d" \
+"./Generated_Code/EndSwitch.d" \
 "./Generated_Code/FRTOS1.d" \
 "./Generated_Code/LED_Onboard_Green.d" \
 "./Generated_Code/LED_Onboard_R.d" \
@@ -405,8 +407,6 @@ C_DEPS_QUOTED += \
 "./Generated_Code/PE_LDD.d" \
 "./Generated_Code/PpgLdd1.d" \
 "./Generated_Code/PpgLdd2.d" \
-"./Generated_Code/TU1.d" \
-"./Generated_Code/US_Trig.d" \
 "./Generated_Code/UTIL1.d" \
 "./Generated_Code/Vectors.d" \
 "./Generated_Code/WAIT1.d" \
@@ -468,9 +468,17 @@ Generated_Code/BitIoLdd11.o: ../Generated_Code/BitIoLdd11.c
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Generated_Code/BitIoLdd2.o: ../Generated_Code/BitIoLdd2.c
+Generated_Code/BitIoLdd12.o: ../Generated_Code/BitIoLdd12.c
 	@echo 'Building file: $<'
 	@echo 'Executing target #18 $<'
+	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
+	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/BitIoLdd12.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/BitIoLdd12.o"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+Generated_Code/BitIoLdd2.o: ../Generated_Code/BitIoLdd2.c
+	@echo 'Building file: $<'
+	@echo 'Executing target #19 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/BitIoLdd2.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/BitIoLdd2.o"
 	@echo 'Finished building: $<'
@@ -478,7 +486,7 @@ Generated_Code/BitIoLdd2.o: ../Generated_Code/BitIoLdd2.c
 
 Generated_Code/BitIoLdd3.o: ../Generated_Code/BitIoLdd3.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #19 $<'
+	@echo 'Executing target #20 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/BitIoLdd3.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/BitIoLdd3.o"
 	@echo 'Finished building: $<'
@@ -486,7 +494,7 @@ Generated_Code/BitIoLdd3.o: ../Generated_Code/BitIoLdd3.c
 
 Generated_Code/BitIoLdd4.o: ../Generated_Code/BitIoLdd4.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #20 $<'
+	@echo 'Executing target #21 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/BitIoLdd4.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/BitIoLdd4.o"
 	@echo 'Finished building: $<'
@@ -494,7 +502,7 @@ Generated_Code/BitIoLdd4.o: ../Generated_Code/BitIoLdd4.c
 
 Generated_Code/BitIoLdd5.o: ../Generated_Code/BitIoLdd5.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #21 $<'
+	@echo 'Executing target #22 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/BitIoLdd5.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/BitIoLdd5.o"
 	@echo 'Finished building: $<'
@@ -502,7 +510,7 @@ Generated_Code/BitIoLdd5.o: ../Generated_Code/BitIoLdd5.c
 
 Generated_Code/BitIoLdd6.o: ../Generated_Code/BitIoLdd6.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #22 $<'
+	@echo 'Executing target #23 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/BitIoLdd6.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/BitIoLdd6.o"
 	@echo 'Finished building: $<'
@@ -510,7 +518,7 @@ Generated_Code/BitIoLdd6.o: ../Generated_Code/BitIoLdd6.c
 
 Generated_Code/BitIoLdd7.o: ../Generated_Code/BitIoLdd7.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #23 $<'
+	@echo 'Executing target #24 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/BitIoLdd7.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/BitIoLdd7.o"
 	@echo 'Finished building: $<'
@@ -518,7 +526,7 @@ Generated_Code/BitIoLdd7.o: ../Generated_Code/BitIoLdd7.c
 
 Generated_Code/BitIoLdd8.o: ../Generated_Code/BitIoLdd8.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #24 $<'
+	@echo 'Executing target #25 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/BitIoLdd8.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/BitIoLdd8.o"
 	@echo 'Finished building: $<'
@@ -526,7 +534,7 @@ Generated_Code/BitIoLdd8.o: ../Generated_Code/BitIoLdd8.c
 
 Generated_Code/BitIoLdd9.o: ../Generated_Code/BitIoLdd9.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #25 $<'
+	@echo 'Executing target #26 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/BitIoLdd9.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/BitIoLdd9.o"
 	@echo 'Finished building: $<'
@@ -534,7 +542,7 @@ Generated_Code/BitIoLdd9.o: ../Generated_Code/BitIoLdd9.c
 
 Generated_Code/CLS1.o: ../Generated_Code/CLS1.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #26 $<'
+	@echo 'Executing target #27 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/CLS1.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/CLS1.o"
 	@echo 'Finished building: $<'
@@ -542,7 +550,7 @@ Generated_Code/CLS1.o: ../Generated_Code/CLS1.c
 
 Generated_Code/CS1.o: ../Generated_Code/CS1.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #27 $<'
+	@echo 'Executing target #28 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/CS1.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/CS1.o"
 	@echo 'Finished building: $<'
@@ -550,7 +558,7 @@ Generated_Code/CS1.o: ../Generated_Code/CS1.c
 
 Generated_Code/Cpu.o: ../Generated_Code/Cpu.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #28 $<'
+	@echo 'Executing target #29 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/Cpu.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/Cpu.o"
 	@echo 'Finished building: $<'
@@ -558,7 +566,7 @@ Generated_Code/Cpu.o: ../Generated_Code/Cpu.c
 
 Generated_Code/DrivingMotor_Direction.o: ../Generated_Code/DrivingMotor_Direction.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #29 $<'
+	@echo 'Executing target #30 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/DrivingMotor_Direction.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/DrivingMotor_Direction.o"
 	@echo 'Finished building: $<'
@@ -566,7 +574,7 @@ Generated_Code/DrivingMotor_Direction.o: ../Generated_Code/DrivingMotor_Directio
 
 Generated_Code/DrivingMotor_Enable.o: ../Generated_Code/DrivingMotor_Enable.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #30 $<'
+	@echo 'Executing target #31 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/DrivingMotor_Enable.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/DrivingMotor_Enable.o"
 	@echo 'Finished building: $<'
@@ -574,7 +582,7 @@ Generated_Code/DrivingMotor_Enable.o: ../Generated_Code/DrivingMotor_Enable.c
 
 Generated_Code/DrivingMotor_MS1.o: ../Generated_Code/DrivingMotor_MS1.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #31 $<'
+	@echo 'Executing target #32 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/DrivingMotor_MS1.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/DrivingMotor_MS1.o"
 	@echo 'Finished building: $<'
@@ -582,7 +590,7 @@ Generated_Code/DrivingMotor_MS1.o: ../Generated_Code/DrivingMotor_MS1.c
 
 Generated_Code/DrivingMotor_MS2.o: ../Generated_Code/DrivingMotor_MS2.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #32 $<'
+	@echo 'Executing target #33 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/DrivingMotor_MS2.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/DrivingMotor_MS2.o"
 	@echo 'Finished building: $<'
@@ -590,7 +598,7 @@ Generated_Code/DrivingMotor_MS2.o: ../Generated_Code/DrivingMotor_MS2.c
 
 Generated_Code/DrivingMotor_Step.o: ../Generated_Code/DrivingMotor_Step.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #33 $<'
+	@echo 'Executing target #34 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/DrivingMotor_Step.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/DrivingMotor_Step.o"
 	@echo 'Finished building: $<'
@@ -598,15 +606,23 @@ Generated_Code/DrivingMotor_Step.o: ../Generated_Code/DrivingMotor_Step.c
 
 Generated_Code/Electromagnet.o: ../Generated_Code/Electromagnet.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #34 $<'
+	@echo 'Executing target #35 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/Electromagnet.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/Electromagnet.o"
 	@echo 'Finished building: $<'
 	@echo ' '
 
+Generated_Code/EndSwitch.o: ../Generated_Code/EndSwitch.c
+	@echo 'Building file: $<'
+	@echo 'Executing target #36 $<'
+	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
+	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/EndSwitch.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/EndSwitch.o"
+	@echo 'Finished building: $<'
+	@echo ' '
+
 Generated_Code/FRTOS1.o: ../Generated_Code/FRTOS1.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #35 $<'
+	@echo 'Executing target #37 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/FRTOS1.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/FRTOS1.o"
 	@echo 'Finished building: $<'
@@ -614,7 +630,7 @@ Generated_Code/FRTOS1.o: ../Generated_Code/FRTOS1.c
 
 Generated_Code/LED_Onboard_Green.o: ../Generated_Code/LED_Onboard_Green.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #36 $<'
+	@echo 'Executing target #38 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/LED_Onboard_Green.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/LED_Onboard_Green.o"
 	@echo 'Finished building: $<'
@@ -622,7 +638,7 @@ Generated_Code/LED_Onboard_Green.o: ../Generated_Code/LED_Onboard_Green.c
 
 Generated_Code/LED_Onboard_R.o: ../Generated_Code/LED_Onboard_R.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #37 $<'
+	@echo 'Executing target #39 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/LED_Onboard_R.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/LED_Onboard_R.o"
 	@echo 'Finished building: $<'
@@ -630,7 +646,7 @@ Generated_Code/LED_Onboard_R.o: ../Generated_Code/LED_Onboard_R.c
 
 Generated_Code/LEDpin1.o: ../Generated_Code/LEDpin1.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #38 $<'
+	@echo 'Executing target #40 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/LEDpin1.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/LEDpin1.o"
 	@echo 'Finished building: $<'
@@ -638,7 +654,7 @@ Generated_Code/LEDpin1.o: ../Generated_Code/LEDpin1.c
 
 Generated_Code/LEDpin2.o: ../Generated_Code/LEDpin2.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #39 $<'
+	@echo 'Executing target #41 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/LEDpin2.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/LEDpin2.o"
 	@echo 'Finished building: $<'
@@ -646,7 +662,7 @@ Generated_Code/LEDpin2.o: ../Generated_Code/LEDpin2.c
 
 Generated_Code/LiftingMotor_Direction.o: ../Generated_Code/LiftingMotor_Direction.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #40 $<'
+	@echo 'Executing target #42 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/LiftingMotor_Direction.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/LiftingMotor_Direction.o"
 	@echo 'Finished building: $<'
@@ -654,7 +670,7 @@ Generated_Code/LiftingMotor_Direction.o: ../Generated_Code/LiftingMotor_Directio
 
 Generated_Code/LiftingMotor_Enable.o: ../Generated_Code/LiftingMotor_Enable.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #41 $<'
+	@echo 'Executing target #43 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/LiftingMotor_Enable.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/LiftingMotor_Enable.o"
 	@echo 'Finished building: $<'
@@ -662,7 +678,7 @@ Generated_Code/LiftingMotor_Enable.o: ../Generated_Code/LiftingMotor_Enable.c
 
 Generated_Code/LiftingMotor_MS1.o: ../Generated_Code/LiftingMotor_MS1.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #42 $<'
+	@echo 'Executing target #44 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/LiftingMotor_MS1.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/LiftingMotor_MS1.o"
 	@echo 'Finished building: $<'
@@ -670,7 +686,7 @@ Generated_Code/LiftingMotor_MS1.o: ../Generated_Code/LiftingMotor_MS1.c
 
 Generated_Code/LiftingMotor_MS2.o: ../Generated_Code/LiftingMotor_MS2.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #43 $<'
+	@echo 'Executing target #45 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/LiftingMotor_MS2.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/LiftingMotor_MS2.o"
 	@echo 'Finished building: $<'
@@ -678,7 +694,7 @@ Generated_Code/LiftingMotor_MS2.o: ../Generated_Code/LiftingMotor_MS2.c
 
 Generated_Code/LiftingMotor_Step.o: ../Generated_Code/LiftingMotor_Step.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #44 $<'
+	@echo 'Executing target #46 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/LiftingMotor_Step.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/LiftingMotor_Step.o"
 	@echo 'Finished building: $<'
@@ -686,7 +702,7 @@ Generated_Code/LiftingMotor_Step.o: ../Generated_Code/LiftingMotor_Step.c
 
 Generated_Code/MCUC1.o: ../Generated_Code/MCUC1.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #45 $<'
+	@echo 'Executing target #47 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/MCUC1.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/MCUC1.o"
 	@echo 'Finished building: $<'
@@ -694,7 +710,7 @@ Generated_Code/MCUC1.o: ../Generated_Code/MCUC1.c
 
 Generated_Code/PE_LDD.o: ../Generated_Code/PE_LDD.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #46 $<'
+	@echo 'Executing target #48 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/PE_LDD.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/PE_LDD.o"
 	@echo 'Finished building: $<'
@@ -702,7 +718,7 @@ Generated_Code/PE_LDD.o: ../Generated_Code/PE_LDD.c
 
 Generated_Code/PpgLdd1.o: ../Generated_Code/PpgLdd1.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #47 $<'
+	@echo 'Executing target #49 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/PpgLdd1.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/PpgLdd1.o"
 	@echo 'Finished building: $<'
@@ -710,25 +726,9 @@ Generated_Code/PpgLdd1.o: ../Generated_Code/PpgLdd1.c
 
 Generated_Code/PpgLdd2.o: ../Generated_Code/PpgLdd2.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #48 $<'
-	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
-	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/PpgLdd2.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/PpgLdd2.o"
-	@echo 'Finished building: $<'
-	@echo ' '
-
-Generated_Code/TU1.o: ../Generated_Code/TU1.c
-	@echo 'Building file: $<'
-	@echo 'Executing target #49 $<'
-	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
-	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/TU1.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/TU1.o"
-	@echo 'Finished building: $<'
-	@echo ' '
-
-Generated_Code/US_Trig.o: ../Generated_Code/US_Trig.c
-	@echo 'Building file: $<'
 	@echo 'Executing target #50 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
-	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/US_Trig.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/US_Trig.o"
+	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Generated_Code/PpgLdd2.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Generated_Code/PpgLdd2.o"
 	@echo 'Finished building: $<'
 	@echo ' '
 

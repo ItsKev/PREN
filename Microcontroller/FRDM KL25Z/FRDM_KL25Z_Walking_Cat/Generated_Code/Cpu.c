@@ -7,7 +7,7 @@
 **     Version     : Component 01.025, Driver 01.04, CPU db: 3.00.000
 **     Datasheet   : KL25P80M48SF0RM, Rev.3, Sep 2012
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2018-04-04, 18:11, # CodeGen: 41
+**     Date/Time   : 2018-05-03, 22:27, # CodeGen: 51
 **     Abstract    :
 **
 **     Settings    :
@@ -75,8 +75,6 @@
 #include "LED_Onboard_Green.h"
 #include "LEDpin2.h"
 #include "BitIoLdd2.h"
-#include "US_Trig.h"
-#include "TU1.h"
 #include "LiftingMotor_MS1.h"
 #include "BitIoLdd3.h"
 #include "LiftingMotor_MS2.h"
@@ -99,6 +97,8 @@
 #include "BitIoLdd10.h"
 #include "Electromagnet.h"
 #include "BitIoLdd11.h"
+#include "EndSwitch.h"
+#include "BitIoLdd12.h"
 #include "PE_Types.h"
 #include "PE_Error.h"
 #include "PE_Const.h"
@@ -350,6 +350,8 @@ void PE_low_level_init(void)
   (void)BitIoLdd10_Init(NULL);
   /* ### BitIO_LDD "BitIoLdd11" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)BitIoLdd11_Init(NULL);
+  /* ### BitIO_LDD "BitIoLdd12" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)BitIoLdd12_Init(NULL);
 }
   /* Flash configuration field */
   __attribute__ ((section (".cfmconfig"))) const uint8_t _cfm[0x10] = {

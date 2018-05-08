@@ -2,8 +2,6 @@
  * Stepper.c
  * 
  * Nützliche Infos:
- * 		Liftinmotor:	150 Steps --> 1 cm height
- * 		Drivingmotor:	1000 Steps --> 54.9 cm on the sail
  *
  *  Created on: Mar 13, 2018
  *      Author: Burak Kizilkaya
@@ -39,13 +37,13 @@
 #define PI 										3.141592653589793238462643383 // For calculates
 #define RADIUS_DRIVING_WHEEL 					1.74 // cm
 #define RADIUS_Lifting_WHEEL 					0.5 // cm
-#define TARGET_VELOCITY_DRIVING_MOTOR 			10 // [cm/s]
+#define TARGET_VELOCITY_DRIVING_MOTOR 			25 // [cm/s]
 #define TARGET_VELOCITY_LIFTING_MOTOR 			10 // [cm/s]
 #define MICROSTEPPING_RESOLUTION_LIFTINGMOTOR	8 // Fullstep(1), Halfstep(2), Quarterstep(4), Eighterstep(8), Sixteenthstep(16)
 #define MICROSTEPPING_RESOLUTION_DRIVINGMOTOR	8 // Fullstep(1), Halfstep(2), Quarterstep(4), Eighterstep(8), Sixteenthstep(16)
 #define INITIAL_FREQ 							400 // Hz 
 #define LIFTINGMOTOR_ACCELARATIONINKREMENT		2 // It's variable --> Testing
-#define DRIVINGMOTOR_ACCELARATIONINKREMENT		2 // It's variable --> Testing
+#define DRIVINGMOTOR_ACCELARATIONINKREMENT		5 // It's variable --> Testing
 
 // Calculates-Methods
 // (100*v)/(r*pi)
@@ -95,6 +93,7 @@ uint8_t Stepper_Init(void) {
 	DrivingMotor_FORWARD();
 	DrivingMotor_Driver_Disable(); // Motor driver is off	
 	DrivingMotor_MS2_SetVal();
+	DrivingMotor_MS1_SetVal();
 
 	DrivingMotor.Speed = 0;
 	DrivingMotor.TargetFreq = INITIAL_FREQ;
@@ -147,14 +146,28 @@ void Stepper_TestApplication(void) {
 	}
 }
 
-uint8_t DrivingMotor_Brakes(void) {
+uint8_t DrivingMotor_Brakes(uint32_t brakingDistanceSteps) {
 	drivingMotor_brakes = TRUE;
+	uint16_t actualSteps = drivingMotor_currentSteps; 
+	uint16_t differenceSteps = brakingDistanceSteps*MICROSTEPPING_RESOLUTION_DRIVINGMOTOR - drivingMotor_accelarationSteps; 
+	bool notDifference = 0; 
+	
+	if (brakingDistanceSteps == 0) {
+		notDifference = 1; 
+	}
+	
+	if(differenceSteps < 0 ){
+		differenceSteps = (-1) * differenceSteps; 
+	}
+	
+	while ((DrivingMotor.Steps <= actualSteps + differenceSteps) && !notDifference); // wait until braking steps is finished
 
-	if(DrivingMotor.State != DECELERATING && DrivingMotor.State != STOPPED){
+	if(DrivingMotor.State != DECELERATING && DrivingMotor.State != STOPPED && !drivingMotor_speedChanges){
 		DrivingMotor.State = DECELERATING; 
 		drivingMotor_speedChanges = 0;
+		STRING_SUCCES(); 
 	}
-	STRING_SUCCES(); 
+	
 	
 	return ERR_OK;
 }
@@ -375,7 +388,7 @@ uint8_t LiftingMotor_MoveContinuous(void) {
 }
 
 uint8_t LiftingMotor_SetSpeed(uint8_t targetVelocity){
-	
+	return ERR_OK; 
 }
 
 void LiftingMotor_Event(void) {
@@ -473,7 +486,7 @@ uint8_t Stepper_ParseCommand(unsigned char* cmd){
 	}
 	
 	else if (strcmp(cmd, "ant stop") == 0) { 
-		return DrivingMotor_Brakes(); 
+		return DrivingMotor_Brakes(400); 
 	}
 	
 	

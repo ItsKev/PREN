@@ -31,8 +31,6 @@
 - \subpage ASerialLdd1
 - \subpage BitIoLdd1
 - \subpage BitIoLdd2
-- \subpage US_Trig
-- \subpage TU1
 - \subpage BitIoLdd3
 - \subpage BitIoLdd4
 - \subpage BitIoLdd5
@@ -44,6 +42,7 @@
 - \subpage BitIoLdd9
 - \subpage BitIoLdd10
 - \subpage BitIoLdd11
+- \subpage BitIoLdd12
 
 
 */
