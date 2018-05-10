@@ -11,8 +11,8 @@
 #include "PE_Types.h"
 
 extern const uint32_t lockupTableForLiftingMotor_NumberOfStepsForLiftingDown[];
-extern const double lockupTableForMeasurment_XAxisAir[];
-extern const double lockupTableForMeasurment_XAxisGround[];
-extern const double lockupTableForMeasurment_YAxis[];
+extern const float lockupTableForMeasurment_XAxisAir[];
+extern const float lockupTableForMeasurment_XAxisGround[];
+extern const float lockupTableForMeasurment_YAxis[];
 
 #endif /* LOCKUP_TABLE_H_ */

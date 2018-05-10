@@ -11,12 +11,17 @@
 #include "PE_Types.h"
 #include "PE_Const.h"
 
-double Measurment_XAxis(uint32_t steps){
-	return 0.0;
+static double calculationDistance_YAxis(uint32_t steps){
+	// Function for the different Distance
+	return 0.0f;
 }
 
-double Measurment_YAxis(uint32_t steps){
-	return 0.0;
+float Measurment_XAxis(uint32_t steps){
+	return lockupTableForMeasurment_XAxisAir[steps];
+}
+
+float Measurment_YAxis(uint32_t steps){
+	return lockupTableForMeasurment_YAxis[steps] - calculationDistance_YAxis(LiftingMotor.Steps);
 }
 
 void MeasurmentInit(void){

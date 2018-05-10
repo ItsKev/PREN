@@ -21,24 +21,34 @@
 #include "MeasurmentHandler.h"
 
 /* Defines */
-#define MAX_STEPS_FOR_DRIVINGMOTOR 5400
-#define BRAKING_DISTANCE 0
+#define MAX_STEPS_FOR_DRIVINGMOTOR 5450
+#define BRAKING_DISTANCE 400
 
 /* Globale Variable */
 Parcour_Handler Parcour_FSM_Handler;
 
 /* Intern Variable */
 static const uint16_t stepsAcrossLoadDrivingMotor = 654;
-static uint16_t stepsForFirstDownLiftingMotor = 3182;
+static uint16_t stepsForFirstDownLiftingMotor = 3190;
 static uint32_t stepsForSecondDownLiftingMotor = 6000;
 
 static void FSM_Parcour_Initalization(void){
 	/* Initialization for the FSM handler */
-	Parcour_FSM_Handler.ActualState_Finished = 0;
-	Parcour_FSM_Handler.ParcourState = Z0_INITIALIZATION;
+	Parcour_FSM_Handler.ParcourState = Z0_INITIALIZATION;	
 	Parcour_FSM_Handler.StartSignal_FromPI = 0;
+	Parcour_FSM_Handler.ActualState_Finished = 0;
 	Parcour_FSM_Handler.z0_initalizationFinished = 0;
+	Parcour_FSM_Handler.z0_finished = 0;
 	Parcour_FSM_Handler.z1_liftingMotorStarted = 0;
+	Parcour_FSM_Handler.z1_drivingMotorStarted = 0;
+	Parcour_FSM_Handler.z1_finished = 0;
+	Parcour_FSM_Handler.z2_sendTargetdetection = 0;
+	Parcour_FSM_Handler.z2_liftingMotorStarted = 0;
+	Parcour_FSM_Handler.z3_drivingMotorStarted = 0;
+	Parcour_FSM_Handler.z3_targetFound = 0;
+	Parcour_FSM_Handler.z4_liftingMotorStarted = 0;
+	Parcour_FSM_Handler.z5_drivingMotorStarted = 0;
+	Parcour_FSM_Handler.z6_endSwitchIsClicked = 0;
 }
 
 
@@ -54,7 +64,7 @@ static void FSM_Parcour(void) {
 	/**
 	 * Is the End-Switch Clicked
 	 */
-//	if (!EndSwitch_GetVal()) {
+//	if (EndSwitch_GetVal()) {
 //		Parcour_FSM_Handler.ParcourState = Z6_THE_ENDSWITCH_IS_CLICKED;
 //		CLS1_SendStr((unsigned char*) "parcour finished\n",
 //							CLS1_GetStdio()->stdOut);
@@ -105,7 +115,7 @@ static void FSM_Parcour(void) {
 
 		}
 
-		if ((LiftingMotor.Steps / 8) < stepsForFirstDownLiftingMotor / 3) {
+		if ((LiftingMotor.Steps / 8) < stepsForFirstDownLiftingMotor - stepsForFirstDownLiftingMotor/3) {
 			Parcour_FSM_Handler.ParcourState = Z3_CRUISING_UNTIL_ACROSS_TARGET;
 		}
 
@@ -136,17 +146,18 @@ static void FSM_Parcour(void) {
 		break;
 	
 	case Z5_CRUISING_UNTIL_MASTS2_IS_REACHED:
-		if ((LiftingMotor.Steps / 8) <= (stepsForSecondDownLiftingMotor / 3) && !Parcour_FSM_Handler.z5_drivingMotorStarted) {
+		if ((LiftingMotor.Steps / 8) <= (stepsForSecondDownLiftingMotor - stepsForSecondDownLiftingMotor/3) && !Parcour_FSM_Handler.z5_drivingMotorStarted) {
 			DrivingMotor_Move(MAX_STEPS_FOR_DRIVINGMOTOR - (DrivingMotor.Steps/8));
 			Parcour_FSM_Handler.z5_drivingMotorStarted = 1;
+			Parcour_FSM_Handler.ParcourState = Z6_UNTIL_THE_ENDSWITCH_IS_CLICKED;
 		}
 		break;
 		
-	case Z6_THE_ENDSWITCH_IS_CLICKED: 
-		if (1/*!Parcour_FSM_Handler.z6_endSwitchIsClicked*/) {
+	case Z6_UNTIL_THE_ENDSWITCH_IS_CLICKED: 
+		if (Parcour_FSM_Handler.z6_endSwitchIsClicked || DrivingMotor.Steps >= MAX_STEPS_FOR_DRIVINGMOTOR) {
 			DrivingMotor_Step_Disable();
 			LiftingMotor_Step_Disable();
-			Parcour_FSM_Handler.z6_endSwitchIsClicked = 1; 
+			Parcour_FSM_Handler.z6_endSwitchIsClicked = 0; 
 			Parcour_FSM_Handler.z0_initalizationFinished = 0; // Initalization can always start for reset
 			Parcour_FSM_Handler.ParcourState = Z0_INITIALIZATION;
 		}
@@ -163,7 +174,7 @@ static portTASK_FUNCTION(Task1, pvParameters) {
 	for (;;) {
 		LED_Onboard_Green_Neg();
 		FSM_Parcour();
-		FRTOS1_vTaskDelay(50/portTICK_RATE_MS);
+		FRTOS1_vTaskDelay(500/portTICK_RATE_MS);
 	}
 }
 

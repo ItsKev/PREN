@@ -146,8 +146,8 @@
       <XtraAge46>1281801067</XtraAge46>
       <XtraAge48>1281819217</XtraAge48>
       <XtraAge66>1285796718</XtraAge66>
-      <XtraAge67>1285796718</XtraAge67>
-      <XtraAge69>1285796718</XtraAge69>
+      <XtraAge67>1286235854</XtraAge67>
+      <XtraAge69>1286235854</XtraAge69>
       <GenExtraFileType69>4</GenExtraFileType69>
       <GenExtraFileType68>4</GenExtraFileType68>
       <GenExtraFileType67>4</GenExtraFileType67>
@@ -349,7 +349,7 @@
     </GenFiles>
     <SignalListFile>Documentation\FRDM_KL25Z_Walking_Cat_SIGNALS.txt</SignalListFile>
     <DestinationCompiler>GNUC</DestinationCompiler>
-    <ProjectModificationStamp>32</ProjectModificationStamp>
+    <ProjectModificationStamp>36</ProjectModificationStamp>
   </Options>
   <CpuID_2>
     <Generated>true</Generated>
@@ -358,7 +358,7 @@
     <GenDriverVersion>01.04</GenDriverVersion>
     <GenEventModule>Events</GenEventModule>
     <HeaderAge>1281736174</HeaderAge>
-    <CodeAge>1285796718</CodeAge>
+    <CodeAge>1286235854</CodeAge>
     <AsemblAge>-1</AsemblAge>
     <GenNumMethods>11</GenNumMethods>
     <SetClockConfiguration>false</SetClockConfiguration>

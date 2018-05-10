@@ -38,11 +38,11 @@
 #define RADIUS_DRIVING_WHEEL 					1.74 // cm
 #define RADIUS_Lifting_WHEEL 					0.5 // cm
 #define TARGET_VELOCITY_DRIVING_MOTOR 			25 // [cm/s]
-#define TARGET_VELOCITY_LIFTING_MOTOR 			10 // [cm/s]
+#define TARGET_VELOCITY_LIFTING_MOTOR 			15 // [cm/s]
 #define MICROSTEPPING_RESOLUTION_LIFTINGMOTOR	8 // Fullstep(1), Halfstep(2), Quarterstep(4), Eighterstep(8), Sixteenthstep(16)
 #define MICROSTEPPING_RESOLUTION_DRIVINGMOTOR	8 // Fullstep(1), Halfstep(2), Quarterstep(4), Eighterstep(8), Sixteenthstep(16)
 #define INITIAL_FREQ 							400 // Hz 
-#define LIFTINGMOTOR_ACCELARATIONINKREMENT		2 // It's variable --> Testing
+#define LIFTINGMOTOR_ACCELARATIONINKREMENT		5 // It's variable --> Testing
 #define DRIVINGMOTOR_ACCELARATIONINKREMENT		5 // It's variable --> Testing
 
 // Calculates-Methods
@@ -473,12 +473,14 @@ uint8_t Stepper_ParseCommand(unsigned char* cmd){
 	} 
 	
 	else if (strncmp(cmd, (unsigned char*)"ant n", 5)==0){	
-		 tmpValue = atoi(cmd+6); 
+		 tmpValue = atoi(cmd+6);
 		 return DrivingMotor_Move(tmpValue);
 	}
 	
 	else if (strcmp(cmd, "ant slow") == 0){
-		return DrivingMotor_SetSpeed(TARGET_VELOCITY_DRIVING_MOTOR*0.5); 
+		//return DrivingMotor_SetSpeed(TARGET_VELOCITY_DRIVING_MOTOR*0.5);
+		DrivingMotor_Step_SetFreqHz(DrivingMotor.TargetFreq - (DrivingMotor.TargetFreq/3));
+		return ERR_OK;
 	}
 	
 	else if (strcmp(cmd, "ant fast") == 0){

@@ -103,7 +103,12 @@ Sources/Shell.o: ../Sources/Shell.c \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/BitIoLdd11.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/EndSwitch.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/BitIoLdd12.h \
- ../Sources/Electromagnet_Driver.h ../Sources/MeasurmentHandler.h
+ ../Sources/Electromagnet_Driver.h ../Sources/MeasurmentHandler.h \
+ C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdio.h \
+ C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdio \
+ C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/eof.h \
+ C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/file_struc.h \
+ C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdio_api.h
 
 C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/lib_ewl.prefix:
 
@@ -318,3 +323,13 @@ D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generate
 ../Sources/Electromagnet_Driver.h:
 
 ../Sources/MeasurmentHandler.h:
+
+C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdio.h:
+
+C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdio:
+
+C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/eof.h:
+
+C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/file_struc.h:
+
+C:/Freescale/CW\ MCU\ v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdio_api.h:

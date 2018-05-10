@@ -12,9 +12,9 @@
 
 void MeasurmentInit(void);
 
-double Measurment_XAxis(uint32_t steps); 
+float Measurment_XAxis(uint32_t steps); 
 
-double Measurment_YAxis(uint32_t steps);
+float Measurment_YAxis(uint32_t steps);
 
 
 #endif /* MEASURMENTHANDLER_H_ */

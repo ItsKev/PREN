@@ -16,6 +16,19 @@
 #include "Stepper.h"
 #include "Electromagnet_Driver.h"
 #include "MeasurmentHandler.h"
+#include <string.h>
+#include <stdio.h>
+
+static int power(int x, unsigned int y) {
+	int temp;
+	if (y == 0)
+		return 1;
+	temp = power(x, y / 2);
+	if (y % 2 == 0)
+		return temp * temp;
+	else
+		return x * temp * temp;
+}
 
 static const char* COMMAND_TABLE[] = { 
 		"\t help\r",
@@ -25,6 +38,68 @@ static const char* COMMAND_TABLE[] = {
 		"\t lst status|n|fast|slow|stop\r",
 		"\t ema	status|on|off\r",
 		"\r"};
+
+// reverses a string 'str' of length 'len'
+static void reverse(char *str, int len)
+{
+    int i=0, j=len-1, temp;
+    while (i<j)
+    {
+        temp = str[i];
+        str[i] = str[j];
+        str[j] = temp;
+        i++; j--;
+    }
+}
+ 
+ // Converts a given integer x to string str[].  d is the number
+ // of digits required in output. If d is more than the number
+ // of digits in x, then 0s are added at the beginning.
+static int intToStr(int x, char str[], int d)
+{
+    int i = 0;
+    while (x)
+    {
+        str[i++] = (x%10) + '0';
+        x = x/10;
+    }
+ 
+    // If number of digits required is more, then
+    // add 0s at the beginning
+    while (i < d)
+        str[i++] = '0';
+ 
+    reverse(str, i);
+    str[i] = '\0';
+    return i;
+}
+ 
+// Converts a floating point number to string.
+static void ftoa(float n, char *res, int afterpoint)
+{
+    // Extract integer part
+    int ipart = (int)n;
+ 
+    // Extract floating part
+    float fpart = n - (float)ipart;
+ 
+    // convert integer part to string
+    int i = intToStr(ipart, res, 0);
+ 
+    // check for display option after point
+    if (afterpoint != 0)
+    {
+        res[i] = '.';  // add dot
+ 
+        // Get the value of fraction part upto given no.
+        // of points after dot. The third parameter is needed
+        // to handle cases like 233.007
+        fpart = fpart * power(10, afterpoint);
+ 
+        intToStr((int)fpart, res + i + 1, afterpoint);
+    }
+}
+
 
 static void TerminalInitText(void) {
 	int i;
@@ -38,6 +113,8 @@ static void TerminalInitText(void) {
 
 static uint8_t DoCommand(uint8_t* cmd){
 	uint8_t result = ERR_OK; 
+	unsigned char tmpDistanceX[10];
+	unsigned char tmpDistanceY[10];
 	
 	if (strcmp(cmd, (unsigned char*)"help") == 0) {
 		TerminalInitText();
@@ -57,6 +134,13 @@ static uint8_t DoCommand(uint8_t* cmd){
 		Parcour_FSM_Handler.z3_targetFound = 1;
 	} else if (strncmp(cmd, "msg last", 8) == 0) {
 		// measurment (calculating) x and z koordinates of load;
+		ftoa(Measurment_XAxis(DrivingMotor.Steps/8),tmpDistanceX,1);
+		ftoa(Measurment_YAxis(DrivingMotor.Steps/8),tmpDistanceY,1);
+		STRING_S();
+		CLS1_SendStr(tmpDistanceX, CLS1_GetStdio()->stdOut);
+		CLS1_SendStr((unsigned char*)";", CLS1_GetStdio()->stdOut);
+		CLS1_SendStr(tmpDistanceY, CLS1_GetStdio()->stdOut);
+		
 	} else if (strncmp(cmd, "mst 2 reached", 13) == 0) {
 		// Parcour is finished --> limit switched detected;
 	} else {
