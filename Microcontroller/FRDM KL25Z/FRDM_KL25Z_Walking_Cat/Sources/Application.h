@@ -33,9 +33,13 @@ typedef struct{
 	bool z2_liftingMotorStarted;
 	bool z3_drivingMotorStarted;
 	bool z3_targetFound;
+	bool z3_liftingMotorStopped;
 	bool z4_liftingMotorStarted;
+	bool z4_liftingIsFinished;
+	int16_t z4_liftingMotorOldSteps;
 	bool z5_drivingMotorStarted;
 	bool z6_endSwitchIsClicked;
+	bool parcourFinished;
 }Parcour_Handler;
 
 extern Parcour_Handler Parcour_FSM_Handler;

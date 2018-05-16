@@ -46,7 +46,7 @@ extern StepperDevice LiftingMotor;
 
 #define DrivingMotor_BACKWARD() ({DrivingMotor.Direction = BACKWARD; DrivingMotor_Direction_ClrVal();})
 
-uint8_t DrivingMotor_Move(int16_t stepsWithoutMicrosteppingRevolution); 
+uint8_t DrivingMotor_Move(int16_t stepsWithoutMicrosteppingRevolution, uint8_t speed, uint8_t accelaration); 
 
 uint8_t DrivingMotor_MoveContinuous(void); 
 
@@ -62,7 +62,7 @@ void DrivingMotor_Event(void);
 
 #define LiftingMotor_BACKWARD()	({LiftingMotor.Direction = BACKWARD; LiftingMotor_Direction_ClrVal();})
 
-uint8_t LiftingMotor_Move(int16_t stepsWithoutMicrosteppingRevolution);
+uint8_t LiftingMotor_Move(int16_t stepsWithoutMicrosteppingRevolution, uint8_t speed, uint8_t accelaration);
 
 uint8_t LiftingMotor_MoveContinuous(void); 
 
