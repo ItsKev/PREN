@@ -6,7 +6,7 @@
 **     Component   : BitIO_LDD
 **     Version     : Component 01.033, Driver 01.03, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2018-05-03, 18:32, # CodeGen: 50
+**     Date/Time   : 2018-05-16, 10:26, # CodeGen: 70
 **     Abstract    :
 **         The HAL BitIO component provides a low level API for unified
 **         access to general purpose digital input/output pins across
@@ -16,8 +16,8 @@
 **         portable to various microprocessors.
 **     Settings    :
 **          Component name                                 : BitIoLdd12
-**          Pin for I/O                                    : PTC16
-**          Pin signal                                     : 
+**          Pin for I/O                                    : PTD7/SPI1_MISO/UART0_TX/SPI1_MOSI
+**          Pin signal                                     : EndSwitch
 **          Direction                                      : Input
 **          Initialization                                 : 
 **            Init. direction                              : Input
@@ -98,7 +98,7 @@ extern "C" {
 
 
 /*! Peripheral base address of a device allocated by the component. This constant can be used directly in PDD macros. */
-#define BitIoLdd12_PRPH_BASE_ADDRESS  0x400FF080U
+#define BitIoLdd12_PRPH_BASE_ADDRESS  0x400FF0C0U
   
 /*! Device data structure pointer used when auto initialization property is enabled. This constant can be passed as a first parameter to all component's methods. */
 #define BitIoLdd12_DeviceData  ((LDD_TDeviceData *)PE_LDD_GetDeviceStructure(PE_LDD_COMPONENT_BitIoLdd12_ID))
@@ -108,9 +108,9 @@ extern "C" {
 #define BitIoLdd12_GetVal_METHOD_ENABLED /*!< GetVal method of the component BitIoLdd12 is enabled (generated) */
 
 /* Definition of implementation constants */
-#define BitIoLdd12_MODULE_BASE_ADDRESS FPTC_BASE_PTR /*!< Name of macro used as the base address */
-#define BitIoLdd12_PORTCONTROL_BASE_ADDRESS PORTC_BASE_PTR /*!< Name of macro used as the base address */
-#define BitIoLdd12_PORT_MASK 0x00010000U /*!< Mask of the allocated pin from the port */
+#define BitIoLdd12_MODULE_BASE_ADDRESS FPTD_BASE_PTR /*!< Name of macro used as the base address */
+#define BitIoLdd12_PORTCONTROL_BASE_ADDRESS PORTD_BASE_PTR /*!< Name of macro used as the base address */
+#define BitIoLdd12_PORT_MASK 0x80U     /*!< Mask of the allocated pin from the port */
 
 
 

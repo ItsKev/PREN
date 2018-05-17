@@ -50,7 +50,8 @@ Generated_Code/Cpu.o: ../Generated_Code/Cpu.c \
  C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/PDD_Types.h \
  ../Generated_Code/LED_Onboard_Green.h \
  ../Generated_Code/LED_Onboard_Greenconfig.h ../Generated_Code/LEDpin2.h \
- ../Generated_Code/BitIoLdd2.h ../Generated_Code/LiftingMotor_MS1.h \
+ ../Generated_Code/BitIoLdd2.h ../Generated_Code/Electromagnet.h \
+ ../Generated_Code/BitIoLdd11.h ../Generated_Code/LiftingMotor_MS1.h \
  ../Generated_Code/BitIoLdd3.h ../Generated_Code/LiftingMotor_MS2.h \
  ../Generated_Code/BitIoLdd4.h ../Generated_Code/LiftingMotor_Enable.h \
  ../Generated_Code/BitIoLdd5.h ../Generated_Code/LiftingMotor_Direction.h \
@@ -62,8 +63,7 @@ Generated_Code/Cpu.o: ../Generated_Code/Cpu.c \
  ../Generated_Code/DrivingMotor_MS2.h ../Generated_Code/BitIoLdd8.h \
  ../Generated_Code/DrivingMotor_Enable.h ../Generated_Code/BitIoLdd9.h \
  ../Generated_Code/DrivingMotor_Direction.h \
- ../Generated_Code/BitIoLdd10.h ../Generated_Code/Electromagnet.h \
- ../Generated_Code/BitIoLdd11.h ../Generated_Code/EndSwitch.h \
+ ../Generated_Code/BitIoLdd10.h ../Generated_Code/EndSwitch.h \
  ../Generated_Code/BitIoLdd12.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Sources/Events.h \
  D:/15_MyFactory/PREN/Microcontroller/FRDM\ KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code/PE_Types.h \
@@ -248,6 +248,10 @@ C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/PDD_Types.h:
 
 ../Generated_Code/BitIoLdd2.h:
 
+../Generated_Code/Electromagnet.h:
+
+../Generated_Code/BitIoLdd11.h:
+
 ../Generated_Code/LiftingMotor_MS1.h:
 
 ../Generated_Code/BitIoLdd3.h:
@@ -289,10 +293,6 @@ C:/Freescale/CW\ MCU\ v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/TPM_PDD.h:
 ../Generated_Code/DrivingMotor_Direction.h:
 
 ../Generated_Code/BitIoLdd10.h:
-
-../Generated_Code/Electromagnet.h:
-
-../Generated_Code/BitIoLdd11.h:
 
 ../Generated_Code/EndSwitch.h:
 

@@ -5,7 +5,7 @@
 **     Processor   : MKL25Z128VLK4
 **     Version     : Component 01.025, Driver 01.04, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2018-05-10, 12:54, # CodeGen: 59
+**     Date/Time   : 2018-05-11, 12:04, # CodeGen: 67
 **     Abstract    :
 **
 **     Settings    :
@@ -69,6 +69,8 @@
   #include "LED_Onboard_Green.h"
   #include "LEDpin2.h"
   #include "BitIoLdd2.h"
+  #include "Electromagnet.h"
+  #include "BitIoLdd11.h"
   #include "LiftingMotor_MS1.h"
   #include "BitIoLdd3.h"
   #include "LiftingMotor_MS2.h"
@@ -89,8 +91,6 @@
   #include "BitIoLdd9.h"
   #include "DrivingMotor_Direction.h"
   #include "BitIoLdd10.h"
-  #include "Electromagnet.h"
-  #include "BitIoLdd11.h"
   #include "EndSwitch.h"
   #include "BitIoLdd12.h"
   #include "Events.h"

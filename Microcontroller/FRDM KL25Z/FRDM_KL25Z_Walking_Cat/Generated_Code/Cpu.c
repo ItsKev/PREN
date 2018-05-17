@@ -7,7 +7,7 @@
 **     Version     : Component 01.025, Driver 01.04, CPU db: 3.00.000
 **     Datasheet   : KL25P80M48SF0RM, Rev.3, Sep 2012
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2018-05-10, 12:54, # CodeGen: 59
+**     Date/Time   : 2018-05-11, 12:04, # CodeGen: 67
 **     Abstract    :
 **
 **     Settings    :
@@ -75,6 +75,8 @@
 #include "LED_Onboard_Green.h"
 #include "LEDpin2.h"
 #include "BitIoLdd2.h"
+#include "Electromagnet.h"
+#include "BitIoLdd11.h"
 #include "LiftingMotor_MS1.h"
 #include "BitIoLdd3.h"
 #include "LiftingMotor_MS2.h"
@@ -95,8 +97,6 @@
 #include "BitIoLdd9.h"
 #include "DrivingMotor_Direction.h"
 #include "BitIoLdd10.h"
-#include "Electromagnet.h"
-#include "BitIoLdd11.h"
 #include "EndSwitch.h"
 #include "BitIoLdd12.h"
 #include "PE_Types.h"
@@ -192,8 +192,9 @@ void __init_hardware(void)
   /* System clock initialization */
   /* SIM_CLKDIV1: OUTDIV1=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,OUTDIV4=3,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0 */
   SIM_CLKDIV1 = (SIM_CLKDIV1_OUTDIV1(0x00) | SIM_CLKDIV1_OUTDIV4(0x03)); /* Set the system prescalers to safe value */
-  /* SIM_SCGC5: PORTE=1,PORTC=1,PORTB=1,PORTA=1 */
+  /* SIM_SCGC5: PORTE=1,PORTD=1,PORTC=1,PORTB=1,PORTA=1 */
   SIM_SCGC5 |= SIM_SCGC5_PORTE_MASK |
+               SIM_SCGC5_PORTD_MASK |
                SIM_SCGC5_PORTC_MASK |
                SIM_SCGC5_PORTB_MASK |
                SIM_SCGC5_PORTA_MASK;   /* Enable clock gate for ports to enable pin routing */
@@ -328,6 +329,8 @@ void PE_low_level_init(void)
   (void)BitIoLdd2_Init(NULL);
   /* ### LED "LED_Onboard_Green" init code ... */
   LED_Onboard_Green_Init(); /* initialize LED driver */
+  /* ### BitIO_LDD "BitIoLdd11" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)BitIoLdd11_Init(NULL);
   /* ### BitIO_LDD "BitIoLdd3" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)BitIoLdd3_Init(NULL);
   /* ### BitIO_LDD "BitIoLdd4" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
@@ -348,8 +351,6 @@ void PE_low_level_init(void)
   (void)BitIoLdd9_Init(NULL);
   /* ### BitIO_LDD "BitIoLdd10" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)BitIoLdd10_Init(NULL);
-  /* ### BitIO_LDD "BitIoLdd11" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
-  (void)BitIoLdd11_Init(NULL);
   /* ### BitIO_LDD "BitIoLdd12" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)BitIoLdd12_Init(NULL);
 }
