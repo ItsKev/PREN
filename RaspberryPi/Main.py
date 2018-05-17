@@ -11,8 +11,8 @@ class Main:
 
     def __init__(self) -> None:
         print("Main_init")
-        initialize_callbacks(self.start, self.stop)
-        threading.Thread(target=app.run).start()
+        initialize_callbacks(self.start, self.stop, self.reset_image_processor)
+        threading.Thread(target=start_website).start()
 
         #update_website_thread = threading.Thread(target=self.website_handler.start_updating_coordinates,
         #                                         args=(self.freedomboard_connector.get_values,))
@@ -28,6 +28,9 @@ class Main:
         print("Main_stop")
         self.freedomboard_connector.stop()
 
+    def reset_image_processor(self):
+        print("Reset")
+        threading.Thread(target=self.image_processor.start_detecting, args=(self.freedomboard_connector, )).start()
 
 if __name__ == '__main__':
     Main()

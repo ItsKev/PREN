@@ -1,36 +1,35 @@
 import cv2
 import time
 import numpy as np
-from picamera import PiCamera
-from picamera.array import PiRGBArray
+from imutils.video.pivideostream import PiVideoStream
+from imutils.video import FPS
 
 
 class ImageProcessor:
     detect_image = True
+    slower_already_sent = False
 
     def start_detecting(self, serial_connection):
         print("ImageProcessor_start_detecting")
 
-        camera = PiCamera()
-        camera.resolution = (640, 480)
-        camera.framerate = 30
-        camera.video_stabilization = True
-        raw_capture = PiRGBArray(camera, size=(640, 480))
-        time.sleep(1)
+        vs = PiVideoStream(resolution=(640, 480)).start()
+        time.sleep(2.0)
+        fps = FPS().start()
 
-        for frame in camera.capture_continuous(raw_capture, format="bgr", use_video_port=True):
+        while True:
             if not self.detect_image:
                 break
-            image = frame.array
-            loop_time = time.time()
+            image = vs.read()
             gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
             gray = cv2.blur(gray, (5, 5))
 
             # detect edges in the image
-            edged = cv2.Canny(gray, 100, 200)
+            _ , edged = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+            # edged = cv2.Canny(gray, 100, 200)
 
-            # find contours (in the image
-            _, contours, _ = cv2.findContours(edged.copy(), cv2.RETR_CCOMP, cv2.CHAIN_APPROX_SIMPLE)
+            # find contours in the image
+            _, contours, _ = cv2.findContours(edged.copy(), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+            contours = sorted(contours, key=cv2.contourArea, reverse=True)[:9]
 
             centers = []
             last_dimensions = []
@@ -62,12 +61,13 @@ class ImageProcessor:
                                 break
                             last_dimensions.append((w, h))
                             centers.append(np.array((cx, cy)))
-            # print("FPS: " + str(1 / (time.time() - loop_time)))
-            raw_capture.truncate(0)
-            raw_capture.seek(0)
-        raw_capture.truncate(0)
-        camera.close()
+            fps.update()
+        fps.stop()
+        print('approx. FPS: {:.2f}'.format(fps.fps()))
+        vs.stop()
         cv2.destroyAllWindows()
+        self.detect_image = True
+        self.slower_already_sent = False
 
     def check_if_target_found(self, centers, cx, cy, serial_connection) -> bool:
         first_match = True
@@ -82,8 +82,11 @@ class ImageProcessor:
                         serial_connection.target_found()
                         self.detect_image = False
                         return True
-                    else:
-                        serial_connection.drive_slower()
+                    # else:
+                        # if not self.slower_already_sent:
+                           # print("Not in center")
+                           # serial_connection.drive_slower()
+                           # self.slower_already_sent = True
         return False
 
     def is_a_duplicate(self, last_dimensions, height, width) -> bool:
@@ -98,7 +101,7 @@ class ImageProcessor:
 
     def is_target_in_center(self, cy) -> bool:
         center_y = 480 / 2
-        offset = 60
+        offset = 20
         if (center_y - offset) <= cy <= (center_y + offset):
             return True
         return False

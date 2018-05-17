@@ -7,18 +7,18 @@
 }
 
 header{
-    position: fixed;
+    /* position: fixed; */
 	width: 100%;
 	height: var(--heading-height);
 }
 
 /* Create angled background with 'before' pseudo-element */
-header::before {
+header:before {
 	content: "";
 	display: block;
 	position: absolute;
 	left: 0;
-	bottom: 6em;
+	top: 6em;
 	width: 100%;
 	height: calc(var(--heading-height) + 7em);
 	z-index: -1;
@@ -55,7 +55,7 @@ header h2{
 main .container{
     margin-top: 230px;
     display: block;
-    height: 5000px;
+    height: auto;
 }
 
 h2{

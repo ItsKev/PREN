@@ -104,13 +104,13 @@ class FreedomboardConnector:
             if self.check_if_successful():
                 break
 
-    def get_values(self) -> (int, int):
+    def get_values(self) -> (float, float):
         while True:
             self.serial_connection.write(b'msg last\n')
             line = self.serial_connection.readline().decode()
             if line[0] == 's':
                 line = line.split(' ')[1]
-                return int(line.split(';')[0]), int(line.split(';')[1])
+                return float(line.split(';')[0]), float(line.split(';')[1])
 
     def start_detecting(self, callback):
         print("FreedomboardConnector_start_detecting")
