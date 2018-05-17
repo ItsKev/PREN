@@ -24,7 +24,6 @@ def hello_world():
     lastJsonentry = mydata[len(mydata) - 1]
     lastX = lastJsonentry["x"]
     lastZ = lastJsonentry["z"]
-    # print("The newest coordinates are: \nx: ", lastX, " z: ", lastZ)
 
     if request.method == 'POST':
         if request.form.get('Start') == 'Start':
@@ -39,27 +38,10 @@ def hello_world():
             if helper.already_started:
                 helper.already_started = False
                 reset_image_processor()
-        # elif request.form.get('Position') == 'Position':
-        #     # @ToDo get Position
-        #     myfile = open('mydata.json').read()
-        #     mydata = json.loads(myfile)
-        #     lastJsonentry = mydata[len(mydata) - 1]
-        #     lastX = lastJsonentry["x"]
-        #     lastZ = lastJsonentry["z"]
-        #     print("The newest coordinates are: \nx: ", lastX, " z: ", lastZ)
-
-        # x, z = WebsiteHandler.WebsiteHandler.start_updating_coordinates()
         else:
             print('Error')
 
     return render_template('layout.html', x=lastX, z=lastZ)
-
-
-@app.route('/newPosition')
-def writeNewPosition(x, z):
-    newX = x
-    newZ = z
-    # @ToDo
 
 
 def start_pressed():
@@ -70,10 +52,6 @@ def start_pressed():
 def stop_pressed():
     print("stop_pressed")
     helper.stop_moving()
-
-    # def start_updating_coordinates(self, get_coordinates):
-    #    x, z = get_coordinates()
-    #    print("got_ values" + x + z)
 
 
 def initialize_callbacks(start_moving, stop_moving, reset_image_processor):
@@ -88,3 +66,7 @@ def start_website():
 
 def reset_image_processor():
     helper.reset_image_processor()
+
+
+if __name__ == '__main__':
+    app.run()

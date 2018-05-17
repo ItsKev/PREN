@@ -3,13 +3,21 @@
 	font-size: 10px;
 
 	/* Heading height variable*/
-	--heading-height: 23em;
+	--heading-height: 55px;
 }
+
+body{
+	background-image: url(../img/background.jpg);
+	color: white;
+}
+
+
 
 header{
     /* position: fixed; */
 	width: 100%;
 	height: var(--heading-height);
+	padding-top: 35px;
 }
 
 /* Create angled background with 'before' pseudo-element */
@@ -28,7 +36,7 @@ header:before {
 		black;
 		linear-gradient(#4e4376, #2b5876);
 	background-size: cover;
-	border-bottom: .2em solid #fff;
+	border-bottom: .2em solid black;
 }
 
 .logo{
@@ -39,25 +47,81 @@ header:before {
 }
 
 header h1{
-    color: white;
-    font-size: 6em;
+    font-size: 35px;
     font-weight: bold;
     text-align: center;
-    margin: 0;
-    padding-left: 50px;
+    margin-top: 30px;
 }
 
 header h2{
-    color: white;
-    font-size: 3em;
+    font-size: 30px;
     text-align: center;
 }
 main .container{
-    margin-top: 230px;
+    margin-top: 100px;
     display: block;
     height: auto;
+	padding-top: 30px;
+}
+form{
+	display: block;
+	text-align: center;
+}
+
+input{
+	margin-left: 20px;
+	margin-right: 20px;
+	font-weight: bolder;
+	color: white;
+}
+
+.start{
+	background-color: #4CAF50;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.stop{
+	background-color: #FF0000;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.reset{
+	background-color: #D0C000;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
 
 h2{
-    color: black;
+	font-size: 20px;
+}
+
+.position{
+	text-align: center;
+    left: 25%;
+    right: 25%;
+    margin: auto;
+    height: 100px;
+}
+
+
+#x{
+	display: inline-block;
+}
+
+#z{
+	display: inline-block;
 }
