@@ -130,6 +130,7 @@ static uint8_t DoCommand(uint8_t* cmd){
 		Parcour_FSM_Handler.StartSignal_FromPI = 1;
 	} else if (strncmp(cmd, "stop", 4) == 0) {
 		// Stop parcour;
+		Parcour_FSM_Handler.parcourFinished = 1; 
 	} else if (strncmp(cmd, "target found", 12) == 0) {
 		Parcour_FSM_Handler.z3_targetFound = 1;
 	} else if (strncmp(cmd, "msg last", 8) == 0) {
