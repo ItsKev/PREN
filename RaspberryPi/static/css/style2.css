@@ -1,0 +1,137 @@
+:root {
+    /* Base font size */
+    font-size: 10px;
+
+    /* Heading height variable*/
+    --heading-height: 55px;
+}
+
+body {
+    color: black;
+}
+
+#blackPanther {
+    content: "";
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    background: url(../img/black_panther.jpeg) no-repeat left;
+    margin-top: 250px;
+    margin-left: 50px;
+}
+
+header {
+    /* position: fixed; */
+    width: 100%;
+    height: var(--heading-height);
+    padding-top: 35px;
+    color: white;
+}
+
+/* Create angled background with 'before' pseudo-element */
+header:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 6em;
+    width: 100%;
+    height: calc(var(--heading-height) + 7em);
+    z-index: -1;
+    transform: skewY(-3.5deg);
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),
+    black;
+linear-gradient(#4e4376, #2b5876);
+    background-size: cover;
+    border-bottom: .2em solid black;
+}
+
+header h1 {
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+}
+
+header h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+main .container {
+    margin-top: 100px;
+    margin-right: 30px;
+    margin-left: 30px;
+    display: block;
+    height: auto;
+    padding-top: 30px;
+}
+
+form {
+    display: block;
+    text-align: left;
+    margin-top: 30px;
+}
+
+input {
+    font-size: 1px;
+    color: black;
+    padding: 50px;
+    float: left;
+    display: inline-block;
+}
+
+form input[type=submit].start {
+    background: url("../img/start.jpg") no-repeat center center;
+    background-size: 80px;
+    border: none;
+}
+
+form input[type=submit].stop {
+    background: url("../img/stop.jpg") no-repeat center center;
+    background-size: 80px;
+    border: none;
+}
+
+form input[type=submit].reset {
+    background: url("../img/reset.jpg") no-repeat center center;
+    background-size: 80px;
+    border: none;
+    clear: both;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+.position {
+    margin-left: 500px;
+    text-align: center;
+}
+
+#x {
+    display: inline-block;
+}
+
+#z {
+    display: inline-block;
+}
+
+.graphic {
+    margin-left: 500px;
+    text-align: center;
+}
+
+#chartContainer{
+    height: 300px;
+    width: 60%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}

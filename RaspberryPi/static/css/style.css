@@ -117,11 +117,20 @@ h2{
     height: 100px;
 }
 
-
 #x{
 	display: inline-block;
 }
 
 #z{
 	display: inline-block;
+}
+
+.graphic{
+    margin: auto;
+    text-align: center;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
 }

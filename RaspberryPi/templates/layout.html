@@ -1,9 +1,59 @@
+<?php
+    header('Content-type: text/html');
+    header('Access-Control-Allow-Origin: *');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/static/css/style.css"/>
-    <!--<script src="/static/script/refresh.js"></script>-->
+    <link rel="stylesheet" href="/static/css/style2.css"/>
+{#    <script src="/static/script/refresh.js"></script>#}
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script type="text/javascript">
+        console.log("started");
+
+        var dataArray = {{ posData }};
+        var xData = {{ x_data }};
+        var zData ={{ z_data }};
+
+
+            window.onload = function () {
+
+                var chart = new CanvasJS.Chart("chartContainer", {
+                    theme: "light2",
+                    animationEnabled: true,
+                    zoomEnabled: true,
+                    title: {
+                        text: "Lastposition"
+                    },
+                    data: [{
+                        type: "area",
+                        dataPoints: []
+                    }]
+                    options: {
+                        scales: {
+                            yAxes:
+                        }
+                    }
+                });
+
+                console.log(dataArray.length);
+                addDataPoints(dataArray.length);
+                chart.render();
+
+                function addDataPoints(noOfDps) {
+                    var xVal = chart.options.data[0].dataPoints.length + 1, yVal = 100;
+                    for (var i = 0; i < noOfDps; i++) {
+                        xVal = xData[i];
+                        yVal = zData[i];
+                        chart.options.data[0].dataPoints.push({x: xVal, y: yVal});
+                    }
+                }
+            }
+
+
+    </script>
+
     <title>Gruppe 33 - Laufkatze</title>
 
 </head>
@@ -13,6 +63,7 @@
     <h2>Pren Gruppe 33</h2>
 </header>
 <main>
+    <div id="blackPanther"></div>
     <div class="container">
         <div class="button">
             <form method="post" action="/">
@@ -24,18 +75,21 @@
         <div class="position">
             <h2 id="x">X-Position: {{ x }}</h2>
             <h2 id="z">Z-Position: {{ z }}</h2>
+            <h2>{{ posData }}</h2>
         </div>
-        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-        <div class="chart_div" style="width: 100%; height: 25%"></div>
         <div class="graphic">
             <h2>Coming soon: Our awesome graphics!</h2>
         </div>
     </div>
+
+    <div id="chartContainer"></div>
+
 </main>
 <footer>
     <div class="container">
         <h3>Gruppe 33 - Kevin Huber, Burak Kizilkaya, Silvio Niggli, Larissa Schuler, Björn Wicki, Janick Zehnder</h3>
     </div>
+
 </footer>
 </body>
 </html>

@@ -25,6 +25,15 @@ def hello_world():
     lastX = lastJsonentry["x"]
     lastZ = lastJsonentry["z"]
 
+    xData = []
+    zData = []
+
+    for i in range(0, len(mydata)-1):
+        xData.append(mydata[i]["x"])
+        zData.append(mydata[i]["z"])
+
+    newData = list(zip(xData, zData))
+
     if request.method == 'POST':
         if request.form.get('Start') == 'Start':
             if not helper.already_started:
@@ -41,7 +50,7 @@ def hello_world():
         else:
             print('Error')
 
-    return render_template('layout.html', x=lastX, z=lastZ)
+    return render_template('layout.html', x=lastX, z=lastZ, x_data=xData, z_data=zData, posData=newData)
 
 
 def start_pressed():
