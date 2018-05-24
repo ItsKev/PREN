@@ -30,15 +30,10 @@
                         type: "area",
                         dataPoints: []
                     }]
-                    options: {
-                        scales: {
-                            yAxes:
-                        }
-                    }
                 });
 
                 console.log(dataArray.length);
-                addDataPoints(dataArray.length);
+                addDataPoints(dataArray.length+1);
                 chart.render();
 
                 function addDataPoints(noOfDps) {
@@ -75,10 +70,6 @@
         <div class="position">
             <h2 id="x">X-Position: {{ x }}</h2>
             <h2 id="z">Z-Position: {{ z }}</h2>
-            <h2>{{ posData }}</h2>
-        </div>
-        <div class="graphic">
-            <h2>Coming soon: Our awesome graphics!</h2>
         </div>
     </div>
 

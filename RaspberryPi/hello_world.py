@@ -28,7 +28,7 @@ def hello_world():
     xData = []
     zData = []
 
-    for i in range(0, len(mydata)-1):
+    for i in range(0, len(mydata)):
         xData.append(mydata[i]["x"])
         zData.append(mydata[i]["z"])
 

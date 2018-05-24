@@ -21,7 +21,7 @@ body {
     z-index: -1;
     background: url(../img/black_panther.jpeg) no-repeat left;
     margin-top: 250px;
-    margin-left: 50px;
+    margin-left: 40px;
 }
 
 header {
@@ -115,20 +115,20 @@ h2 {
 
 #x {
     display: inline-block;
+    margin-right: 50px;
 }
 
 #z {
     display: inline-block;
 }
 
-.graphic {
-    margin-left: 500px;
-    text-align: center;
-}
 
 #chartContainer{
-    height: 300px;
-    width: 60%;
+    margin-left: 550px;
+    margin-right: 25px;
+    margin-top: 50px;
+    height: 400px;
+    width: auto;
 }
 
 footer {
