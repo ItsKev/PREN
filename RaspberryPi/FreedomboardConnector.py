@@ -1,5 +1,4 @@
 import serial
-import time
 
 
 class FreedomboardConnector:
@@ -132,8 +131,3 @@ class FreedomboardConnector:
         if "success" not in line:
             return False
         return True
-
-
-if __name__ == '__main__':
-    freeedom = FreedomboardConnector()
-    print(str(freeedom.drive_get_steps()))

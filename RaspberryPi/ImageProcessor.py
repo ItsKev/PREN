@@ -25,12 +25,10 @@ class ImageProcessor:
 
             # detect edges in the image
             _ , edged = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
-            # edged = cv2.Canny(gray, 100, 200)
 
             # find contours in the image
             _, contours, _ = cv2.findContours(edged.copy(), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
             contours = sorted(contours, key=cv2.contourArea, reverse=True)[:9]
-
             centers = []
             last_dimensions = []
             for contour in contours:
@@ -82,11 +80,6 @@ class ImageProcessor:
                         serial_connection.target_found()
                         self.detect_image = False
                         return True
-                    # else:
-                        # if not self.slower_already_sent:
-                           # print("Not in center")
-                           # serial_connection.drive_slower()
-                           # self.slower_already_sent = True
         return False
 
     def is_a_duplicate(self, last_dimensions, height, width) -> bool:
