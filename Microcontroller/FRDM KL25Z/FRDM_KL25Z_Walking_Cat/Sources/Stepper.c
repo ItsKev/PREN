@@ -45,7 +45,7 @@
 // Default-Values for Speed, Accelaration
 #define TARGET_VELOCITY_LIFTING_MOTOR 			10 // [cm/s]
 #define LIFTINGMOTOR_ACCELARATIONINKREMENT		5 // It's variable --> Testing
-#define TARGET_VELOCITY_DRIVING_MOTOR 			25 // [cm/s]
+#define TARGET_VELOCITY_DRIVING_MOTOR 			50 // [cm/s]
 #define DRIVINGMOTOR_ACCELARATIONINKREMENT		5 // It's variable --> Testing
 
 // Calculates-Methods
@@ -71,6 +71,7 @@ static uint32_t liftingMotor_oldSteps;
 static uint32_t liftingMotor_currentSteps; 
 static bool liftingMotor_speedChanges;
 static uint16_t liftingMotor_speedChangesSteps;
+static uint8_t liftingMotor_accelarionInkrement;
 
 static bool drivingMotor_continuous;
 static bool drivingMotor_stopped;
@@ -82,6 +83,7 @@ static uint32_t drivingMotor_oldSteps;
 static uint32_t drivingMotor_currentSteps;
 static bool drivingMotor_speedChanges;
 static uint16_t drivingMotor_speedChangesSteps;
+static uint8_t drivingMotor_accelarationInkrement; 
 
 
 //--------------------------------------
@@ -209,6 +211,7 @@ uint8_t DrivingMotor_Move(int16_t stepsWithoutMicrosteppingRevolution, uint8_t s
 	uint32_t tmpSteps; 
 	DrivingMotor.TargetFreq = TARGET_FREQ_DRIVING_MOTOR(speed);
 	DrivingMotor.Speed = speed; 
+	drivingMotor_accelarationInkrement = accelaration;
 	drivingMotor_currentSteps = 0; 
 	drivingMotor_accelarationSteps = 0;
 	drivingMotor_cruisingSteps = 0;
@@ -250,7 +253,7 @@ void DrivingMotor_Event(void) {
 	switch (DrivingMotor.State) {
 	case ACCELARATING:
 		if ((DrivingMotor.AccelartionFreq < DrivingMotor.TargetFreq)) {
-			DrivingMotor_Step_SetFreqHz(DrivingMotor.AccelartionFreq += DRIVINGMOTOR_ACCELARATIONINKREMENT);
+			DrivingMotor_Step_SetFreqHz(DrivingMotor.AccelartionFreq += drivingMotor_accelarationInkrement);
 		}
 
 		if ((drivingMotor_currentSteps >= drivingMotor_accelarationSteps) && !drivingMotor_speedChanges) {
@@ -273,7 +276,7 @@ void DrivingMotor_Event(void) {
 		if (!drivingMotor_speedChanges) { 
 			// decrement until the freq is INITIAL_FRQ
 			if (DrivingMotor.AccelartionFreq > INITIAL_FREQ) {
-				DrivingMotor_Step_SetFreqHz(DrivingMotor.AccelartionFreq -= DRIVINGMOTOR_ACCELARATIONINKREMENT);
+				DrivingMotor_Step_SetFreqHz(DrivingMotor.AccelartionFreq -= drivingMotor_accelarationInkrement);
 			}
 			// change the State when the black panther has finished his Steps or the Method ..._Brakes() is actived
 			if ((drivingMotor_currentSteps >= ((drivingMotor_accelarationSteps * 2) + drivingMotor_cruisingSteps))
@@ -334,6 +337,7 @@ uint8_t LiftingMotor_Move(int16_t stepsWithoutMicrosteppingRevolution, uint8_t s
 	uint32_t tmpSteps;
 	LiftingMotor.TargetFreq = TARGET_FREQ_LIFTING_MOTOR(speed);	
 	LiftingMotor.Speed = speed; 
+	liftingMotor_accelarionInkrement = accelaration;
 	liftingMotor_currentSteps = 0; 
 	liftingMotor_accelarationSteps = 0; 
 	liftingMotor_cruisingSteps = 0; 
@@ -399,7 +403,7 @@ void LiftingMotor_Event(void) {
 	switch (LiftingMotor.State) {
 	case ACCELARATING:
 		if ((LiftingMotor.AccelartionFreq < LiftingMotor.TargetFreq)) {
-			LiftingMotor_Step_SetFreqHz(LiftingMotor.AccelartionFreq += LIFTINGMOTOR_ACCELARATIONINKREMENT);
+			LiftingMotor_Step_SetFreqHz(LiftingMotor.AccelartionFreq += liftingMotor_accelarionInkrement);
 		}
 
 		if ((liftingMotor_currentSteps >= liftingMotor_accelarationSteps)) {
@@ -415,7 +419,7 @@ void LiftingMotor_Event(void) {
 
 	case DECELERATING:
 		if (LiftingMotor.AccelartionFreq > INITIAL_FREQ) {
-			LiftingMotor_Step_SetFreqHz(LiftingMotor.AccelartionFreq -= LIFTINGMOTOR_ACCELARATIONINKREMENT);
+			LiftingMotor_Step_SetFreqHz(LiftingMotor.AccelartionFreq -= liftingMotor_accelarionInkrement);
 		}
 
 		if (liftingMotor_currentSteps >= ((liftingMotor_accelarationSteps * 2) + liftingMotor_cruisingSteps)
@@ -491,7 +495,7 @@ uint8_t Stepper_ParseCommand(unsigned char* cmd){
 	}
 	
 	else if (strcmp(cmd, "ant stop") == 0) { 
-		return DrivingMotor_Brakes(400); 
+		return DrivingMotor_Brakes(200); 
 	}
 	
 	
