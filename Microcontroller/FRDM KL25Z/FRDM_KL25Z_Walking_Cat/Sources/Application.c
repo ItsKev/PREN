@@ -30,12 +30,16 @@
 #define SAFTY_DRIVINGMOTOR_SPEED 			25 // [cm/s]
 #define SAFTY_DRIVINGMOTOR_ACCELARATION		5 // It's variable --> Testing
 
-#define LIFTINGMOTOR_SPEED_DOWN					50
-#define LIFTINGMOTOR_SPEED_UP					40
-#define LIFTINGMOTOR_ACCELARATION_DOWN			2
-#define LIFTINGMOTOR_ACCELARTAION_UP			5
+#define LIFTINGMOTOR_SPEED_DOWN1				50
+#define LIFTINGMOTOR_SPEED_UP1					70
+#define LIFTINGMOTOR_SPEED_DOWN2				70
+#define LIFTINGMOTOR_SPEED_UP2					70
+#define LIFTINGMOTOR_ACCELARATION_DOWN1			2
+#define LIFTINGMOTOR_ACCELARTAION_UP1			10
+#define LIFTINGMOTOR_ACCELARATION_DOWN2			5
+#define LIFTINGMOTOR_ACCELARTAION_UP2			30
 
-#define DRIVINGMOTOR_SPEED_FIRSTSTAGE			35
+#define DRIVINGMOTOR_SPEED_FIRSTSTAGE			40
 #define DRIVINGMOTOR_SPEED_SECONDSTAGE			45
 #define DRIVINGMOTOR_SPEED_THIRDSTAGE			60
 #define DRIVINGMOTOR_ACCELARATION_FIRSTSTAGE	5
@@ -110,7 +114,7 @@ static void FSM_Parcour(void) {
 		if (!Parcour_FSM_Handler.z1_drivingMotorStarted
 				&& !Parcour_FSM_Handler.z2_liftingMotorStarted) {
 			DrivingMotor_Move(stepsAcrossLoadDrivingMotor, DRIVINGMOTOR_SPEED_FIRSTSTAGE, DRIVINGMOTOR_ACCELARATION_FIRSTSTAGE);
-			LiftingMotor_Move(stepsForFirstDownLiftingMotor, LIFTINGMOTOR_SPEED_DOWN, LIFTINGMOTOR_ACCELARATION_DOWN);
+			LiftingMotor_Move(stepsForFirstDownLiftingMotor, LIFTINGMOTOR_SPEED_DOWN1, LIFTINGMOTOR_ACCELARATION_DOWN1);
 			Electromagnet_Driver_ON();
 			Parcour_FSM_Handler.z1_drivingMotorStarted = 1;
 			Parcour_FSM_Handler.z1_liftingMotorStarted = 1;
@@ -132,11 +136,11 @@ static void FSM_Parcour(void) {
 		}
 		// The Lifting Motor started reverse
 		if (!Parcour_FSM_Handler.z2_liftingMotorStarted) {
-			LiftingMotor_Move(-stepsForFirstDownLiftingMotor, LIFTINGMOTOR_SPEED_UP, LIFTINGMOTOR_ACCELARTAION_UP);
+			LiftingMotor_Move(-(stepsForFirstDownLiftingMotor - stepsForFirstDownLiftingMotor/4), LIFTINGMOTOR_SPEED_UP1, LIFTINGMOTOR_ACCELARTAION_UP1);
 			Parcour_FSM_Handler.z2_liftingMotorStarted = 1;
 		}
 		// 
-		if ((LiftingMotor.Steps / 8) <= stepsForFirstDownLiftingMotor - stepsForFirstDownLiftingMotor/3) {
+		if ((LiftingMotor.Steps / 8) <= (stepsForFirstDownLiftingMotor - stepsForFirstDownLiftingMotor/3)) {
 			Parcour_FSM_Handler.ParcourState = Z3_CRUISING_UNTIL_ACROSS_TARGET;
 		}
 
@@ -157,7 +161,7 @@ static void FSM_Parcour(void) {
 			Parcour_FSM_Handler.z3_liftingMotorStopped = 1;
 			Parcour_FSM_Handler.z4_liftingMotorOldSteps = LiftingMotor.Steps/8;
 			stepsForSecondDownLiftingMotor = lockupTableForLiftingMotor_NumberOfStepsForLiftingDown[(DrivingMotor.Steps/8)-1] - LiftingMotor.Steps/8 + 300;
-			LiftingMotor_Move(stepsForSecondDownLiftingMotor, LIFTINGMOTOR_SPEED_DOWN, LIFTINGMOTOR_ACCELARATION_DOWN);
+			LiftingMotor_Move(stepsForSecondDownLiftingMotor, LIFTINGMOTOR_SPEED_DOWN2, LIFTINGMOTOR_ACCELARATION_DOWN2);
 			DrivingMotor_Brakes(BRAKING_DISTANCE);
 			Parcour_FSM_Handler.ParcourState = Z4_LOWER_LOAD_UNTIL_FINISHED;
 		}
@@ -166,13 +170,13 @@ static void FSM_Parcour(void) {
 	case Z4_LOWER_LOAD_UNTIL_FINISHED:
 		if ((LiftingMotor.Steps / 8) >= Parcour_FSM_Handler.z4_liftingMotorOldSteps + stepsForSecondDownLiftingMotor) {
 			Electromagnet_Driver_OFF();
-			LiftingMotor_Move(-stepsForSecondDownLiftingMotor, LIFTINGMOTOR_SPEED_UP, LIFTINGMOTOR_ACCELARTAION_UP); 
+			LiftingMotor_Move(-stepsForSecondDownLiftingMotor, LIFTINGMOTOR_SPEED_UP2, LIFTINGMOTOR_ACCELARTAION_UP2); 
 			Parcour_FSM_Handler.ParcourState = Z5_CRUISING_UNTIL_MASTS2_IS_REACHED;
 		}
 		break;
 	
 	case Z5_CRUISING_UNTIL_MASTS2_IS_REACHED:
-		if ((LiftingMotor.Steps / 8) <= (stepsForSecondDownLiftingMotor - stepsForSecondDownLiftingMotor/4) && !Parcour_FSM_Handler.z5_drivingMotorStarted) {
+		if ((LiftingMotor.Steps / 8) <= (stepsForSecondDownLiftingMotor - 300) && !Parcour_FSM_Handler.z5_drivingMotorStarted) {
 			DrivingMotor_Move(MAX_STEPS_FOR_DRIVINGMOTOR - (DrivingMotor.Steps/8), DRIVINGMOTOR_SPEED_THIRDSTAGE, DRIVINGMOTOR_ACCELARATION_THIRDSTAGE);
 			Parcour_FSM_Handler.z5_drivingMotorStarted = 1;
 			Parcour_FSM_Handler.ParcourState = Z6_UNTIL_THE_ENDSWITCH_IS_CLICKED;
