@@ -17,8 +17,7 @@ class Main:
         initialize_callbacks(self.start, self.stop, self.reset_image_processor)
         threading.Thread(target=start_website).start()
 
-        threading.Thread(target=self.freedomboard_connector.start_detecting,
-                         args=(self.get_coordiantes, )).start()
+        threading.Thread(target=self.get_coordiantes).start()
         self.image_processor.start_detecting(self.freedomboard_connector)
 
     def start(self):
@@ -31,10 +30,11 @@ class Main:
         self.update_thread = False
 
     def get_coordiantes(self):
+        self.freedomboard_connector.start_detecting()
         while True:
             print('start getting coordinates')
-            #if not self.update_thread:
-            #    break
+            if not self.update_thread:
+                break
             x, z = self.freedomboard_connector.get_values()
             print(str(x))
             print(str(z))
@@ -52,8 +52,7 @@ class Main:
         print("Reset")
         self.update_thread = False
         threading.Thread(target=self.image_processor.start_detecting, args=(self.freedomboard_connector, )).start()
-        #threading.Thread(target=self.freedomboard_connector.start_detecting,
-        #                 args=(self.get_coordiantes,)).start()
+        threading.Thread(target=self.get_coordiantes).start()
         self.update_thread = True
 
 if __name__ == '__main__':

@@ -111,13 +111,13 @@ class FreedomboardConnector:
                 line = line.split(' ')[1]
                 return float(line.split(';')[0]), float(line.split(';')[1])
 
-    def start_detecting(self, callback):
+    def start_detecting(self):
         print("FreedomboardConnector_start_detecting")
         while True:
             line = self.serial_connection.readline().decode()
-            if line == 'start detecting':
+            print(line)
+            if "start detecting" in line:
                 break
-        callback()
 
     def target_found(self):
         print("FreedomboardConnector_target_found")
