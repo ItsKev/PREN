@@ -349,7 +349,7 @@
     </GenFiles>
     <SignalListFile>Documentation\FRDM_KL25Z_Walking_Cat_SIGNALS.txt</SignalListFile>
     <DestinationCompiler>GNUC</DestinationCompiler>
-    <ProjectModificationStamp>43</ProjectModificationStamp>
+    <ProjectModificationStamp>45</ProjectModificationStamp>
   </Options>
   <CpuID_2>
     <Generated>true</Generated>
@@ -6773,8 +6773,8 @@
     <GenComponentVersion>02.197</GenComponentVersion>
     <GenDriverVersion>01.00</GenDriverVersion>
     <GenEventModule>Events</GenEventModule>
-    <HeaderAge>1283175540</HeaderAge>
-    <CodeAge>1283175540</CodeAge>
+    <HeaderAge>1287751182</HeaderAge>
+    <CodeAge>1287751182</CodeAge>
     <AsemblAge>-1</AsemblAge>
     <GenNumMethods>24</GenNumMethods>
     <Enable>true</Enable>
@@ -7004,8 +7004,8 @@
       <GenComponentVersion>01.015</GenComponentVersion>
       <GenDriverVersion>01.03</GenDriverVersion>
       <GenEventModule>Events</GenEventModule>
-      <HeaderAge>1283175540</HeaderAge>
-      <CodeAge>1283175540</CodeAge>
+      <HeaderAge>1287751182</HeaderAge>
+      <CodeAge>1287751183</CodeAge>
       <AsemblAge>-1</AsemblAge>
       <GenNumMethods>26</GenNumMethods>
       <Init>true</Init>

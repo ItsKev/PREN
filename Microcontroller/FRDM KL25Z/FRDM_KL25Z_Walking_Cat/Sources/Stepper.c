@@ -45,8 +45,8 @@
 // Default-Values for Speed, Accelaration
 #define TARGET_VELOCITY_LIFTING_MOTOR 			10 // [cm/s]
 #define LIFTINGMOTOR_ACCELARATIONINKREMENT		5 // It's variable --> Testing
-#define TARGET_VELOCITY_DRIVING_MOTOR 			50 // [cm/s]
-#define DRIVINGMOTOR_ACCELARATIONINKREMENT		5 // It's variable --> Testing
+#define TARGET_VELOCITY_DRIVING_MOTOR 			70 // [cm/s]
+#define DRIVINGMOTOR_ACCELARATIONINKREMENT		2 // It's variable --> Testing
 
 // Calculates-Methods
 // (100*v)/(r*pi)

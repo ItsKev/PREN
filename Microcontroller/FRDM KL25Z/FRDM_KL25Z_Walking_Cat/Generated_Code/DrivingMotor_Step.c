@@ -6,7 +6,7 @@
 **     Component   : PPG
 **     Version     : Component 02.197, Driver 01.00, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2018-03-27, 22:35, # CodeGen: 34
+**     Date/Time   : 2018-06-01, 16:48, # CodeGen: 78
 **     Abstract    :
 **         This component "PPG" implements a programmable
 **         pulse generator that generates signal with variable
