@@ -1,5 +1,4 @@
 import threading
-import json
 import time
 
 from hello_world import *
@@ -30,6 +29,8 @@ class Main:
         self.update_thread = False
 
     def get_coordiantes(self):
+        with open('mydata.json', 'w'):
+            pass
         self.freedomboard_connector.start_detecting()
         while True:
             print('start getting coordinates')
