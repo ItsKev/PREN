@@ -7,46 +7,70 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/static/css/style2.css"/>
-{#    <script src="/static/script/refresh.js"></script>#}
+    {#    <script src="/static/script/refresh.js"></script>#}
     <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script type="text/javascript" src="../static/script/jquery-3.3.1.min.js"></script>
     <script type="text/javascript">
         console.log("started");
+        $(document).ready(function () {
+            window.setInterval(updateData, 1000);
+        });
 
-        var dataArray = {{ posData }};
-        var xData = {{ x_data }};
-        var zData ={{ z_data }};
+        let dataArray = {{ posData }};
+        let xData = {{ x_data }};
+        let zData ={{ z_data }};
+        let chart;
 
 
-            window.onload = function () {
-
-                var chart = new CanvasJS.Chart("chartContainer", {
-                    theme: "light2",
-                    animationEnabled: true,
-                    zoomEnabled: true,
-                    title: {
-                        text: "Lastposition"
-                    },
-                    data: [{
-                        type: "area",
-                        dataPoints: []
-                    }]
-                });
-
-                console.log(dataArray.length);
-                addDataPoints(dataArray.length+1);
-                chart.render();
-
-                function addDataPoints(noOfDps) {
-                    var xVal = chart.options.data[0].dataPoints.length + 1, yVal = 100;
-                    for (var i = 0; i < noOfDps; i++) {
-                        xVal = xData[i];
-                        yVal = zData[i];
-                        chart.options.data[0].dataPoints.push({x: xVal, y: yVal});
-                    }
-                }
+        function addDataPoints(noOfDps, x = xData, z = zData) {
+            // xVal = chart.options.data[0].dataPoints.length + 1, zVal = 100;
+            for (var i = 0; i < noOfDps; i++) {
+                xVal = x[i];
+                zVal = z[i];
+                chart.options.data[0].dataPoints.push({x: xVal, y: zVal});
             }
+        }
 
+        window.onload = function () {
+            chart = new CanvasJS.Chart("chartContainer", {
+                theme: "light2",
+                animationEnabled: true,
+                zoomEnabled: true,
+                title: {
+                    text: "Lastposition"
+                },
+                data: [{
+                    type: "area",
+                    dataPoints: []
+                }]
+            });
+            console.log(dataArray.length);
+            addDataPoints(dataArray.length + 1);
+            chart.render();
+        }
 
+        function updateData() {
+            console.log("Data updating");
+            $.ajax({
+                url: "/pos",
+                type: "get",
+                success: function (response) {
+                    var jsonObj = jQuery.parseJSON(response);
+
+                    $("#x").html("X-Position: " + jsonObj.x);
+                    $("#z").html("Z-Position: " + jsonObj.z);
+                    if (chart != null) {
+                        addDataPoints(1, [jsonObj.x], [jsonObj.z]);
+                        chart.render();
+                    }
+
+                },
+                error: function (respone) {
+                    $("#error").html("Fehler: " + respone.responseText);
+                }
+            });
+
+        }
     </script>
 
     <title>Gruppe 33 - Laufkatze</title>

@@ -53,6 +53,15 @@ def hello_world():
     return render_template('layout.html', x=lastX, z=lastZ, x_data=xData, z_data=zData, posData=newData)
 
 
+@app.route('/pos')
+def pos():
+    x,z = last_entry(open('mydata.json').read())
+    return json.dumps({
+        "x": x,
+        "z": z,
+    }, sort_keys=True, indent=4, separators=(',', ': '))
+
+
 def start_pressed():
     print("start_pressed")
     helper.start_moving()
@@ -75,6 +84,14 @@ def start_website():
 
 def reset_image_processor():
     helper.reset_image_processor()
+
+
+def last_entry(jsonObj) -> (int, int):
+    mydata = json.loads(jsonObj)
+    last_jsonentry = mydata[len(mydata) - 1]
+    lastX = last_jsonentry["x"]
+    lastZ = last_jsonentry["z"]
+    return lastX, lastZ
 
 
 if __name__ == '__main__':
