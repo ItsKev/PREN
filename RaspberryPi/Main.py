@@ -14,14 +14,20 @@ class Main:
     def __init__(self) -> None:
         print("Main_init")
         initialize_callbacks(self.start, self.stop, self.reset_image_processor)
-        threading.Thread(target=start_website).start()
 
-        threading.Thread(target=self.get_coordiantes).start()
+        with open('mydata.json', mode='w', encoding='utf-8') as json_file:
+            data = []
+            entry = {'z': 0, 'x': 65}
+            data.append(entry)
+            json.dump(data, json_file)
+
+        threading.Thread(target=start_website).start()
         self.image_processor.start_detecting(self.freedomboard_connector)
 
     def start(self):
         print("Main_start")
         self.freedomboard_connector.start()
+        threading.Thread(target=self.get_coordiantes).start()
 
     def stop(self):
         print("Main_stop")
@@ -29,25 +35,32 @@ class Main:
         self.update_thread = False
 
     def get_coordiantes(self):
-        with open('mydata.json', 'w'):
-            pass
+        time.sleep(0.1)
         self.freedomboard_connector.start_detecting()
+        print('start getting coordinates')
+        time.sleep(0.2)
+        old_x = 0.0
         while True:
-            print('start getting coordinates')
-            if not self.update_thread:
-                break
             x, z = self.freedomboard_connector.get_values()
-            print(str(x))
-            print(str(z))
+            if x == -1 and z == -1:
+                with open('mydata.json') as json_file:
+                    data = json.load(json_file)
+
+                with open('mydata.json', mode='w', encoding='utf-8') as json_file:
+                    entry = {'z': 1.5, 'x': old_x}
+                    data.append(entry)
+                    json.dump(data, json_file)
+                break
+            old_x = x
             data = []
             with open('mydata.json') as json_file:
                 data = json.load(json_file)
 
             with open('mydata.json', mode='w', encoding='utf-8') as json_file:
-                entry = {'z': x, 'x': z}
+                entry = {'z': z, 'x': x}
                 data.append(entry)
                 json.dump(data, json_file)
-            time.sleep(0.5)
+            time.sleep(0.3)
 
     def reset_image_processor(self):
         print("Reset")

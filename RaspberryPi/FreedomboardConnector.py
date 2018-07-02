@@ -1,6 +1,6 @@
 import serial
 import threading
-
+import time
 
 class FreedomboardConnector:
 
@@ -16,6 +16,7 @@ class FreedomboardConnector:
     def start(self):
         print("FreedomboardConnector_start")
         self.lock.acquire()
+        print("start lock aquired!")
         while True:
             self.serial_connection.write(b'start\n')
             if self.check_if_successful():
@@ -136,31 +137,39 @@ class FreedomboardConnector:
         self.lock.release()
 
     def get_values(self) -> (float, float):
-        self.lock.acquire()
         while True:
+            self.lock.acquire()
             self.serial_connection.write(b'msg last\n')
-            line = self.serial_connection.readline().decode()
-            print(line)
-            if line[0] == 's' and not line[1] == 'u':
-                line = line.split(' ')[1]
-                self.lock.release()
-                return float(line.split(';')[0]), float(line.split(';')[1])
+            read_line = self.serial_connection.readline().decode()
+            self.lock.release()
+            if "s " in read_line:
+                read_line = read_line.split(' ')[1]
+                print(read_line)
+                return float(read_line.split(';')[0]), float(read_line.split(';')[1])
+            elif "measurement finished" in read_line:
+                print("measurement finished")
+                return -1.0, -1.0
+            time.sleep(0.1)
+            read_line = ""
 
     def start_detecting(self):
         print("FreedomboardConnector_start_detecting")
         while True:
+            self.lock.acquire()
             line = self.serial_connection.readline().decode()
-            print(line)
+            self.lock.release()
             if "start detecting" in line:
                 break
 
     def target_found(self):
         print("FreedomboardConnector_target_found")
         self.lock.acquire()
+        print("target found lock acquired")
         while True:
             self.serial_connection.write(b'target found\n')
             if self.check_if_successful():
                 break
+        time.sleep(0.2)
         self.lock.release()
 
     def check_if_successful(self) -> bool:
