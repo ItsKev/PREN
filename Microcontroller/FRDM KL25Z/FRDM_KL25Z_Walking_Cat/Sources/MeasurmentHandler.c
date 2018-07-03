@@ -13,18 +13,15 @@
 
 static double calculationDistance_YAxis(uint32_t steps){
 	// Function for the different Distance
-	return 0.00685f * (float)steps;
+	return 0.0f;
 }
 
 float Measurment_XAxis(uint32_t steps){
-	return lockupTableForMeasurment_XAxisGround[steps];
+	return lockupTableForMeasurment_XAxisAir[steps];
 }
 
 float Measurment_YAxis(uint32_t steps){
-	float sum1 = lockupTableForMeasurment_YAxis[steps];
-	float sum2 = calculationDistance_YAxis(LiftingMotor.Steps/8);
-	float result = sum1 - sum2; 
-	return result;
+	return lockupTableForMeasurment_YAxis[steps] - calculationDistance_YAxis(LiftingMotor.Steps);
 }
 
 void MeasurmentInit(void){

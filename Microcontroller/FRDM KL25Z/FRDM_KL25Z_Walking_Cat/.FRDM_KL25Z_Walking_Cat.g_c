@@ -349,7 +349,7 @@
     </GenFiles>
     <SignalListFile>Documentation\FRDM_KL25Z_Walking_Cat_SIGNALS.txt</SignalListFile>
     <DestinationCompiler>GNUC</DestinationCompiler>
-    <ProjectModificationStamp>46</ProjectModificationStamp>
+    <ProjectModificationStamp>45</ProjectModificationStamp>
   </Options>
   <CpuID_2>
     <Generated>true</Generated>
