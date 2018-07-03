@@ -87,7 +87,7 @@
       <File Name="Project_Settings/Linker_Files/ProcessorExpert.ld" FileDate="2018-03-05, 23:41:05" FileAge="1520289665366" FileType="8" CompNumb="2" />
       <File Name="Documentation/doxygen/BitIoLdd5.txt" FileDate="2018-03-18, 15:55:10" FileAge="1521384910684" FileType="45637" CompNumb="85" />
       <File Name="Generated_Code/portable.h" FileDate="2018-03-05, 23:47:28" FileAge="1520290048365" FileType="45637" CompNumb="9" />
-      <File Name="Documentation/FRDM_KL25Z_Walking_Cat_SIGNALS.txt" FileDate="2018-06-01, 17:00:40" FileAge="1527865240379" FileType="3072" />
+      <File Name="Documentation/FRDM_KL25Z_Walking_Cat_SIGNALS.txt" FileDate="2018-07-02, 12:48:22" FileAge="1530528502167" FileType="3072" />
       <File Name="Generated_Code/mpu_prototypes.h" FileDate="2018-03-05, 23:47:28" FileAge="1520290048443" FileType="45637" CompNumb="9" />
       <File Name="Static_Code/PDD/USB_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
       <File Name="Generated_Code/LiftingMotor_Direction.h" FileDate="2018-03-18, 15:55:10" FileAge="1521384910666" FileType="45637" CompNumb="86" />
@@ -164,21 +164,21 @@
       <File Name="Sources/Events.c" FileDate="2018-05-03, 23:13:51" FileAge="1525382031686" FileType="131328" />
       <File Name="Static_Code/PDD/MCM_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
       <File Name="Generated_Code/BitIoLdd8.h" FileDate="2018-03-18, 15:55:10" FileAge="1521384910632" FileType="45637" CompNumb="95" />
-      <File Name="Generated_Code/readme_gdbBacktraceDebug.txt" FileDate="2018-03-05, 23:47:28" FileAge="1520290048451" FileType="45637" CompNumb="9" />
-      <File Name="Generated_Code/semphr.h" FileDate="2018-03-05, 23:47:28" FileAge="1520290048393" FileType="45637" CompNumb="9" />
       <File Name="Documentation/doxygen/pex.css" FileDate="2018-03-05, 23:41:05" FileAge="1520289665283" FileType="16384" CompNumb="2" />
+      <File Name="Generated_Code/semphr.h" FileDate="2018-03-05, 23:47:28" FileAge="1520290048393" FileType="45637" CompNumb="9" />
+      <File Name="Generated_Code/readme_gdbBacktraceDebug.txt" FileDate="2018-03-05, 23:47:28" FileAge="1520290048451" FileType="45637" CompNumb="9" />
       <File Name="Generated_Code/UTIL1config.h" FileDate="2018-03-05, 23:47:28" FileAge="1520290048469" FileType="45637" CompNumb="6" />
-      <File Name="Generated_Code/BitIoLdd8.c" FileDate="2018-03-18, 15:55:10" FileAge="1521384910629" FileType="45637" CompNumb="95" />
       <File Name="Generated_Code/LEDpin1.h" FileDate="2018-03-06, 23:27:23" FileAge="1520375243218" FileType="45637" CompNumb="26" />
+      <File Name="Generated_Code/BitIoLdd8.c" FileDate="2018-03-18, 15:55:10" FileAge="1521384910629" FileType="45637" CompNumb="95" />
       <File Name="Generated_Code/BitIoLdd6.h" FileDate="2018-03-18, 15:55:10" FileAge="1521384910675" FileType="45637" CompNumb="87" />
-      <File Name="Generated_Code/ASerialLdd1.h" FileDate="2018-03-06, 22:31:22" FileAge="1520371882562" FileType="45637" CompNumb="16" />
-      <File Name="Generated_Code/LED_Onboard_Rconfig.h" FileDate="2018-03-06, 23:27:23" FileAge="1520375243194" FileType="45637" CompNumb="25" />
       <File Name="Documentation/doxygen/FRDM_KL25Z_Walking_Cat.txt" FileDate="2018-05-11, 12:05:02" FileAge="1526033102134" FileType="45637" CompNumb="2" />
+      <File Name="Generated_Code/LED_Onboard_Rconfig.h" FileDate="2018-03-06, 23:27:23" FileAge="1520375243194" FileType="45637" CompNumb="25" />
+      <File Name="Generated_Code/ASerialLdd1.h" FileDate="2018-03-06, 22:31:22" FileAge="1520371882562" FileType="45637" CompNumb="16" />
       <File Name="Generated_Code/LEDpin1.c" FileDate="2018-03-06, 23:27:23" FileAge="1520375243205" FileType="45637" CompNumb="26" />
       <File Name="Generated_Code/BitIoLdd6.c" FileDate="2018-03-18, 15:55:10" FileAge="1521384910672" FileType="45637" CompNumb="87" />
-      <File Name="Generated_Code/BitIoLdd4.h" FileDate="2018-03-18, 15:55:10" FileAge="1521384910703" FileType="45637" CompNumb="83" />
-      <File Name="Documentation/doxygen/BitIoLdd7.txt" FileDate="2018-03-18, 15:55:10" FileAge="1521384910641" FileType="45637" CompNumb="93" />
       <File Name="Generated_Code/ASerialLdd1.c" FileDate="2018-03-06, 22:31:22" FileAge="1520371882639" FileType="45637" CompNumb="16" />
+      <File Name="Documentation/doxygen/BitIoLdd7.txt" FileDate="2018-03-18, 15:55:10" FileAge="1521384910641" FileType="45637" CompNumb="93" />
+      <File Name="Generated_Code/BitIoLdd4.h" FileDate="2018-03-18, 15:55:10" FileAge="1521384910703" FileType="45637" CompNumb="83" />
       <File Name="Static_Code/PDD/UART0_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
       <File Name="Static_Code/PDD/GPIO_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
       <File Name="Generated_Code/BitIoLdd4.c" FileDate="2018-03-18, 15:55:10" FileAge="1521384910700" FileType="45637" CompNumb="83" />
@@ -189,8 +189,8 @@
       <File Name="Generated_Code/LiftingMotor_Step.h" FileDate="2018-03-27, 22:35:41" FileAge="1522182941110" FileType="45637" CompNumb="88" />
       <File Name="Generated_Code/CS1.c" FileDate="2018-03-06, 22:18:04" FileAge="1520371084441" FileType="45637" CompNumb="13" />
       <File Name="Generated_Code/LiftingMotor_Step.c" FileDate="2018-03-27, 22:35:41" FileAge="1522182941106" FileType="45637" CompNumb="88" />
-      <File Name="Static_Code/PDD/UART_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
       <File Name="Generated_Code/FreeRTOS_license.txt" FileDate="2018-03-05, 23:47:28" FileAge="1520290048347" FileType="45637" CompNumb="9" />
+      <File Name="Static_Code/PDD/UART_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
       <File Name="Generated_Code/.gdbinit-FreeRTOS-helpers" FileDate="2018-03-05, 23:47:28" FileAge="1520290048453" FileType="45637" CompNumb="9" />
       <File Name="Generated_Code/PE_Const.h" FileDate="2018-03-05, 23:41:05" FileAge="1520289665419" FileType="45637" />
       <File Name="Static_Code/PDD/I2C_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
@@ -198,5 +198,5 @@
       <File Name="Static_Code/PDD/TPM_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
     </GeneratedByPE>
   </GeneratedFilesList>
-  <CodeGenReference>81</CodeGenReference>
+  <CodeGenReference>82</CodeGenReference>
 </CodeGenerationInfo>
