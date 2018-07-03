@@ -135,7 +135,7 @@ static uint8_t DoCommand(uint8_t* cmd){
 		Parcour_FSM_Handler.z3_targetFound = 1;
 	} else if (strncmp(cmd, "msg last", 8) == 0) {
 		// measurment (calculating) x and z koordinates of load;
-		ftoa(Measurment_XAxis(DrivingMotor.Steps/8)-1.5f,tmpDistanceX,1);
+		ftoa(Measurment_XAxis(DrivingMotor.Steps/8),tmpDistanceX,1);
 		ftoa(Measurment_YAxis(DrivingMotor.Steps/8),tmpDistanceY,1);
 		STRING_S();
 		CLS1_SendStr(tmpDistanceX, CLS1_GetStdio()->stdOut);

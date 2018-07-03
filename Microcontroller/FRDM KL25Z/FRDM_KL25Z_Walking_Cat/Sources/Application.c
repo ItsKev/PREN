@@ -21,18 +21,8 @@
 #include "MeasurmentHandler.h"
 
 /* Defines */
-<<<<<<< HEAD
-<<<<<<< HEAD
 #define MAX_STEPS_FOR_DRIVINGMOTOR  5500//7000//5470
-#define BRAKING_DISTANCE 235
-=======
-#define MAX_STEPS_FOR_DRIVINGMOTOR 7000//5470
-#define BRAKING_DISTANCE 190
->>>>>>> parent of 0715dfa... Hardwarecontrol V1.0
-=======
-#define MAX_STEPS_FOR_DRIVINGMOTOR 7000//5470
-#define BRAKING_DISTANCE 190
->>>>>>> parent of 0715dfa... Hardwarecontrol V1.0
+#define BRAKING_DISTANCE 170
 
 // Geschwindigkeit
 #define SAFTY_LIFTINGMOTOR_SPEED 			10 // [cm/s]
@@ -46,27 +36,14 @@
 #define LIFTINGMOTOR_SPEED_UP2					70
 #define LIFTINGMOTOR_ACCELARATION_DOWN1			2
 #define LIFTINGMOTOR_ACCELARTAION_UP1			10
-#define LIFTINGMOTOR_ACCELARATION_DOWN2			5
+#define LIFTINGMOTOR_ACCELARATION_DOWN2			7
 #define LIFTINGMOTOR_ACCELARTAION_UP2			30
 
 #define DRIVINGMOTOR_SPEED_FIRSTSTAGE			50
-<<<<<<< HEAD
-<<<<<<< HEAD
-#define DRIVINGMOTOR_SPEED_SECONDSTAGE			40
+#define DRIVINGMOTOR_SPEED_SECONDSTAGE			43
 #define DRIVINGMOTOR_SPEED_THIRDSTAGE			62
-#define DRIVINGMOTOR_ACCELARATION_FIRSTSTAGE	4
-#define DRIVINGMOTOR_ACCELARATION_SECONDSTAGE	3//3//5
-=======
-=======
->>>>>>> parent of 0715dfa... Hardwarecontrol V1.0
-#define DRIVINGMOTOR_SPEED_SECONDSTAGE			48
-#define DRIVINGMOTOR_SPEED_THIRDSTAGE			60
 #define DRIVINGMOTOR_ACCELARATION_FIRSTSTAGE	3
-#define DRIVINGMOTOR_ACCELARATION_SECONDSTAGE	5
-<<<<<<< HEAD
->>>>>>> parent of 0715dfa... Hardwarecontrol V1.0
-=======
->>>>>>> parent of 0715dfa... Hardwarecontrol V1.0
+#define DRIVINGMOTOR_ACCELARATION_SECONDSTAGE	10//5
 #define DRIVINGMOTOR_ACCELARATION_THIRDSTAGE	2
 
 /* Globale Variable */
@@ -159,7 +136,7 @@ static void FSM_Parcour(void) {
 		}
 		// The Lifting Motor started reverse
 		if (!Parcour_FSM_Handler.z2_liftingMotorStarted) {
-			LiftingMotor_Move(-(stepsForFirstDownLiftingMotor), LIFTINGMOTOR_SPEED_UP1, LIFTINGMOTOR_ACCELARTAION_UP1);
+			LiftingMotor_Move(-(stepsForFirstDownLiftingMotor - stepsForFirstDownLiftingMotor/4), LIFTINGMOTOR_SPEED_UP1, LIFTINGMOTOR_ACCELARTAION_UP1);
 			Parcour_FSM_Handler.z2_liftingMotorStarted = 1;
 		}
 		// 
@@ -183,7 +160,7 @@ static void FSM_Parcour(void) {
 			Parcour_FSM_Handler.z3_targetFound = 0; 
 			Parcour_FSM_Handler.z3_liftingMotorStopped = 1;
 			Parcour_FSM_Handler.z4_liftingMotorOldSteps = LiftingMotor.Steps/8;
-			stepsForSecondDownLiftingMotor = lockupTableForLiftingMotor_NumberOfStepsForLiftingDown[(DrivingMotor.Steps/8)-1] - (LiftingMotor.Steps/8) + 300;
+			stepsForSecondDownLiftingMotor = lockupTableForLiftingMotor_NumberOfStepsForLiftingDown[(DrivingMotor.Steps/8)-1] - LiftingMotor.Steps/8 + 300;
 			LiftingMotor_Move(stepsForSecondDownLiftingMotor, LIFTINGMOTOR_SPEED_DOWN2, LIFTINGMOTOR_ACCELARATION_DOWN2);
 			DrivingMotor_Brakes(BRAKING_DISTANCE);
 			Parcour_FSM_Handler.ParcourState = Z4_LOWER_LOAD_UNTIL_FINISHED;
@@ -194,6 +171,9 @@ static void FSM_Parcour(void) {
 		if ((LiftingMotor.Steps / 8) >= Parcour_FSM_Handler.z4_liftingMotorOldSteps + stepsForSecondDownLiftingMotor) {
 			Electromagnet_Driver_OFF();
 			LiftingMotor_Move(-stepsForSecondDownLiftingMotor, LIFTINGMOTOR_SPEED_UP2, LIFTINGMOTOR_ACCELARTAION_UP2); 
+			CLS1_SendStr((unsigned char*) "measurement finished\n",
+								CLS1_GetStdio()->stdOut);
+			
 			Parcour_FSM_Handler.ParcourState = Z5_CRUISING_UNTIL_MASTS2_IS_REACHED;
 		}
 		break;
@@ -214,8 +194,7 @@ static void FSM_Parcour(void) {
 			
 			DrivingMotor.State = STOPPED; 
 			LiftingMotor.State = STOPPED;
-			DrivingMotor_Step_Disable();
-			//DrivingMotor_Move(-(DrivingMotor.Steps/8 - 600), SAFTY_DRIVINGMOTOR_SPEED, SAFTY_DRIVINGMOTOR_ACCELARATION); 
+			DrivingMotor_Move(-(DrivingMotor.Steps/8 - 600), SAFTY_DRIVINGMOTOR_SPEED, SAFTY_DRIVINGMOTOR_ACCELARATION); 
 			LiftingMotor_Move(-(LiftingMotor.Steps/8), SAFTY_LIFTINGMOTOR_SPEED, SAFTY_LIFTINGMOTOR_ACCELARATION);
 			
 		}
