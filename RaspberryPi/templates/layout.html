@@ -32,10 +32,18 @@
         window.onload = function () {
             chart = new CanvasJS.Chart("chartContainer", {
                 theme: "light2",
-                animationEnabled: true,
-                zoomEnabled: true,
+                //animationEnabled: true,
+                //zoomEnabled: true,
                 title: {
                     text: "Lastposition"
+                },
+                axisY: {
+                  minimum: 0,
+                    maximum: 110,
+                },
+                axisX: {
+                    minimum: 0,
+                    maximum: 350,
                 },
                 data: [{
                     type: "area",
