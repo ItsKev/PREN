@@ -22,7 +22,7 @@
 
 /* Defines */
 #define MAX_STEPS_FOR_DRIVINGMOTOR  5500//7000//5470
-#define BRAKING_DISTANCE 170
+#define BRAKING_DISTANCE 235
 
 // Geschwindigkeit
 #define SAFTY_LIFTINGMOTOR_SPEED 			10 // [cm/s]
@@ -36,7 +36,7 @@
 #define LIFTINGMOTOR_SPEED_UP2					70
 #define LIFTINGMOTOR_ACCELARATION_DOWN1			2
 #define LIFTINGMOTOR_ACCELARTAION_UP1			10
-#define LIFTINGMOTOR_ACCELARATION_DOWN2			7
+#define LIFTINGMOTOR_ACCELARATION_DOWN2			5
 #define LIFTINGMOTOR_ACCELARTAION_UP2			30
 
 #define DRIVINGMOTOR_SPEED_FIRSTSTAGE			50
@@ -160,7 +160,7 @@ static void FSM_Parcour(void) {
 			Parcour_FSM_Handler.z3_targetFound = 0; 
 			Parcour_FSM_Handler.z3_liftingMotorStopped = 1;
 			Parcour_FSM_Handler.z4_liftingMotorOldSteps = LiftingMotor.Steps/8;
-			stepsForSecondDownLiftingMotor = lockupTableForLiftingMotor_NumberOfStepsForLiftingDown[(DrivingMotor.Steps/8)-1] - LiftingMotor.Steps/8 + 300;
+			stepsForSecondDownLiftingMotor = lockupTableForLiftingMotor_NumberOfStepsForLiftingDown[(DrivingMotor.Steps/8)-1] - (LiftingMotor.Steps/8) + 300;
 			LiftingMotor_Move(stepsForSecondDownLiftingMotor, LIFTINGMOTOR_SPEED_DOWN2, LIFTINGMOTOR_ACCELARATION_DOWN2);
 			DrivingMotor_Brakes(BRAKING_DISTANCE);
 			Parcour_FSM_Handler.ParcourState = Z4_LOWER_LOAD_UNTIL_FINISHED;
