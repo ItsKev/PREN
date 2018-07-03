@@ -5,6 +5,6 @@
 ################################################################################
 
 export GNU_Make_Install_DirEnv=$(CWInstallLocationEnv)/gnu/bin
-export ProjDirPath=D:/15_MyFactory/PREN/Microcontroller/FRDM KL25Z/FRDM_KL25Z_Walking_Cat
+export ProjDirPath=C:/Users/burak/Downloads/PREN-0715dfa8d6d0324eb5180cebc0ae15d20b0286f3/FRDM_KL25Z_Walking_Cat
 export CWInstallLocationEnv=C:/Freescale/CW MCU v10.7
 export ARMSourceryDirEnv=$(CWInstallLocationEnv)/Cross_Tools/arm-none-eabi-gcc-4_7_3/bin

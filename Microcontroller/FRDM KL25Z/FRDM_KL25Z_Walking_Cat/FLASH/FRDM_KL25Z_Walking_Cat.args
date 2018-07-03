@@ -73,7 +73,7 @@
 -g3
 -gdwarf-2
 -gstrict-dwarf
--T"D:/15_MyFactory/PREN/Microcontroller/FRDM KL25Z/FRDM_KL25Z_Walking_Cat/Project_Settings/Linker_Files/ProcessorExpert.ld"
+-T"C:/Users/burak/Downloads/PREN-0715dfa8d6d0324eb5180cebc0ae15d20b0286f3/FRDM_KL25Z_Walking_Cat/Project_Settings/Linker_Files/ProcessorExpert.ld"
 -Xlinker
 --gc-sections
 -L"C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/lib/armv6-m"

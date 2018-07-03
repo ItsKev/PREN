@@ -6,7 +6,7 @@
 **     Component   : PPG_LDD
 **     Version     : Component 01.015, Driver 01.03, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2018-06-01, 16:48, # CodeGen: 78
+**     Date/Time   : 2018-07-03, 15:34, # CodeGen: 82
 **     Abstract    :
 **          This component implements a programmable pulse generator that
 **          generates signal with variable duty and variable cycle (period).

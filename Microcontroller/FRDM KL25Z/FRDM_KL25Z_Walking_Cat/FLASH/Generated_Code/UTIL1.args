@@ -4,12 +4,12 @@
 -g3
 -gdwarf-2
 -gstrict-dwarf
--I"D:/15_MyFactory/PREN/Microcontroller/FRDM KL25Z/FRDM_KL25Z_Walking_Cat/Project_Headers"
--I"D:/15_MyFactory/PREN/Microcontroller/FRDM KL25Z/FRDM_KL25Z_Walking_Cat/Project_Settings/Startup_Code"
+-I"C:/Users/burak/Downloads/PREN-0715dfa8d6d0324eb5180cebc0ae15d20b0286f3/FRDM_KL25Z_Walking_Cat/Project_Headers"
+-I"C:/Users/burak/Downloads/PREN-0715dfa8d6d0324eb5180cebc0ae15d20b0286f3/FRDM_KL25Z_Walking_Cat/Project_Settings/Startup_Code"
 -I"C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/EWL_C/include"
 -I"C:/Freescale/CW MCU v10.7/MCU/ARM_GCC_Support/ewl/EWL_Runtime/include"
--I"D:/15_MyFactory/PREN/Microcontroller/FRDM KL25Z/FRDM_KL25Z_Walking_Cat/Generated_Code"
--I"D:/15_MyFactory/PREN/Microcontroller/FRDM KL25Z/FRDM_KL25Z_Walking_Cat/Sources"
+-I"C:/Users/burak/Downloads/PREN-0715dfa8d6d0324eb5180cebc0ae15d20b0286f3/FRDM_KL25Z_Walking_Cat/Generated_Code"
+-I"C:/Users/burak/Downloads/PREN-0715dfa8d6d0324eb5180cebc0ae15d20b0286f3/FRDM_KL25Z_Walking_Cat/Sources"
 -I"C:/Freescale/CW MCU v10.7/MCU/ProcessorExpert/lib/Kinetis/pdd/inc"
 -I"C:/Freescale/CW MCU v10.7/MCU/ProcessorExpert/lib/Kinetis/iofiles"
 -O0
