@@ -88,7 +88,11 @@
       <File Name="Documentation/doxygen/BitIoLdd5.txt" FileDate="2018-03-18, 15:55:10" FileAge="1521384910684" FileType="45637" CompNumb="85" />
       <File Name="Generated_Code/portable.h" FileDate="2018-03-05, 23:47:28" FileAge="1520290048365" FileType="45637" CompNumb="9" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <File Name="Documentation/FRDM_KL25Z_Walking_Cat_SIGNALS.txt" FileDate="2018-07-03, 14:15:57" FileAge="1530620157234" FileType="3072" />
+=======
+      <File Name="Documentation/FRDM_KL25Z_Walking_Cat_SIGNALS.txt" FileDate="2018-06-01, 17:00:40" FileAge="1527865240379" FileType="3072" />
+>>>>>>> parent of 0715dfa... Hardwarecontrol V1.0
 =======
       <File Name="Documentation/FRDM_KL25Z_Walking_Cat_SIGNALS.txt" FileDate="2018-06-01, 17:00:40" FileAge="1527865240379" FileType="3072" />
 >>>>>>> parent of 0715dfa... Hardwarecontrol V1.0
@@ -203,7 +207,11 @@
     </GeneratedByPE>
   </GeneratedFilesList>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <CodeGenReference>84</CodeGenReference>
+=======
+  <CodeGenReference>81</CodeGenReference>
+>>>>>>> parent of 0715dfa... Hardwarecontrol V1.0
 =======
   <CodeGenReference>81</CodeGenReference>
 >>>>>>> parent of 0715dfa... Hardwarecontrol V1.0
